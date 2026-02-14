@@ -5,7 +5,7 @@ import type { ServicePageData } from "@/lib/service-page-types";
 export const metadata: Metadata = {
   title: "Excavation Services Dubai & UAE | Safe GPR-Guided Excavation | Bhadeya Technical",
   description:
-    "Professional excavation services in Dubai, Abu Dhabi & UAE. GPR-scanned excavation zones for maximum safety. Site preparation, utility trenching, foundation excavation. 5+ years experience.",
+    "Professional excavation services in Dubai, Abu Dhabi & UAE. GPR-scanned excavation zones for maximum safety. Site preparation, utility trenching, foundation excavation. 7+ years experience.",
   keywords: [
     "excavation services Dubai",
     "excavation UAE",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Excavation Dubai & UAE | GPR-Guided | Bhadeya Technical",
     description:
-      "Safe excavation with GPR-scanned zones in Dubai, Abu Dhabi & UAE. Site prep, trenching, foundations. 5+ years.",
+      "Safe excavation with GPR-scanned zones in Dubai, Abu Dhabi & UAE. Site prep, trenching, foundations. 7+ years.",
     url: "https://www.bhadeya.com/services/excavation",
     type: "website",
   },
@@ -32,9 +32,9 @@ const excavationData: ServicePageData = {
   hero: {
     title: "Professional Excavation Services in Dubai & UAE",
     subtitle:
-      "Safe, efficient excavation with GPR-scanned zones. We identify underground utilities and obstructions before digging—reducing risk and delays. Site preparation, utility trenching, foundation excavation. 5+ years serving Dubai, Abu Dhabi, Sharjah and across the UAE.",
+      "Safe, efficient excavation with GPR-scanned zones. We identify underground utilities and obstructions before digging—reducing risk and delays. Site preparation, utility trenching, foundation excavation. 7+ years serving Dubai, Abu Dhabi, Sharjah and across the UAE.",
     stats: [
-      { value: "5+ Years", label: "Experience" },
+      { value: "7+ Years", label: "Experience" },
       { value: "GPR pre-scan", label: "Safety" },
       { value: "All UAE", label: "Coverage" },
     ],
@@ -86,7 +86,7 @@ const excavationData: ServicePageData = {
       "We combine modern excavation machinery with GPR scanning technology. Before any excavation we use our Proceq GP8000 GPR to map the subsurface. Our operators are trained in safe digging practices and we follow UAE safety standards. This integrated approach—GPR first, then controlled excavation—delivers safe, efficient results across Dubai, Abu Dhabi and the UAE.",
     specs: [
       { label: "GPR depth", value: "Up to 200 cm" },
-      { label: "Experience", value: "5+ years" },
+      { label: "Experience", value: "7+ years" },
       { label: "Coverage", value: "All UAE" },
     ],
     whyBest:
@@ -143,7 +143,7 @@ const excavationData: ServicePageData = {
     {
       title: "Excavation Services in Dubai",
       content:
-        "Excavation services in Dubai are in demand for new builds, infrastructure and MEP projects. Safe excavation requires knowing what is underground. Bhadeya Technical provides excavation with GPR scanning—we map utilities and obstructions before digging, reducing the risk of strikes and delays. We serve Dubai with 5+ years of experience and a focus on safety and efficiency.",
+        "Excavation services in Dubai are in demand for new builds, infrastructure and MEP projects. Safe excavation requires knowing what is underground. Bhadeya Technical provides excavation with GPR scanning—we map utilities and obstructions before digging, reducing the risk of strikes and delays. We serve Dubai with 7+ years of experience and a focus on safety and efficiency.",
     },
     {
       title: "Excavation Services in Abu Dhabi",
@@ -181,7 +181,7 @@ const excavationData: ServicePageData = {
       {
         question: "How long have you been providing excavation services?",
         answer:
-          "We have 5+ years of experience providing excavation and GPR scanning services across the UAE. We are trusted by contractors and developers in Dubai, Abu Dhabi and beyond.",
+          "We have 7+ years of experience providing excavation and GPR scanning services across the UAE. We are trusted by contractors and developers in Dubai, Abu Dhabi and beyond.",
       },
     ],
   },

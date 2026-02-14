@@ -20,12 +20,12 @@ export const metadata: Metadata = {
   title:
     "About Bhadeya Technical Services LLC | GPR Scanning Experts Since 2019 | UAE",
   description:
-    "Learn about Bhadeya Technical Services LLC - UAE's trusted GPR scanning and core cutting company since 2019. 5+ years experience, 500+ projects, serving Dubai, Abu Dhabi, Sharjah & all UAE.",
+    "Learn about Bhadeya Technical Services LLC - UAE's trusted GPR scanning and core cutting company since 2019. 7+ years experience, serving Dubai, Abu Dhabi, Sharjah & all UAE.",
   alternates: { canonical: "https://www.bhadeya.com/about" },
   openGraph: {
     title: "About Bhadeya Technical Services LLC | UAE",
     description:
-      "UAE's trusted GPR scanning and core cutting company since 2019. 5+ years, 500+ projects across Dubai, Abu Dhabi, Sharjah & UAE.",
+      "UAE's trusted GPR scanning and core cutting company since 2019. 7+ years across Dubai, Abu Dhabi, Sharjah & UAE.",
     url: "https://www.bhadeya.com/about",
     type: "website",
   },
@@ -98,8 +98,7 @@ export default function AboutPage() {
                   Founded in 2019, Bhadeya Technical Services L.L.C has grown to
                   become one of the UAE&apos;s most trusted providers of GPR
                   scanning, core cutting, and excavation
-                  services. With over 5 years of hands-on experience and 500+
-                  completed projects, we have built a reputation for precision,
+                  services. With over 7 years of hands-on experience, we have built a reputation for precision,
                   reliability, and safety.
                 </p>
                 <p>

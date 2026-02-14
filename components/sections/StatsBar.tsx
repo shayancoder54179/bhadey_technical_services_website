@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, animate } from "framer-motion";
 import {
-  Briefcase,
   Calendar,
   Ruler,
   MapPin,
@@ -14,13 +13,7 @@ import { cn } from "@/lib/utils";
 
 const STATS = [
   {
-    value: 500,
-    suffix: "+",
-    label: "Projects Completed",
-    Icon: Briefcase,
-  },
-  {
-    value: 5,
+    value: 7,
     suffix: "+",
     label: "Years Experience",
     Icon: Calendar,
@@ -99,7 +92,7 @@ export function StatsBar() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {STATS.map((stat) => {
             const Icon = stat.Icon as LucideIcon;
             return (

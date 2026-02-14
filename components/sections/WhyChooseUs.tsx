@@ -24,7 +24,7 @@ const FEATURES = [
   {
     title: "Proven Track Record",
     description:
-      "We have served UAE's most prestigious projects including The Dubai Mall, Kempinski Hotel, The Edition, Emaar Properties, Nakheel Mall, Sheikh Khalifa Hospital, Mediclinic, and hundreds more. Our 500+ successful projects speak for themselves.",
+      "We have served UAE's most prestigious projects including The Dubai Mall, Kempinski Hotel, The Edition, Emaar Properties, Nakheel Mall, Sheikh Khalifa Hospital, Mediclinic, and hundreds more.",
     Icon: Trophy,
   },
   {
@@ -135,7 +135,7 @@ export function WhyChooseUs() {
               variants={headerVariants}
               className="text-lg text-muted-foreground max-w-xl"
             >
-              5+ years of precision, safety, and reliability in every project
+              7+ years of precision, safety, and reliability in every project
             </motion.p>
           </motion.header>
         </div>

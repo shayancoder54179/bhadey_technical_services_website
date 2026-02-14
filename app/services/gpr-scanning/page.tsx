@@ -38,7 +38,6 @@ const gprPageData: ServicePageData = {
       "Ground Penetrating Radar (GPR) scanning using the industry-leading Proceq GP8000. Detect rebar, post-tension cables, utilities and voids up to 200cm depth—non-destructively and with full reporting. Trusted by Dubai Mall, Emaar and ADNOC.",
     stats: [
       { value: "200cm", label: "Max scanning depth" },
-      { value: "500+", label: "Projects completed" },
       { value: "Proceq GP8000", label: "Technology" },
     ],
     ctaPrimaryLabel: "Get Free Quote",
@@ -165,7 +164,7 @@ const gprPageData: ServicePageData = {
     {
       title: "Why Choose Professional GPR Scanning",
       content:
-        "Choosing a professional GPR scanning provider ensures correct equipment, trained technicians and reliable reports. Amateur or unqualified scanning can miss critical elements and lead to costly damage or safety incidents. Bhadeya Technical uses the Proceq GP8000, follows a strict process and delivers reports you can trust for planning and compliance. We have completed 500+ projects across the UAE and are trusted by names such as Dubai Mall, Emaar and ADNOC.",
+        "Choosing a professional GPR scanning provider ensures correct equipment, trained technicians and reliable reports. Amateur or unqualified scanning can miss critical elements and lead to costly damage or safety incidents. Bhadeya Technical uses the Proceq GP8000, follows a strict process and delivers reports you can trust for planning and compliance. We are trusted by names such as Dubai Mall, Emaar and ADNOC.",
     },
   ],
   peopleAlsoAsk: [

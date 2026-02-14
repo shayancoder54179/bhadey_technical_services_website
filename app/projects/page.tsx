@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title:
     "Our Projects | GPR Scanning & Core Cutting Portfolio | Bhadeya Technical UAE",
   description:
-    "View our portfolio of 500+ GPR scanning, core cutting, and excavation projects across UAE. Trusted by Dubai Mall, Emaar, ADNOC, Kempinski, Yas Mall, Mediclinic & more.",
+    "View our portfolio of GPR scanning, core cutting, and excavation projects across UAE. Trusted by Dubai Mall, Emaar, ADNOC, Kempinski, Yas Mall, Mediclinic & more.",
   alternates: { canonical: "https://www.bhadeya.com/projects" },
   openGraph: {
     title: "Our Projects | Bhadeya Technical Services UAE",
     description:
-      "Portfolio of 500+ GPR scanning and core cutting projects. Trusted by Dubai Mall, Emaar, ADNOC & more.",
+      "Portfolio of GPR scanning and core cutting projects. Trusted by Dubai Mall, Emaar, ADNOC & more.",
     url: "https://www.bhadeya.com/projects",
     type: "website",
   },
@@ -92,8 +92,7 @@ export default function ProjectsPage() {
               Our Projects & Portfolio
             </h1>
             <p className="text-lg text-white/90">
-              Over 500 successful projects across UAE&apos;s most prestigious
-              developments
+              Trusted across UAE&apos;s most prestigious developments
             </p>
           </header>
         </div>
@@ -119,7 +118,7 @@ export default function ProjectsPage() {
       >
         <div className="mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
           <p className="text-lg md:text-xl font-semibold text-white">
-            500+ Projects | 5+ Years | 6+ Cities | Trusted by UAE&apos;s Best
+            7+ Years | 6+ Cities | Trusted by UAE&apos;s Best
           </p>
         </div>
       </section>

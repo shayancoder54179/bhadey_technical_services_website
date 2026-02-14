@@ -104,7 +104,7 @@ export function ProjectsShowcase() {
         {/* Below grid: count + CTA */}
         <div className="text-center mb-14 md:mb-16">
           <p className="text-muted-foreground text-base md:text-lg mb-6">
-            And 500+ more projects across UAE
+            And more projects across UAE
           </p>
           <Button asChild size="lg" className="font-semibold">
             <Link href="/projects">

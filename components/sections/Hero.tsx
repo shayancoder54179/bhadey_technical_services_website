@@ -62,7 +62,7 @@ export function Hero() {
               className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/95 backdrop-blur-sm"
               role="status"
             >
-              🏆 UAE&apos;s Trusted GPR Scanning Experts • 5+ Years Experience
+              🏆 UAE&apos;s Trusted GPR Scanning Experts • 7+ Years Experience
             </span>
           </motion.div>
 

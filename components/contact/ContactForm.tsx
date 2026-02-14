@@ -35,9 +35,7 @@ const LOCATIONS = [
 
 interface FormState {
   fullName: string;
-  email: string;
   phone: string;
-  companyName: string;
   serviceRequired: string;
   projectLocation: string;
   message: string;
@@ -45,16 +43,10 @@ interface FormState {
 
 const initialFormState: FormState = {
   fullName: "",
-  email: "",
   phone: "",
-  companyName: "",
   serviceRequired: "",
   projectLocation: "",
   message: "",
-};
-
-function validateEmail(email: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function validatePhone(phone: string): boolean {
@@ -77,8 +69,6 @@ export function ContactForm() {
     const newErrors: Partial<Record<keyof FormState, string>> = {};
 
     if (!form.fullName.trim()) newErrors.fullName = "Full name is required";
-    if (!form.email.trim()) newErrors.email = "Email is required";
-    else if (!validateEmail(form.email)) newErrors.email = "Please enter a valid email";
     if (!form.phone.trim()) newErrors.phone = "Phone number is required";
     else if (!validatePhone(form.phone)) newErrors.phone = "Please enter a valid phone number";
     if (!form.message.trim()) newErrors.message = "Message is required";
@@ -92,9 +82,7 @@ export function ContactForm() {
     if (!validate()) return;
 
     const name = form.fullName.trim();
-    const email = form.email.trim();
     const phone = form.phone.trim();
-    const company = form.companyName.trim();
     const service = form.serviceRequired;
     const location = form.projectLocation;
     const message = form.message.trim();
@@ -104,9 +92,7 @@ export function ContactForm() {
 ━━━━━━━━━━━━━━━━━━━━━
 
 👤 *Name:* ${name}
-📧 *Email:* ${email}
 📱 *Phone:* ${phone}
-🏢 *Company:* ${company || "Not provided"}
 
 🔧 *Service Required:* ${service || "Not specified"}
 📍 *Project Location:* ${location || "Not specified"}
@@ -139,45 +125,24 @@ ${message}
       <p className="text-sm text-muted-foreground">
         Your inquiry details will be sent directly to our team via WhatsApp for the fastest response.
       </p>
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div className="space-y-2">
-          <label htmlFor="fullName" className="text-sm font-medium text-foreground">
-            Full Name <span className="text-destructive">*</span>
-          </label>
-          <Input
-            id="fullName"
-            type="text"
-            placeholder="John Smith"
-            value={form.fullName}
-            onChange={(e) => updateField("fullName", e.target.value)}
-            aria-invalid={!!errors.fullName}
-            className="h-11"
-          />
-          {errors.fullName && (
-            <p className="text-sm text-destructive" role="alert">
-              {errors.fullName}
-            </p>
-          )}
-        </div>
-        <div className="space-y-2">
-          <label htmlFor="email" className="text-sm font-medium text-foreground">
-            Email <span className="text-destructive">*</span>
-          </label>
-          <Input
-            id="email"
-            type="email"
-            placeholder="john@company.com"
-            value={form.email}
-            onChange={(e) => updateField("email", e.target.value)}
-            aria-invalid={!!errors.email}
-            className="h-11"
-          />
-          {errors.email && (
-            <p className="text-sm text-destructive" role="alert">
-              {errors.email}
-            </p>
-          )}
-        </div>
+      <div className="space-y-2">
+        <label htmlFor="fullName" className="text-sm font-medium text-foreground">
+          Full Name <span className="text-destructive">*</span>
+        </label>
+        <Input
+          id="fullName"
+          type="text"
+          placeholder="John Smith"
+          value={form.fullName}
+          onChange={(e) => updateField("fullName", e.target.value)}
+          aria-invalid={!!errors.fullName}
+          className="h-11"
+        />
+        {errors.fullName && (
+          <p className="text-sm text-destructive" role="alert">
+            {errors.fullName}
+          </p>
+        )}
       </div>
 
       <div className="space-y-2">
@@ -198,20 +163,6 @@ ${message}
             {errors.phone}
           </p>
         )}
-      </div>
-
-      <div className="space-y-2">
-        <label htmlFor="companyName" className="text-sm font-medium text-foreground">
-          Company Name <span className="text-muted-foreground">(optional)</span>
-        </label>
-        <Input
-          id="companyName"
-          type="text"
-          placeholder="Your company"
-          value={form.companyName}
-          onChange={(e) => updateField("companyName", e.target.value)}
-          className="h-11"
-        />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">

@@ -137,7 +137,7 @@ export const services = [
       'Pool and basement excavation'
     ],
     stats: {
-      experience: '5+ Years',
+      experience: '7+ Years',
       safety: 'GPR Pre-Scan',
       coverage: 'All UAE'
     }

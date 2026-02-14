@@ -71,7 +71,7 @@ export function ServicesOverview() {
             end-to-end solutions for safe construction practices
           </p>
           <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[800px] mx-auto text-center">
-            Bhadeya Technical Services LLC is a leading provider of GPR scanning, core cutting, and excavation services across Dubai, Abu Dhabi, Sharjah, and UAE. With 5+ years of experience and 500+ completed projects, we deliver precision and safety on every job.
+            Bhadeya Technical Services LLC is a leading provider of GPR scanning, core cutting, and excavation services across Dubai, Abu Dhabi, Sharjah, and UAE. With 7+ years of experience, we deliver precision and safety on every job.
           </p>
         </header>
 

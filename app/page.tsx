@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   title:
     "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting Services in Dubai & UAE",
   description:
-    "Professional GPR scanning (Proceq GP8000), diamond core cutting, and excavation services in Dubai, Abu Dhabi, Sharjah & UAE. 500+ projects completed including Dubai Mall, Emaar, ADNOC. Get free quote today!",
+    "Professional GPR scanning (Proceq GP8000), diamond core cutting, and excavation services in Dubai, Abu Dhabi, Sharjah & UAE. Trusted for projects including Dubai Mall, Emaar, ADNOC. Get free quote today!",
   alternates: {
     canonical: "https://www.bhadeya.com",
   },

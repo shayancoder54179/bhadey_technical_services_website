@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Bhadeya Technical Services LLC",
   },
   description:
-    "Leading GPR scanning, core cutting & excavation services in Dubai, Abu Dhabi, Sharjah & UAE. Using Proceq GP8000 technology. 5+ years experience. Trusted by Dubai Mall, Emaar, ADNOC & more.",
+    "Leading GPR scanning, core cutting & excavation services in Dubai, Abu Dhabi, Sharjah & UAE. Using Proceq GP8000 technology. 7+ years experience. Trusted by Dubai Mall, Emaar, ADNOC & more.",
   keywords: [
     "GPR scanning Dubai",
     "GPR scanning UAE",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     title:
       "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
     description:
-      "Leading GPR scanning, core cutting & excavation services in Dubai, Abu Dhabi, Sharjah & UAE. 5+ years of trusted experience.",
+      "Leading GPR scanning, core cutting & excavation services in Dubai, Abu Dhabi, Sharjah & UAE. 7+ years of trusted experience.",
     images: [
       {
         url: "/images/bts_logo.png",
