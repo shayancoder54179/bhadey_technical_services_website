@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import { Target, Eye, Heart, Radio, Box, Drill, MapPin, Quote } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -118,19 +119,16 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div
-              className="aspect-[4/3] rounded-xl bg-muted border border-border overflow-hidden flex items-center justify-center"
-              aria-hidden
-            >
-              <div
-                className="w-full h-full flex items-center justify-center text-muted-foreground/50 text-sm"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(0,102,255,0.06) 0%, rgba(255,107,0,0.04) 100%)",
-                }}
-              >
-                Image placeholder
-              </div>
+            <div className="aspect-[4/3] rounded-xl border border-border overflow-hidden">
+              <Image
+                src="/images/7272030 (1).jpg"
+                alt="Bhadeya Technical Services GPR scanning expert at work in Dubai UAE - Proceq GP8000 ground penetrating radar on concrete"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>

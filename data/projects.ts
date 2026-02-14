@@ -25,15 +25,21 @@ export const projects = [
   { name: 'Zulekha Hospital', category: 'Healthcare', location: 'Dubai', featured: false },
 
   // Construction Companies
-  { name: 'DCC (Dubai Contracting Company)', category: 'Contractor', location: 'Dubai', featured: false },
-  { name: 'MCC', category: 'Contractor', location: 'UAE', featured: false },
-  { name: 'SCC', category: 'Contractor', location: 'UAE', featured: false },
+  { name: 'Zahiya City Center', category: 'Commercial', location: 'Dubai', featured: true },
 
   // Other
   { name: 'Banks & Residential Buildings', category: 'Residential', location: 'UAE', featured: false },
   { name: 'Commercial Buildings', category: 'Commercial', location: 'UAE', featured: false },
-  { name: 'Major Interior Companies', category: 'Interior', location: 'UAE', featured: false },
   { name: 'SKH Abu Dhabi', category: 'Government', location: 'Abu Dhabi', featured: false },
+
+  // New projects
+  { name: 'Samana Development', category: 'Developer', location: 'Dubai', featured: true },
+  { name: 'Deira City Centre', category: 'Commercial', location: 'Dubai', featured: true },
+  { name: 'Mirdif City Centre', category: 'Commercial', location: 'Dubai', featured: true },
+  { name: 'Bhatia Contracting', category: 'Contractor', location: 'UAE', featured: false },
+  { name: 'Azizi Development', category: 'Developer', location: 'Dubai', featured: true },
+  { name: 'China State Contracting', category: 'Contractor', location: 'UAE', featured: true },
+  { name: 'IKEA Dubai Festival City', category: 'Commercial', location: 'Dubai', featured: true },
 ]
 
 export const projectCategories = ['All', 'Commercial', 'Hospitality', 'Corporate', 'Developer', 'Healthcare', 'Contractor', 'Residential', 'Government', 'Interior']
