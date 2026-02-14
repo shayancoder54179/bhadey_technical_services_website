@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Phone, Check, Grid3X3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -41,6 +42,8 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
     features,
     applications,
     process,
+    galleryImages,
+    galleryTitle,
     seoParagraphs,
     peopleAlsoAsk,
     relatedServices,
@@ -80,56 +83,75 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
             }}
           />
           <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-            <header className="max-w-3xl">
-              <h1
-                id="service-hero-title"
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-bold leading-tight text-white mb-4"
-              >
-                {hero.title}
-              </h1>
-              <p className="text-lg text-white/90 mb-8">
-                {hero.subtitle}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
-                <Button
-                  asChild
-                  size="lg"
-                  className="w-full sm:w-auto bg-[var(--color-accent-orange)] text-white hover:bg-[var(--color-accent-orange)]/90 font-semibold px-8 py-6 rounded-lg shadow-lg"
+            <div
+              className={cn(
+                "flex flex-col gap-10",
+                hero.image && "lg:flex-row lg:items-center lg:gap-12"
+              )}
+            >
+              <header className={hero.image ? "max-w-3xl lg:flex-1" : "max-w-3xl"}>
+                <h1
+                  id="service-hero-title"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-bold leading-tight text-white mb-4"
                 >
-                  <GetQuoteLink href="/contact">{hero.ctaPrimaryLabel}</GetQuoteLink>
-                </Button>
-                {hero.ctaSecondaryLabel && hero.ctaSecondaryHref && (
+                  {hero.title}
+                </h1>
+                <p className="text-lg text-white/90 mb-8">
+                  {hero.subtitle}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
                   <Button
                     asChild
-                    variant="outline"
                     size="lg"
-                    className="w-full sm:w-auto border-2 border-white/80 text-white bg-transparent hover:bg-white/10 font-semibold px-6 py-6 rounded-lg"
+                    className="w-full sm:w-auto bg-[var(--color-accent-orange)] text-white hover:bg-[var(--color-accent-orange)]/90 font-semibold px-8 py-6 rounded-lg shadow-lg"
                   >
-                    <PhoneLink
-                      href={hero.ctaSecondaryHref}
-                      className="inline-flex items-center gap-2"
-                    >
-                      <Phone className="size-5" aria-hidden />
-                      {hero.ctaSecondaryLabel}
-                    </PhoneLink>
+                    <GetQuoteLink href="/contact">{hero.ctaPrimaryLabel}</GetQuoteLink>
                   </Button>
-                )}
-              </div>
-              <div className="flex flex-wrap gap-4 sm:gap-6" role="list">
-                {hero.stats.map((stat, i) => (
-                  <div
-                    key={i}
-                    role="listitem"
-                    className="rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3"
-                  >
-                    <span className="text-xl md:text-2xl font-bold text-white tabular-nums block">
-                      {stat.value}
-                    </span>
-                    <span className="text-sm text-white/80">{stat.label}</span>
-                  </div>
-                ))}
-              </div>
-            </header>
+                  {hero.ctaSecondaryLabel && hero.ctaSecondaryHref && (
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="lg"
+                      className="w-full sm:w-auto border-2 border-white/80 text-white bg-transparent hover:bg-white/10 font-semibold px-6 py-6 rounded-lg"
+                    >
+                      <PhoneLink
+                        href={hero.ctaSecondaryHref}
+                        className="inline-flex items-center gap-2"
+                      >
+                        <Phone className="size-5" aria-hidden />
+                        {hero.ctaSecondaryLabel}
+                      </PhoneLink>
+                    </Button>
+                  )}
+                </div>
+                <div className="flex flex-wrap gap-4 sm:gap-6" role="list">
+                  {hero.stats.map((stat, i) => (
+                    <div
+                      key={i}
+                      role="listitem"
+                      className="rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3"
+                    >
+                      <span className="text-xl md:text-2xl font-bold text-white tabular-nums block">
+                        {stat.value}
+                      </span>
+                      <span className="text-sm text-white/80">{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </header>
+              {hero.image && (
+                <div className="flex-shrink-0 w-full lg:w-[42%] rounded-xl overflow-hidden border border-white/10 shadow-xl">
+                  <Image
+                    src={hero.image.src}
+                    alt={hero.image.alt}
+                    width={800}
+                    height={500}
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
@@ -287,6 +309,33 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
             </div>
           </div>
         </section>
+
+        {/* Gallery: project / service photos */}
+        {galleryImages && galleryImages.length > 0 && (
+          <section className="bg-muted/40 py-16 md:py-20 lg:py-24" aria-labelledby="gallery-heading">
+            <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+              <h2 id="gallery-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10">
+                {galleryTitle ?? "Gallery"}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                {galleryImages.map((img, i) => (
+                  <div
+                    key={i}
+                    className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border bg-muted shadow-sm"
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* AEO: People Also Ask style Q&A */}
         {peopleAlsoAsk && peopleAlsoAsk.length > 0 && (

@@ -41,6 +41,10 @@ const excavationData: ServicePageData = {
     ctaPrimaryLabel: "Get Free Quote",
     ctaSecondaryLabel: "Call Now: +971 55 692 6286",
     ctaSecondaryHref: "tel:+971556926286",
+    image: {
+      src: "/images/tenweb_media_sb87wloxc.webp",
+      alt: "Excavation and ground works with GPR-guided safety",
+    },
   },
   overview: {
     title: "What Are Our Excavation Services?",

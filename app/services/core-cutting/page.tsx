@@ -60,6 +60,10 @@ const coreCuttingData: ServicePageData = {
     ctaPrimaryLabel: "Get Free Quote",
     ctaSecondaryLabel: "Call Now: +971 55 692 6286",
     ctaSecondaryHref: "tel:+971556926286",
+    image: {
+      src: "/images/diamond-core-cutting-service-1024x688.png",
+      alt: "Diamond core cutting service for concrete and masonry",
+    },
   },
   overview: {
     title: "What is Core Cutting?",
@@ -125,6 +129,12 @@ const coreCuttingData: ServicePageData = {
     { title: "Window and door openings" },
     { title: "Structural modifications" },
   ],
+  galleryImages: [
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.41 (1).jpeg", alt: "Core drill bit cutting into concrete with wet drilling" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.42.jpeg", alt: "Concrete core samples and drilled holes after core cutting" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.43.jpeg", alt: "Technician operating core drilling machine on concrete" },
+  ],
+  galleryTitle: "Core Cutting in Action",
   process: {
     title: "Our Core Cutting Process",
     steps: [

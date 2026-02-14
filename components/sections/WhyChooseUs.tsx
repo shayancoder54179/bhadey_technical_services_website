@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import {
@@ -95,18 +96,17 @@ export function WhyChooseUs() {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             transition={{ duration: 0.5 }}
-            className="order-2 lg:order-1 flex-shrink-0 w-full lg:w-[45%] aspect-[4/3] rounded-xl bg-muted border border-border overflow-hidden"
+            className="order-2 lg:order-1 flex-shrink-0 w-full lg:w-[45%] aspect-[4/3] rounded-xl border border-border overflow-hidden"
             aria-hidden
           >
-            <div
-              className="w-full h-full flex items-center justify-center text-muted-foreground/50 text-sm"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(0,102,255,0.06) 0%, rgba(255,107,0,0.04) 100%)",
-              }}
-            >
-              Image placeholder
-            </div>
+            <Image
+              src="/images/7272030 (1).jpg"
+              alt="Bhadeya technician performing GPR scanning on concrete structure"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+            />
           </motion.div>
 
           {/* Header content — right on desktop */}

@@ -44,6 +44,10 @@ const gprPageData: ServicePageData = {
     ctaPrimaryLabel: "Get Free Quote",
     ctaSecondaryLabel: "Call Now: +971 55 692 6286",
     ctaSecondaryHref: "tel:+971556926286",
+    image: {
+      src: "/images/7272030 (1).jpg",
+      alt: "Technician performing GPR scanning on concrete with Proceq equipment",
+    },
   },
   overview: {
     title: "What is GPR Scanning?",
@@ -110,6 +114,14 @@ const gprPageData: ServicePageData = {
     { title: "Bridge deck assessment" },
     { title: "Structural integrity evaluation" },
   ],
+  galleryImages: [
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.37.jpeg", alt: "Technician scanning ceiling with GPR device" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.38.jpeg", alt: "Grid and coordinate marking for GPR scan area" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.39 (2).jpeg", alt: "Core-drilled hole and scan markings on concrete" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.39.jpeg", alt: "Concrete surface with GPR scan markings" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.40.jpeg", alt: "Proceq GPR data and equipment on site" },
+  ],
+  galleryTitle: "GPR Scanning in Action",
   process: {
     title: "Our GPR Scanning Process",
     steps: [

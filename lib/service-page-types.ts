@@ -15,6 +15,8 @@ export interface ServiceHeroData {
   ctaPrimaryLabel: string;
   ctaSecondaryLabel?: string;
   ctaSecondaryHref?: string;
+  /** Optional hero image (e.g. for excavation page) */
+  image?: { src: string; alt: string };
 }
 
 export interface HowItWorksStep {
@@ -95,6 +97,10 @@ export interface ServicePageData {
   features: FeatureItem[];
   applications: ApplicationItem[];
   process: ProcessData;
+  /** Optional gallery of project/service photos */
+  galleryImages?: { src: string; alt: string }[];
+  /** Optional title for the gallery section (e.g. "Core Cutting in Action") */
+  galleryTitle?: string;
   seoParagraphs?: SEOParagraph[];
   /** AEO: "People Also Ask" style Q&A blocks */
   peopleAlsoAsk?: PeopleAlsoAskItem[];
