@@ -72,7 +72,7 @@ export function Header() {
       )}
       role="banner"
     >
-      <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-between gap-4 px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Logo */}
         <Link
           href="/"

@@ -47,7 +47,7 @@ export function ServiceAreas() {
       className="bg-muted/50 py-16 md:py-20 lg:py-24"
       aria-labelledby="service-areas-heading"
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <p
             className="text-sm font-semibold uppercase tracking-wide text-[var(--color-accent-orange)] mb-3"

@@ -40,7 +40,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
         className={cn("border-b border-border bg-muted/30 py-3", className)}
         aria-label="Breadcrumb"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
             {items.map((item, i) => (
               <li key={i} className="flex items-center gap-1.5">

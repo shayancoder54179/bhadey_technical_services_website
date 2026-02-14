@@ -16,7 +16,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <div
-        className="flex-1 flex flex-col items-center justify-center px-4 py-16 text-center"
+        className="flex-1 flex flex-col items-center justify-center px-6 py-16 text-center sm:px-8 lg:px-12 xl:px-16"
         role="region"
         aria-label="Page not found"
       >

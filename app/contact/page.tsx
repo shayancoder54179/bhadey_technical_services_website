@@ -84,7 +84,7 @@ export default function ContactPage() {
             backgroundSize: "48px 48px",
           }}
         />
-        <div className="relative container mx-auto px-4">
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <header className="max-w-3xl">
             <h1
               id="contact-hero-title"
@@ -102,10 +102,10 @@ export default function ContactPage() {
 
       {/* Contact Info Cards */}
       <section
-        className="relative -mt-10 z-10 px-4"
+        className="relative -mt-10 z-10"
         aria-labelledby="contact-cards-heading"
       >
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <div
             id="contact-cards-heading"
             className="sr-only"
@@ -188,7 +188,7 @@ export default function ContactPage() {
         className="py-16 md:py-20 lg:py-24 bg-muted/30"
         aria-labelledby="contact-form-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="contact-form-heading"
             className="sr-only"
@@ -268,7 +268,7 @@ export default function ContactPage() {
         className="bg-white py-16 md:py-20 lg:py-24"
         aria-labelledby="service-areas-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="service-areas-heading"
             className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center"
@@ -298,7 +298,7 @@ export default function ContactPage() {
         className="bg-muted/50 py-16 md:py-20 lg:py-24"
         aria-labelledby="contact-faq-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="contact-faq-heading"
             className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center"

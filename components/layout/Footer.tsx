@@ -28,7 +28,7 @@ export function Footer() {
       style={{ backgroundColor: FOOTER_BG }}
       role="contentinfo"
     >
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-12 lg:py-16 xl:px-16">
         <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-4 xl:gap-8">
           {/* Section 1 - Company Info */}
           <div className="xl:col-span-1">
@@ -152,7 +152,7 @@ export function Footer() {
         className="border-t border-white/10"
         style={{ backgroundColor: "rgba(0,0,0,0.2)" }}
       >
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row sm:px-8 lg:px-12 xl:px-16">
           <p className="text-center text-sm text-white/70 sm:text-left">
             © {new Date().getFullYear()} Bhadeya Technical Services L.L.C. All
             rights reserved.

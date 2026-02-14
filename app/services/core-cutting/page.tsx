@@ -213,7 +213,7 @@ function CoreCuttingExtras() {
         className="bg-muted/40 py-16 md:py-20 lg:py-24 border-t border-border"
         aria-labelledby="size-chart-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2 id="size-chart-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Core Hole Size Range: 12mm to 500mm
           </h2>
@@ -244,7 +244,7 @@ function CoreCuttingExtras() {
         className="bg-white py-16 md:py-20 lg:py-24 border-t border-border"
         aria-labelledby="gpr-safety-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="max-w-3xl mx-auto rounded-2xl border-2 border-[var(--color-secondary-blue)]/30 bg-[var(--color-secondary-blue)]/5 p-8 md:p-10">
             <div className="flex items-start gap-4 mb-6">
               <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-[var(--color-secondary-blue)]/20 text-[var(--color-secondary-blue)]">
@@ -274,7 +274,7 @@ function CoreCuttingExtras() {
         className="bg-muted/40 py-16 md:py-20 lg:py-24 border-t border-border"
         aria-labelledby="equipment-showcase-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2 id="equipment-showcase-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Professional Equipment Showcase
           </h2>

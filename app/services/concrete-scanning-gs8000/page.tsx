@@ -200,7 +200,7 @@ function GPRVsConcreteComparison() {
       className="bg-white py-16 md:py-20 lg:py-24 border-t border-border"
       aria-labelledby="comparison-heading"
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         <h2 id="comparison-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-8">
           GPR Scanning vs Concrete Scanning — Which Do You Need?
         </h2>

@@ -51,7 +51,7 @@ export function ServicesOverview() {
       className="bg-white py-16 md:py-20 lg:py-24"
       aria-labelledby="services-heading"
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section header */}
         <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <p

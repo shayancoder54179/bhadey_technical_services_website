@@ -80,7 +80,7 @@ export function StatsBar() {
   return (
     <section
       ref={ref}
-      className="relative py-14 md:py-16 lg:py-20 overflow-hidden"
+      className="relative w-full py-14 md:py-16 lg:py-20 overflow-hidden bg-[#0A2540]"
       aria-label="Company statistics"
     >
       {/* Background: navy with subtle pattern */}
@@ -98,7 +98,7 @@ export function StatsBar() {
         }}
       />
 
-      <div className="relative container mx-auto px-4">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {STATS.map((stat) => {
             const Icon = stat.Icon as LucideIcon;

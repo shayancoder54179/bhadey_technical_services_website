@@ -29,7 +29,7 @@ export function CTASection() {
         aria-hidden
       />
 
-      <div className="relative container mx-auto px-4 text-center">
+      <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
         <h2
           id="cta-heading"
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-2xl mx-auto"

@@ -22,7 +22,7 @@ const itemFadeUp = {
 export function Hero() {
   return (
     <section
-      className="relative min-h-[auto] md:min-h-[100vh] overflow-hidden flex items-center justify-center"
+      className="relative min-h-[auto] w-full md:min-h-[100vh] overflow-hidden flex items-center justify-center bg-[#0A2540]"
       aria-label="Hero - Bhadeya Technical Services GPR Scanning Dubai UAE"
     >
       {/* Background: deep navy to dark blue gradient + dot pattern */}
@@ -50,7 +50,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative container mx-auto px-4 py-12 md:py-16 lg:py-20 flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-5rem)]">
+      <div className="relative mx-auto w-full max-w-7xl px-6 py-12 sm:px-8 md:py-16 lg:px-12 lg:py-20 xl:px-16 flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-5rem)]">
         <motion.header
           variants={containerVariants}
           initial="hidden"

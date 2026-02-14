@@ -86,7 +86,7 @@ export function WhyChooseUs() {
       className="bg-[#F8FAFC] py-16 md:py-20 lg:py-24"
       aria-labelledby="why-choose-us-heading"
     >
-      <div className="container mx-auto px-4">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Alternating layout: image placeholder left, content right */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12 xl:gap-16 mb-14 md:mb-16">
           {/* Image placeholder — left on desktop */}

@@ -79,7 +79,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
               backgroundSize: "48px 48px",
             }}
           />
-          <div className="relative container mx-auto px-4">
+          <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
             <header className="max-w-3xl">
               <h1
                 id="service-hero-title"
@@ -135,7 +135,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* Overview / What Is */}
         <section className="bg-white py-16 md:py-20 lg:py-24" aria-labelledby="overview-heading">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
             <h2 id="overview-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-6">
               {overview.title}
             </h2>
@@ -188,7 +188,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* Equipment */}
         <section className="bg-muted/40 py-16 md:py-20 lg:py-24" aria-labelledby="equipment-heading">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
             <h2 id="equipment-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               {equipment.title}
             </h2>
@@ -220,7 +220,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* Features / Benefits grid */}
         <section className="bg-white py-16 md:py-20 lg:py-24" aria-labelledby="features-heading">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
             <h2 id="features-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10">
               Features &amp; Benefits
             </h2>
@@ -246,7 +246,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* Applications */}
         <section className="bg-muted/40 py-16 md:py-20 lg:py-24" aria-labelledby="applications-heading">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
             <h2 id="applications-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10">
               Applications
             </h2>
@@ -268,7 +268,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* Process */}
         <section className="bg-white py-16 md:py-20 lg:py-24" aria-labelledby="process-heading">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
             <h2 id="process-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10">
               {process.title}
             </h2>
@@ -291,17 +291,19 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
         {/* AEO: People Also Ask style Q&A */}
         {peopleAlsoAsk && peopleAlsoAsk.length > 0 && (
           <section className="bg-white py-16 md:py-20 lg:py-24 border-t border-border" aria-labelledby="people-also-ask-heading">
-            <div className="container mx-auto px-4 max-w-3xl">
-              <h2 id="people-also-ask-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-8">
-                People Also Ask
-              </h2>
-              <div className="space-y-6">
-                {peopleAlsoAsk.map((item, i) => (
-                  <article key={i} className="border-b border-border pb-6 last:border-0 last:pb-0">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{item.question}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{item.answer}</p>
-                  </article>
-                ))}
+            <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+              <div className="max-w-3xl mx-auto">
+                <h2 id="people-also-ask-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+                  People Also Ask
+                </h2>
+                <div className="space-y-6">
+                  {peopleAlsoAsk.map((item, i) => (
+                    <article key={i} className="border-b border-border pb-6 last:border-0 last:pb-0">
+                      <h3 className="text-lg font-semibold text-foreground mb-2">{item.question}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{item.answer}</p>
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
@@ -310,8 +312,8 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
         {/* Optional: City-specific SEO paragraphs */}
         {seoParagraphs && seoParagraphs.length > 0 && (
           <section className="bg-muted/40 py-16 md:py-20 lg:py-24" aria-label="Service information by location">
-            <div className="container mx-auto px-4 max-w-3xl">
-              <div className="space-y-8 prose prose-lg text-muted-foreground max-w-none">
+            <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+              <div className="max-w-3xl mx-auto space-y-8 prose prose-lg text-muted-foreground max-w-none">
                 {seoParagraphs.map((block, i) => (
                   <div key={i}>
                     {block.title && (
@@ -330,7 +332,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* Related Services */}
         <section className="bg-white py-16 md:py-20 lg:py-24 border-t border-border" aria-labelledby="related-heading">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
             <h2 id="related-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-8">
               Related Services
             </h2>
@@ -368,7 +370,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
             }}
             aria-hidden
           />
-          <div className="relative container mx-auto px-4 text-center">
+          <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
             <h2 id="cta-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-2xl mx-auto">
               {ctaTitle}
             </h2>

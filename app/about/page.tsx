@@ -62,7 +62,7 @@ export default function AboutPage() {
             backgroundSize: "48px 48px",
           }}
         />
-        <div className="relative container mx-auto px-4">
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <header className="max-w-3xl">
             <h1
               id="about-hero-title"
@@ -83,7 +83,7 @@ export default function AboutPage() {
         className="bg-white py-16 md:py-20 lg:py-24"
         aria-labelledby="our-story-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <h2
@@ -141,7 +141,7 @@ export default function AboutPage() {
         className="bg-muted/50 py-16 md:py-20 lg:py-24"
         aria-labelledby="mission-values-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="mission-values-heading"
             className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center"
@@ -200,7 +200,7 @@ export default function AboutPage() {
         className="bg-white py-16 md:py-20 lg:py-24"
         aria-labelledby="equipment-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="equipment-heading"
             className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center"
@@ -258,7 +258,7 @@ export default function AboutPage() {
         className="bg-muted/50 py-16 md:py-20 lg:py-24"
         aria-labelledby="service-areas-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="service-areas-heading"
             className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center"
@@ -296,7 +296,7 @@ export default function AboutPage() {
         className="bg-white py-16 md:py-20 lg:py-24"
         aria-labelledby="why-choose-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="why-choose-heading"
             className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center"

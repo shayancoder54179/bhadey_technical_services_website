@@ -83,7 +83,7 @@ export default function ProjectsPage() {
             backgroundSize: "48px 48px",
           }}
         />
-        <div className="relative container mx-auto px-4">
+        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <header className="max-w-3xl">
             <h1
               id="projects-hero-title"
@@ -107,7 +107,7 @@ export default function ProjectsPage() {
         <h2 id="projects-grid-heading" className="sr-only">
           Filter and browse our project portfolio
         </h2>
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <ProjectsFilterGrid />
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function ProjectsPage() {
         className="bg-[#0A2540] py-8 md:py-10"
         aria-label="Portfolio statistics"
       >
-        <div className="container mx-auto px-4 text-center">
+        <div className="mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
           <p className="text-lg md:text-xl font-semibold text-white">
             500+ Projects | 5+ Years | 6+ Cities | Trusted by UAE&apos;s Best
           </p>
@@ -129,7 +129,7 @@ export default function ProjectsPage() {
         className="bg-muted/40 py-16 md:py-20"
         aria-labelledby="trusted-by-heading"
       >
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="trusted-by-heading"
             className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10"
@@ -169,7 +169,7 @@ export default function ProjectsPage() {
           }}
           aria-hidden
         />
-        <div className="relative container mx-auto px-4 text-center">
+        <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="cta-heading"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-2xl mx-auto"
