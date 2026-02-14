@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bhadeyatechnicalservices.com
+
+# Sitemaps
+Sitemap: https://bhadeyatechnicalservices.com/sitemap.xml
