@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://bhadeyatechnicalservices.com
+Host: https://www.bhadeya.com
 
 # Sitemaps
-Sitemap: https://bhadeyatechnicalservices.com/sitemap.xml
+Sitemap: https://www.bhadeya.com/sitemap.xml

@@ -30,7 +30,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.bhadeyatechnical.com"),
+  metadataBase: new URL("https://www.bhadeya.com"),
   title: {
     default:
       "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_AE",
-    url: "https://www.bhadeyatechnical.com",
+    url: "https://www.bhadeya.com",
     siteName: "Bhadeya Technical Services LLC",
     title:
       "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
     images: ["/images/bts_logo.png"],
   },
   alternates: {
-    canonical: "https://www.bhadeyatechnical.com",
+    canonical: "https://www.bhadeya.com",
   },
   verification: {
     google: "YOUR_GOOGLE_VERIFICATION_CODE",

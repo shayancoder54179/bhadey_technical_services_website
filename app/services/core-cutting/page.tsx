@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     "core cutting Abu Dhabi",
     "core cutting Sharjah",
   ],
-  alternates: { canonical: "https://www.bhadeyatechnical.com/services/core-cutting" },
+  alternates: { canonical: "https://www.bhadeya.com/services/core-cutting" },
   openGraph: {
     title: "Core Cutting Dubai & UAE | 12-500mm | Bhadeya Technical",
     description:
       "Diamond core cutting 12mm–500mm in Dubai, Abu Dhabi & UAE. GPR before every cut. Professional equipment.",
-    url: "https://www.bhadeyatechnical.com/services/core-cutting",
+    url: "https://www.bhadeya.com/services/core-cutting",
     type: "website",
   },
 };

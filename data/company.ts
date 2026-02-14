@@ -6,7 +6,7 @@ export const company = {
   phone: '+971 55 692 6286',
   phoneClean: '+971556926286',
   email: 'Bhadeyatechnical@gmail.com',
-  website: 'https://www.bhadeyatechnical.com',
+  website: 'https://www.bhadeya.com',
   foundingYear: 2019,
   yearsInBusiness: '5+',
   hours: {

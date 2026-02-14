@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     "utility trenching UAE",
     "foundation excavation Dubai",
   ],
-  alternates: { canonical: "https://www.bhadeyatechnical.com/services/excavation" },
+  alternates: { canonical: "https://www.bhadeya.com/services/excavation" },
   openGraph: {
     title: "Excavation Dubai & UAE | GPR-Guided | Bhadeya Technical",
     description:
       "Safe excavation with GPR-scanned zones in Dubai, Abu Dhabi & UAE. Site prep, trenching, foundations. 5+ years.",
-    url: "https://www.bhadeyatechnical.com/services/excavation",
+    url: "https://www.bhadeya.com/services/excavation",
     type: "website",
   },
 };

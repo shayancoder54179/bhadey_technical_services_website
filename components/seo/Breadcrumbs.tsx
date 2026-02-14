@@ -13,7 +13,7 @@ export interface BreadcrumbsProps {
  * Styled to be subtle but visible.
  */
 export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
-  const baseUrl = "https://www.bhadeyatechnical.com";
+  const baseUrl = "https://www.bhadeya.com";
   const schemaItems = items.map((item, i) => {
     const url = item.href.startsWith("http") ? item.href : `${baseUrl}${item.href}`;
     return {

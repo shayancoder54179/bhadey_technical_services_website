@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.bhadeyatechnical.com";
+  const baseUrl = "https://www.bhadeya.com";
 
   return [
     {
@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/services/gpr-scanning`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/concrete-scanning-gs8000`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,

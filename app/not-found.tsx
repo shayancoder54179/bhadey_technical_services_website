@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "The page you are looking for could not be found. Return to Bhadeya Technical Services homepage or contact us for GPR scanning and core cutting in UAE.",
   robots: { index: false, follow: true },
-  alternates: { canonical: "https://www.bhadeyatechnical.com/404" },
+  alternates: { canonical: "https://www.bhadeya.com/404" },
 };
 
 export default function NotFound() {

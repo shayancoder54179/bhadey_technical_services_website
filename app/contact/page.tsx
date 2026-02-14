@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     "Contact Us | Get Free GPR Scanning Quote | Bhadeya Technical Services UAE",
   description:
     "Contact Bhadeya Technical Services LLC for GPR scanning, core cutting & excavation quotes. Call +971 55 692 6286 or email Bhadeyatechnical@gmail.com. Serving Dubai, Abu Dhabi, Sharjah & UAE.",
-  alternates: { canonical: "https://www.bhadeyatechnical.com/contact" },
+  alternates: { canonical: "https://www.bhadeya.com/contact" },
   openGraph: {
     title: "Contact Us | Bhadeya Technical Services UAE",
     description:
       "Get a free quote for GPR scanning, core cutting & excavation. Call +971 55 692 6286. Serving Dubai, Abu Dhabi, Sharjah & UAE.",
-    url: "https://www.bhadeyatechnical.com/contact",
+    url: "https://www.bhadeya.com/contact",
     type: "website",
   },
 };

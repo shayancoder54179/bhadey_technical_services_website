@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     "NDT Dubai",
     "non destructive testing UAE",
   ],
-  alternates: { canonical: "https://www.bhadeyatechnical.com/services/concrete-scanning-gs8000" },
+  alternates: { canonical: "https://www.bhadeya.com/services/concrete-scanning-gs8000" },
   openGraph: {
     title: "Concrete Scanning Dubai | GS 8000 | Bhadeya Technical",
     description:
       "High-resolution concrete scanning with GS 8000 in Dubai, Abu Dhabi & UAE. Rebar detection, cover measurement, NDT.",
-    url: "https://www.bhadeyatechnical.com/services/concrete-scanning-gs8000",
+    url: "https://www.bhadeya.com/services/concrete-scanning-gs8000",
     type: "website",
   },
 };

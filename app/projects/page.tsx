@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     "Our Projects | GPR Scanning & Core Cutting Portfolio | Bhadeya Technical UAE",
   description:
     "View our portfolio of 500+ GPR scanning, core cutting, and excavation projects across UAE. Trusted by Dubai Mall, Emaar, ADNOC, Kempinski, Yas Mall, Mediclinic & more.",
-  alternates: { canonical: "https://www.bhadeyatechnical.com/projects" },
+  alternates: { canonical: "https://www.bhadeya.com/projects" },
   openGraph: {
     title: "Our Projects | Bhadeya Technical Services UAE",
     description:
       "Portfolio of 500+ GPR scanning and core cutting projects. Trusted by Dubai Mall, Emaar, ADNOC & more.",
-    url: "https://www.bhadeyatechnical.com/projects",
+    url: "https://www.bhadeya.com/projects",
     type: "website",
   },
 };

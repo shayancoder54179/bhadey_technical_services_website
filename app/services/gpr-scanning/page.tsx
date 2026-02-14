@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     "subsurface scanning UAE",
     "utility detection Dubai",
   ],
-  alternates: { canonical: "https://www.bhadeyatechnical.com/services/gpr-scanning" },
+  alternates: { canonical: "https://www.bhadeya.com/services/gpr-scanning" },
   openGraph: {
     title: "GPR Scanning Services Dubai & UAE | Proceq GP8000 | Bhadeya Technical",
     description:
       "Professional GPR scanning in Dubai, Abu Dhabi, Sharjah & UAE. 200cm depth, rebar & post-tension detection. Trusted by Dubai Mall, Emaar & ADNOC.",
-    url: "https://www.bhadeyatechnical.com/services/gpr-scanning",
+    url: "https://www.bhadeya.com/services/gpr-scanning",
     type: "website",
   },
 };

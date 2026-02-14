@@ -41,7 +41,7 @@ export function appendUTMParams(
   url: string,
   params: Partial<UTMParams>
 ): string {
-  const parsed = new URL(url, typeof window !== "undefined" ? window.location.origin : "https://www.bhadeyatechnical.com");
+  const parsed = new URL(url, typeof window !== "undefined" ? window.location.origin : "https://www.bhadeya.com");
   Object.entries(params).forEach(([key, value]) => {
     if (value) parsed.searchParams.set(key, value);
   });
