@@ -12,6 +12,8 @@ import {
   BackToTop,
   PageTransition,
 } from "@/components/layout";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const GA_MEASUREMENT_ID = "G-XXXXXXXXX";
 
@@ -158,6 +160,8 @@ export default function RootLayout({
         <WhatsAppButton />
         <CallButton />
         <BackToTop />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
