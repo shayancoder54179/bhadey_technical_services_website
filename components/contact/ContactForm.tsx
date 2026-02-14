@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { trackWhatsAppClick } from "@/lib/tracking";
+import { trackWhatsAppClick, trackFormSubmit } from "@/lib/tracking";
 import {
   Select,
   SelectContent,
@@ -121,6 +121,7 @@ ${message}
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
+    trackFormSubmit("contact_form");
     trackWhatsAppClick();
     window.open(whatsappURL, "_blank");
 

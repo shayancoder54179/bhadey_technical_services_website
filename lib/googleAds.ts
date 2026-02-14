@@ -1,118 +1,66 @@
+// ============================================
+// UTM & CAMPAIGN TRACKING UTILITIES
+// ============================================
+
 /**
- * Google Ads landing page optimization: UTM tracking, variant detection, conversion utilities.
+ * Get UTM parameters from current URL
  */
+export const getUTMParams = () => {
+  if (typeof window === "undefined") return {};
 
-const GOOGLE_ADS_ID = "AW-XXXXXXXXX";
-const GA_MEASUREMENT_ID = "G-6FWYL6PN3Q";
-
-export type UTMParams = {
-  utm_source?: string;
-  utm_medium?: string;
-  utm_campaign?: string;
-  utm_term?: string;
-  utm_content?: string;
+  const params = new URLSearchParams(window.location.search);
+  return {
+    utm_source: params.get("utm_source") || "",
+    utm_medium: params.get("utm_medium") || "",
+    utm_campaign: params.get("utm_campaign") || "",
+    utm_term: params.get("utm_term") || "",
+    utm_content: params.get("utm_content") || "",
+  };
 };
 
 /**
- * Get UTM parameters from the current URL (client-side).
+ * Check if user came from Google Ads
  */
-export function getUTMParams(): UTMParams {
-  if (typeof window === "undefined") return {};
-  const search = new URLSearchParams(window.location.search);
-  const params: UTMParams = {};
-  const keys: (keyof UTMParams)[] = [
-    "utm_source",
-    "utm_medium",
-    "utm_campaign",
-    "utm_term",
-    "utm_content",
-  ];
-  keys.forEach((key) => {
-    const value = search.get(key);
-    if (value) params[key] = value;
-  });
-  return params;
-}
-
-/**
- * Append UTM parameters to a URL (e.g. for share links or CTAs).
- */
-export function appendUTMParams(
-  url: string,
-  params: Partial<UTMParams>
-): string {
-  const parsed = new URL(url, typeof window !== "undefined" ? window.location.origin : "https://www.bhadeya.com");
-  Object.entries(params).forEach(([key, value]) => {
-    if (value) parsed.searchParams.set(key, value);
-  });
-  return parsed.toString();
-}
-
-/**
- * Detect if the user landed from a Google Ads campaign (has UTM params).
- */
-export function isGoogleAdsLanding(): boolean {
+export const isGoogleAdsLanding = () => {
   const params = getUTMParams();
   return (
-    params.utm_medium === "cpc" ||
-    params.utm_medium === "ppc" ||
-    (typeof params.utm_source === "string" &&
-      params.utm_source.toLowerCase() === "google")
+    params.utm_source === "google" &&
+    (params.utm_medium === "cpc" || params.utm_medium === "ppc")
   );
-}
+};
 
 /**
- * Get landing page variant from URL (e.g. ?variant=form or ?lp=quote).
- * Use for A/B testing or different landing experiences.
+ * Save UTM params to sessionStorage
  */
-export function getLandingPageVariant(): string | null {
-  if (typeof window === "undefined") return null;
-  const search = new URLSearchParams(window.location.search);
-  return search.get("variant") || search.get("lp") || null;
-}
-
-/**
- * Persist UTM params in sessionStorage for attribution across page views.
- */
-export function persistUTMParams(): void {
+export const persistUTMParams = () => {
   if (typeof window === "undefined") return;
+
   const params = getUTMParams();
-  if (Object.keys(params).length > 0) {
-    try {
-      sessionStorage.setItem("utm_params", JSON.stringify(params));
-    } catch {
-      // ignore
-    }
+  if (params.utm_source) {
+    sessionStorage.setItem("utm_params", JSON.stringify(params));
   }
-}
+};
 
 /**
- * Retrieve persisted UTM params (e.g. when sending form submission to backend).
+ * Get saved UTM params
  */
-export function getPersistedUTMParams(): UTMParams {
+export const getPersistedUTMParams = () => {
   if (typeof window === "undefined") return {};
-  try {
-    const raw = sessionStorage.getItem("utm_params");
-    if (raw) {
-      const parsed = JSON.parse(raw) as UTMParams;
-      return typeof parsed === "object" && parsed !== null ? parsed : {};
-    }
-  } catch {
-    // ignore
-  }
-  return {};
-}
+
+  const stored = sessionStorage.getItem("utm_params");
+  return stored ? JSON.parse(stored) : {};
+};
 
 /**
- * Google Ads conversion ID (for use in gtag config or server-side).
+ * Append UTM params to a URL
  */
-export function getGoogleAdsId(): string {
-  return GOOGLE_ADS_ID;
-}
-
-/**
- * GA Measurement ID (for analytics).
- */
-export function getGAMeasurementId(): string {
-  return GA_MEASUREMENT_ID;
-}
+export const appendUTMParams = (
+  baseUrl: string,
+  params: Record<string, string>
+) => {
+  const url = new URL(baseUrl);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value) url.searchParams.set(key, value);
+  });
+  return url.toString();
+};
