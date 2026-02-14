@@ -33,10 +33,10 @@ export default function NotFound() {
           <Link href="/" className="mb-8 inline-block">
             <Image
               src="/images/bts_logo.png"
-              alt="Bhadeya Technical Services LLC"
+              alt="Bhadeya Technical Services LLC - GPR scanning and diamond core cutting Dubai UAE"
               width={200}
               height={70}
-              className="h-14 w-auto md:h-16"
+              className="h-14 w-auto md:h-16 object-contain"
             />
           </Link>
           <p className="text-6xl sm:text-7xl font-bold text-[#0066FF]/30 mb-2">

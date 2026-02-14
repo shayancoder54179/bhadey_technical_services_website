@@ -46,7 +46,7 @@ const gprPageData: ServicePageData = {
     ctaSecondaryHref: "tel:+971556926286",
     image: {
       src: "/images/7272030 (1).jpg",
-      alt: "Technician performing GPR scanning on concrete with Proceq equipment",
+      alt: "Professional GPR scanning service in Dubai using Proceq GP8000 ground penetrating radar for rebar detection and subsurface scanning in UAE",
     },
   },
   overview: {
@@ -115,11 +115,11 @@ const gprPageData: ServicePageData = {
     { title: "Structural integrity evaluation" },
   ],
   galleryImages: [
-    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.37.jpeg", alt: "Technician scanning ceiling with GPR device" },
-    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.38.jpeg", alt: "Grid and coordinate marking for GPR scan area" },
-    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.39 (2).jpeg", alt: "Core-drilled hole and scan markings on concrete" },
-    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.39.jpeg", alt: "Concrete surface with GPR scan markings" },
-    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.40.jpeg", alt: "Proceq GPR data and equipment on site" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.37.jpeg", alt: "Bhadeya Technical Services GPR scanning at construction site Dubai - technician using ground penetrating radar on ceiling" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.38.jpeg", alt: "GPR scanning grid and coordinate marking for subsurface scanning rebar detection UAE" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.39 (2).jpeg", alt: "Ground penetrating radar scan markings and core-drilled hole on concrete slab Dubai project" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.39.jpeg", alt: "Concrete surface with GPR scanning markings for rebar detection Dubai UAE" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.40.jpeg", alt: "Proceq GP8000 GPR scanner detecting subsurface utilities at construction site UAE" },
   ],
   galleryTitle: "GPR Scanning in Action",
   process: {

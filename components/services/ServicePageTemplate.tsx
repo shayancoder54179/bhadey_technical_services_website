@@ -148,6 +148,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
                     height={500}
                     className="w-full h-auto object-cover"
                     sizes="(max-width: 1024px) 100vw, 42vw"
+                    priority={true}
                   />
                 </div>
               )}
@@ -329,6 +330,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
                     />
                   </div>
                 ))}

@@ -101,11 +101,12 @@ export function WhyChooseUs() {
           >
             <Image
               src="/images/7272030 (1).jpg"
-              alt="Bhadeya technician performing GPR scanning on concrete structure"
+              alt="Bhadeya Technical Services LLC professional team - GPR scanning experts at work in Dubai UAE ground penetrating radar"
               width={800}
               height={600}
               className="w-full h-full object-cover"
               sizes="(max-width: 1024px) 100vw, 45vw"
+              loading="lazy"
             />
           </motion.div>
 

@@ -62,7 +62,7 @@ const coreCuttingData: ServicePageData = {
     ctaSecondaryHref: "tel:+971556926286",
     image: {
       src: "/images/diamond-core-cutting-service-1024x688.png",
-      alt: "Diamond core cutting service for concrete and masonry",
+      alt: "Diamond core cutting service in Dubai by Bhadeya Technical Services - professional concrete cutting UAE",
     },
   },
   overview: {
@@ -130,9 +130,9 @@ const coreCuttingData: ServicePageData = {
     { title: "Structural modifications" },
   ],
   galleryImages: [
-    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.41 (1).jpeg", alt: "Core drill bit cutting into concrete with wet drilling" },
-    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.42.jpeg", alt: "Concrete core samples and drilled holes after core cutting" },
-    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.43.jpeg", alt: "Technician operating core drilling machine on concrete" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.41 (1).jpeg", alt: "Diamond core cutting in Dubai - core drill bit cutting into concrete slab UAE construction project" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.42.jpeg", alt: "Professional concrete core cutting Dubai - core samples and drilled holes by Bhadeya Technical Services UAE" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.43.jpeg", alt: "Core cutting service UAE - technician operating diamond core drilling machine on concrete Dubai" },
   ],
   galleryTitle: "Core Cutting in Action",
   process: {

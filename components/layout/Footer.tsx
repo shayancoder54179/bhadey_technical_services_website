@@ -36,10 +36,11 @@ export function Footer() {
               <div className="bg-white rounded-xl p-3 inline-block mb-4">
                 <Image
                   src="/images/bts_logo.png"
-                  alt="Bhadeya Technical Services LLC"
+                  alt="Bhadeya Technical Services LLC - GPR scanning core cutting excavation Dubai UAE"
                   width={220}
                   height={80}
                   className="h-16 w-auto object-contain"
+                  loading="lazy"
                 />
               </div>
               <span className="mt-2 block text-sm font-semibold uppercase tracking-tight text-white">

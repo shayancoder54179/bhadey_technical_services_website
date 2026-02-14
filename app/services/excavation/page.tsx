@@ -43,7 +43,7 @@ const excavationData: ServicePageData = {
     ctaSecondaryHref: "tel:+971556926286",
     image: {
       src: "/images/tenweb_media_sb87wloxc.webp",
-      alt: "Excavation and ground works with GPR-guided safety",
+      alt: "Professional excavation services in Dubai UAE - safe GPR-guided excavation at construction site by Bhadeya Technical Services",
     },
   },
   overview: {

@@ -81,7 +81,7 @@ export function Header() {
         >
           <Image
             src="/images/bts_logo.png"
-            alt="Bhadeya Technical Services LLC - GPR Scanning & Core Cutting UAE"
+            alt="Bhadeya Technical Services LLC - GPR scanning diamond core cutting excavation Dubai UAE"
             width={180}
             height={60}
             priority={true}
@@ -221,10 +221,11 @@ export function Header() {
                 <div className="bg-white rounded-lg p-1.5 shadow-sm inline-block">
                   <Image
                     src="/images/bts_logo.png"
-                    alt="Bhadeya Technical Services LLC"
+                    alt="Bhadeya Technical Services LLC - GPR scanning core cutting Dubai UAE"
                     width={180}
                     height={60}
                     className="h-12 w-auto object-contain"
+                    loading="lazy"
                   />
                 </div>
               </Link>
