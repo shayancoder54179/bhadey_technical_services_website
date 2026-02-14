@@ -197,7 +197,7 @@ export function Header() {
             size="default"
             className="bg-[var(--color-accent-orange)] font-semibold text-white hover:bg-[var(--color-accent-orange)]/90"
           >
-            <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick()}>
+            <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("header")}>
               Get Free Quote
             </Link>
           </Button>
@@ -298,7 +298,7 @@ export function Header() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => { setMobileOpen(false); trackWhatsAppClick("header"); }}
                 >
                   Get Free Quote
                 </Link>

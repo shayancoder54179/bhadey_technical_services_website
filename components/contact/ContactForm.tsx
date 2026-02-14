@@ -122,7 +122,7 @@ ${message}
     const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
     trackFormSubmit("contact_form");
-    trackWhatsAppClick();
+    trackWhatsAppClick("contact_form");
     window.open(whatsappURL, "_blank");
 
     setForm(initialFormState);

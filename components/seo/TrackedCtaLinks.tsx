@@ -41,14 +41,15 @@ interface WhatsAppLinkProps {
   href: string;
   children: React.ReactNode;
   className?: string;
+  source?: string;
   [key: string]: unknown;
 }
 
-export function WhatsAppLink({ href, children, className, ...props }: WhatsAppLinkProps) {
+export function WhatsAppLink({ href, children, className, source, ...props }: WhatsAppLinkProps) {
   return (
     <a
       href={href}
-      onClick={() => trackWhatsAppClick()}
+      onClick={() => trackWhatsAppClick(source)}
       target="_blank"
       rel="noopener noreferrer"
       className={className}

@@ -14,7 +14,7 @@ export function WhatsAppButton() {
   return (
     <Link
       href={whatsappUrl}
-      onClick={() => trackWhatsAppClick()}
+      onClick={() => trackWhatsAppClick("floating_button")}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-40 flex size-12 items-center justify-center rounded-full shadow-lg transition-transform hover:scale-105 md:bottom-8 md:right-8 md:size-14"

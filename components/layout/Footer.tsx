@@ -77,6 +77,7 @@ export function Footer() {
               </div>
               <WhatsAppLink
                 href={whatsappUrl}
+                source="footer"
                 className="inline-flex items-center gap-2 text-sm text-[#25D366] transition-colors hover:underline"
                 aria-label="Chat with us on WhatsApp"
               >
