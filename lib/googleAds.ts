@@ -3,7 +3,7 @@
  */
 
 const GOOGLE_ADS_ID = "AW-XXXXXXXXX";
-const GA_MEASUREMENT_ID = "G-XXXXXXXXX";
+const GA_MEASUREMENT_ID = "G-WRBXL8Z119";
 
 export type UTMParams = {
   utm_source?: string;
