@@ -185,7 +185,7 @@ export function Header() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={`tel:${company.phoneClean}`}
-            onClick={trackPhoneClick}
+            onClick={() => trackPhoneClick(company.phoneClean)}
             className="flex items-center gap-2 text-sm font-medium text-[var(--color-primary-navy)] transition-colors hover:text-[var(--color-accent-orange)]"
             aria-label={`Call us: ${company.phone}`}
           >
@@ -197,7 +197,7 @@ export function Header() {
             size="default"
             className="bg-[var(--color-accent-orange)] font-semibold text-white hover:bg-[var(--color-accent-orange)]/90"
           >
-            <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppClick}>
+            <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick()}>
               Get Free Quote
             </Link>
           </Button>

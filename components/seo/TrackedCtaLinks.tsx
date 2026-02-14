@@ -16,7 +16,7 @@ interface GetQuoteLinkProps {
 
 export function GetQuoteLink({ href, children, className, ...props }: GetQuoteLinkProps) {
   return (
-    <Link href={href} onClick={trackGetQuoteClick} className={className} {...props}>
+    <Link href={href} onClick={() => trackGetQuoteClick()} className={className} {...props}>
       {children}
     </Link>
   );
@@ -31,7 +31,7 @@ interface PhoneLinkProps {
 
 export function PhoneLink({ href, children, className, ...props }: PhoneLinkProps) {
   return (
-    <a href={href} onClick={trackPhoneClick} className={className} {...props}>
+    <a href={href} onClick={() => trackPhoneClick()} className={className} {...props}>
       {children}
     </a>
   );
@@ -48,7 +48,7 @@ export function WhatsAppLink({ href, children, className, ...props }: WhatsAppLi
   return (
     <a
       href={href}
-      onClick={trackWhatsAppClick}
+      onClick={() => trackWhatsAppClick()}
       target="_blank"
       rel="noopener noreferrer"
       className={className}
