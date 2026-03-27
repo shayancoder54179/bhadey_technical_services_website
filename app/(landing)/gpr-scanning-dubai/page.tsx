@@ -41,6 +41,11 @@ function MinimalHeader() {
         zIndex: 50,
       }}
     >
+      <style>{`
+        @media (max-width: 480px) {
+          .header-logo { width: 130px !important; height: auto !important; }
+        }
+      `}</style>
       <div
         style={{
           maxWidth: 1100,
@@ -59,6 +64,7 @@ function MinimalHeader() {
             alt="Bhadeya Technical Services"
             width={180}
             height={52}
+            className="header-logo"
             style={{ objectFit: "contain" }}
             priority
           />
@@ -840,7 +846,7 @@ function Equipment() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
             gap: 48,
             alignItems: "start",
           }}
@@ -1755,36 +1761,14 @@ function FooterStrip() {
         }}
       >
         {/* Brand */}
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <div
-            style={{
-              width: 28,
-              height: 28,
-              background: `linear-gradient(135deg, ${C.gold} 0%, #B8860B 100%)`,
-              borderRadius: 6,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontFamily: font.barlow,
-              fontWeight: 800,
-              fontSize: 14,
-              color: C.bg,
-              flexShrink: 0,
-            }}
-          >
-            B
-          </div>
-          <span
-            style={{
-              fontFamily: font.barlow,
-              fontWeight: 700,
-              fontSize: 14,
-              color: C.muted,
-              letterSpacing: "0.04em",
-            }}
-          >
-            BHADEYA TECHNICAL SERVICES L.L.C
-          </span>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Image
+            src="/images/bts_logo.png"
+            alt="Bhadeya Technical Services"
+            width={140}
+            height={40}
+            style={{ objectFit: "contain" }}
+          />
         </div>
 
         {/* Links */}

@@ -66,8 +66,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/bts_logo.png",
-    apple: "/images/bts_logo.png",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
   },
   openGraph: {
     type: "website",
