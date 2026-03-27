@@ -451,7 +451,7 @@ const FEATURES = [
       </svg>
     ),
     title: "7+ Years, 500+ Projects",
-    body: "From high-rises in Downtown Dubai to industrial facilities in Sharjah — our team has delivered accurate scans across every major sector in the UAE.",
+    body: "From high-rises in Downtown Dubai to industrial facilities in Sharjah — our team has delivered accurate concrete scanning services across every major sector in the UAE.",
   },
 ];
 
@@ -1358,7 +1358,7 @@ function ServiceAreas() {
 const FAQS = [
   {
     q: "What is GPR scanning and why do I need it?",
-    a: "Ground Penetrating Radar (GPR) sends radar pulses into concrete and maps what's inside — rebar, post-tension cables, conduits, voids. Before drilling, cutting, or coring any concrete element, a GPR scan tells you exactly where hidden hazards are so you can avoid them. It prevents structural damage, utility strikes, and — most importantly — injuries.",
+    a: "Ground Penetrating Radar (GPR) sends radar pulses into concrete and maps what's inside — rebar, post-tension cables, conduits, voids. Before drilling, cutting, or coring any concrete element, a GPR survey in Dubai tells you exactly where hidden hazards are so you can avoid them. It prevents structural damage, utility strikes, and — most importantly — injuries.",
   },
   {
     q: "How long does a typical scan take on-site?",
