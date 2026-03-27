@@ -111,13 +111,35 @@ function Hero() {
         padding: "60px 20px 80px",
       }}
     >
+      <style>{`
+        .hero-grid {
+          grid-template-columns: 1fr 420px;
+          gap: 60px;
+        }
+        .hero-form {
+          position: sticky;
+          top: 80px;
+        }
+        @media (max-width: 767px) {
+          .hero-grid {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
+          .hero-form {
+            position: static !important;
+          }
+          .hero-wa-btn {
+            background: linear-gradient(135deg, #D4A017 0%, #B8860B 100%) !important;
+            color: #060B14 !important;
+          }
+        }
+      `}</style>
       <div
+        className="hero-grid"
         style={{
           maxWidth: 1100,
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: "1fr 420px",
-          gap: 60,
           alignItems: "start",
         }}
       >
@@ -237,6 +259,7 @@ function Hero() {
           <WhatsAppLink
             href="https://wa.me/971556926286?text=Hi%2C%20I%27d%20like%20a%20free%20GPR%20scanning%20quote."
             source="landing_hero"
+            className="hero-wa-btn"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -261,13 +284,12 @@ function Hero() {
 
         {/* Right: lead form */}
         <div
+          className="hero-form"
           style={{
             background: C.card,
             border: `1px solid ${C.border}`,
             borderRadius: 16,
             padding: "36px 32px",
-            position: "sticky",
-            top: 80,
           }}
         >
           <p
