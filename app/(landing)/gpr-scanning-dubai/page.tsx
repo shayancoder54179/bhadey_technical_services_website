@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { LeadForm } from "./LeadForm";
 import { PhoneLink } from "@/components/seo/TrackedCtaLinks";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export const metadata: Metadata = {
   title: "GPR Scanning Dubai | Same-Day Service | Bhadeya Technical",
@@ -238,6 +239,7 @@ function Hero() {
             href="https://wa.me/971556926286?text=Hi%2C%20I%27d%20like%20a%20free%20GPR%20scanning%20quote."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("landing_hero")}
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -1649,6 +1651,7 @@ function FinalCta() {
             href="https://wa.me/971556926286?text=Hi%2C%20I%27d%20like%20a%20free%20GPR%20scanning%20quote."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("landing_cta")}
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -1887,6 +1890,7 @@ function StickyMobileBar() {
           href="https://wa.me/971556926286?text=Hi%2C%20I%27d%20like%20a%20free%20GPR%20scanning%20quote."
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick("landing_sticky_bar")}
           style={{
             flex: 2,
             display: "flex",
