@@ -2,15 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { JsonLd } from "@/components/seo/JsonLd";
-import {
-  Header,
-  Footer,
-  WhatsAppButton,
-  CallButton,
-  BackToTop,
-  PageTransition,
-} from "@/components/layout";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -145,18 +136,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${plusJakartaSans.variable} overflow-x-hidden font-sans antialiased`}
       >
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
-        <JsonLd />
-        <Header />
-        <main id="main-content" className="min-h-screen pt-20" tabIndex={-1}>
-          <PageTransition>{children}</PageTransition>
-        </main>
-        <Footer />
-        <WhatsAppButton />
-        <CallButton />
-        <BackToTop />
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>
