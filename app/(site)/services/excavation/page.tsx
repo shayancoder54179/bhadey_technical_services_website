@@ -85,7 +85,7 @@ const excavationData: ServicePageData = {
     description:
       "We combine modern excavation machinery with GPR scanning technology. Before any excavation we use our Proceq GP8000 GPR to map the subsurface. Our operators are trained in safe digging practices and we follow UAE safety standards. This integrated approach—GPR first, then controlled excavation—delivers safe, efficient results across Dubai, Abu Dhabi and the UAE.",
     specs: [
-      { label: "GPR depth", value: "Up to 200 cm" },
+      { label: "GPR depth", value: "Up to 500 cm" },
       { label: "Experience", value: "7+ years" },
       { label: "Coverage", value: "All UAE" },
     ],

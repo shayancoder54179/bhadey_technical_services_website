@@ -5,15 +5,15 @@ export const services = [
     id: 'gpr-scanning',
     title: 'GPR Scanning',
     fullTitle: 'Ground Penetrating Radar (GPR) Scanning',
-    shortDescription: 'Non-destructive subsurface scanning using Proceq GP8000 technology with up to 200cm depth detection.',
-    overviewHighlight: '200cm Depth | Proceq GP8000',
+    shortDescription: 'Non-destructive subsurface scanning using Proceq GP8000 technology with up to 500cm depth detection.',
+    overviewHighlight: '500cm Depth | Proceq GP8000',
     overviewFeatures: ['Rebar detection', 'Post-tension cables', 'Utility mapping', '3D visualization'],
     iconColor: 'blue' as ServiceIconColor,
     longDescription: 'Our GPR scanning service uses the industry-leading Proceq GP8000 ground penetrating radar system to detect and map subsurface objects including rebar, post-tension cables, conduits, voids, and utilities before any concrete cutting or drilling operations. This non-destructive testing method ensures maximum safety and prevents costly damage to embedded structures.',
     icon: 'Radar', // lucide icon name
     slug: 'gpr-scanning',
     features: [
-      'Maximum scanning depth of 200cm',
+      'Maximum scanning depth of 500cm',
       'Real-time 3D visualization of subsurface structures',
       'Detection of rebar, post-tension cables, conduits & voids',
       'Non-destructive and completely safe',
@@ -23,7 +23,7 @@ export const services = [
       'Compliance with UAE construction safety standards'
     ],
     equipment: 'Proceq GP8000',
-    equipmentDescription: 'The Proceq GP8000 is a state-of-the-art ground penetrating radar that provides real-time 3D visualization of concrete structures, enabling accurate detection of embedded objects at depths up to 200cm.',
+    equipmentDescription: 'The Proceq GP8000 is a state-of-the-art ground penetrating radar that provides real-time 3D visualization of concrete structures, enabling accurate detection of embedded objects at depths up to 500cm.',
     benefits: [
       'Prevent hitting rebar and post-tension cables',
       'Avoid costly utility damage',
@@ -43,7 +43,7 @@ export const services = [
       'Structural integrity evaluation'
     ],
     stats: {
-      depth: '200cm',
+      depth: '500cm',
       accuracy: '±5mm',
       technology: 'Proceq GP8000'
     }

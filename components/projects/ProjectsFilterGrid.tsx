@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -81,15 +82,31 @@ export function ProjectsFilterGrid() {
               variants={cardVariants}
               layout
               className={cn(
-                "group relative rounded-xl overflow-hidden p-5 min-h-[140px]",
-                "bg-gradient-to-br shadow-sm",
+                "group relative rounded-xl overflow-hidden min-h-[140px]",
+                "shadow-sm",
                 "transition-all duration-300 ease-out",
                 "hover:scale-[1.02] hover:shadow-lg",
-                CATEGORY_GRADIENTS[project.category] ??
-                  "from-slate-600/90 to-slate-700/90"
+                !project.image && cn(
+                  "bg-gradient-to-br",
+                  CATEGORY_GRADIENTS[project.category] ?? "from-slate-600/90 to-slate-700/90"
+                )
               )}
             >
-              {/* Hover gradient overlay */}
+              {/* Background: image with dark overlay OR fallback gradient */}
+              {project.image ? (
+                <>
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" aria-hidden />
+                </>
+              ) : null}
+
+              {/* Hover overlay */}
               <div
                 className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none"
                 aria-hidden
@@ -97,7 +114,7 @@ export function ProjectsFilterGrid() {
 
               {project.featured && (
                 <span
-                  className="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-white/25 px-2 py-1 text-xs font-semibold text-white"
+                  className="absolute top-3 right-3 z-10 flex items-center gap-1 rounded-full bg-white/25 px-2 py-1 text-xs font-semibold text-white"
                   aria-label="Featured project"
                 >
                   <Star className="size-3.5 fill-current" aria-hidden />
@@ -105,22 +122,25 @@ export function ProjectsFilterGrid() {
                 </span>
               )}
 
-              <h3 className="text-base md:text-lg font-bold text-white mb-2 pr-12">
-                {project.name}
-              </h3>
-              <Badge
-                variant="secondary"
-                className="mb-3 w-fit text-xs font-medium bg-white/25 text-white border-white/30"
-              >
-                {project.category}
-              </Badge>
-              <p className="flex items-center gap-1.5 text-sm text-white/90">
-                <MapPin
-                  className="size-4 shrink-0 text-white/80"
-                  aria-hidden
-                />
-                {project.location}
-              </p>
+              {/* Content */}
+              <div className="relative z-10 p-5 flex flex-col justify-end min-h-[140px]">
+                <h3 className="text-base md:text-lg font-bold text-white mb-2 pr-12">
+                  {project.name}
+                </h3>
+                <Badge
+                  variant="secondary"
+                  className="mb-3 w-fit text-xs font-medium bg-white/25 text-white border-white/30"
+                >
+                  {project.category}
+                </Badge>
+                <p className="flex items-center gap-1.5 text-sm text-white/90">
+                  <MapPin
+                    className="size-4 shrink-0 text-white/80"
+                    aria-hidden
+                  />
+                  {project.location}
+                </p>
+              </div>
             </motion.article>
           ))}
         </AnimatePresence>

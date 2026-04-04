@@ -34,9 +34,9 @@ const FEATURES = [
     Icon: ShieldCheck,
   },
   {
-    title: "200cm Scanning Depth",
+    title: "500cm Scanning Depth",
     description:
-      "Our Proceq GP8000 achieves up to 200cm scanning depth, detecting deep-embedded utilities, post-tension cables, and structures that other scanners miss.",
+      "Our Proceq GP8000 achieves up to 500cm scanning depth, detecting deep-embedded utilities, post-tension cables, and structures that other scanners miss.",
     Icon: ArrowDownToLine,
   },
   {

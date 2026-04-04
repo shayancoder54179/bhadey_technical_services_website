@@ -78,7 +78,7 @@ export function Hero() {
             className="text-base sm:text-lg text-white/85 max-w-[700px] leading-relaxed mx-auto"
           >
             Protect your structure before you cut. We use Proceq GP8000
-            technology for precise subsurface detection up to 200cm depth.
+            technology for precise subsurface detection up to 500cm depth.
             Serving Dubai, Abu Dhabi, Sharjah & across UAE.
           </motion.p>
 

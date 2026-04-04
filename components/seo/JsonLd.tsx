@@ -50,7 +50,7 @@ const localBusinessSchema = {
           "@type": "Service",
           name: "GPR Scanning",
           description:
-            "Ground Penetrating Radar scanning using Proceq GP8000 with up to 200cm depth",
+            "Ground Penetrating Radar scanning using Proceq GP8000 with up to 500cm depth",
           url: `${BASE_URL}/services/gpr-scanning`,
         },
       },
@@ -136,7 +136,7 @@ const faqPageSchema = {
       name: "How deep can GPR scanning detect?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our Proceq GP8000 GPR system can detect subsurface features up to 200cm (2 meters) deep, depending on the material composition and conditions. For concrete slabs, typical detection depth is 40-80cm.",
+        text: "Our Proceq GP8000 GPR system can detect subsurface features up to 500cm (5 meters) deep, depending on the material composition and conditions. For concrete slabs, typical detection depth is 40-80cm.",
       },
     },
     {
@@ -209,7 +209,7 @@ const serviceSchemas = [
     "@type": "Service",
     name: "GPR Scanning",
     description:
-      "Ground Penetrating Radar scanning using Proceq GP8000 for subsurface imaging, rebar detection, utility mapping, and post-tension cable location up to 200cm depth.",
+      "Ground Penetrating Radar scanning using Proceq GP8000 for subsurface imaging, rebar detection, utility mapping, and post-tension cable location up to 500cm depth.",
     provider: {
       "@type": "LocalBusiness",
       name: "Bhadeya Technical Services LLC",

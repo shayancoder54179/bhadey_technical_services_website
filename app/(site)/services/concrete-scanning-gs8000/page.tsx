@@ -170,7 +170,7 @@ const concreteScanningData: ServicePageData = {
       {
         question: "What is the difference between GPR scanning and concrete scanning with GS 8000?",
         answer:
-          "Both are non-destructive. GPR with the Proceq GP8000 offers deeper penetration (up to 200cm) and is ideal for deep utilities and ground scanning. The GS 8000 is optimised for concrete—delivering high-resolution rebar mapping, cover measurement and embedded object detection within concrete elements. We recommend the best option based on your project.",
+          "Both are non-destructive. GPR with the Proceq GP8000 offers deeper penetration (up to 500cm) and is ideal for deep utilities and ground scanning. The GS 8000 is optimised for concrete—delivering high-resolution rebar mapping, cover measurement and embedded object detection within concrete elements. We recommend the best option based on your project.",
       },
       {
         question: "When should I use concrete scanning instead of GPR?",
@@ -219,7 +219,7 @@ function GPRVsConcreteComparison() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Best for: <strong className="text-foreground">Deep penetration</strong>, utility locating, ground and slab scanning. Detects rebar, post-tension cables, conduits and voids <strong className="text-foreground">up to 200cm depth</strong>.
+                Best for: <strong className="text-foreground">Deep penetration</strong>, utility locating, ground and slab scanning. Detects rebar, post-tension cables, conduits and voids <strong className="text-foreground">up to 500cm depth</strong>.
               </p>
               <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
                 <li>Pre-core cutting and drilling</li>

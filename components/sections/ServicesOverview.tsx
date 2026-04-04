@@ -75,8 +75,8 @@ export function ServicesOverview() {
           </p>
         </header>
 
-        {/* Service cards — 3 columns on desktop, single column mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-14 md:mb-16">
+        {/* Service cards — 2x2 grid on desktop, single column mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-14 md:mb-16">
           {(services as ServiceItem[]).map((service, index) => {
             const IconComponent =
               ICON_MAP[service.icon as keyof typeof ICON_MAP] ?? Radar;

@@ -5,7 +5,7 @@ export const faqs = [
   },
   {
     question: 'How deep can your GPR scanner detect objects?',
-    answer: 'Our Proceq GP8000 GPR scanner can detect objects at depths up to 200cm (2 meters). This industry-leading depth capability allows us to identify deep-embedded utilities, post-tension cables, rebar, voids, and other subsurface structures with high accuracy.'
+    answer: 'Our Proceq GP8000 GPR scanner can detect objects at depths up to 500cm (5 meters). This industry-leading depth capability allows us to identify deep-embedded utilities, post-tension cables, rebar, voids, and other subsurface structures with high accuracy.'
   },
   {
     question: 'What sizes of core holes can you cut?',

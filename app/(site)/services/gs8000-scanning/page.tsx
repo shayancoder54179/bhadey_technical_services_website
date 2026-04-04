@@ -283,7 +283,7 @@ function ComparisonSection() {
                 },
                 {
                   feature: "Max Depth",
-                  gp: "200cm in concrete",
+                  gp: "500cm in concrete",
                   gs: "10m underground",
                 },
                 {

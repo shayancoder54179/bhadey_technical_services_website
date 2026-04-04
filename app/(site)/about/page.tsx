@@ -217,7 +217,7 @@ export default function AboutPage() {
               <CardContent className="space-y-2">
                 <ul className="text-muted-foreground text-sm space-y-1" role="list">
                   <li>• Industry-leading GPR scanner</li>
-                  <li>• 200cm maximum depth</li>
+                  <li>• 500cm maximum depth</li>
                   <li>• Real-time 3D visualization</li>
                   <li>• Used for GPR Scanning</li>
                 </ul>

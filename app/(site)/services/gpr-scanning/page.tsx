@@ -5,7 +5,7 @@ import type { ServicePageData } from "@/lib/service-page-types";
 export const metadata: Metadata = {
   title: "GPR Scanning Services Dubai & UAE | Ground Penetrating Radar | Proceq GP8000",
   description:
-    "Professional GPR scanning services in Dubai, Abu Dhabi, Sharjah & UAE. Using Proceq GP8000 with 200cm depth detection. Rebar detection, post-tension cable locating, utility mapping. Trusted by Dubai Mall, Emaar & ADNOC. Get free quote!",
+    "Professional GPR scanning services in Dubai, Abu Dhabi, Sharjah & UAE. Using Proceq GP8000 with 500cm depth detection. Rebar detection, post-tension cable locating, utility mapping. Trusted by Dubai Mall, Emaar & ADNOC. Get free quote!",
   keywords: [
     "GPR scanning Dubai",
     "GPR scanning UAE",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GPR Scanning Services Dubai & UAE | Proceq GP8000 | Bhadeya Technical",
     description:
-      "Professional GPR scanning in Dubai, Abu Dhabi, Sharjah & UAE. 200cm depth, rebar & post-tension detection. Trusted by Dubai Mall, Emaar & ADNOC.",
+      "Professional GPR scanning in Dubai, Abu Dhabi, Sharjah & UAE. 500cm depth, rebar & post-tension detection. Trusted by Dubai Mall, Emaar & ADNOC.",
     url: "https://www.bhadeya.com/services/gpr-scanning",
     type: "website",
   },
@@ -35,9 +35,9 @@ const gprPageData: ServicePageData = {
   hero: {
     title: "Professional GPR Scanning Services in Dubai & UAE",
     subtitle:
-      "Ground Penetrating Radar (GPR) scanning using the industry-leading Proceq GP8000. Detect rebar, post-tension cables, utilities and voids up to 200cm depth—non-destructively and with full reporting. Trusted by Dubai Mall, Emaar and ADNOC.",
+      "Ground Penetrating Radar (GPR) scanning using the industry-leading Proceq GP8000. Detect rebar, post-tension cables, utilities and voids up to 500cm depth—non-destructively and with full reporting. Trusted by Dubai Mall, Emaar and ADNOC.",
     stats: [
-      { value: "200cm", label: "Max scanning depth" },
+      { value: "500cm", label: "Max scanning depth" },
       { value: "Proceq GP8000", label: "Technology" },
     ],
     ctaPrimaryLabel: "Get Free Quote",
@@ -85,9 +85,9 @@ const gprPageData: ServicePageData = {
     title: "Equipment We Use",
     name: "Proceq GP8000",
     description:
-      "The Proceq GP8000 is a state-of-the-art ground penetrating radar system that provides real-time 3D visualization of concrete and subsurface structures. It enables accurate detection of rebar, post-tension cables, conduits, voids and utilities at depths up to 200cm, with high resolution and reliability. Used by leading contractors and consultants worldwide, the GP8000 is the gold standard for GPR scanning in the UAE.",
+      "The Proceq GP8000 is a state-of-the-art ground penetrating radar system that provides real-time 3D visualization of concrete and subsurface structures. It enables accurate detection of rebar, post-tension cables, conduits, voids and utilities at depths up to 500cm, with high resolution and reliability. Used by leading contractors and consultants worldwide, the GP8000 is the gold standard for GPR scanning in the UAE.",
     specs: [
-      { label: "Max depth", value: "200 cm" },
+      { label: "Max depth", value: "500 cm" },
       { label: "Technology", value: "Ground Penetrating Radar" },
       { label: "Output", value: "Real-time 3D imaging" },
       { label: "Applications", value: "Concrete, asphalt, ground" },
@@ -96,7 +96,7 @@ const gprPageData: ServicePageData = {
       "The Proceq GP8000 offers industry-leading depth and clarity. Its real-time 3D visualization helps our team and your engineers make fast, confident decisions on-site. We chose the GP8000 to deliver the highest quality GPR scanning services in Dubai and the UAE.",
   },
   features: [
-    { title: "200cm maximum scanning depth", description: "Detect deep-embedded utilities and post-tension cables." },
+    { title: "500cm maximum scanning depth", description: "Detect deep-embedded utilities and post-tension cables." },
     { title: "Real-time 3D visualization", description: "See subsurface structures as we scan." },
     { title: "Rebar, PT cables & conduit detection", description: "Accurate mapping of all critical embedded elements." },
     { title: "Non-destructive and safe", description: "No damage to the structure; safe for occupants and workers." },
@@ -154,7 +154,7 @@ const gprPageData: ServicePageData = {
     {
       title: "GPR Scanning in Dubai",
       content:
-        "GPR scanning in Dubai is essential for high-rise, commercial and infrastructure projects. Before core cutting, drilling or demolition, contractors and consultants rely on GPR to locate rebar, post-tension cables and utilities. Bhadeya Technical provides professional GPR scanning services across Dubai using the Proceq GP8000, with 200cm depth capability and detailed reporting. We serve developers, main contractors and MEP teams on projects ranging from fit-outs to major new builds.",
+        "GPR scanning in Dubai is essential for high-rise, commercial and infrastructure projects. Before core cutting, drilling or demolition, contractors and consultants rely on GPR to locate rebar, post-tension cables and utilities. Bhadeya Technical provides professional GPR scanning services across Dubai using the Proceq GP8000, with 500cm depth capability and detailed reporting. We serve developers, main contractors and MEP teams on projects ranging from fit-outs to major new builds.",
     },
     {
       title: "GPR Scanning in Abu Dhabi",
@@ -176,7 +176,7 @@ const gprPageData: ServicePageData = {
     {
       question: "How accurate is GPR scanning?",
       answer:
-        "Our Proceq GP8000 GPR scanner provides accuracy of ±5mm for object detection and can scan up to 200cm depth. It detects rebar, post-tension cables, conduits, voids, and utilities with high precision.",
+        "Our Proceq GP8000 GPR scanner provides accuracy of ±5mm for object detection and can scan up to 500cm depth. It detects rebar, post-tension cables, conduits, voids, and utilities with high precision.",
     },
     {
       question: "How long does GPR scanning take?",
@@ -205,7 +205,7 @@ const gprPageData: ServicePageData = {
       {
         question: "How deep can your GPR scanner detect objects?",
         answer:
-          "Our Proceq GP8000 GPR scanner can detect objects at depths up to 200cm (2 metres). This industry-leading depth allows us to identify deep-embedded utilities, post-tension cables, rebar, voids and other subsurface structures with high accuracy across Dubai and the UAE.",
+          "Our Proceq GP8000 GPR scanner can detect objects at depths up to 500cm (5 metres). This industry-leading depth allows us to identify deep-embedded utilities, post-tension cables, rebar, voids and other subsurface structures with high accuracy across Dubai and the UAE.",
       },
       {
         question: "Which areas in the UAE do you serve?",

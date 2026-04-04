@@ -207,12 +207,24 @@ export function Header() {
 
         {/* Mobile menu trigger */}
         <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-          <SheetTrigger
-            className="flex size-10 items-center justify-center rounded-md text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/10 lg:hidden"
-            aria-label="Open menu"
-          >
-            <Menu className="size-6" aria-hidden />
-          </SheetTrigger>
+          <div className="flex items-center gap-2 lg:hidden">
+            {/* WhatsApp CTA — mobile header only */}
+            <a
+              href="https://wa.me/971556926286?text=Hello, I would like to inquire about your GPR scanning services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 bg-amber-500 hover:bg-amber-400 text-black font-semibold rounded text-xs px-2 py-1 transition-colors"
+              onClick={() => trackWhatsAppClick("mobile_header")}
+            >
+              💬 Free Quote
+            </a>
+            <SheetTrigger
+              className="flex size-10 items-center justify-center rounded-md text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/10"
+              aria-label="Open menu"
+            >
+              <Menu className="size-6" aria-hidden />
+            </SheetTrigger>
+          </div>
           <SheetContent
             side="right"
             className="flex w-full max-w-sm flex-col bg-white"

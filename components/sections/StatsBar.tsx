@@ -19,7 +19,7 @@ const STATS = [
     Icon: Calendar,
   },
   {
-    value: 200,
+    value: 500,
     suffix: "cm",
     label: "Max Scanning Depth",
     Icon: Ruler,

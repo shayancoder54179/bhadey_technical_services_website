@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
@@ -78,25 +79,60 @@ export function ProjectsShowcase() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               className={cn(
-                "group relative rounded-xl border border-border bg-gradient-to-br p-5 shadow-sm",
+                "group relative rounded-xl border border-border overflow-hidden shadow-sm min-h-[160px]",
                 "transition-all duration-300 ease-out",
                 "hover:shadow-md hover:border-[var(--color-secondary-blue)]/30",
-                CATEGORY_GRADIENTS[project.category] ?? "from-muted/50 to-muted"
+                !project.image && cn(
+                  "bg-gradient-to-br",
+                  CATEGORY_GRADIENTS[project.category] ?? "from-muted/50 to-muted"
+                )
               )}
             >
-              <h3 className="text-base md:text-lg font-bold text-foreground mb-2 pr-2">
-                {project.name}
-              </h3>
-              <Badge
-                variant="secondary"
-                className="mb-3 w-fit text-xs font-medium"
-              >
-                {project.category}
-              </Badge>
-              <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                <MapPin className="size-4 shrink-0 text-[var(--color-accent-orange)]" aria-hidden />
-                {project.location}
-              </p>
+              {/* Background: image with dark overlay OR fallback gradient */}
+              {project.image ? (
+                <>
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" aria-hidden />
+                </>
+              ) : null}
+
+              {/* Content */}
+              <div className={cn(
+                "relative z-10 p-5 flex flex-col justify-end h-full",
+                project.image ? "min-h-[160px]" : ""
+              )}>
+                <h3 className={cn(
+                  "text-base md:text-lg font-bold mb-2 pr-2",
+                  project.image ? "text-white" : "text-foreground"
+                )}>
+                  {project.name}
+                </h3>
+                <Badge
+                  variant="secondary"
+                  className={cn(
+                    "mb-3 w-fit text-xs font-medium",
+                    project.image && "bg-white/25 text-white border-white/30"
+                  )}
+                >
+                  {project.category}
+                </Badge>
+                <p className={cn(
+                  "flex items-center gap-1.5 text-sm",
+                  project.image ? "text-white/90" : "text-muted-foreground"
+                )}>
+                  <MapPin
+                    className={cn("size-4 shrink-0", project.image ? "text-white/80" : "text-[var(--color-accent-orange)]")}
+                    aria-hidden
+                  />
+                  {project.location}
+                </p>
+              </div>
             </motion.article>
           ))}
         </div>
