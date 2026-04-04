@@ -190,6 +190,7 @@ const gprPageData: ServicePageData = {
     },
   ],
   relatedServices: [
+    { href: "/services/gs8000-scanning", label: "GS8000 Ground Scanning" },
     { href: "/services/core-cutting", label: "Core Cutting" },
     { href: "/services/excavation", label: "Excavation" },
   ],

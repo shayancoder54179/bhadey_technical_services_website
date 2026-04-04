@@ -141,5 +141,50 @@ export const services = [
       safety: 'GPR Pre-Scan',
       coverage: 'All UAE'
     }
+  },
+  {
+    id: 'gs8000-scanning',
+    title: 'GS8000 Ground Scanning',
+    fullTitle: 'Proceq GS8000 Large-Scale Ground Scanning',
+    shortDescription: 'Large-scale utility mapping and road scanning up to 10m depth using the Proceq GS8000 pushcart GPR system.',
+    overviewHighlight: '10m Depth | Proceq GS8000',
+    overviewFeatures: ['Utility mapping', 'Road scanning', 'GNSS geolocation', 'Up to 80km/h'],
+    iconColor: 'green' as ServiceIconColor,
+    longDescription: 'Our GS8000 ground scanning service uses the Proceq GS8000 pushcart GPR system for large-scale subsurface utility mapping, road scanning, and infrastructure inspection. With scanning depths up to 10 metres and speeds up to 80km/h, we deliver fast, accurate underground mapping for major civil and infrastructure projects across UAE.',
+    icon: 'Layers',
+    slug: 'gs8000-scanning',
+    features: [
+      'Maximum scanning depth of 10m (33ft)',
+      'Scan speed up to 80km/h',
+      'SFCW technology for superior resolution',
+      'Integrated GNSS geolocation',
+      'Real-time 2D and 3D visualization via iPad',
+      'CAD and GIS data output',
+      'Large-area grid scanning up to 80x80m',
+      'Non-destructive and completely safe'
+    ],
+    equipment: 'Proceq GS8000',
+    equipmentDescription: 'The Proceq GS8000 is a large-scale pushcart GPR system using SFCW technology with 0.2–3.4GHz bandwidth, capable of scanning up to 10m depth at speeds of 80km/h with integrated GNSS geolocation.',
+    benefits: [
+      'Cover vast areas rapidly with precision',
+      'Accurate utility detection before excavation',
+      'GNSS-tagged data for engineering use',
+      'CAD and GIS export for project teams',
+      'Non-destructive and safe',
+      'Fast deployment on large civil sites'
+    ],
+    applications: [
+      'Underground utility mapping',
+      'Road and pavement scanning',
+      'Bridge deck assessment',
+      'Pre-excavation surveys',
+      'Infrastructure asset inspection',
+      'Geophysical investigations'
+    ],
+    stats: {
+      depth: '10m',
+      speed: '80km/h',
+      technology: 'Proceq GS8000'
+    }
   }
 ]
