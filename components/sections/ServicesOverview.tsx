@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { Radar, CircleDot, Shovel, ArrowRight } from "lucide-react";
+import { Radar, CircleDot, Shovel, Magnet, Layers, Truck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GetQuoteLink } from "@/components/seo/TrackedCtaLinks";
 import { services } from "@/data/services";
@@ -14,6 +14,9 @@ const ICON_MAP = {
   Radar,
   CircleDot,
   Shovel,
+  Magnet,
+  Layers,
+  Truck,
 } as const;
 
 const ICON_COLOR_CLASSES: Record<ServiceIconColor, string> = {

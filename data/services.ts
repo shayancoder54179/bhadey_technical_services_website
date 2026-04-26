@@ -143,6 +143,96 @@ export const services = [
     }
   },
   {
+    id: 'pm8000-scanning',
+    title: 'PM8000 Rebar Scanning',
+    fullTitle: 'Profometer PM8000 Rebar Cover Mapping',
+    shortDescription: 'Non-destructive electromagnetic scanning to locate rebars, measure concrete cover depth, and estimate rebar diameter before core cutting or drilling.',
+    overviewHighlight: '±1mm Accuracy | Proceq PM8000',
+    overviewFeatures: ['Rebar detection', 'Cover depth measurement', 'Diameter estimation', 'Safe drilling points'],
+    iconColor: 'blue' as ServiceIconColor,
+    longDescription: 'Our Profometer PM8000 rebar cover mapping service uses electromagnetic pulse induction technology to detect reinforcement bars inside concrete structures, measure concrete cover depth to ±1mm accuracy, and estimate rebar diameter — all without breaking the surface. Every core cutting or drilling job at Bhadeya begins with a PM8000 scan to identify safe points and protect structural integrity.',
+    icon: 'Magnet',
+    slug: 'pm8000-scanning',
+    features: [
+      'Rebar detection with pinpoint accuracy',
+      'Concrete cover measurement to ±1mm',
+      'Rebar diameter estimation without surface damage',
+      'Identifies safe drilling and core cutting points',
+      'Works on floors, walls, ceilings, columns, and beams',
+      '8 hours battery autonomy for full-day operation',
+      'Cloud data export via CSV and Screening Eagle Workspace',
+      'World\'s most compact and lightweight cover meter'
+    ],
+    equipment: 'Proceq Profometer PM8000',
+    equipmentDescription: 'The Profometer PM8000 is the world\'s most compact and lightweight electromagnetic cover meter, using pulse induction technology to detect rebar, measure cover depth to ±1mm, and estimate bar diameter — all in a single handheld device.',
+    benefits: [
+      'Prevent hitting rebar during core cutting or drilling',
+      'Protect structural integrity on every job',
+      'Ensure worker safety before any penetration work',
+      'Fast and accurate on-site scanning',
+      'Non-destructive — no damage to surfaces',
+      'Digital data for project records'
+    ],
+    applications: [
+      'Pre-drilling checks',
+      'Pre-core cutting surveys',
+      'Structural assessments',
+      'Rebar mapping for renovation projects',
+      'Building inspections',
+      'Quality control for new construction'
+    ],
+    stats: {
+      accuracy: '±1mm',
+      battery: '8 Hours',
+      technology: 'Proceq PM8000'
+    }
+  },
+  {
+    id: 'oversized-cargo',
+    title: 'Oversized Cargo Movement',
+    fullTitle: 'Oversized Cargo Movement Assistance',
+    shortDescription: 'Expert ground support, escort services, and route planning for oversized and heavy cargo movement across the UAE.',
+    overviewHighlight: 'UAE-Wide | RTA Compliant',
+    overviewFeatures: ['Route survey & planning', 'Escort & flagging services', 'GPR route scanning', 'Regulatory compliance'],
+    iconColor: 'navy' as ServiceIconColor,
+    longDescription: 'Bhadeya Technical Services provides comprehensive ground support and technical assistance for oversized and heavy cargo movement across all UAE emirates. We combine expert route planning, RTA regulatory compliance, and our unique GPR scanning capability to ensure every oversized load moves safely. No other UAE provider offers this integrated scanning-and-escort service.',
+    icon: 'Truck',
+    slug: 'oversized-cargo',
+    features: [
+      'Pre-movement route survey and road clearance assessment',
+      'RTA permit assistance and oversized load documentation',
+      'Professional escort vehicles and certified flagmen',
+      'GPR scanning of roads and bridges along the route',
+      'On-site trained technicians throughout the operation',
+      '24/7 emergency assistance during transport',
+      'Compliance with UAE and emirate-specific authority regulations',
+      'Coordination with relevant traffic and civil authorities'
+    ],
+    equipment: 'Professional Escort & Support Fleet',
+    equipmentDescription: 'Our oversized cargo operations are supported by a professional fleet of escort vehicles, certified flagmen, and technical equipment including GPR scanners for pre-movement road and bridge structural assessment.',
+    benefits: [
+      'Integrated GPR scanning + cargo escort — unique in UAE',
+      'Full RTA compliance and permit support',
+      'Reduced risk of route incidents or infrastructure damage',
+      'Experienced technical crew on-site at all times',
+      '24/7 emergency coverage across all UAE emirates',
+      'Single point of contact for complex cargo movements'
+    ],
+    applications: [
+      'Heavy machinery transport',
+      'Industrial equipment relocation',
+      'Construction material haulage',
+      'Oil & gas equipment movement',
+      'Large prefabricated structure transport',
+      'Project cargo logistics support'
+    ],
+    stats: {
+      coverage: 'All UAE',
+      compliance: 'RTA Certified',
+      support: '24/7'
+    }
+  },
+  {
     id: 'gs8000-scanning',
     title: 'GS8000 Ground Scanning',
     fullTitle: 'Proceq GS8000 Large-Scale Ground Scanning',
