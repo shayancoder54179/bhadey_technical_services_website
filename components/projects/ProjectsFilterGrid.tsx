@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -83,28 +82,12 @@ export function ProjectsFilterGrid() {
               layout
               className={cn(
                 "group relative rounded-xl overflow-hidden min-h-[140px]",
-                "shadow-sm",
+                "shadow-sm bg-gradient-to-br",
                 "transition-all duration-300 ease-out",
                 "hover:scale-[1.02] hover:shadow-lg",
-                !project.image && cn(
-                  "bg-gradient-to-br",
-                  CATEGORY_GRADIENTS[project.category] ?? "from-slate-600/90 to-slate-700/90"
-                )
+                CATEGORY_GRADIENTS[project.category] ?? "from-slate-600/90 to-slate-700/90"
               )}
             >
-              {/* Background: image with dark overlay OR fallback gradient */}
-              {project.image ? (
-                <>
-                  <Image
-                    src={project.image}
-                    alt={project.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" aria-hidden />
-                </>
-              ) : null}
 
               {/* Hover overlay */}
               <div
