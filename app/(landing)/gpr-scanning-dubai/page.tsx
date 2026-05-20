@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { LeadForm } from "./LeadForm";
 import { PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
+import { trackGetQuoteClick } from "@/lib/tracking";
 
 export const metadata: Metadata = {
   title: "GPR Scanning Dubai | Same-Day Service | Bhadeya Technical",
@@ -320,7 +321,7 @@ function Hero() {
           >
             We'll respond within minutes on WhatsApp.
           </p>
-          <LeadForm />
+          <LeadForm formId="gpr_landing_hero_form" />
         </div>
       </div>
     </section>
@@ -753,6 +754,7 @@ function HowItWorks() {
         <div style={{ textAlign: "center", marginTop: 64 }}>
           <a
             href="#lead-form"
+            onClick={() => trackGetQuoteClick("how_it_works_step1")}
             style={{
               display: "inline-block",
               padding: "16px 40px",
@@ -1599,7 +1601,7 @@ function BottomLeadForm() {
             padding: "36px 32px",
           }}
         >
-          <LeadForm />
+          <LeadForm formId="gpr_landing_bottom_form" />
         </div>
       </div>
     </section>

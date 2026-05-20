@@ -10,6 +10,10 @@ interface FormState {
   description: string;
 }
 
+interface LeadFormProps {
+  formId?: string;
+}
+
 const EMIRATES = [
   "Dubai",
   "Abu Dhabi",
@@ -20,7 +24,7 @@ const EMIRATES = [
   "Other",
 ];
 
-export function LeadForm() {
+export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
   const [form, setForm] = useState<FormState>({
     name: "",
     phone: "",
@@ -38,8 +42,8 @@ export function LeadForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    trackFormSubmit("gpr_landing_whatsapp");
-    trackWhatsAppClick("landing_form");
+    trackFormSubmit(formId);
+    trackWhatsAppClick(formId);
 
     const message = [
       "Hello Bhadeya, I'd like a free quote for GPR Scanning.",
