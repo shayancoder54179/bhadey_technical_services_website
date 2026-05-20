@@ -11,12 +11,21 @@ interface GetQuoteLinkProps {
   href: string;
   children: React.ReactNode;
   className?: string;
+  source?: string;
   [key: string]: unknown;
 }
 
-export function GetQuoteLink({ href, children, className, ...props }: GetQuoteLinkProps) {
+export function GetQuoteLink({ href, children, className, source, ...props }: GetQuoteLinkProps) {
+  const isExternal = href.startsWith("http") || href.startsWith("#");
+  if (isExternal) {
+    return (
+      <a href={href} onClick={() => trackGetQuoteClick(source)} className={className} {...props}>
+        {children}
+      </a>
+    );
+  }
   return (
-    <Link href={href} onClick={() => trackGetQuoteClick()} className={className} {...props}>
+    <Link href={href} onClick={() => trackGetQuoteClick(source)} className={className} {...props}>
       {children}
     </Link>
   );

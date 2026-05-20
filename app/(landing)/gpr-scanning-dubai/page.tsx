@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { LeadForm } from "./LeadForm";
-import { PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
-import { trackGetQuoteClick } from "@/lib/tracking";
+import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 
 export const metadata: Metadata = {
   title: "GPR Scanning Dubai | Same-Day Service | Bhadeya Technical",
@@ -752,9 +751,9 @@ function HowItWorks() {
 
         {/* Bottom CTA */}
         <div style={{ textAlign: "center", marginTop: 64 }}>
-          <a
+          <GetQuoteLink
             href="#lead-form"
-            onClick={() => trackGetQuoteClick("how_it_works_step1")}
+            source="how_it_works_step1"
             style={{
               display: "inline-block",
               padding: "16px 40px",
@@ -769,7 +768,7 @@ function HowItWorks() {
             }}
           >
             START WITH STEP 1 — GET A FREE QUOTE
-          </a>
+          </GetQuoteLink>
         </div>
       </div>
     </section>
