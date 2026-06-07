@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
+import { faqPageSchema } from "@/components/seo/JsonLd";
 
 // Below-the-fold sections: SSR with lazy-loaded client JS for faster initial load
 const StatsBar = dynamic(
@@ -36,7 +37,7 @@ const CTASection = dynamic(
 
 export const metadata: Metadata = {
   title:
-    "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting Services in Dubai & UAE",
+    "GPR Scanning & Core Cutting Dubai & UAE | Bhadeya Technical Services",
   description:
     "Professional GPR scanning (Proceq GP8000), diamond core cutting, and excavation services in Dubai, Abu Dhabi, Sharjah & UAE. Trusted for projects including Dubai Mall, Emaar, ADNOC. Get free quote today!",
   alternates: {
@@ -58,6 +59,10 @@ const sectionClass = "scroll-mt-20";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
       {/* 1. Hero */}
       <div id="hero" className={sectionClass}>
         <Hero />

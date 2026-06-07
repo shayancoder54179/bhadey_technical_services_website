@@ -2,7 +2,7 @@ const BASE_URL = "https://www.bhadeya.com";
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": `${BASE_URL}/#localbusiness`,
   name: "Bhadeya Technical Services LLC",
   description:
@@ -125,6 +125,7 @@ const localBusinessSchema = {
     "Non-Destructive Testing",
   ],
   slogan: "Precision Scanning. Safe Construction.",
+  priceRange: "AED",
   sameAs: [],
 };
 
@@ -153,6 +154,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     telephone: "+971556926286",
     email: "Bhadeyatechnical@gmail.com",
+    contactType: "customer service",
     areaServed: ["AE"],
     availableLanguage: ["English", "Arabic"],
   },
@@ -365,9 +367,10 @@ const allSchemas = [
   localBusinessSchema,
   organizationSchema,
   websiteSchema,
-  faqPageSchema,
   ...serviceSchemas,
 ];
+
+export { faqPageSchema };
 
 export function JsonLd() {
   return (

@@ -9,6 +9,13 @@ export const metadata: Metadata = {
     "Professional GPR concrete scanning in Dubai. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.bhadeya.com/gpr-scanning-dubai" },
+  openGraph: {
+    title: "GPR Scanning Dubai | Same-Day Service | Bhadeya Technical",
+    description:
+      "Professional GPR concrete scanning in Dubai. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
+    url: "https://www.bhadeya.com/gpr-scanning-dubai",
+    type: "website",
+  },
 };
 
 /* ─── design tokens ─── */

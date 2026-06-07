@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.bhadeya.com"),
   title: {
     default:
-      "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
-    template: "%s | Bhadeya Technical Services LLC",
+      "GPR Scanning & Core Cutting UAE | Bhadeya Technical Services",
+    template: "%s | Bhadeya Technical Services",
   },
   description:
     "Leading GPR scanning, core cutting & excavation services in Dubai, Abu Dhabi, Sharjah & UAE. Using Proceq GP8000 technology. 7+ years experience. Trusted by Dubai Mall, Emaar, ADNOC & more.",

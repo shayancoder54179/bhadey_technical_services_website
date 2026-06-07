@@ -1,5 +1,5 @@
 export const company = {
-  name: 'Bhadeya Technical Services L.L.C',
+  name: 'Bhadeya Technical Services LLC',
   shortName: 'Bhadeya Technical',
   tagline: 'Precision Scanning. Safe Construction.',
   description: 'UAE\'s trusted partner for GPR scanning, core cutting, and excavation services. Over 7 years of experience serving major projects across Dubai, Abu Dhabi, Sharjah, and beyond.',

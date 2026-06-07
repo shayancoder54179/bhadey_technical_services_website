@@ -434,8 +434,8 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
                 size="lg"
                 className="w-full sm:w-auto bg-white text-[#0066ff] hover:bg-white/95 font-semibold text-base px-8 py-6 rounded-lg shadow-lg"
               >
-                <GetQuoteLink href="/contact" className="inline-flex items-center gap-2">
-                  Get Free Quote
+                <GetQuoteLink href={whatsappUrl(ctaDescription)} className="inline-flex items-center gap-2">
+                  Get Free Quote via WhatsApp
                 </GetQuoteLink>
               </Button>
               <Button
