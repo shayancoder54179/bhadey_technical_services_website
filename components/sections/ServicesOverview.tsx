@@ -144,7 +144,7 @@ export function ServicesOverview() {
                   href={`/services/${service.slug}`}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-secondary-blue)] hover:underline focus:outline-none focus:underline"
                 >
-                  Learn More
+                  Learn More About {service.title}
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </motion.article>
