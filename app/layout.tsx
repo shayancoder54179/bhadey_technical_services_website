@@ -102,6 +102,9 @@ export const metadata: Metadata = {
   },
   category: "Construction Services",
   manifest: "/manifest.json",
+  verification: {
+    google: "bJ30NNNcubrsJHFDXUOJSPxfW3p5yfmZyM7ZnYJcW4Y",
+  },
 };
 
 export default function RootLayout({
