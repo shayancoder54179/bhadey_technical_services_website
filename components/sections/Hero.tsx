@@ -17,13 +17,13 @@ const containerVariants = {
 // H1 uses transform-only — no opacity:0 so browser can measure LCP immediately
 const h1Variant = {
   hidden: { y: 12 },
-  visible: { y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  visible: { y: 0, transition: { duration: 0.4 } },
 };
 
 // Other items fade + slide
 const itemFadeUp = {
   hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
 };
 
 export function Hero() {
