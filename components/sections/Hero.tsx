@@ -7,16 +7,23 @@ import { GetQuoteLink, PhoneLink } from "@/components/seo/TrackedCtaLinks";
 import { cn } from "@/lib/utils";
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.08, delayChildren: 0.05 },
   },
 };
 
+// H1 uses transform-only — no opacity:0 so browser can measure LCP immediately
+const h1Variant = {
+  hidden: { y: 12 },
+  visible: { y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
+
+// Other items fade + slide
 const itemFadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
 };
 
 export function Hero() {
@@ -66,8 +73,9 @@ export function Hero() {
             </span>
           </motion.div>
 
+          {/* H1 uses transform-only variant — always visible for LCP measurement */}
           <motion.h1
-            variants={itemFadeUp}
+            variants={h1Variant}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[3.5rem] font-bold leading-tight text-white tracking-tight"
           >
             Professional GPR Scanning & Core Cutting Services in Dubai & UAE
@@ -94,7 +102,7 @@ export function Hero() {
                 "text-base font-semibold px-8 py-6 rounded-lg shadow-lg"
               )}
             >
-              <GetQuoteLink href="/contact">Get Free Quote</GetQuoteLink>
+              <GetQuoteLink href="https://wa.me/971556926286?text=Hi%2C%20I%27d%20like%20to%20get%20a%20free%20quote%20for%20GPR%20scanning%20services.">Get Free Quote</GetQuoteLink>
             </Button>
             <Button
               asChild
