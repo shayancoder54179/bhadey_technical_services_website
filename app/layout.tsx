@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -105,6 +105,12 @@ export const metadata: Metadata = {
   verification: {
     google: "bJ30NNNcubrsJHFDXUOJSPxfW3p5yfmZyM7ZnYJcW4Y",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0a2540",
 };
 
 export default function RootLayout({
