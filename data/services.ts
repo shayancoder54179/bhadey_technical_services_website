@@ -44,7 +44,7 @@ export const services = [
     ],
     stats: {
       depth: '500cm',
-      accuracy: '±5mm',
+      accuracy: '±10mm',
       technology: 'Proceq GP8000'
     }
   },

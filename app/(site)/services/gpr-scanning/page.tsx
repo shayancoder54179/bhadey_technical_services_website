@@ -178,7 +178,7 @@ const gprPageData: ServicePageData = {
     {
       question: "How accurate is GPR scanning?",
       answer:
-        "Our Proceq GP8000 GPR scanner provides accuracy of ±5mm for object detection and can scan up to 500cm depth. It detects rebar, post-tension cables, conduits, voids, and utilities with high precision.",
+        "Our Proceq GP8000 GPR scanner detects rebar, post-tension cables, conduits, voids, and utilities with positional accuracy within ±10mm under ideal conditions. Accuracy depends on concrete mix, moisture content, and object depth — our technicians will advise if site conditions could affect results. The scanner covers depths up to 500cm.",
     },
     {
       question: "How long does GPR scanning take?",
