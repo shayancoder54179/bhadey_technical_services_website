@@ -13,6 +13,7 @@ export interface ServiceHeroData {
   subtitle: string;
   stats: HeroStat[];
   ctaPrimaryLabel: string;
+  ctaPrimaryHref?: string;
   ctaSecondaryLabel?: string;
   ctaSecondaryHref?: string;
   /** Optional hero image (e.g. for excavation page) */

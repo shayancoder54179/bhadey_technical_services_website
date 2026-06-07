@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "Professional GPR concrete scanning in Dubai. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://www.bhadeya.com/gpr-scanning-dubai" },
 };
 
 /* ─── design tokens ─── */
@@ -1076,16 +1077,12 @@ function Gallery() {
               background: "#111",
             }}
           >
-            <img
+            <Image
               src={GALLERY_PHOTOS[0].src}
               alt={GALLERY_PHOTOS[0].alt}
-              loading="lazy"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-              }}
+              fill
+              style={{ objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, 550px"
             />
             <div
               style={{
@@ -1122,16 +1119,12 @@ function Gallery() {
                 background: "#111",
               }}
             >
-              <img
+              <Image
                 src={photo.src}
                 alt={photo.alt}
-                loading="lazy"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 50vw, 275px"
               />
               <div
                 style={{
@@ -1922,9 +1915,98 @@ function StickyMobileBar() {
 /* ══════════════════════════════════════════════
    PAGE EXPORT
 ══════════════════════════════════════════════ */
+const landingPageSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "GPR Concrete Scanning Dubai",
+    alternateName: "Ground Penetrating Radar Scanning Dubai",
+    description:
+      "Professional GPR concrete scanning in Dubai. Detect rebar, conduits, post-tension cables and voids before drilling or cutting using the Proceq GP8000. Same-day response across all UAE.",
+    provider: { "@id": "https://www.bhadeya.com/#localbusiness" },
+    areaServed: [
+      { "@type": "City", name: "Dubai" },
+      { "@type": "City", name: "Abu Dhabi" },
+      { "@type": "City", name: "Sharjah" },
+      { "@type": "City", name: "Ras Al Khaimah" },
+      { "@type": "City", name: "Fujairah" },
+      { "@type": "City", name: "Al Ain" },
+    ],
+    url: "https://www.bhadeya.com/gpr-scanning-dubai",
+    serviceType: "GPR Scanning",
+    category: "Non-Destructive Testing",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is GPR scanning and why do I need it?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Ground Penetrating Radar (GPR) sends radar pulses into concrete and maps what's inside — rebar, post-tension cables, conduits, voids. Before drilling, cutting, or coring any concrete element, a GPR survey in Dubai tells you exactly where hidden hazards are so you can avoid them. It prevents structural damage, utility strikes, and injuries. In the UAE, GPR scanning is a standard safety requirement before any core cutting or drilling work on concrete structures.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long does a typical scan take on-site?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A standard slab scan (up to 20–30 m²) takes 1–2 hours including setup, scanning, and marking. Larger areas or complex geometries may take a half-day. We provide time estimates when you submit your request, and same-day service is available for urgent projects across Dubai.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you work on weekends and outside business hours?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We operate Sunday–Thursday 8 AM–6 PM and Saturday 9 AM–3 PM as standard hours. Emergency and out-of-hours scanning is available — message us on WhatsApp and we'll confirm availability for your project.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How accurate is GPR scanning for detecting rebar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The Proceq GP8000 can detect rebar, conduits, and other objects with positional accuracy within ±10 mm under ideal conditions. Accuracy depends on concrete mix, moisture content, and object depth — our technicians will advise if any factors could affect results for your specific slab.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is GPR scanning safe for occupied buildings?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Completely safe. GPR is a non-destructive, non-ionising technology — it emits no radiation and poses no risk to people or structure. There is no need to clear the area during scanning, making it suitable for occupied buildings and operational facilities.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What do I receive after the scan?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You receive on-slab physical markings showing safe drill and cut zones, plus a digital scan report in PDF format with 2D scan images. For Proceq GP8000 scans we can also provide 3D rendered output via the Proceq Link app for use in BIM and coordination drawings.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide a quote before coming to site?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Send us the site location, approximate area to be scanned, and the type of work planned via WhatsApp or the form on this page. We'll respond with a fixed-price quote — no surprises. Most quotes are confirmed within 1 hour during business hours.",
+        },
+      },
+    ],
+  },
+];
+
 export default function GprScanningDubaiPage() {
   return (
     <main style={{ background: C.bg, minHeight: "100vh", color: C.text }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(landingPageSchema) }}
+      />
       <MinimalHeader />
       <Hero />
       <LogoStrip />

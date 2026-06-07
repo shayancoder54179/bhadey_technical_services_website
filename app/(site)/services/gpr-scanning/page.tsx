@@ -40,7 +40,9 @@ const gprPageData: ServicePageData = {
       { value: "500cm", label: "Max scanning depth" },
       { value: "Proceq GP8000", label: "Technology" },
     ],
-    ctaPrimaryLabel: "Get Free Quote",
+    ctaPrimaryLabel: "Get Free Quote via WhatsApp",
+    ctaPrimaryHref:
+      "https://wa.me/971556926286?text=Hi%2C%20I%27d%20like%20to%20get%20a%20free%20quote%20for%20GPR%20scanning%20services.",
     ctaSecondaryLabel: "Call Now: +971 55 692 6286",
     ctaSecondaryHref: "tel:+971556926286",
     image: {

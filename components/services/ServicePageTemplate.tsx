@@ -105,7 +105,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
                     size="lg"
                     className="w-full sm:w-auto bg-[var(--color-accent-orange)] text-white hover:bg-[var(--color-accent-orange)]/90 font-semibold px-8 py-6 rounded-lg shadow-lg"
                   >
-                    <GetQuoteLink href="/contact">{hero.ctaPrimaryLabel}</GetQuoteLink>
+                    <GetQuoteLink href={hero.ctaPrimaryHref ?? "/contact"}>{hero.ctaPrimaryLabel}</GetQuoteLink>
                   </Button>
                   {hero.ctaSecondaryLabel && hero.ctaSecondaryHref && (
                     <Button
