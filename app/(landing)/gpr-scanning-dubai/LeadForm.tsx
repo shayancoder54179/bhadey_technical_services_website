@@ -43,7 +43,6 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     trackFormSubmit(formId);
-    trackWhatsAppClick(formId);
 
     const message = [
       "Hello Bhadeya, I'd like a free quote for GPR Scanning.",
@@ -54,7 +53,10 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
     ].join("\n");
 
     const url = `https://wa.me/971556926286?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    const opened = window.open(url, "_blank", "noopener,noreferrer");
+    if (opened) {
+      trackWhatsAppClick(formId);
+    }
   }
 
   const inputStyle: React.CSSProperties = {
