@@ -4,15 +4,15 @@ import { LeadForm } from "./LeadForm";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 
 export const metadata: Metadata = {
-  title: "GPR Scanning UAE | Same-Day Service | Bhadeya Technical",
+  title: "Ground Penetrating Radar (GPR) Scanning UAE | Concrete Scanning Company",
   description:
-    "Professional GPR concrete scanning across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
+    "Professional ground penetrating radar (GPR) concrete scanning services across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Trusted concrete scanning company detecting rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
   robots: { index: false, follow: true },
   alternates: { canonical: "https://www.bhadeya.com/services/gpr-scanning" },
   openGraph: {
-    title: "GPR Scanning UAE | Same-Day Service | Bhadeya Technical",
+    title: "Ground Penetrating Radar (GPR) Scanning UAE | Concrete Scanning Company",
     description:
-      "Professional GPR concrete scanning across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
+      "Professional ground penetrating radar (GPR) concrete scanning services across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
     url: "https://www.bhadeya.com/gpr-scanning-dubai",
     type: "website",
   },
@@ -215,9 +215,10 @@ function Hero() {
               marginBottom: 36,
             }}
           >
-            Detect rebar, post-tension cables, conduits, and voids before you
-            drill or cut. Protect your team and your structure — get a free
-            quote in minutes via WhatsApp.
+            Our ground penetrating radar (GPR) technology detects rebar,
+            post-tension cables, conduits, and voids before you drill or cut.
+            Protect your team and your structure — get a free quote in
+            minutes via WhatsApp.
           </p>
 
           {/* trust badges */}
@@ -1622,8 +1623,9 @@ function FinalCta() {
             margin: "0 auto 48px",
           }}
         >
-          Don&apos;t drill blind. Get a professional GPR scan before any concrete
-          work begins. Free quote, fast response, all emirates covered.
+          Don&apos;t drill blind. As a trusted concrete scanning company in the
+          UAE, we deliver professional GPR scans before any concrete work
+          begins. Free quote, fast response, all emirates covered.
         </p>
 
         {/* CTA button pair */}
