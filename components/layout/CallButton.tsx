@@ -11,7 +11,7 @@ export function CallButton() {
     <a
       href={`tel:${company.phoneClean}`}
       onClick={() => trackPhoneClick(company.phoneClean)}
-      className="fixed bottom-6 left-6 z-40 flex size-12 items-center justify-center border border-white/10 transition-transform hover:scale-105 md:hidden"
+      className="fixed bottom-24 right-6 z-40 flex size-12 items-center justify-center border border-white/10 transition-transform hover:scale-105 md:hidden"
       style={{ backgroundColor: INK }}
       aria-label={`Call ${company.phone}`}
     >

@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: "GPR Scanning UAE | Same-Day Service | Bhadeya Technical",
   description:
     "Professional GPR concrete scanning across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
-  robots: { index: true, follow: true },
-  alternates: { canonical: "https://www.bhadeya.com/gpr-scanning-dubai" },
+  robots: { index: false, follow: true },
+  alternates: { canonical: "https://www.bhadeya.com/services/gpr-scanning" },
   openGraph: {
     title: "GPR Scanning UAE | Same-Day Service | Bhadeya Technical",
     description:
@@ -180,7 +180,7 @@ function Hero() {
                 textTransform: "uppercase",
               }}
             >
-              UAE&apos;s #1 GPR Scanning Service
+              UAE&apos;s Trusted GPR Scanning Service
             </span>
           </div>
 
@@ -336,16 +336,11 @@ function Hero() {
    CLIENT LOGO STRIP
 ══════════════════════════════════════════════ */
 const CLIENTS = [
+  "THE DUBAI MALL",
+  "ADNOC",
   "EMAAR",
-  "ALDAR",
-  "DAMAC",
-  "NAKHEEL",
-  "MERAAS",
-  "SOBHA REALTY",
-  "ARABTEC",
-  "DEYAAR",
-  "OMNIX INT'L",
-  "LOOTAH REAL ESTATE",
+  "KEMPINSKI",
+  "SHEIKH KHALIFA HOSPITAL",
 ];
 
 function LogoStrip() {

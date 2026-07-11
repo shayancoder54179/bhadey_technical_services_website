@@ -14,17 +14,6 @@ const localBusinessSchema = {
     "@type": "ImageObject",
     url: `${BASE_URL}/images/bts_logo.png`,
   },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Dubai",
-    addressRegion: "Dubai",
-    addressCountry: "AE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 25.2048,
-    longitude: 55.2708,
-  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -105,7 +94,6 @@ const localBusinessSchema = {
     "Non-Destructive Testing",
   ],
   slogan: "Precision Scanning. Safe Construction.",
-  priceRange: "AED",
   sameAs: [],
 };
 
@@ -124,12 +112,6 @@ const organizationSchema = {
   description:
     "Leading GPR scanning, core cutting and excavation services in UAE",
   foundingDate: "2019",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Dubai",
-    addressRegion: "Dubai",
-    addressCountry: "AE",
-  },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+971556926286",

@@ -236,6 +236,52 @@ const gprPageData: ServicePageData = {
     "Get a free quote for GPR scanning with the Proceq GP8000. We respond within 1 hour during business hours.",
 };
 
+const pageSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.bhadeya.com/services/gpr-scanning#service",
+    name: "GPR Scanning Services",
+    description:
+      "Ground Penetrating Radar scanning using Proceq GP8000 for subsurface imaging, rebar detection, utility mapping, and post-tension cable location up to 500cm depth across Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain.",
+    provider: { "@id": "https://www.bhadeya.com/#localbusiness" },
+    areaServed: [
+      { "@type": "City", name: "Dubai" },
+      { "@type": "City", name: "Abu Dhabi" },
+      { "@type": "City", name: "Sharjah" },
+      { "@type": "City", name: "Ras Al Khaimah" },
+      { "@type": "City", name: "Fujairah" },
+      { "@type": "City", name: "Al Ain" },
+    ],
+    url: "https://www.bhadeya.com/services/gpr-scanning",
+    serviceType: "Ground Penetrating Radar Scanning",
+    category: "Non-Destructive Testing",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: gprPageData.faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  },
+];
+
 export default function GPRScanningPage() {
-  return <ServicePageTemplate data={gprPageData} />;
+  return (
+    <>
+      {pageSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <ServicePageTemplate data={gprPageData} />
+    </>
+  );
 }
