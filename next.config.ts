@@ -17,6 +17,15 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/services/concrete-scanning",
+        destination: "/services/gpr-scanning",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
