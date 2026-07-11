@@ -29,6 +29,11 @@ const nextConfig: NextConfig = {
         destination: "/#faq",
         permanent: true,
       },
+      {
+        source: "/services/gs8000-scanning",
+        destination: "/services/gpr-scanning",
+        permanent: true,
+      },
     ];
   },
   async headers() {
