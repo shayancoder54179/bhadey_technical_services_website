@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   Phone,
   Mail,
@@ -7,7 +6,6 @@ import {
   MessageCircle,
   MapPin,
 } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -64,35 +62,23 @@ export default function ContactPage() {
         className={`relative py-16 md:py-20 lg:py-24 overflow-hidden ${sectionClass}`}
         aria-labelledby="contact-hero-title"
       >
+        <div className="absolute inset-0 bg-ink" />
         <div
-          className="absolute inset-0 bg-[#0A2540]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: `
-              radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 102, 255, 0.12) 0%, transparent 50%),
-              radial-gradient(ellipse 60% 40% at 100% 100%, rgba(0, 102, 255, 0.06) 0%, transparent 50%)
-            `,
-            backgroundSize: "100% 100%, 100% 100%",
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)
-            `,
-            backgroundSize: "48px 48px",
+            backgroundImage:
+              "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
           }}
         />
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <header className="max-w-3xl">
             <h1
               id="contact-hero-title"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-bold leading-tight text-white mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-paper mb-4 tracking-tight"
             >
               Contact Us
             </h1>
-            <p className="text-lg text-white/90">
+            <p className="text-lg text-paper/80">
               Get a free quote for GPR scanning, core cutting, or excavation
               services
             </p>
@@ -112,80 +98,68 @@ export default function ContactPage() {
           >
             Contact options
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
-            <Card className="border-2 shadow-lg hover:border-[var(--color-secondary-blue)]/30 transition-colors">
-              <CardHeader className="pb-2">
-                <div className="inline-flex size-12 rounded-full items-center justify-center bg-[var(--color-secondary-blue)]/15 text-[var(--color-secondary-blue)] mb-2">
-                  <Phone className="size-6" aria-hidden />
-                </div>
-                <h2 className="text-xl font-bold text-foreground">Call Us</h2>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <a
-                  href={`tel:${company.phoneClean}`}
-                  className="text-lg font-semibold text-[var(--color-secondary-blue)] hover:underline block"
-                >
-                  {company.phone}
-                </a>
-                <p className="text-sm text-muted-foreground">
-                  Available during business hours
-                </p>
-                <a
-                  href={company.socialLinks.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-green-600 hover:underline"
-                >
-                  <MessageCircle className="size-4" />
-                  WhatsApp
-                </a>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 gap-px border border-steel/20 bg-steel/20 md:grid-cols-3">
+            <div className="bg-paper p-6">
+              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                <Phone className="size-6" aria-hidden />
+              </div>
+              <h2 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Call Us</h2>
+              <a
+                href={`tel:${company.phoneClean}`}
+                className="font-mono text-lg font-semibold text-foreground hover:text-signal-orange block"
+              >
+                {company.phone}
+              </a>
+              <p className="text-sm text-muted-foreground mt-1">
+                Available during business hours
+              </p>
+              <a
+                href={company.socialLinks.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[#25D366] hover:underline mt-2"
+              >
+                <MessageCircle className="size-4" />
+                WhatsApp
+              </a>
+            </div>
 
-            <Card className="border-2 shadow-lg hover:border-[var(--color-secondary-blue)]/30 transition-colors">
-              <CardHeader className="pb-2">
-                <div className="inline-flex size-12 rounded-full items-center justify-center bg-[var(--color-secondary-blue)]/15 text-[var(--color-secondary-blue)] mb-2">
-                  <Mail className="size-6" aria-hidden />
-                </div>
-                <h2 className="text-xl font-bold text-foreground">Email Us</h2>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <a
-                  href={`mailto:${company.email}`}
-                  className="text-lg font-semibold text-[var(--color-secondary-blue)] hover:underline block break-all"
-                >
-                  {company.email}
-                </a>
-                <p className="text-sm text-muted-foreground">
-                  We respond within 2 hours
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-paper p-6">
+              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                <Mail className="size-6" aria-hidden />
+              </div>
+              <h2 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Email Us</h2>
+              <a
+                href={`mailto:${company.email}`}
+                className="text-lg font-semibold text-foreground hover:text-signal-orange block break-all"
+              >
+                {company.email}
+              </a>
+              <p className="text-sm text-muted-foreground mt-1">
+                We respond within 2 hours
+              </p>
+            </div>
 
-            <Card className="border-2 shadow-lg hover:border-[var(--color-secondary-blue)]/30 transition-colors">
-              <CardHeader className="pb-2">
-                <div className="inline-flex size-12 rounded-full items-center justify-center bg-[var(--color-accent-orange)]/15 text-[var(--color-accent-orange)] mb-2">
-                  <Clock className="size-6" aria-hidden />
-                </div>
-                <h2 className="text-xl font-bold text-foreground">
-                  Working Hours
-                </h2>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-foreground font-medium">
-                  Sun - Thu: 8:00 AM - 6:00 PM
-                </p>
-                <p className="text-muted-foreground">Saturday: 9:00 AM - 3:00 PM</p>
-                <p className="text-muted-foreground">Friday: Closed</p>
-              </CardContent>
-            </Card>
+            <div className="bg-paper p-6">
+              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                <Clock className="size-6" aria-hidden />
+              </div>
+              <h2 className="text-xl font-semibold text-foreground mb-2 tracking-tight">
+                Working Hours
+              </h2>
+              <p className="text-foreground font-medium">
+                Sun - Thu: 8:00 AM - 6:00 PM
+              </p>
+              <p className="text-muted-foreground">Saturday: 9:00 AM - 3:00 PM</p>
+              <p className="text-muted-foreground">Friday: Closed</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Main Section - Split Layout */}
       <section
-        className="py-16 md:py-20 lg:py-24 bg-muted/30"
+        className="py-16 md:py-20 lg:py-24 bg-concrete"
         aria-labelledby="contact-form-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -198,8 +172,8 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left - Contact Form */}
             <div className="lg:col-span-3">
-              <div className="rounded-2xl border-2 border-border bg-card p-6 md:p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-foreground mb-2">
+              <div className="border border-steel/20 bg-paper p-6 md:p-8">
+                <h3 className="text-2xl font-semibold text-foreground mb-2 tracking-tight">
                   Get a Free Quote
                 </h3>
                 <p className="text-muted-foreground mb-8">
@@ -211,11 +185,11 @@ export default function ContactPage() {
             </div>
 
             {/* Right - Additional Info */}
-            <div className="lg:col-span-2 space-y-6">
-              <div className="rounded-2xl border-2 border-border bg-card p-6 shadow-sm">
+            <div className="lg:col-span-2 space-y-3">
+              <div className="border border-steel/20 bg-paper p-6">
                 <Badge
                   variant="outline"
-                  className="mb-4 border-[var(--color-accent-orange)] text-[var(--color-accent-orange)]"
+                  className="mb-4 rounded-none border-signal-orange text-signal-orange"
                 >
                   Quick Response Guaranteed
                 </Badge>
@@ -227,7 +201,7 @@ export default function ContactPage() {
                   href={company.socialLinks.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 w-full h-14 rounded-xl bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors mb-6"
+                  className="flex items-center justify-center gap-3 w-full h-14 bg-[#25D366] text-white font-semibold hover:bg-[#20BD5A] transition-colors mb-6"
                 >
                   <MessageCircle className="size-6" />
                   Chat on WhatsApp
@@ -238,21 +212,21 @@ export default function ContactPage() {
                 </p>
                 <a
                   href={`tel:${company.phoneClean}`}
-                  className="text-lg font-semibold text-[var(--color-secondary-blue)] hover:underline"
+                  className="font-mono text-lg font-semibold text-foreground hover:text-signal-orange"
                 >
                   {company.phone}
                 </a>
               </div>
 
-              <div className="rounded-2xl border-2 border-border bg-card p-6 shadow-sm">
-                <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                  <MapPin className="size-5 text-[var(--color-accent-orange)]" />
+              <div className="border border-steel/20 bg-paper p-6">
+                <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2 tracking-tight">
+                  <MapPin className="size-5 text-signal-orange" />
                   Service Areas
                 </h4>
                 <ul className="grid grid-cols-1 gap-2 text-sm text-muted-foreground" role="list">
                   {company.serviceAreas.map((city) => (
                     <li key={city} className="flex items-center gap-2">
-                      <span className="size-1.5 rounded-full bg-[var(--color-accent-orange)]" />
+                      <span className="size-1.5 bg-signal-orange" />
                       {city}
                     </li>
                   ))}
@@ -265,13 +239,13 @@ export default function ContactPage() {
 
       {/* Service Areas Section */}
       <section
-        className="bg-white py-16 md:py-20 lg:py-24"
+        className="bg-paper py-16 md:py-20 lg:py-24"
         aria-labelledby="service-areas-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="service-areas-heading"
-            className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center"
+            className="text-2xl md:text-3xl font-semibold text-foreground mb-4 text-center tracking-tight"
           >
             Service Areas
           </h2>
@@ -279,13 +253,13 @@ export default function ContactPage() {
             We provide GPR scanning, core cutting, and excavation services across
             all major UAE emirates.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
             {company.serviceAreas.map((city) => (
               <span
                 key={city}
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-5 py-2.5 text-foreground font-medium"
+                className="inline-flex items-center gap-2 border border-steel/20 bg-concrete px-5 py-2.5 text-foreground font-medium"
               >
-                <MapPin className="size-4 text-[var(--color-accent-orange)]" />
+                <MapPin className="size-4 text-signal-orange" />
                 {city}
               </span>
             ))}
@@ -295,13 +269,13 @@ export default function ContactPage() {
 
       {/* FAQ Section */}
       <section
-        className="bg-muted/50 py-16 md:py-20 lg:py-24"
+        className="bg-concrete py-16 md:py-20 lg:py-24"
         aria-labelledby="contact-faq-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="contact-faq-heading"
-            className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center"
+            className="text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center tracking-tight"
           >
             Frequently Asked Questions
           </h2>

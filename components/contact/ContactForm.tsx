@@ -239,7 +239,7 @@ ${message}
       <div className="space-y-2">
         <Button
           type="submit"
-          className="h-12 w-full gap-2 bg-[var(--color-accent-orange)] text-white hover:bg-[var(--color-accent-orange)]/90 focus-visible:ring-[var(--color-accent-orange)]"
+          className="h-12 w-full gap-2 rounded-none bg-signal-orange text-ink hover:bg-signal-orange/90 focus-visible:ring-signal-orange"
         >
           <MessageCircle className="size-5 shrink-0" aria-hidden />
           Send via WhatsApp

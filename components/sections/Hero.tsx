@@ -29,35 +29,18 @@ const itemFadeUp = {
 export function Hero() {
   return (
     <section
-      className="relative min-h-[auto] w-full md:min-h-[100vh] overflow-hidden flex items-center justify-center bg-[#0A2540]"
+      className="relative w-full overflow-hidden bg-ink"
       aria-label="Hero - Bhadeya Technical Services GPR Scanning Dubai UAE"
     >
-      {/* Background: deep navy to dark blue gradient + dot pattern */}
       <div
-        className="absolute inset-0 bg-[#0A2540]"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `
-            radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
-            radial-gradient(ellipse 60% 40% at 50% 100%, rgba(0, 102, 255, 0.08) 0%, transparent 50%),
-            radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 1px)
-          `,
-          backgroundSize: "100% 100%, 100% 100%, 24px 24px",
-          backgroundPosition: "0 0, 0 0, 0 0",
-        }}
-      />
-      {/* Subtle grid overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)
-          `,
-          backgroundSize: "48px 48px",
+          backgroundImage:
+            "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-7xl px-6 py-12 sm:px-8 md:py-16 lg:px-12 lg:py-20 xl:px-16 flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-5rem)]">
+      <div className="relative mx-auto flex min-h-[75vh] w-full max-w-7xl flex-col items-center justify-center px-6 py-14 sm:px-8 md:min-h-[80vh] md:py-16 lg:px-12 xl:px-16">
         <motion.header
           variants={containerVariants}
           initial="hidden"
@@ -66,28 +49,31 @@ export function Hero() {
         >
           <motion.div variants={itemFadeUp}>
             <span
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/95 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 border border-signal-orange/30 bg-signal-orange/[0.08] px-4 py-1.5 font-mono text-xs uppercase tracking-wider text-signal-orange"
               role="status"
             >
-              🏆 UAE&apos;s Trusted GPR Scanning Experts • 7+ Years Experience
+              <span className="size-1.5 shrink-0 rounded-full bg-signal-orange shadow-[0_0_8px_var(--color-signal-orange)]" />
+              UAE&apos;s Trusted GPR Scanning Experts · 7+ Years
             </span>
           </motion.div>
 
           {/* H1 uses transform-only variant — always visible for LCP measurement */}
           <motion.h1
             variants={h1Variant}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[3.5rem] font-bold leading-tight text-white tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[3.5rem] font-semibold leading-[1.08] text-paper tracking-tight"
           >
-            Professional GPR Scanning & Core Cutting Services in Dubai & UAE
+            Know what&apos;s beneath{" "}
+            <span className="text-signal-orange">before</span> you cut.
           </motion.h1>
 
           <motion.p
             variants={itemFadeUp}
-            className="text-base sm:text-lg text-white/85 max-w-[700px] leading-relaxed mx-auto"
+            className="text-base sm:text-lg text-paper/75 max-w-[700px] leading-relaxed mx-auto"
           >
             Protect your structure before you cut. We use Proceq GP8000
-            technology for precise subsurface detection up to 500cm depth.
-            Serving Dubai, Abu Dhabi, Sharjah & across UAE.
+            technology for precise subsurface detection up to{" "}
+            <span className="font-mono text-paper">500cm</span> depth.
+            Serving Dubai, Abu Dhabi, Sharjah &amp; across UAE.
           </motion.p>
 
           <motion.div
@@ -98,8 +84,8 @@ export function Hero() {
               asChild
               size="lg"
               className={cn(
-                "w-full sm:w-auto bg-[var(--color-accent-orange)] text-white hover:bg-[var(--color-accent-orange)]/90",
-                "text-base font-semibold px-8 py-6 rounded-lg shadow-lg"
+                "w-full sm:w-auto rounded-none border border-transparent bg-signal-orange text-ink hover:border-ink hover:bg-signal-orange",
+                "text-base font-semibold px-8 py-6"
               )}
             >
               <GetQuoteLink href="https://wa.me/971556926286?text=Hi%2C%20I%27d%20like%20to%20get%20a%20free%20quote%20for%20GPR%20scanning%20services.">Get Free Quote</GetQuoteLink>
@@ -108,7 +94,7 @@ export function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto border-2 border-white/80 text-white bg-transparent hover:bg-white/10 text-base font-semibold px-6 py-6 rounded-lg"
+              className="w-full sm:w-auto rounded-none border-2 border-white/25 bg-transparent text-paper hover:bg-white/5 hover:text-paper hover:border-white/40 text-base font-semibold px-6 py-6"
             >
               <PhoneLink
                 href="tel:+971556926286"

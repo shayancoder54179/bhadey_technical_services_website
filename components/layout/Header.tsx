@@ -44,6 +44,14 @@ const WHATSAPP_URL = `${company.socialLinks.whatsapp}?text=${encodeURIComponent(
   "Hello, I would like to inquire about your GPR scanning and technical services."
 )}`;
 
+const navLinkClass = (active: boolean) =>
+  cn(
+    "border-b-2 border-transparent px-1 py-2 text-sm font-medium transition-colors",
+    active
+      ? "border-signal-orange text-signal-orange"
+      : "text-paper/75 hover:border-signal-orange/50 hover:text-paper"
+  );
+
 export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = React.useState(false);
@@ -67,10 +75,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 h-20 transition-all duration-300",
-        scrolled
-          ? "bg-white/95 shadow-md backdrop-blur-sm"
-          : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 h-20 border-b border-white/10 transition-colors duration-300",
+        scrolled ? "bg-ink-raised/95 backdrop-blur-sm" : "bg-ink-raised"
       )}
       role="banner"
     >
@@ -78,7 +84,7 @@ export function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center transition-opacity hover:opacity-90"
+          className="flex items-center bg-paper px-2 py-1.5 transition-opacity hover:opacity-90"
           aria-label="Bhadeya Technical Services - Home"
         >
           <Image
@@ -87,24 +93,16 @@ export function Header() {
             width={180}
             height={60}
             priority={true}
-            className="h-10 w-auto md:h-12 object-contain"
+            className="h-9 w-auto md:h-10 object-contain"
           />
         </Link>
 
         {/* Desktop nav */}
         <nav
-          className="hidden items-center gap-1 lg:flex"
+          className="hidden items-center gap-2 lg:flex"
           aria-label="Main navigation"
         >
-          <Link
-            href="/"
-            className={cn(
-              "rounded-md px-3 py-2 text-sm font-medium transition-colors",
-              isActive("/")
-                ? "text-[var(--color-accent-orange)]"
-                : "text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5 hover:text-[var(--color-primary-navy)]"
-            )}
-          >
+          <Link href="/" className={navLinkClass(isActive("/"))}>
             Home
           </Link>
 
@@ -117,10 +115,8 @@ export function Header() {
             <button
               type="button"
               className={cn(
-                "inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                isServicesActive || servicesOpen
-                  ? "text-[var(--color-accent-orange)]"
-                  : "text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5 hover:text-[var(--color-primary-navy)]"
+                "inline-flex items-center gap-1",
+                navLinkClass(isServicesActive || servicesOpen)
               )}
               aria-expanded={servicesOpen}
               aria-haspopup="true"
@@ -134,28 +130,28 @@ export function Header() {
             </button>
             {servicesOpen && (
               <div
-                className="absolute left-1/2 top-full z-50 mt-0 w-[min(90vw,640px)] -translate-x-1/2 rounded-lg border border-[var(--color-primary-navy)]/10 bg-white p-4 shadow-xl"
+                className="absolute left-1/2 top-full z-50 mt-0 w-[min(90vw,640px)] -translate-x-1/2 border border-white/10 bg-ink-raised p-4"
                 role="menu"
               >
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-1 sm:grid-cols-2">
                   {services.map((service) => {
                     const Icon = serviceIcons[service.icon] ?? Radar;
                     return (
                       <Link
                         key={service.id}
                         href={`/services/${service.slug}`}
-                        className="flex gap-3 rounded-lg p-3 transition-colors hover:bg-[var(--color-primary-navy)]/5"
+                        className="flex gap-3 p-3 transition-colors hover:bg-white/5"
                         role="menuitem"
                         onClick={() => setServicesOpen(false)}
                       >
-                        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent-orange)]/10 text-[var(--color-accent-orange)]">
+                        <div className="flex size-10 shrink-0 items-center justify-center bg-signal-orange/10 text-signal-orange">
                           <Icon className="size-5" aria-hidden />
                         </div>
                         <div className="min-w-0">
-                          <span className="font-semibold text-[var(--color-primary-navy)]">
+                          <span className="font-semibold text-paper">
                             {service.title}
                           </span>
-                          <p className="mt-0.5 line-clamp-2 text-xs text-[var(--color-primary-navy)]/70">
+                          <p className="mt-0.5 line-clamp-2 text-xs text-paper/60">
                             {service.shortDescription}
                           </p>
                         </div>
@@ -168,27 +164,18 @@ export function Header() {
           </div>
 
           {navLinks.slice(1).map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={cn(
-                "rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                isActive(href)
-                  ? "text-[var(--color-accent-orange)]"
-                  : "text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5 hover:text-[var(--color-primary-navy)]"
-              )}
-            >
+            <Link key={href} href={href} className={navLinkClass(isActive(href))}>
               {label}
             </Link>
           ))}
         </nav>
 
         {/* Desktop right: phone + CTA */}
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           <a
             href={`tel:${company.phoneClean}`}
             onClick={() => trackPhoneClick(company.phoneClean)}
-            className="flex items-center gap-2 text-sm font-medium text-[var(--color-primary-navy)] transition-colors hover:text-[var(--color-accent-orange)]"
+            className="flex items-center gap-2 font-mono text-sm text-paper/80 transition-colors hover:text-signal-orange"
             aria-label={`Call us: ${company.phone}`}
           >
             <Phone className="size-4 shrink-0" aria-hidden />
@@ -197,7 +184,7 @@ export function Header() {
           <Button
             asChild
             size="default"
-            className="bg-[var(--color-accent-orange)] font-semibold text-white hover:bg-[var(--color-accent-orange)]/90"
+            className="rounded-none border border-transparent bg-signal-orange font-semibold text-ink hover:border-ink hover:bg-signal-orange"
           >
             <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("header")}>
               Get Free Quote
@@ -213,13 +200,13 @@ export function Header() {
               href="https://wa.me/971556926286?text=Hello, I would like to inquire about your GPR scanning services."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 bg-amber-500 hover:bg-amber-400 text-black font-semibold rounded text-xs px-2 py-1 transition-colors"
+              className="bg-signal-orange px-3 py-1.5 text-xs font-semibold text-ink transition-opacity hover:opacity-90"
               onClick={() => trackWhatsAppClick("mobile_header")}
             >
-              💬 Free Quote
+              Free Quote
             </a>
             <SheetTrigger
-              className="flex size-10 items-center justify-center rounded-md text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/10"
+              className="flex size-10 items-center justify-center text-paper hover:bg-white/10"
               aria-label="Open menu"
             >
               <Menu className="size-6" aria-hidden />
@@ -227,18 +214,18 @@ export function Header() {
           </div>
           <SheetContent
             side="right"
-            className="flex w-full max-w-sm flex-col bg-white"
+            className="flex w-full max-w-sm flex-col border-l border-white/10 bg-ink text-paper"
             showCloseButton={true}
           >
             <SheetHeader>
               <Link href="/" className="mb-2 block w-fit" onClick={() => setMobileOpen(false)}>
-                <div className="bg-white rounded-lg p-1.5 shadow-sm inline-block">
+                <div className="inline-block bg-paper px-2 py-1.5">
                   <Image
                     src="/images/bts_logo.png"
                     alt="Bhadeya Technical Services LLC - GPR scanning core cutting Dubai UAE"
                     width={180}
                     height={60}
-                    className="h-12 w-auto object-contain"
+                    className="h-11 w-auto object-contain"
                     loading="lazy"
                   />
                 </div>
@@ -248,19 +235,19 @@ export function Header() {
             <nav className="flex flex-1 flex-col gap-1 overflow-y-auto" aria-label="Mobile navigation">
               <Link
                 href="/"
-                className="rounded-md px-3 py-2.5 font-medium text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5"
+                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
                 onClick={() => setMobileOpen(false)}
               >
                 Home
               </Link>
-              <span className="mt-2 px-3 text-xs font-semibold uppercase tracking-wider text-[var(--color-primary-navy)]/60">
+              <span className="mt-2 px-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper/50">
                 Services
               </span>
               {services.map((service) => (
                 <Link
                   key={service.id}
                   href={`/services/${service.slug}`}
-                  className="rounded-md px-3 py-2.5 font-medium text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5"
+                  className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
                   onClick={() => setMobileOpen(false)}
                 >
                   {service.title}
@@ -268,29 +255,29 @@ export function Header() {
               ))}
               <Link
                 href="/projects"
-                className="rounded-md px-3 py-2.5 font-medium text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5"
+                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
                 onClick={() => setMobileOpen(false)}
               >
                 Projects
               </Link>
               <Link
                 href="/about"
-                className="rounded-md px-3 py-2.5 font-medium text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5"
+                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
                 onClick={() => setMobileOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="rounded-md px-3 py-2.5 font-medium text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5"
+                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
                 onClick={() => { setMobileOpen(false); trackGetQuoteClick(); }}
               >
                 Contact
               </Link>
-              <div className="my-4 border-t border-[var(--color-primary-navy)]/10" />
+              <div className="my-4 border-t border-white/10" />
               <a
                 href={`tel:${company.phoneClean}`}
-                className="flex items-center gap-2 rounded-md px-3 py-2.5 font-medium text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5"
+                className="flex items-center gap-2 px-3 py-2.5 font-medium text-paper hover:bg-white/5"
                 onClick={() => { setMobileOpen(false); trackPhoneClick(); }}
               >
                 <Phone className="size-4" aria-hidden />
@@ -298,7 +285,7 @@ export function Header() {
               </a>
               <a
                 href={`mailto:${company.email}`}
-                className="rounded-md px-3 py-2.5 font-medium text-[var(--color-primary-navy)] hover:bg-[var(--color-primary-navy)]/5"
+                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
                 onClick={() => setMobileOpen(false)}
               >
                 {company.email}
@@ -306,7 +293,7 @@ export function Header() {
               <Button
                 asChild
                 size="lg"
-                className="mt-4 w-full bg-[var(--color-accent-orange)] font-semibold text-white hover:bg-[var(--color-accent-orange)]/90"
+                className="mt-4 w-full rounded-none bg-signal-orange font-semibold text-ink hover:bg-signal-orange/90"
               >
                 <Link
                   href={WHATSAPP_URL}

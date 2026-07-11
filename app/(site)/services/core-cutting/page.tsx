@@ -220,11 +220,11 @@ function CoreCuttingExtras() {
     <>
       {/* Size chart */}
       <section
-        className="bg-muted/40 py-16 md:py-20 lg:py-24 border-t border-border"
+        className="bg-concrete py-16 md:py-20 lg:py-24 border-t border-steel/20"
         aria-labelledby="size-chart-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-          <h2 id="size-chart-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+          <h2 id="size-chart-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-4 tracking-tight">
             Core Hole Size Range: 12mm to 500mm
           </h2>
           <p className="text-muted-foreground max-w-3xl mb-10">
@@ -235,12 +235,12 @@ function CoreCuttingExtras() {
               {CORE_SIZES.map((item) => (
                 <div
                   key={item.mm}
-                  className="flex flex-col items-center rounded-xl border-2 border-border bg-card p-4 min-w-[100px] shadow-sm"
+                  className="flex flex-col items-center border border-steel/20 bg-paper p-4 min-w-[100px]"
                 >
-                  <span className="flex size-12 items-center justify-center rounded-full bg-[var(--color-accent-orange)]/15 text-[var(--color-accent-orange)] font-bold text-lg">
+                  <span className="flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
                     <CircleDot className="size-6" aria-hidden />
                   </span>
-                  <span className="font-bold text-foreground text-lg mt-2 tabular-nums">{item.label}</span>
+                  <span className="font-mono font-semibold text-foreground text-lg mt-2 tabular-nums">{item.label}</span>
                   <span className="text-xs text-muted-foreground text-center mt-1">{item.use}</span>
                 </div>
               ))}
@@ -251,17 +251,17 @@ function CoreCuttingExtras() {
 
       {/* GPR Scanning Before Every Cut */}
       <section
-        className="bg-white py-16 md:py-20 lg:py-24 border-t border-border"
+        className="bg-paper py-16 md:py-20 lg:py-24 border-t border-steel/20"
         aria-labelledby="gpr-safety-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-          <div className="max-w-3xl mx-auto rounded-2xl border-2 border-[var(--color-secondary-blue)]/30 bg-[var(--color-secondary-blue)]/5 p-8 md:p-10">
+          <div className="max-w-3xl mx-auto border border-steel/20 bg-concrete/50 p-8 md:p-10">
             <div className="flex items-start gap-4 mb-6">
-              <span className="flex size-14 shrink-0 items-center justify-center rounded-full bg-[var(--color-secondary-blue)]/20 text-[var(--color-secondary-blue)]">
+              <span className="flex size-14 shrink-0 items-center justify-center bg-signal-orange/10 text-signal-orange">
                 <Shield className="size-7" aria-hidden />
               </span>
               <div>
-                <h2 id="gpr-safety-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                <h2 id="gpr-safety-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-2 tracking-tight">
                   GPR Scanning Before Every Cut
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -271,7 +271,7 @@ function CoreCuttingExtras() {
             </div>
             <Link
               href="/services/gpr-scanning"
-              className="inline-flex items-center text-[var(--color-secondary-blue)] font-semibold hover:underline"
+              className="inline-flex items-center border-b-2 border-transparent text-foreground font-semibold hover:border-signal-orange"
             >
               Learn more about our GPR scanning →
             </Link>
@@ -281,15 +281,15 @@ function CoreCuttingExtras() {
 
       {/* Professional equipment showcase */}
       <section
-        className="bg-muted/40 py-16 md:py-20 lg:py-24 border-t border-border"
+        className="bg-concrete py-16 md:py-20 lg:py-24 border-t border-steel/20"
         aria-labelledby="equipment-showcase-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-          <h2 id="equipment-showcase-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+          <h2 id="equipment-showcase-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-6 tracking-tight">
             Professional Equipment Showcase
           </h2>
           <div className="flex flex-col md:flex-row gap-6 items-start max-w-4xl">
-            <span className="flex size-20 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+            <span className="flex size-20 shrink-0 items-center justify-center bg-signal-orange/10 text-signal-orange">
               <Wrench className="size-10" aria-hidden />
             </span>
             <div>

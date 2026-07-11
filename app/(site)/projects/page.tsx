@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { GetQuoteLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
@@ -63,35 +62,23 @@ export default function ProjectsPage() {
         className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
         aria-labelledby="projects-hero-title"
       >
+        <div className="absolute inset-0 bg-ink" />
         <div
-          className="absolute inset-0 bg-[#0A2540]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: `
-              radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 102, 255, 0.12) 0%, transparent 50%),
-              radial-gradient(ellipse 60% 40% at 100% 100%, rgba(0, 102, 255, 0.06) 0%, transparent 50%)
-            `,
-            backgroundSize: "100% 100%, 100% 100%",
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)
-            `,
-            backgroundSize: "48px 48px",
+            backgroundImage:
+              "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
           }}
         />
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <header className="max-w-3xl">
             <h1
               id="projects-hero-title"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-bold leading-tight text-white mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-paper mb-4 tracking-tight"
             >
               Our Projects & Portfolio
             </h1>
-            <p className="text-lg text-white/90">
+            <p className="text-lg text-paper/80">
               Trusted across UAE&apos;s most prestigious developments
             </p>
           </header>
@@ -100,7 +87,7 @@ export default function ProjectsPage() {
 
       {/* Filter + Projects Grid */}
       <section
-        className="bg-white py-16 md:py-20 lg:py-24 scroll-mt-20"
+        className="bg-paper py-16 md:py-20 lg:py-24 scroll-mt-20"
         aria-labelledby="projects-grid-heading"
       >
         <h2 id="projects-grid-heading" className="sr-only">
@@ -113,25 +100,25 @@ export default function ProjectsPage() {
 
       {/* Stats Banner */}
       <section
-        className="bg-[#0A2540] py-8 md:py-10"
+        className="border-y border-white/10 bg-ink py-8 md:py-10"
         aria-label="Portfolio statistics"
       >
         <div className="mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
-          <p className="text-lg md:text-xl font-semibold text-white">
-            7+ Years | 6+ Cities | Trusted by UAE&apos;s Best
+          <p className="font-mono text-lg md:text-xl font-semibold text-paper">
+            <span className="text-signal-orange">7+</span> Years &middot; <span className="text-signal-orange">6+</span> Cities &middot; Trusted by UAE&apos;s Best
           </p>
         </div>
       </section>
 
       {/* Notable Clients */}
       <section
-        className="bg-muted/40 py-16 md:py-20"
+        className="bg-concrete py-16 md:py-20"
         aria-labelledby="trusted-by-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="trusted-by-heading"
-            className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10"
+            className="text-2xl md:text-3xl font-semibold text-foreground text-center mb-10 tracking-tight"
           >
             Trusted By
           </h2>
@@ -139,7 +126,7 @@ export default function ProjectsPage() {
             {NOTABLE_CLIENTS.map((client) => (
               <span
                 key={client}
-                className="inline-flex items-center rounded-lg border border-border bg-card px-5 py-3 text-sm md:text-base font-semibold text-foreground shadow-sm"
+                className="inline-flex items-center border border-steel/20 bg-paper px-5 py-3 text-sm md:text-base font-semibold text-foreground"
               >
                 {client}
               </span>
@@ -157,25 +144,23 @@ export default function ProjectsPage() {
         className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
         aria-labelledby="cta-heading"
       >
+        <div className="absolute inset-0 bg-ink" aria-hidden />
         <div
-          className="absolute inset-0 bg-gradient-to-br from-[#0066ff] via-[#0052cc] to-[#0A2540]"
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 50%)`,
+            backgroundImage:
+              "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
           }}
           aria-hidden
         />
         <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="cta-heading"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-2xl mx-auto"
+            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-paper mb-4 max-w-2xl mx-auto tracking-tight"
           >
             Have a project? Let&apos;s discuss how we can help.
           </h2>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-paper/80 max-w-2xl mx-auto mb-10">
             Get a free quote for GPR scanning, core cutting, or excavation. We
             respond within 1 hour during business hours.
           </p>
@@ -183,7 +168,7 @@ export default function ProjectsPage() {
             <Button
               asChild
               size="lg"
-              className="w-full sm:w-auto bg-white text-[#0066ff] hover:bg-white/95 font-semibold text-base px-8 py-6 rounded-lg shadow-lg"
+              className="w-full sm:w-auto rounded-none border border-transparent bg-signal-orange text-ink hover:border-paper hover:bg-signal-orange font-semibold text-base px-8 py-6"
             >
               <GetQuoteLink href="/contact" className="inline-flex items-center gap-2">
                 Get Quote
@@ -192,7 +177,7 @@ export default function ProjectsPage() {
             <Button
               asChild
               size="lg"
-              className="w-full sm:w-auto bg-[#25D366] text-white hover:bg-[#20BD5A] font-semibold text-base px-8 py-6 rounded-lg shadow-lg"
+              className="w-full sm:w-auto rounded-none bg-[#25D366] text-white hover:bg-[#20BD5A] font-semibold text-base px-8 py-6"
             >
               <WhatsAppLink href={whatsappUrl} className="inline-flex items-center gap-2">
                 <WhatsAppIcon aria-hidden />

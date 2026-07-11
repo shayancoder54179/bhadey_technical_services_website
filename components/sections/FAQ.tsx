@@ -26,8 +26,8 @@ function FAQAccordionTrigger({
         {...props}
       >
         {children}
-        <Plus className="text-muted-foreground pointer-events-none size-5 shrink-0 translate-y-0.5 group-data-[state=open]:hidden" />
-        <Minus className="text-muted-foreground pointer-events-none size-5 shrink-0 translate-y-0.5 hidden group-data-[state=open]:block" />
+        <Plus className="text-steel pointer-events-none size-5 shrink-0 translate-y-0.5 group-data-[state=open]:hidden" />
+        <Minus className="text-signal-orange pointer-events-none size-5 shrink-0 translate-y-0.5 hidden group-data-[state=open]:block" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );
@@ -36,29 +36,29 @@ function FAQAccordionTrigger({
 export function FAQ() {
   return (
     <section
-      className="bg-white py-16 md:py-20 lg:py-24"
+      className="bg-paper py-16 md:py-20 lg:py-24"
       aria-labelledby="faq-heading"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <p
-            className="text-sm font-semibold uppercase tracking-wide text-[var(--color-accent-orange)] mb-3"
+            className="font-mono text-xs font-semibold uppercase tracking-widest text-signal-orange mb-3"
             aria-hidden
           >
             FAQ
           </p>
           <h2
             id="faq-heading"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight"
           >
             Frequently Asked Questions About GPR Scanning & Core Cutting
           </h2>
         </header>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto border-t border-steel/20">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`faq-${index}`}>
+              <AccordionItem key={index} value={`faq-${index}`} className="border-steel/20">
                 <FAQAccordionTrigger>{faq.question}</FAQAccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">
                   {faq.answer}

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-11T00:00:00.000Z",
+  "title": "Design System: Bhadeya Technical Services",
+  "extensions": {
+    "colorMeta": {
+      "signal-orange": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "oklch(0.72 0.19 46)",
+        "tonalRamp": ["#3A1E00", "#5C2F00", "#8A4700", "#B95F00", "#E97400", "#F5820F", "#FFA555", "#FFD3A8"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(0.16 0 0)",
+        "tonalRamp": ["#0E0E0F", "#18181A", "#252528", "#3A3A3E", "#54545A", "#75757C", "#9E9EA5", "#C9C9CE"]
+      },
+      "concrete": {
+        "role": "neutral",
+        "displayName": "Concrete",
+        "canonical": "oklch(0.92 0.01 80)",
+        "tonalRamp": ["#3A362D", "#5C564A", "#8A8272", "#B0A897", "#CFC7B6", "#E2DDD2", "#EEEAE2", "#FBFAF7"]
+      },
+      "steel": {
+        "role": "neutral",
+        "displayName": "Steel",
+        "canonical": "oklch(0.47 0.01 240)",
+        "tonalRamp": ["#1B1E21", "#2C3033", "#3F454A", "#5B6570", "#7A8590", "#9BA5AF", "#C0C8CF", "#E4E8EB"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline and major section headers only." },
+      "body": { "displayName": "Body", "purpose": "Descriptions, FAQ answers, long-form copy." },
+      "label": { "displayName": "Label / Mono", "purpose": "Eyebrows, badges, nav labels, and every real measurement or spec number." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default ease-out-expo for hover/focus state transitions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA action (Get Free Quote). Flat Signal Orange fill, Ink text, near-zero radius.",
+      "html": "<button class=\"ds-btn-primary\">Get Free Quote</button>",
+      "css": ".ds-btn-primary { background: #F5820F; color: #0E0E0F; padding: 13px 26px; font-weight: 600; font-size: 14px; border: 1px solid transparent; border-radius: 2px; transition: border-color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { border-color: #0E0E0F; } .ds-btn-primary:focus-visible { outline: 2px solid #F5820F; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary CTA on dark surfaces (Call Now). Transparent fill, hairline border.",
+      "html": "<button class=\"ds-btn-ghost\">Call Now</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #FBFAF7; padding: 13px 26px; font-weight: 600; font-size: 14px; border: 1px solid rgba(251,250,247,0.28); border-radius: 2px; transition: background 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-ghost:hover { background: rgba(251,250,247,0.08); } .ds-btn-ghost:focus-visible { outline: 2px solid #F5820F; outline-offset: 2px; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Grid-panel service card; borderless, sits inside a shared hairline grid rather than owning its own border.",
+      "html": "<div class=\"ds-card\"><span class=\"ds-card-idx\">GPR</span><h3 class=\"ds-card-title\">GPR Scanning</h3><p class=\"ds-card-desc\">Non-destructive subsurface mapping before any cutting begins.</p><span class=\"ds-card-stat\">500cm depth</span></div>",
+      "css": ".ds-card { background: #FBFAF7; color: #0E0E0F; padding: 26px 22px; } .ds-card-idx { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #F5820F; display: block; margin-bottom: 14px; letter-spacing: 0.08em; text-transform: uppercase; } .ds-card-title { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; } .ds-card-desc { font-family: 'Inter', sans-serif; font-size: 13.5px; color: #5B6570; line-height: 1.55; margin: 0 0 14px; } .ds-card-stat { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #0E0E0F; background: #E2DDD2; display: inline-block; padding: 4px 8px; border-radius: 2px; }"
+    },
+    {
+      "name": "Stat Band",
+      "kind": "custom",
+      "refersTo": "stat-band",
+      "description": "Dark instrument band for key stats (years, depth, accuracy, coverage), mono numerals with Signal Orange unit suffix.",
+      "html": "<div class=\"ds-stat\"><span class=\"ds-stat-num\">500<span class=\"ds-stat-unit\">CM</span></span><span class=\"ds-stat-lbl\">Max scan depth</span></div>",
+      "css": ".ds-stat { text-align: left; } .ds-stat-num { font-family: 'IBM Plex Mono', monospace; font-size: 28px; color: #FBFAF7; display: block; } .ds-stat-unit { color: #F5820F; font-size: 16px; margin-left: 2px; } .ds-stat-lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #7C8792; margin-top: 4px; display: block; font-family: 'IBM Plex Mono', monospace; }"
+    },
+    {
+      "name": "Nav Bar",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Ink Raised header bar (deliberately one step lighter than the Ink page surfaces below it) with Paper wordmark and Signal Orange active-link underline.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-brand\">BHADEYA</span><a class=\"ds-nav-link ds-nav-link-active\" href=\"#\">Services</a><a class=\"ds-nav-link\" href=\"#\">Projects</a></nav>",
+      "css": ".ds-nav { background: #18181A; color: #FBFAF7; display: flex; align-items: center; gap: 28px; padding: 16px 24px; } .ds-nav-brand { font-family: 'Space Grotesk', sans-serif; font-weight: 600; letter-spacing: -0.01em; } .ds-nav-link { font-family: 'Inter', sans-serif; font-size: 14px; color: #FBFAF7; text-decoration: none; padding-bottom: 4px; border-bottom: 2px solid transparent; transition: border-color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-nav-link:hover, .ds-nav-link-active { border-bottom-color: #F5820F; } .ds-nav-link:focus-visible { outline: 2px solid #F5820F; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Depth Gauge",
+    "overview": "Bhadeya's product is literal: seeing what's hidden underground or embedded in concrete before anyone cuts, drills, or digs. The Depth Gauge takes that job and makes it the visual grammar of the site itself — depth rulers, tick marks, measured numbers (500CM, ±10MM, 12–500MM) standing in for the generic stat-card. The palette is deliberately restricted to the two colors already in the company's own eagle-and-wordmark logo: flat black and one signal orange, no gradients, no third brand color, no navy-blue-and-orange corporate-services template look. This is also, not incidentally, the universal hazard/safety-signage color pairing — apt for a company whose entire job is preventing someone from hitting a cable they couldn't see.",
+    "keyCharacteristics": [
+      "Flat, high-contrast, two-color discipline (ink black + signal orange)",
+      "Measurement/instrumentation vocabulary: mono numerals, precise stats, real spec numbers",
+      "Zero border-radius or near-zero — sharp, engineered edges, not soft SaaS rounding",
+      "Still and quiet by default — no grid-line textures or animated sweep/scan motifs"
+    ],
+    "rules": [
+      { "name": "The Two-Color Rule", "body": "Only Ink and Signal Orange are allowed to carry brand meaning. Every other value in this palette is a neutral.", "section": "colors" },
+      { "name": "The Mono-Number Rule", "body": "Any digit that represents a real spec is set in IBM Plex Mono; digits inside ordinary prose stay in Inter.", "section": "typography" },
+      { "name": "The Flat-by-Default Rule", "body": "If a component needs to look lifted, change its background tint or add a hairline border. Never reach for box-shadow or a grid-line texture.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep every brand-meaningful color to exactly two: Ink (#0E0E0F) and Signal Orange (#F5820F).",
+      "Do set every real measurement in IBM Plex Mono.",
+      "Do use flat fills, hairline borders, and tint changes for hierarchy — never box-shadow.",
+      "Do use Ink Raised (not pure Ink) for the header, footer, and any dark panel sitting against another Ink surface.",
+      "Do keep contact (WhatsApp/call) visually one tap away on every page."
+    ],
+    "donts": [
+      "Don't introduce navy, electric blue, or any third brand hue.",
+      "Don't use a dot-grid, repeating grid-line texture, or animated scan/sweep line anywhere.",
+      "Don't use rounded pill buttons or soft-shadow icon-in-circle stat cards.",
+      "Don't add drop-shadows or blurred glows to cards, buttons, or nav.",
+      "Don't stack two Ink-background sections directly on top of each other without a seam."
+    ]
+  }
+}

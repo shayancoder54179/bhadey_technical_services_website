@@ -25,7 +25,7 @@ npm run lint       # ESLint check
 ### Content Data Layer (`data/`)
 All static content lives in centralized data files — avoid hardcoding content in components:
 - `data/company.ts` — contact info, hours, service areas, stats
-- `data/services.ts` — 4 services (GPR scanning, core cutting, excavation, GS8000)
+- `data/services.ts` — 4 services (GPR scanning, core cutting, excavation, oversized cargo)
 - `data/projects.ts` — project portfolio entries
 - `data/faqs.ts` — FAQ entries
 

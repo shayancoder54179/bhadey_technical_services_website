@@ -85,26 +85,6 @@ const localBusinessSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "PM8000 Rebar Scanning",
-          description:
-            "Profometer PM8000 rebar cover measurement and mapping with ±1mm accuracy",
-          url: `${BASE_URL}/services/pm8000-scanning`,
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "GS8000 Ground Scanning",
-          description:
-            "Proceq GS8000 large-scale ground scanning up to 10m depth for infrastructure projects",
-          url: `${BASE_URL}/services/gs8000-scanning`,
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
           name: "Oversized Cargo Movement",
           description:
             "Specialised oversized and heavy cargo transport across the UAE",
@@ -216,7 +196,7 @@ const faqPageSchema = {
       name: "What equipment do you use for GPR scanning?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use the Proceq GP8000 ground penetrating radar system for subsurface scanning. It is an industry-leading, non-destructive testing instrument with real-time 3D visualization, trusted by leading contractors and consultants worldwide. For rebar cover measurement we use the Profometer PM8000, and for large-scale infrastructure scanning the Proceq GS8000.",
+        text: "We use the Proceq GP8000 ground penetrating radar system for subsurface scanning. It is an industry-leading, non-destructive testing instrument with real-time 3D visualization, trusted by leading contractors and consultants worldwide.",
       },
     },
     {
@@ -303,44 +283,6 @@ const serviceSchemas = [
     url: `${BASE_URL}/services/excavation`,
     serviceType: "Excavation",
     category: "Construction Services",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "PM8000 Rebar Scanning",
-    description:
-      "Profometer PM8000 rebar cover measurement and mapping with ±1mm accuracy, CSV and cloud export for structural documentation.",
-    provider: { "@id": `${BASE_URL}/#localbusiness` },
-    areaServed: [
-      { "@type": "City", name: "Dubai" },
-      { "@type": "City", name: "Abu Dhabi" },
-      { "@type": "City", name: "Sharjah" },
-      { "@type": "City", name: "Ras Al Khaimah" },
-      { "@type": "City", name: "Fujairah" },
-      { "@type": "City", name: "Al Ain" },
-    ],
-    url: `${BASE_URL}/services/pm8000-scanning`,
-    serviceType: "Rebar Cover Measurement",
-    category: "Non-Destructive Testing",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "GS8000 Ground Scanning",
-    description:
-      "Proceq GS8000 large-scale SFCW ground penetrating radar scanning up to 10m depth at 80km/h scan speed with GNSS geolocation for infrastructure projects.",
-    provider: { "@id": `${BASE_URL}/#localbusiness` },
-    areaServed: [
-      { "@type": "City", name: "Dubai" },
-      { "@type": "City", name: "Abu Dhabi" },
-      { "@type": "City", name: "Sharjah" },
-      { "@type": "City", name: "Ras Al Khaimah" },
-      { "@type": "City", name: "Fujairah" },
-      { "@type": "City", name: "Al Ain" },
-    ],
-    url: `${BASE_URL}/services/gs8000-scanning`,
-    serviceType: "Ground Scanning",
-    category: "Non-Destructive Testing",
   },
   {
     "@context": "https://schema.org",

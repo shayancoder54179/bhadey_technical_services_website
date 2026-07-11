@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -11,9 +11,16 @@ const inter = Inter({
   display: "swap",
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-mono-plex",
+  subsets: ["latin"],
+  weight: ["500"],
   display: "swap",
 });
 
@@ -110,7 +117,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0a2540",
+  themeColor: "#0e0e0f",
 };
 
 export default function RootLayout({
@@ -124,7 +131,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body
-        className={`${inter.variable} ${plusJakartaSans.variable} overflow-x-hidden font-sans antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable} overflow-x-hidden font-sans antialiased`}
       >
         {children}
         <Analytics />

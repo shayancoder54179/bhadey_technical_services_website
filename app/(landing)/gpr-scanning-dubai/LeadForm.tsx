@@ -60,12 +60,11 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
   const inputStyle: React.CSSProperties = {
     width: "100%",
     padding: "12px 16px",
-    background: "#0A0E1A",
-    border: "1px solid rgba(212,160,23,0.3)",
-    borderRadius: "8px",
-    color: "#F9FAFB",
+    background: "#18181A",
+    border: "1px solid rgba(245,130,15,0.3)",
+    color: "#FBFAF7",
     fontSize: "15px",
-    fontFamily: "var(--font-dm-sans), DM Sans, sans-serif",
+    fontFamily: "var(--font-inter), Inter, sans-serif",
     outline: "none",
     transition: "border-color 0.2s",
   };
@@ -78,7 +77,7 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
     color: "#9CA3AF",
     textTransform: "uppercase",
     letterSpacing: "0.05em",
-    fontFamily: "var(--font-dm-sans), DM Sans, sans-serif",
+    fontFamily: "var(--font-inter), Inter, sans-serif",
   };
 
   return (
@@ -94,8 +93,8 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
           onChange={handleChange}
           placeholder="e.g. Ahmed Al Mansouri"
           style={inputStyle}
-          onFocus={(e) => (e.target.style.borderColor = "#D4A017")}
-          onBlur={(e) => (e.target.style.borderColor = "rgba(212,160,23,0.3)")}
+          onFocus={(e) => (e.target.style.borderColor = "#F5820F")}
+          onBlur={(e) => (e.target.style.borderColor = "rgba(245,130,15,0.3)")}
         />
       </div>
 
@@ -110,8 +109,8 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
           onChange={handleChange}
           placeholder="+971 50 000 0000"
           style={inputStyle}
-          onFocus={(e) => (e.target.style.borderColor = "#D4A017")}
-          onBlur={(e) => (e.target.style.borderColor = "rgba(212,160,23,0.3)")}
+          onFocus={(e) => (e.target.style.borderColor = "#F5820F")}
+          onBlur={(e) => (e.target.style.borderColor = "rgba(245,130,15,0.3)")}
         />
       </div>
 
@@ -124,12 +123,12 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
           value={form.emirate}
           onChange={handleChange}
           style={{ ...inputStyle, cursor: "pointer" }}
-          onFocus={(e) => (e.target.style.borderColor = "#D4A017")}
-          onBlur={(e) => (e.target.style.borderColor = "rgba(212,160,23,0.3)")}
+          onFocus={(e) => (e.target.style.borderColor = "#F5820F")}
+          onBlur={(e) => (e.target.style.borderColor = "rgba(245,130,15,0.3)")}
         >
           <option value="" disabled>Select your emirate…</option>
           {EMIRATES.map((em) => (
-            <option key={em} value={em} style={{ background: "#111827" }}>
+            <option key={em} value={em} style={{ background: "#18181A" }}>
               {em}
             </option>
           ))}
@@ -147,8 +146,8 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
           rows={4}
           placeholder="Describe your project — e.g. core cutting in a slab, renovation scan, utility mapping..."
           style={{ ...inputStyle, resize: "vertical", minHeight: "100px" }}
-          onFocus={(e) => (e.target.style.borderColor = "#D4A017")}
-          onBlur={(e) => (e.target.style.borderColor = "rgba(212,160,23,0.3)")}
+          onFocus={(e) => (e.target.style.borderColor = "#F5820F")}
+          onBlur={(e) => (e.target.style.borderColor = "rgba(245,130,15,0.3)")}
         />
       </div>
 
@@ -157,13 +156,12 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
         style={{
           width: "100%",
           padding: "16px",
-          background: "linear-gradient(135deg, #D4A017 0%, #B8860B 100%)",
+          background: "#F5820F",
           border: "none",
-          borderRadius: "8px",
-          color: "#0A0E1A",
+          color: "#0E0E0F",
           fontSize: "17px",
           fontWeight: 700,
-          fontFamily: "var(--font-barlow), Barlow Condensed, sans-serif",
+          fontFamily: "var(--font-heading), 'Space Grotesk', sans-serif",
           letterSpacing: "0.03em",
           cursor: "pointer",
           transition: "opacity 0.2s, transform 0.1s",
@@ -175,10 +173,6 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
       >
         Get Free Quote via WhatsApp →
       </button>
-
-      <p style={{ textAlign: "center", fontSize: "13px", color: "#6B7280", margin: 0 }}>
-        🔒 Your details are only shared with Bhadeya. No spam, ever.
-      </p>
     </form>
   );
 }

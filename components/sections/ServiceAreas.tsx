@@ -44,20 +44,20 @@ export function ServiceAreas() {
   return (
     <section
       ref={ref}
-      className="bg-muted/50 py-16 md:py-20 lg:py-24"
+      className="bg-concrete py-16 md:py-20 lg:py-24"
       aria-labelledby="service-areas-heading"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <p
-            className="text-sm font-semibold uppercase tracking-wide text-[var(--color-accent-orange)] mb-3"
+            className="font-mono text-xs font-semibold uppercase tracking-widest text-signal-orange mb-3"
             aria-hidden
           >
-            SERVICE AREAS
+            Service Areas
           </p>
           <h2
             id="service-areas-heading"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight"
           >
             GPR Scanning & Core Cutting Services Across UAE
           </h2>
@@ -67,7 +67,7 @@ export function ServiceAreas() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 gap-px border border-steel/20 bg-steel/20 sm:grid-cols-2 lg:grid-cols-3">
           {cities.map((city, index) => (
             <motion.article
               key={city}
@@ -76,14 +76,13 @@ export function ServiceAreas() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               className={cn(
-                "rounded-xl border border-border bg-card p-6 shadow-sm",
-                "transition-all duration-300 ease-out",
-                "hover:border-[var(--color-secondary-blue)]/30 hover:shadow-md"
+                "bg-paper p-6",
+                "transition-colors duration-300 ease-out hover:bg-concrete/50"
               )}
             >
-              <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+              <h3 className="text-xl font-semibold text-foreground mb-2 flex items-center gap-2 tracking-tight">
                 <MapPin
-                  className="size-5 shrink-0 text-[var(--color-accent-orange)]"
+                  className="size-5 shrink-0 text-signal-orange"
                   aria-hidden
                 />
                 {city}

@@ -5,23 +5,10 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
 const featuredProjects = projects.filter((p) => p.featured).slice(0, 12);
-
-const CATEGORY_GRADIENTS: Record<string, string> = {
-  Commercial: "from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30",
-  Hospitality: "from-sky-50 to-blue-50 dark:from-sky-950/30 dark:to-blue-950/30",
-  Corporate: "from-slate-50 to-zinc-50 dark:from-slate-950/30 dark:to-zinc-950/30",
-  Developer: "from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30",
-  Healthcare: "from-rose-50 to-red-50 dark:from-rose-950/30 dark:to-red-950/30",
-  Contractor: "from-violet-50 to-purple-50 dark:from-violet-950/30 dark:to-purple-950/30",
-  Residential: "from-cyan-50 to-indigo-50 dark:from-cyan-950/30 dark:to-indigo-950/30",
-  Government: "from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30",
-  Interior: "from-fuchsia-50 to-pink-50 dark:from-fuchsia-950/30 dark:to-pink-950/30",
-};
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -44,21 +31,21 @@ export function ProjectsShowcase() {
   return (
     <section
       ref={ref}
-      className="bg-white py-16 md:py-20 lg:py-24"
+      className="bg-paper py-16 md:py-20 lg:py-24"
       aria-labelledby="projects-heading"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Header */}
         <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <p
-            className="text-sm font-semibold uppercase tracking-wide text-[var(--color-accent-orange)] mb-3"
+            className="font-mono text-xs font-semibold uppercase tracking-widest text-signal-orange mb-3"
             aria-hidden
           >
-            OUR PROJECTS
+            Our Projects
           </p>
           <h2
             id="projects-heading"
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight"
           >
             Trusted by UAE&apos;s Most Iconic Projects
           </h2>
@@ -68,8 +55,8 @@ export function ProjectsShowcase() {
           </p>
         </header>
 
-        {/* Project cards grid: 4 cols desktop, 3 tablet, 2 mobile */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 mb-12 md:mb-14">
+        {/* Project cards grid: flat instrument-panel treatment, individually bordered (count isn't guaranteed to divide evenly into the grid) */}
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 mb-12 md:mb-14">
           {featuredProjects.map((project, index) => (
             <motion.article
               key={`${project.name}-${project.location}`}
@@ -78,31 +65,23 @@ export function ProjectsShowcase() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               className={cn(
-                "group relative rounded-xl border border-border overflow-hidden shadow-sm min-h-[160px] bg-gradient-to-br",
-                "transition-all duration-300 ease-out",
-                "hover:shadow-md hover:border-[var(--color-secondary-blue)]/30",
-                CATEGORY_GRADIENTS[project.category] ?? "from-muted/50 to-muted"
+                "group flex min-h-[160px] flex-col justify-end border border-steel/20 bg-paper p-5",
+                "transition-colors duration-300 ease-out hover:bg-concrete/50"
               )}
             >
-              {/* Content */}
-              <div className="relative z-10 p-5 flex flex-col justify-end h-full min-h-[160px]">
-                <h3 className="text-base md:text-lg font-bold mb-2 pr-2 text-foreground">
-                  {project.name}
-                </h3>
-                <Badge
-                  variant="secondary"
-                  className="mb-3 w-fit text-xs font-medium"
-                >
-                  {project.category}
-                </Badge>
-                <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                  <MapPin
-                    className="size-4 shrink-0 text-[var(--color-accent-orange)]"
-                    aria-hidden
-                  />
-                  {project.location}
-                </p>
-              </div>
+              <h3 className="text-base md:text-lg font-semibold mb-2 pr-2 text-foreground tracking-tight">
+                {project.name}
+              </h3>
+              <span className="mb-3 w-fit border border-steel/30 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-steel">
+                {project.category}
+              </span>
+              <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                <MapPin
+                  className="size-4 shrink-0 text-signal-orange"
+                  aria-hidden
+                />
+                {project.location}
+              </p>
             </motion.article>
           ))}
         </div>
@@ -112,7 +91,7 @@ export function ProjectsShowcase() {
           <p className="text-muted-foreground text-base md:text-lg mb-6">
             And more projects across UAE
           </p>
-          <Button asChild size="lg" className="font-semibold">
+          <Button asChild size="lg" className="rounded-none bg-signal-orange font-semibold text-ink hover:bg-signal-orange/90">
             <Link href="/projects">
               View All Projects
               <span className="ml-1.5" aria-hidden>→</span>
@@ -142,10 +121,10 @@ export function ProjectsShowcase() {
               {[...allProjectNames, ...allProjectNames].map((name, i) => (
                 <span
                   key={`${name}-${i}`}
-                  className="text-sm font-medium text-muted-foreground whitespace-nowrap"
+                  className="font-mono text-sm text-muted-foreground whitespace-nowrap"
                 >
                   {name}
-                  <span className="mx-6 text-muted-foreground/50" aria-hidden>•</span>
+                  <span className="mx-6 text-signal-orange/60" aria-hidden>·</span>
                 </span>
               ))}
             </motion.div>

@@ -84,7 +84,7 @@ export function WhyChooseUs() {
   return (
     <section
       ref={ref}
-      className="bg-[#F8FAFC] py-16 md:py-20 lg:py-24"
+      className="bg-concrete py-16 md:py-20 lg:py-24"
       aria-labelledby="why-choose-us-heading"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -96,7 +96,7 @@ export function WhyChooseUs() {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             transition={{ duration: 0.5 }}
-            className="order-2 lg:order-1 flex-shrink-0 w-full lg:w-[45%] aspect-[4/3] rounded-xl border border-border overflow-hidden"
+            className="order-2 lg:order-1 flex-shrink-0 w-full lg:w-[45%] aspect-[4/3] border border-steel/20 overflow-hidden"
             aria-hidden
           >
             <Image
@@ -119,15 +119,15 @@ export function WhyChooseUs() {
           >
             <motion.p
               variants={headerVariants}
-              className="text-sm font-semibold uppercase tracking-wide text-[var(--color-accent-orange)] mb-3"
+              className="font-mono text-xs font-semibold uppercase tracking-widest text-signal-orange mb-3"
               aria-hidden
             >
-              WHY BHADEYA
+              Why Bhadeya
             </motion.p>
             <motion.h2
               id="why-choose-us-heading"
               variants={headerVariants}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 leading-tight tracking-tight"
             >
               Why Leading UAE Companies Trust Bhadeya Technical Services
             </motion.h2>
@@ -145,7 +145,7 @@ export function WhyChooseUs() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 gap-px border border-steel/20 bg-steel/20 md:grid-cols-2 lg:grid-cols-3"
         >
           {FEATURES.map((feature) => {
             const Icon = feature.Icon as LucideIcon;
@@ -155,21 +155,18 @@ export function WhyChooseUs() {
                 variants={cardVariants}
                 transition={{ duration: 0.4 }}
                 className={cn(
-                  "rounded-xl border border-border bg-card p-6 shadow-sm",
-                  "transition-all duration-300 ease-out",
-                  "hover:border-[var(--color-secondary-blue)]/30 hover:shadow-md"
+                  "bg-paper p-6",
+                  "transition-colors duration-300 ease-out",
+                  "hover:bg-concrete/50"
                 )}
               >
                 <div
-                  className={cn(
-                    "inline-flex size-12 rounded-full items-center justify-center mb-4",
-                    "bg-[var(--color-secondary-blue)]/15 text-[var(--color-secondary-blue)]"
-                  )}
+                  className="mb-4 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange"
                   aria-hidden
                 >
                   <Icon className="size-6" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">
                   {feature.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">

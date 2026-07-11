@@ -143,51 +143,6 @@ export const services = [
     }
   },
   {
-    id: 'pm8000-scanning',
-    title: 'PM8000 Rebar Scanning',
-    fullTitle: 'Profometer PM8000 Rebar Cover Mapping',
-    shortDescription: 'Non-destructive electromagnetic scanning to locate rebars, measure concrete cover depth, and estimate rebar diameter before core cutting or drilling.',
-    overviewHighlight: '±1mm Accuracy | Proceq PM8000',
-    overviewFeatures: ['Rebar detection', 'Cover depth measurement', 'Diameter estimation', 'Safe drilling points'],
-    iconColor: 'blue' as ServiceIconColor,
-    longDescription: 'Our Profometer PM8000 rebar cover mapping service uses electromagnetic pulse induction technology to detect reinforcement bars inside concrete structures, measure concrete cover depth to ±1mm accuracy, and estimate rebar diameter — all without breaking the surface. Every core cutting or drilling job at Bhadeya begins with a PM8000 scan to identify safe points and protect structural integrity.',
-    icon: 'Magnet',
-    slug: 'pm8000-scanning',
-    features: [
-      'Rebar detection with pinpoint accuracy',
-      'Concrete cover measurement to ±1mm',
-      'Rebar diameter estimation without surface damage',
-      'Identifies safe drilling and core cutting points',
-      'Works on floors, walls, ceilings, columns, and beams',
-      '8 hours battery autonomy for full-day operation',
-      'Cloud data export via CSV and Screening Eagle Workspace',
-      'World\'s most compact and lightweight cover meter'
-    ],
-    equipment: 'Proceq Profometer PM8000',
-    equipmentDescription: 'The Profometer PM8000 is the world\'s most compact and lightweight electromagnetic cover meter, using pulse induction technology to detect rebar, measure cover depth to ±1mm, and estimate bar diameter — all in a single handheld device.',
-    benefits: [
-      'Prevent hitting rebar during core cutting or drilling',
-      'Protect structural integrity on every job',
-      'Ensure worker safety before any penetration work',
-      'Fast and accurate on-site scanning',
-      'Non-destructive — no damage to surfaces',
-      'Digital data for project records'
-    ],
-    applications: [
-      'Pre-drilling checks',
-      'Pre-core cutting surveys',
-      'Structural assessments',
-      'Rebar mapping for renovation projects',
-      'Building inspections',
-      'Quality control for new construction'
-    ],
-    stats: {
-      accuracy: '±1mm',
-      battery: '8 Hours',
-      technology: 'Proceq PM8000'
-    }
-  },
-  {
     id: 'oversized-cargo',
     title: 'Oversized Cargo Movement',
     fullTitle: 'Oversized Cargo Movement Assistance',
@@ -230,51 +185,6 @@ export const services = [
       coverage: 'All UAE',
       compliance: 'RTA Certified',
       support: '24/7'
-    }
-  },
-  {
-    id: 'gs8000-scanning',
-    title: 'GS8000 Ground Scanning',
-    fullTitle: 'Proceq GS8000 Large-Scale Ground Scanning',
-    shortDescription: 'Large-scale utility mapping and road scanning up to 10m depth using the Proceq GS8000 pushcart GPR system.',
-    overviewHighlight: '10m Depth | Proceq GS8000',
-    overviewFeatures: ['Utility mapping', 'Road scanning', 'GNSS geolocation', 'Up to 80km/h'],
-    iconColor: 'green' as ServiceIconColor,
-    longDescription: 'Our GS8000 ground scanning service uses the Proceq GS8000 pushcart GPR system for large-scale subsurface utility mapping, road scanning, and infrastructure inspection. With scanning depths up to 10 metres and speeds up to 80km/h, we deliver fast, accurate underground mapping for major civil and infrastructure projects across UAE.',
-    icon: 'Layers',
-    slug: 'gs8000-scanning',
-    features: [
-      'Maximum scanning depth of 10m (33ft)',
-      'Scan speed up to 80km/h',
-      'SFCW technology for superior resolution',
-      'Integrated GNSS geolocation',
-      'Real-time 2D and 3D visualization via iPad',
-      'CAD and GIS data output',
-      'Large-area grid scanning up to 80x80m',
-      'Non-destructive and completely safe'
-    ],
-    equipment: 'Proceq GS8000',
-    equipmentDescription: 'The Proceq GS8000 is a large-scale pushcart GPR system using SFCW technology with 0.2–3.4GHz bandwidth, capable of scanning up to 10m depth at speeds of 80km/h with integrated GNSS geolocation.',
-    benefits: [
-      'Cover vast areas rapidly with precision',
-      'Accurate utility detection before excavation',
-      'GNSS-tagged data for engineering use',
-      'CAD and GIS export for project teams',
-      'Non-destructive and safe',
-      'Fast deployment on large civil sites'
-    ],
-    applications: [
-      'Underground utility mapping',
-      'Road and pavement scanning',
-      'Bridge deck assessment',
-      'Pre-excavation surveys',
-      'Infrastructure asset inspection',
-      'Geophysical investigations'
-    ],
-    stats: {
-      depth: '10m',
-      speed: '80km/h',
-      technology: 'Proceq GS8000'
     }
   }
 ]

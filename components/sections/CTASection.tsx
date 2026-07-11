@@ -16,15 +16,13 @@ export function CTASection() {
       className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
       aria-labelledby="cta-heading"
     >
-      {/* Gradient background: electric blue to navy */}
+      {/* Flat Ink background */}
+      <div className="absolute inset-0 bg-ink" aria-hidden />
       <div
-        className="absolute inset-0 bg-gradient-to-br from-[#0066ff] via-[#0052cc] to-[#0A2540]"
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 50%)`,
+          backgroundImage:
+            "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
         }}
         aria-hidden
       />
@@ -32,11 +30,11 @@ export function CTASection() {
       <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
         <h2
           id="cta-heading"
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-2xl mx-auto"
+          className="text-3xl md:text-4xl lg:text-5xl font-semibold text-paper mb-4 max-w-2xl mx-auto tracking-tight"
         >
           Ready to Start Your Project?
         </h2>
-        <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10">
+        <p className="text-lg md:text-xl text-paper/80 max-w-2xl mx-auto mb-10">
           Get a free consultation and quote for your GPR scanning, core cutting,
           or excavation needs. We respond within 1 hour during business hours.
         </p>
@@ -46,8 +44,8 @@ export function CTASection() {
             asChild
             size="lg"
             className={cn(
-              "w-full sm:w-auto bg-white text-[#0066ff] hover:bg-white/95",
-              "font-semibold text-base px-8 py-6 rounded-lg shadow-lg"
+              "w-full sm:w-auto rounded-none border border-transparent bg-signal-orange text-ink hover:border-paper hover:bg-signal-orange",
+              "font-semibold text-base px-8 py-6"
             )}
           >
             <GetQuoteLink href="/contact">Get Free Quote</GetQuoteLink>
@@ -56,8 +54,8 @@ export function CTASection() {
             asChild
             size="lg"
             className={cn(
-              "w-full sm:w-auto bg-[#25D366] text-white hover:bg-[#20BD5A]",
-              "font-semibold text-base px-8 py-6 rounded-lg shadow-lg"
+              "w-full sm:w-auto rounded-none bg-[#25D366] text-white hover:bg-[#20BD5A]",
+              "font-semibold text-base px-8 py-6"
             )}
           >
             <WhatsAppLink href={whatsappUrl} className="inline-flex items-center gap-2">
@@ -67,10 +65,10 @@ export function CTASection() {
           </Button>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-white/95">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-paper/90">
           <PhoneLink
             href={`tel:${company.phoneClean}`}
-            className="inline-flex items-center gap-2 text-base font-medium hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 font-mono text-base font-medium hover:text-signal-orange transition-colors"
             aria-label={`Call ${company.phone}`}
           >
             <Phone className="size-5 shrink-0" aria-hidden />
@@ -78,7 +76,7 @@ export function CTASection() {
           </PhoneLink>
           <a
             href={`mailto:${company.email}`}
-            className="inline-flex items-center gap-2 text-base font-medium hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 text-base font-medium hover:text-signal-orange transition-colors"
             aria-label={`Email ${company.email}`}
           >
             <Mail className="size-5 shrink-0" aria-hidden />
@@ -86,10 +84,10 @@ export function CTASection() {
           </a>
         </div>
 
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-white/80 text-sm">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-paper/70 text-sm">
           <span className="inline-flex items-center gap-2">
             <Clock className="size-4 shrink-0" aria-hidden />
-            <strong className="text-white/95">Working hours:</strong>
+            <strong className="text-paper/90">Working hours:</strong>
           </span>
           <span>
             {company.hours.weekday.days}: {company.hours.weekday.time}

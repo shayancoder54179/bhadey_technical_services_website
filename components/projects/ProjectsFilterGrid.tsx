@@ -3,21 +3,8 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Star } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { projects, projectCategories } from "@/data/projects";
 import { cn } from "@/lib/utils";
-
-const CATEGORY_GRADIENTS: Record<string, string> = {
-  Commercial: "from-amber-600/90 to-orange-700/90",
-  Hospitality: "from-sky-600/90 to-blue-700/90",
-  Corporate: "from-slate-600/90 to-zinc-700/90",
-  Developer: "from-emerald-600/90 to-teal-700/90",
-  Healthcare: "from-rose-600/90 to-red-700/90",
-  Contractor: "from-violet-600/90 to-purple-700/90",
-  Residential: "from-cyan-600/90 to-indigo-700/90",
-  Government: "from-blue-600/90 to-indigo-700/90",
-  Interior: "from-fuchsia-600/90 to-pink-700/90",
-};
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -55,10 +42,10 @@ export function ProjectsFilterGrid() {
             aria-selected={activeFilter === cat}
             onClick={() => setActiveFilter(cat)}
             className={cn(
-              "shrink-0 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-200",
+              "shrink-0 border px-4 py-2.5 font-mono text-xs uppercase tracking-wide transition-colors duration-200",
               activeFilter === cat
-                ? "bg-[var(--color-accent-orange)] text-white shadow-md"
-                : "bg-muted/80 text-muted-foreground hover:bg-muted hover:text-foreground"
+                ? "border-signal-orange bg-signal-orange text-ink"
+                : "border-steel/20 bg-paper text-muted-foreground hover:border-steel/40 hover:text-foreground"
             )}
           >
             {cat}
@@ -66,38 +53,31 @@ export function ProjectsFilterGrid() {
         ))}
       </div>
 
-      {/* Projects grid */}
+      {/* Projects grid — flat instrument-panel treatment, individually bordered (filtered count varies) */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         key={activeFilter}
       >
         <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <motion.article
               key={`${project.name}-${project.location}-${project.category}`}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
               variants={cardVariants}
               layout
               className={cn(
-                "group relative rounded-xl overflow-hidden min-h-[140px]",
-                "shadow-sm bg-gradient-to-br",
-                "transition-all duration-300 ease-out",
-                "hover:scale-[1.02] hover:shadow-lg",
-                CATEGORY_GRADIENTS[project.category] ?? "from-slate-600/90 to-slate-700/90"
+                "group relative flex min-h-[140px] flex-col justify-end border border-steel/20 bg-paper p-5",
+                "transition-colors duration-300 ease-out hover:bg-concrete/50"
               )}
             >
-
-              {/* Hover overlay */}
-              <div
-                className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none"
-                aria-hidden
-              />
-
               {project.featured && (
                 <span
-                  className="absolute top-3 right-3 z-10 flex items-center gap-1 rounded-full bg-white/25 px-2 py-1 text-xs font-semibold text-white"
+                  className="absolute top-3 right-3 z-10 flex items-center gap-1 bg-signal-orange px-2 py-1 font-mono text-[10px] font-semibold uppercase text-ink"
                   aria-label="Featured project"
                 >
                   <Star className="size-3.5 fill-current" aria-hidden />
@@ -105,25 +85,19 @@ export function ProjectsFilterGrid() {
                 </span>
               )}
 
-              {/* Content */}
-              <div className="relative z-10 p-5 flex flex-col justify-end min-h-[140px]">
-                <h3 className="text-base md:text-lg font-bold text-white mb-2 pr-12">
-                  {project.name}
-                </h3>
-                <Badge
-                  variant="secondary"
-                  className="mb-3 w-fit text-xs font-medium bg-white/25 text-white border-white/30"
-                >
-                  {project.category}
-                </Badge>
-                <p className="flex items-center gap-1.5 text-sm text-white/90">
-                  <MapPin
-                    className="size-4 shrink-0 text-white/80"
-                    aria-hidden
-                  />
-                  {project.location}
-                </p>
-              </div>
+              <h3 className="text-base md:text-lg font-semibold text-foreground mb-2 pr-12 tracking-tight">
+                {project.name}
+              </h3>
+              <span className="mb-3 w-fit border border-steel/30 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-steel">
+                {project.category}
+              </span>
+              <p className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                <MapPin
+                  className="size-4 shrink-0 text-signal-orange"
+                  aria-hidden
+                />
+                {project.location}
+              </p>
             </motion.article>
           ))}
         </AnimatePresence>

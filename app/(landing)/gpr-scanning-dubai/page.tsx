@@ -4,46 +4,48 @@ import { LeadForm } from "./LeadForm";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 
 export const metadata: Metadata = {
-  title: "GPR Scanning Dubai | Same-Day Service | Bhadeya Technical",
+  title: "GPR Scanning UAE | Same-Day Service | Bhadeya Technical",
   description:
-    "Professional GPR concrete scanning in Dubai. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
+    "Professional GPR concrete scanning across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
   robots: { index: true, follow: true },
   alternates: { canonical: "https://www.bhadeya.com/gpr-scanning-dubai" },
   openGraph: {
-    title: "GPR Scanning Dubai | Same-Day Service | Bhadeya Technical",
+    title: "GPR Scanning UAE | Same-Day Service | Bhadeya Technical",
     description:
-      "Professional GPR concrete scanning in Dubai. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
+      "Professional GPR concrete scanning across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
     url: "https://www.bhadeya.com/gpr-scanning-dubai",
     type: "website",
   },
 };
 
-/* ─── design tokens ─── */
+/* ─── design tokens — matches the main site's DESIGN.md (Ink + Signal Orange) ─── */
 const C = {
-  bg: "#060B14",
-  card: "#0A0E1A",
-  gold: "#D4A017",
-  goldLight: "#F0C040",
-  navy: "#0a2540",
-  text: "#F9FAFB",
+  bg: "#0E0E0F",
+  card: "#18181A",
+  gold: "#F5820F",
+  goldLight: "#FFA555",
+  navy: "#18181A",
+  text: "#FBFAF7",
   muted: "#9CA3AF",
-  border: "rgba(212,160,23,0.18)",
+  border: "rgba(245,130,15,0.22)",
 };
 
 const font = {
-  barlow: "var(--font-barlow), 'Barlow Condensed', sans-serif",
-  dm: "var(--font-dm-sans), 'DM Sans', sans-serif",
+  barlow: "var(--font-heading), 'Space Grotesk', sans-serif",
+  dm: "var(--font-inter), 'Inter', sans-serif",
 };
 
 /* ══════════════════════════════════════════════
-   MINIMAL HEADER
+   MINIMAL HEADER — same visual system as the main site
+   (Ink Raised bar, Paper logo plate, flat Signal Orange CTA)
+   but no nav menu, to keep this a focused landing page.
 ══════════════════════════════════════════════ */
 function MinimalHeader() {
   return (
     <header
       style={{
         background: C.card,
-        borderBottom: `1px solid ${C.border}`,
+        borderBottom: "1px solid rgba(255,255,255,0.1)",
         position: "sticky",
         top: 0,
         zIndex: 50,
@@ -59,41 +61,40 @@ function MinimalHeader() {
           maxWidth: 1100,
           margin: "0 auto",
           padding: "0 20px",
-          height: 64,
+          height: 72,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
         }}
       >
-        {/* Logo wordmark */}
-        <div style={{ display: "flex", alignItems: "center" }}>
+        {/* Logo — on a Paper plate, matching the main site header */}
+        <div style={{ display: "flex", alignItems: "center", background: "#FBFAF7", padding: "6px 8px" }}>
           <Image
             src="/images/bts_logo.png"
             alt="Bhadeya Technical Services"
-            width={180}
-            height={52}
+            width={170}
+            height={50}
             className="header-logo"
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "contain", height: 40, width: "auto" }}
             priority
           />
         </div>
 
-        {/* CTA phone */}
+        {/* CTA phone — flat Signal Orange, no gradient/pill */}
         <PhoneLink
           href="tel:+971556926286"
           style={{
             display: "flex",
             alignItems: "center",
             gap: 8,
-            padding: "8px 18px",
-            background: `linear-gradient(135deg, ${C.gold} 0%, #B8860B 100%)`,
-            borderRadius: 8,
+            padding: "10px 18px",
+            background: C.gold,
             fontFamily: font.barlow,
             fontWeight: 700,
             fontSize: 15,
-            color: C.bg,
+            color: C.card,
             textDecoration: "none",
-            letterSpacing: "0.04em",
+            letterSpacing: "0.02em",
             whiteSpace: "nowrap",
           }}
         >
@@ -121,7 +122,7 @@ function Hero() {
   return (
     <section
       style={{
-        background: `linear-gradient(160deg, ${C.bg} 0%, #0D1526 100%)`,
+        background: C.bg,
         padding: "60px 20px 80px",
       }}
     >
@@ -141,10 +142,6 @@ function Hero() {
           }
           .hero-form {
             position: static !important;
-          }
-          .hero-wa-btn {
-            background: linear-gradient(135deg, #D4A017 0%, #B8860B 100%) !important;
-            color: #060B14 !important;
           }
         }
       `}</style>
@@ -166,7 +163,7 @@ function Hero() {
               alignItems: "center",
               gap: 8,
               padding: "6px 14px",
-              background: "rgba(212,160,23,0.12)",
+              background: "rgba(245,130,15,0.12)",
               border: `1px solid ${C.border}`,
               borderRadius: 100,
               marginBottom: 24,
@@ -183,7 +180,7 @@ function Hero() {
                 textTransform: "uppercase",
               }}
             >
-              Dubai's #1 GPR Scanning Service
+              UAE&apos;s #1 GPR Scanning Service
             </span>
           </div>
 
@@ -202,7 +199,7 @@ function Hero() {
             GPR CONCRETE{" "}
             <span style={{ color: C.gold }}>SCANNING</span>
             <br />
-            IN DUBAI — FAST,
+            ACROSS THE UAE — FAST,
             <br />
             ACCURATE, SAFE.
           </h1>
@@ -326,7 +323,7 @@ function Hero() {
               marginBottom: 28,
             }}
           >
-            We'll respond within minutes on WhatsApp.
+            We&apos;ll respond within minutes on WhatsApp.
           </p>
           <LeadForm formId="gpr_landing_hero_form" />
         </div>
@@ -624,7 +621,7 @@ function HowItWorks() {
     <section
       id="how-it-works"
       style={{
-        background: `linear-gradient(160deg, #0D1526 0%, ${C.bg} 100%)`,
+        background: C.bg,
         padding: "80px 20px",
       }}
     >
@@ -679,28 +676,12 @@ function HowItWorks() {
                 position: "relative",
               }}
             >
-              {/* Connector line (not on last) */}
-              {idx < STEPS.length - 1 && (
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 28,
-                    right: 20,
-                    width: "calc(100% - 100px)",
-                    height: 1,
-                    background: `linear-gradient(90deg, ${C.gold} 0%, rgba(212,160,23,0.1) 100%)`,
-                    display: "none", // hidden on mobile, shown via CSS below
-                  }}
-                />
-              )}
-
               {/* Step number bubble */}
               <div
                 style={{
                   width: 56,
                   height: 56,
-                  borderRadius: "50%",
-                  background: `linear-gradient(135deg, ${C.gold} 0%, #B8860B 100%)`,
+                  background: C.gold,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -765,8 +746,7 @@ function HowItWorks() {
             style={{
               display: "inline-block",
               padding: "16px 40px",
-              background: `linear-gradient(135deg, ${C.gold} 0%, #B8860B 100%)`,
-              borderRadius: 10,
+              background: C.gold,
               fontFamily: font.barlow,
               fontWeight: 700,
               fontSize: 18,
@@ -1098,7 +1078,7 @@ function Gallery() {
                 left: 0,
                 right: 0,
                 padding: "20px 20px 16px",
-                background: "linear-gradient(transparent, rgba(6,11,20,0.85))",
+                background: "linear-gradient(transparent, rgba(14,14,15,0.85))",
               }}
             >
               <p
@@ -1140,7 +1120,7 @@ function Gallery() {
                   left: 0,
                   right: 0,
                   padding: "14px 14px 10px",
-                  background: "linear-gradient(transparent, rgba(6,11,20,0.8))",
+                  background: "linear-gradient(transparent, rgba(14,14,15,0.8))",
                 }}
               >
                 <p
@@ -1387,7 +1367,7 @@ function ServiceAreas() {
 const FAQS = [
   {
     q: "What is GPR scanning and why do I need it?",
-    a: "Ground Penetrating Radar (GPR) sends radar pulses into concrete and maps what's inside — rebar, post-tension cables, conduits, voids. Before drilling, cutting, or coring any concrete element, a GPR survey in Dubai tells you exactly where hidden hazards are so you can avoid them. It prevents structural damage, utility strikes, and — most importantly — injuries.",
+    a: "Ground Penetrating Radar (GPR) sends radar pulses into concrete and maps what's inside — rebar, post-tension cables, conduits, voids. Before drilling, cutting, or coring any concrete element, a GPR survey tells you exactly where hidden hazards are so you can avoid them. It prevents structural damage, utility strikes, and — most importantly — injuries.",
   },
   {
     q: "How long does a typical scan take on-site?",
@@ -1587,7 +1567,7 @@ function BottomLeadForm() {
               lineHeight: 1.65,
             }}
           >
-            Fill in the form and we'll respond within minutes on WhatsApp.
+            Fill in the form and we&apos;ll respond within minutes on WhatsApp.
           </p>
         </div>
 
@@ -1614,24 +1594,12 @@ function FinalCta() {
   return (
     <section
       style={{
-        background: `linear-gradient(135deg, #0D1526 0%, ${C.navy} 60%, #0D1526 100%)`,
+        background: C.bg,
         padding: "100px 20px",
-        borderTop: `1px solid ${C.border}`,
         textAlign: "center",
       }}
     >
       <div style={{ maxWidth: 700, margin: "0 auto" }}>
-        {/* Decorative top line */}
-        <div
-          style={{
-            width: 60,
-            height: 3,
-            background: `linear-gradient(90deg, transparent, ${C.gold}, transparent)`,
-            margin: "0 auto 36px",
-            borderRadius: 2,
-          }}
-        />
-
         <h2
           style={{
             fontFamily: font.barlow,
@@ -1659,7 +1627,7 @@ function FinalCta() {
             margin: "0 auto 48px",
           }}
         >
-          Don't drill blind. Get a professional GPR scan before any concrete
+          Don&apos;t drill blind. Get a professional GPR scan before any concrete
           work begins. Free quote, fast response, all emirates covered.
         </p>
 
@@ -1745,8 +1713,8 @@ function FooterStrip() {
   return (
     <footer
       style={{
-        background: "#040810",
-        borderTop: `1px solid ${C.border}`,
+        background: C.card,
+        borderTop: "1px solid rgba(245,130,15,0.3)",
         padding: "28px 20px",
       }}
     >
@@ -1761,8 +1729,8 @@ function FooterStrip() {
           gap: 16,
         }}
       >
-        {/* Brand */}
-        <div style={{ display: "flex", alignItems: "center" }}>
+        {/* Brand — logo on a Paper plate, matching the main site footer */}
+        <div style={{ display: "flex", alignItems: "center", background: "#FBFAF7", padding: "6px 8px" }}>
           <Image
             src="/images/bts_logo.png"
             alt="Bhadeya Technical Services"
@@ -1926,10 +1894,10 @@ const landingPageSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "GPR Concrete Scanning Dubai",
-    alternateName: "Ground Penetrating Radar Scanning Dubai",
+    name: "GPR Concrete Scanning UAE",
+    alternateName: "Ground Penetrating Radar Scanning UAE",
     description:
-      "Professional GPR concrete scanning in Dubai. Detect rebar, conduits, post-tension cables and voids before drilling or cutting using the Proceq GP8000. Same-day response across all UAE.",
+      "Professional GPR concrete scanning across the UAE. Detect rebar, conduits, post-tension cables and voids before drilling or cutting using the Proceq GP8000. Same-day response in Dubai, next-day across all emirates.",
     provider: { "@id": "https://www.bhadeya.com/#localbusiness" },
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -1952,7 +1920,7 @@ const landingPageSchema = [
         name: "What is GPR scanning and why do I need it?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ground Penetrating Radar (GPR) sends radar pulses into concrete and maps what's inside — rebar, post-tension cables, conduits, voids. Before drilling, cutting, or coring any concrete element, a GPR survey in Dubai tells you exactly where hidden hazards are so you can avoid them. It prevents structural damage, utility strikes, and injuries. In the UAE, GPR scanning is a standard safety requirement before any core cutting or drilling work on concrete structures.",
+          text: "Ground Penetrating Radar (GPR) sends radar pulses into concrete and maps what's inside — rebar, post-tension cables, conduits, voids. Before drilling, cutting, or coring any concrete element, a GPR survey tells you exactly where hidden hazards are so you can avoid them. It prevents structural damage, utility strikes, and injuries. In the UAE, GPR scanning is a standard safety requirement before any core cutting or drilling work on concrete structures.",
         },
       },
       {
@@ -1960,7 +1928,7 @@ const landingPageSchema = [
         name: "How long does a typical scan take on-site?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A standard slab scan (up to 20–30 m²) takes 1–2 hours including setup, scanning, and marking. Larger areas or complex geometries may take a half-day. We provide time estimates when you submit your request, and same-day service is available for urgent projects across Dubai.",
+          text: "A standard slab scan (up to 20–30 m²) takes 1–2 hours including setup, scanning, and marking. Larger areas or complex geometries may take a half-day. We provide time estimates when you submit your request, and same-day service is available for urgent projects across the UAE.",
         },
       },
       {

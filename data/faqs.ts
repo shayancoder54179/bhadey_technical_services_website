@@ -17,7 +17,7 @@ export const faqs = [
   },
   {
     question: 'What equipment do you use for GPR scanning?',
-    answer: 'Our primary GPR scanning equipment is the Proceq GP8000, a state-of-the-art ground penetrating radar system manufactured in Switzerland and used by leading contractors and consultants worldwide. The GP8000 operates across a wide frequency range (200 MHz – 4 GHz), delivers real-time 3D visualization on an integrated display, and achieves detection depths up to 500cm with positional accuracy within ±10mm. For rebar cover measurement and mapping we use the Profometer PM8000, which provides ±1mm accuracy and outputs data to CSV or cloud for structural documentation. For large-scale infrastructure and road scanning we use the Proceq GS8000, capable of scanning at up to 80km/h with GNSS geolocation and 10m depth capability. All equipment is regularly calibrated and maintained to manufacturer standards.'
+    answer: 'Our primary GPR scanning equipment is the Proceq GP8000, a state-of-the-art ground penetrating radar system manufactured in Switzerland and used by leading contractors and consultants worldwide. The GP8000 operates across a wide frequency range (200 MHz – 4 GHz), delivers real-time 3D visualization on an integrated display, and achieves detection depths up to 500cm with positional accuracy within ±10mm. All equipment is regularly calibrated and maintained to manufacturer standards.'
   },
   {
     question: 'How long does a GPR scan typically take?',

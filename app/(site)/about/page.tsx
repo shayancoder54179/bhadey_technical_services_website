@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import Link from "next/link";
-import { Target, Eye, Heart, Radio, Box, Drill, MapPin, Quote } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Target, Eye, Heart, Radio, Drill, MapPin, Quote } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { company } from "@/data/company";
 
@@ -43,35 +41,23 @@ export default function AboutPage() {
         className={`relative py-16 md:py-20 lg:py-24 overflow-hidden ${sectionClass}`}
         aria-labelledby="about-hero-title"
       >
+        <div className="absolute inset-0 bg-ink" />
         <div
-          className="absolute inset-0 bg-[#0A2540]"
+          className="absolute inset-0"
           style={{
-            backgroundImage: `
-              radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 102, 255, 0.12) 0%, transparent 50%),
-              radial-gradient(ellipse 60% 40% at 100% 100%, rgba(0, 102, 255, 0.06) 0%, transparent 50%)
-            `,
-            backgroundSize: "100% 100%, 100% 100%",
-          }}
-        />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)
-            `,
-            backgroundSize: "48px 48px",
+            backgroundImage:
+              "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
           }}
         />
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <header className="max-w-3xl">
             <h1
               id="about-hero-title"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-bold leading-tight text-white mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-paper mb-4 tracking-tight"
             >
               About Bhadeya Technical Services L.L.C
             </h1>
-            <p className="text-lg text-white/90">
+            <p className="text-lg text-paper/80">
               Your Trusted Partner for GPR Scanning & Technical Services in UAE
               Since 2019
             </p>
@@ -81,7 +67,7 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <section
-        className="bg-white py-16 md:py-20 lg:py-24"
+        className="bg-paper py-16 md:py-20 lg:py-24"
         aria-labelledby="our-story-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -89,7 +75,7 @@ export default function AboutPage() {
             <div>
               <h2
                 id="our-story-heading"
-                className="text-2xl md:text-3xl font-bold text-foreground mb-6"
+                className="text-2xl md:text-3xl font-semibold text-foreground mb-6 tracking-tight"
               >
                 Our Story
               </h2>
@@ -118,7 +104,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="aspect-[4/3] rounded-xl border border-border overflow-hidden">
+            <div className="aspect-[4/3] border border-steel/20 overflow-hidden">
               <Image
                 src="/images/7272030 (1).jpg"
                 alt="Bhadeya Technical Services GPR scanning expert at work in Dubai UAE - Proceq GP8000 ground penetrating radar on concrete"
@@ -135,112 +121,92 @@ export default function AboutPage() {
 
       {/* Our Mission & Values */}
       <section
-        className="bg-muted/50 py-16 md:py-20 lg:py-24"
+        className="bg-concrete py-16 md:py-20 lg:py-24"
         aria-labelledby="mission-values-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="mission-values-heading"
-            className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center"
+            className="text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center tracking-tight"
           >
             Our Mission & Values
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            <Card className="border-2 hover:border-[var(--color-secondary-blue)]/30 transition-colors">
-              <CardHeader className="pb-2">
-                <div className="inline-flex size-12 rounded-full items-center justify-center bg-[var(--color-secondary-blue)]/15 text-[var(--color-secondary-blue)] mb-2">
-                  <Target className="size-6" aria-hidden />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">Mission</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  To provide the most accurate and reliable GPR scanning and
-                  technical services in the UAE, ensuring safety and precision in
-                  every project.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-2 hover:border-[var(--color-secondary-blue)]/30 transition-colors">
-              <CardHeader className="pb-2">
-                <div className="inline-flex size-12 rounded-full items-center justify-center bg-[var(--color-secondary-blue)]/15 text-[var(--color-secondary-blue)] mb-2">
-                  <Eye className="size-6" aria-hidden />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">Vision</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  To be the UAE&apos;s first choice for non-destructive testing
-                  and construction technical services.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-2 hover:border-[var(--color-secondary-blue)]/30 transition-colors">
-              <CardHeader className="pb-2">
-                <div className="inline-flex size-12 rounded-full items-center justify-center bg-[var(--color-accent-orange)]/15 text-[var(--color-accent-orange)] mb-2">
-                  <Heart className="size-6" aria-hidden />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">Values</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Safety, Precision, Reliability, Innovation, Integrity
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+            <div className="border border-steel/20 bg-paper p-6">
+              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                <Target className="size-6" aria-hidden />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Mission</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                To provide the most accurate and reliable GPR scanning and
+                technical services in the UAE, ensuring safety and precision in
+                every project.
+              </p>
+            </div>
+            <div className="border border-steel/20 bg-paper p-6">
+              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                <Eye className="size-6" aria-hidden />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Vision</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                To be the UAE&apos;s first choice for non-destructive testing
+                and construction technical services.
+              </p>
+            </div>
+            <div className="border border-steel/20 bg-paper p-6">
+              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                <Heart className="size-6" aria-hidden />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Values</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Safety, Precision, Reliability, Innovation, Integrity
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Our Equipment */}
       <section
-        className="bg-white py-16 md:py-20 lg:py-24"
+        className="bg-paper py-16 md:py-20 lg:py-24"
         aria-labelledby="equipment-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="equipment-heading"
-            className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center"
+            className="text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center tracking-tight"
           >
             Our Equipment
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            <Card className="border-2 hover:border-[var(--color-secondary-blue)]/30 transition-colors">
-              <CardHeader className="pb-2">
-                <div className="inline-flex size-12 rounded-full items-center justify-center bg-[var(--color-secondary-blue)]/15 text-[var(--color-secondary-blue)] mb-2">
-                  <Radio className="size-6" aria-hidden />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">
-                  Proceq GP8000
-                </h3>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <ul className="text-muted-foreground text-sm space-y-1" role="list">
-                  <li>• Industry-leading GPR scanner</li>
-                  <li>• 500cm maximum depth</li>
-                  <li>• Real-time 3D visualization</li>
-                  <li>• Used for GPR Scanning</li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card className="border-2 hover:border-[var(--color-secondary-blue)]/30 transition-colors">
-              <CardHeader className="pb-2">
-                <div className="inline-flex size-12 rounded-full items-center justify-center bg-[var(--color-accent-orange)]/15 text-[var(--color-accent-orange)] mb-2">
-                  <Drill className="size-6" aria-hidden />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">
-                  Professional Diamond Core Cutting Systems
-                </h3>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <ul className="text-muted-foreground text-sm space-y-1" role="list">
-                  <li>• Professional-grade equipment</li>
-                  <li>• 12–500mm diameter range</li>
-                  <li>• Clean, precise cuts</li>
-                  <li>• Used for Core Cutting</li>
-                </ul>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 max-w-4xl mx-auto">
+            <div className="border border-steel/20 bg-concrete/40 p-6">
+              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                <Radio className="size-6" aria-hidden />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">
+                Proceq GP8000
+              </h3>
+              <ul className="text-muted-foreground text-sm space-y-1" role="list">
+                <li>• Industry-leading GPR scanner</li>
+                <li>• 500cm maximum depth</li>
+                <li>• Real-time 3D visualization</li>
+                <li>• Used for GPR Scanning</li>
+              </ul>
+            </div>
+            <div className="border border-steel/20 bg-concrete/40 p-6">
+              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                <Drill className="size-6" aria-hidden />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">
+                Professional Diamond Core Cutting Systems
+              </h3>
+              <ul className="text-muted-foreground text-sm space-y-1" role="list">
+                <li>• Professional-grade equipment</li>
+                <li>• 12–500mm diameter range</li>
+                <li>• Clean, precise cuts</li>
+                <li>• Used for Core Cutting</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -252,13 +218,13 @@ export default function AboutPage() {
 
       {/* Service Areas */}
       <section
-        className="bg-muted/50 py-16 md:py-20 lg:py-24"
+        className="bg-concrete py-16 md:py-20 lg:py-24"
         aria-labelledby="service-areas-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="service-areas-heading"
-            className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center"
+            className="text-2xl md:text-3xl font-semibold text-foreground mb-6 text-center tracking-tight"
           >
             Service Areas
           </h2>
@@ -266,18 +232,18 @@ export default function AboutPage() {
             We provide GPR scanning and core cutting services across the UAE.
           </p>
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-lg font-semibold text-foreground mb-4 text-center">
+            <h3 className="font-mono text-xs uppercase tracking-widest text-steel mb-4 text-center">
               Cities we serve
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3" role="list">
               {company.serviceAreas.map((city) => (
                 <li
                   key={city}
-                  className="flex items-center gap-2 text-muted-foreground"
+                  className="flex items-center gap-2 border border-steel/20 bg-paper px-4 py-3 text-muted-foreground"
                   role="listitem"
                 >
                   <MapPin
-                    className="size-4 shrink-0 text-[var(--color-accent-orange)]"
+                    className="size-4 shrink-0 text-signal-orange"
                     aria-hidden
                   />
                   {city}
@@ -290,13 +256,13 @@ export default function AboutPage() {
 
       {/* Why Clients Choose Us */}
       <section
-        className="bg-white py-16 md:py-20 lg:py-24"
+        className="bg-paper py-16 md:py-20 lg:py-24"
         aria-labelledby="why-choose-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="why-choose-heading"
-            className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center"
+            className="text-2xl md:text-3xl font-semibold text-foreground mb-4 text-center tracking-tight"
           >
             Why Clients Choose Us
           </h2>
@@ -304,9 +270,9 @@ export default function AboutPage() {
             Trusted by leading developers, contractors, and consultants across
             the UAE.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <blockquote className="rounded-xl border-2 border-border bg-muted/30 p-6 md:p-8">
-              <Quote className="size-10 text-[var(--color-secondary-blue)]/30 mb-4" aria-hidden />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl mx-auto">
+            <blockquote className="border border-steel/20 bg-concrete/40 p-6 md:p-8">
+              <Quote className="size-10 text-signal-orange/40 mb-4" aria-hidden />
               <p className="text-foreground font-medium mb-2">
                 &ldquo;They showed up on time, scanned before every cut, and
                 delivered clear reports. No surprises on site.&rdquo;
@@ -315,8 +281,8 @@ export default function AboutPage() {
                 — Construction project manager, Dubai
               </footer>
             </blockquote>
-            <blockquote className="rounded-xl border-2 border-border bg-muted/30 p-6 md:p-8">
-              <Quote className="size-10 text-[var(--color-secondary-blue)]/30 mb-4" aria-hidden />
+            <blockquote className="border border-steel/20 bg-concrete/40 p-6 md:p-8">
+              <Quote className="size-10 text-signal-orange/40 mb-4" aria-hidden />
               <p className="text-foreground font-medium mb-2">
                 &ldquo;Best GPR and core cutting team we&apos;ve worked with in
                 the UAE. Equipment is top-notch, results are accurate.&rdquo;

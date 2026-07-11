@@ -3,32 +3,22 @@
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, animate } from "framer-motion";
-import {
-  Calendar,
-  Ruler,
-  MapPin,
-  type LucideIcon,
-} from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const STATS = [
   {
     value: 7,
-    suffix: "+",
+    suffix: "+ YRS",
     label: "Years Experience",
-    Icon: Calendar,
   },
   {
     value: 500,
-    suffix: "cm",
+    suffix: "CM",
     label: "Max Scanning Depth",
-    Icon: Ruler,
   },
   {
     value: 6,
-    suffix: "+",
+    suffix: "+ CITIES",
     label: "Cities Served",
-    Icon: MapPin,
   },
 ] as const;
 
@@ -56,9 +46,11 @@ function AnimatedNumber({
   }, [inView, target, duration]);
 
   return (
-    <span className="tabular-nums">
+    <span className="font-mono tabular-nums">
       {display}
-      {suffix}
+      <span className="text-signal-orange text-lg sm:text-xl md:text-2xl align-middle ml-1">
+        {suffix}
+      </span>
     </span>
   );
 }
@@ -73,88 +65,31 @@ export function StatsBar() {
   return (
     <section
       ref={ref}
-      className="relative w-full py-14 md:py-16 lg:py-20 overflow-hidden bg-[#0A2540]"
+      className="relative w-full border-y border-white/10 bg-ink py-14 md:py-16 lg:py-20"
       aria-label="Company statistics"
     >
-      {/* Background: navy with subtle pattern */}
-      <div
-        className="absolute inset-0 bg-[#0A2540]"
-        style={{
-          backgroundImage: `
-            radial-gradient(ellipse 80% 50% at 50% 50%, rgba(0, 102, 255, 0.12) 0%, transparent 50%),
-            radial-gradient(circle at 20% 80%, rgba(255, 107, 0, 0.06) 0%, transparent 30%),
-            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
-          `,
-          backgroundSize: "100% 100%, 100% 100%, 32px 32px, 32px 32px",
-          backgroundPosition: "0 0, 0 0, 0 0, 0 0",
-        }}
-      />
-
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {STATS.map((stat) => {
-            const Icon = stat.Icon as LucideIcon;
-            return (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{
-                  duration: 0.5,
-                  delay: STATS.indexOf(stat) * 0.1,
-                }}
-                className="relative flex flex-col items-center text-center"
-              >
-                {/* Glow behind number */}
-                <div
-                  className="absolute inset-0 flex items-center justify-center pointer-events-none"
-                  aria-hidden
-                >
-                  <div
-                    className="w-24 h-24 rounded-full opacity-20 blur-2xl"
-                    style={{
-                      background:
-                        "radial-gradient(circle, rgba(255,107,0,0.4) 0%, transparent 70%)",
-                    }}
-                  />
-                </div>
-
-                {/* Icon with accent */}
-                <div
-                  className={cn(
-                    "inline-flex size-12 rounded-full items-center justify-center mb-4",
-                    "bg-[var(--color-accent-orange)]/20 text-[var(--color-accent-orange)]",
-                    "border border-[var(--color-accent-orange)]/30"
-                  )}
-                  aria-hidden
-                >
-                  <Icon className="size-6" />
-                </div>
-
-                {/* Number with gradient / bold white */}
-                <div className="relative">
-                  <motion.span
-                    className="block text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight"
-                    style={{
-                      textShadow:
-                        "0 0 40px rgba(255,255,255,0.15), 0 0 80px rgba(0,102,255,0.1)",
-                    }}
-                  >
-                    <AnimatedNumber
-                      target={stat.value}
-                      inView={inView}
-                      suffix={stat.suffix}
-                    />
-                  </motion.span>
-                </div>
-
-                <p className="mt-2 text-sm sm:text-base font-medium text-white/85">
-                  {stat.label}
-                </p>
-              </motion.div>
-            );
-          })}
+        <div className="grid grid-cols-1 divide-y divide-white/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          {STATS.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex flex-col items-center py-6 text-center sm:py-0"
+            >
+              <span className="block text-4xl sm:text-5xl md:text-6xl font-semibold text-paper tracking-tight">
+                <AnimatedNumber
+                  target={stat.value}
+                  inView={inView}
+                  suffix={stat.suffix}
+                />
+              </span>
+              <p className="mt-2 font-mono text-xs uppercase tracking-widest text-paper/55">
+                {stat.label}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

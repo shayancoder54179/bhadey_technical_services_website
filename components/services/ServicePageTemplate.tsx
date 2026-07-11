@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Phone, Check, Grid3X3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 import { company } from "@/data/company";
@@ -62,24 +61,12 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
           className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
           aria-labelledby="service-hero-title"
         >
+          <div className="absolute inset-0 bg-ink" />
           <div
-            className="absolute inset-0 bg-[#0A2540]"
+            className="absolute inset-0"
             style={{
-              backgroundImage: `
-                radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 102, 255, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 40% at 100% 100%, rgba(0, 102, 255, 0.06) 0%, transparent 50%)
-              `,
-              backgroundSize: "100% 100%, 100% 100%",
-            }}
-          />
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)
-              `,
-              backgroundSize: "48px 48px",
+              backgroundImage:
+                "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
             }}
           />
           <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -92,18 +79,18 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
               <header className={hero.image ? "max-w-3xl lg:flex-1" : "max-w-3xl"}>
                 <h1
                   id="service-hero-title"
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-bold leading-tight text-white mb-4"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-paper mb-4 tracking-tight"
                 >
                   {hero.title}
                 </h1>
-                <p className="text-lg text-white/90 mb-8">
+                <p className="text-lg text-paper/80 mb-8">
                   {hero.subtitle}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
                   <Button
                     asChild
                     size="lg"
-                    className="w-full sm:w-auto bg-[var(--color-accent-orange)] text-white hover:bg-[var(--color-accent-orange)]/90 font-semibold px-8 py-6 rounded-lg shadow-lg"
+                    className="w-full sm:w-auto rounded-none border border-transparent bg-signal-orange text-ink hover:border-ink hover:bg-signal-orange font-semibold px-8 py-6"
                   >
                     <GetQuoteLink href={hero.ctaPrimaryHref ?? "/contact"}>{hero.ctaPrimaryLabel}</GetQuoteLink>
                   </Button>
@@ -112,7 +99,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
                       asChild
                       variant="outline"
                       size="lg"
-                      className="w-full sm:w-auto border-2 border-white/80 text-white bg-transparent hover:bg-white/10 font-semibold px-6 py-6 rounded-lg"
+                      className="w-full sm:w-auto rounded-none border-2 border-white/25 text-paper bg-transparent hover:bg-white/5 hover:text-paper hover:border-white/40 font-semibold px-6 py-6"
                     >
                       <PhoneLink
                         href={hero.ctaSecondaryHref}
@@ -129,18 +116,18 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
                     <div
                       key={i}
                       role="listitem"
-                      className="rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-3"
+                      className="border border-white/15 bg-white/[0.04] px-4 py-3"
                     >
-                      <span className="text-xl md:text-2xl font-bold text-white tabular-nums block">
+                      <span className="font-mono text-xl md:text-2xl font-semibold text-paper tabular-nums block">
                         {stat.value}
                       </span>
-                      <span className="text-sm text-white/80">{stat.label}</span>
+                      <span className="text-sm text-paper/70">{stat.label}</span>
                     </div>
                   ))}
                 </div>
               </header>
               {hero.image && (
-                <div className="flex-shrink-0 w-full lg:w-[42%] rounded-xl overflow-hidden border border-white/10 shadow-xl">
+                <div className="flex-shrink-0 w-full lg:w-[42%] overflow-hidden border border-white/10">
                   <Image
                     src={hero.image.src}
                     alt={hero.image.alt}
@@ -157,9 +144,9 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
         </section>
 
         {/* Overview / What Is */}
-        <section className="bg-white py-16 md:py-20 lg:py-24" aria-labelledby="overview-heading">
+        <section className="bg-paper py-16 md:py-20 lg:py-24" aria-labelledby="overview-heading">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-            <h2 id="overview-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <h2 id="overview-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-6 tracking-tight">
               {overview.title}
             </h2>
             <div className="prose prose-lg text-muted-foreground max-w-none mb-10">
@@ -167,31 +154,27 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
             </div>
             {overview.howItWorks && overview.howItWorks.length > 0 && (
               <div className="mb-10">
-                <h3 className="text-xl font-semibold text-foreground mb-6">How It Works</h3>
-                <div className="grid gap-6 md:grid-cols-3">
+                <h3 className="text-xl font-semibold text-foreground mb-6 tracking-tight">How It Works</h3>
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
                   {overview.howItWorks.map((step) => (
-                    <Card key={step.step} className="border-2">
-                      <CardHeader className="pb-2">
-                        <div className="flex items-center gap-3">
-                          <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-secondary-blue)]/15 text-[var(--color-secondary-blue)] font-bold">
-                            {step.step}
-                          </span>
-                          <h4 className="text-lg font-semibold text-foreground">{step.title}</h4>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {step.description}
-                        </p>
-                      </CardContent>
-                    </Card>
+                    <div key={step.step} className="border border-steel/20 bg-paper p-5">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="flex size-9 shrink-0 items-center justify-center bg-signal-orange/10 font-mono font-semibold text-signal-orange">
+                          {step.step}
+                        </span>
+                        <h4 className="text-lg font-semibold text-foreground tracking-tight">{step.title}</h4>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
                   ))}
                 </div>
               </div>
             )}
             {overview.benefits && overview.benefits.length > 0 && (
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">Benefits</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4 tracking-tight">Benefits</h3>
                 <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3" role="list">
                   {overview.benefits.map((benefit, i) => (
                     <li
@@ -199,7 +182,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
                       className="flex items-start gap-2 text-muted-foreground"
                       role="listitem"
                     >
-                      <Check className="size-5 shrink-0 text-[var(--color-accent-orange)] mt-0.5" aria-hidden />
+                      <Check className="size-5 shrink-0 text-signal-orange mt-0.5" aria-hidden />
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -210,9 +193,9 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
         </section>
 
         {/* Equipment */}
-        <section className="bg-muted/40 py-16 md:py-20 lg:py-24" aria-labelledby="equipment-heading">
+        <section className="bg-concrete py-16 md:py-20 lg:py-24" aria-labelledby="equipment-heading">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-            <h2 id="equipment-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h2 id="equipment-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-4 tracking-tight">
               {equipment.title}
             </h2>
             <p className="text-lg font-semibold text-foreground mb-2">{equipment.name}</p>
@@ -221,11 +204,11 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
             </p>
             {equipment.specs && equipment.specs.length > 0 && (
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-foreground mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-4 tracking-tight">Technical Specifications</h3>
                 <dl className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                   {equipment.specs.map((spec, i) => (
-                    <div key={i} className="rounded-lg border bg-card px-4 py-3">
-                      <dt className="text-sm text-muted-foreground">{spec.label}</dt>
+                    <div key={i} className="border border-steel/20 bg-paper px-4 py-3">
+                      <dt className="font-mono text-xs uppercase tracking-wide text-steel">{spec.label}</dt>
                       <dd className="font-semibold text-foreground">{spec.value}</dd>
                     </div>
                   ))}
@@ -233,8 +216,8 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
               </div>
             )}
             {equipment.whyBest && (
-              <div className="rounded-xl border-2 border-[var(--color-secondary-blue)]/20 bg-[var(--color-secondary-blue)]/5 p-6">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Why This Equipment</h3>
+              <div className="border border-steel/20 bg-paper p-6">
+                <h3 className="text-lg font-semibold text-foreground mb-2 tracking-tight">Why This Equipment</h3>
                 <p className="text-muted-foreground leading-relaxed">{equipment.whyBest}</p>
               </div>
             )}
@@ -242,16 +225,16 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
         </section>
 
         {/* Features / Benefits grid */}
-        <section className="bg-white py-16 md:py-20 lg:py-24" aria-labelledby="features-heading">
+        <section className="bg-paper py-16 md:py-20 lg:py-24" aria-labelledby="features-heading">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-            <h2 id="features-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10">
+            <h2 id="features-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-10 tracking-tight">
               Features &amp; Benefits
             </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {features.map((item, i) => (
-                <Card key={i} className="border-2 flex flex-row items-start gap-4 p-5">
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent-orange)]/15">
-                    <Check className="size-5 text-[var(--color-accent-orange)]" aria-hidden />
+                <div key={i} className="flex flex-row items-start gap-4 border border-steel/20 bg-paper p-5">
+                  <span className="flex size-10 shrink-0 items-center justify-center bg-signal-orange/10">
+                    <Check className="size-5 text-signal-orange" aria-hidden />
                   </span>
                   <div>
                     <h3 className="font-semibold text-foreground">{item.title}</h3>
@@ -261,25 +244,25 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
                       </p>
                     )}
                   </div>
-                </Card>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Applications */}
-        <section className="bg-muted/40 py-16 md:py-20 lg:py-24" aria-labelledby="applications-heading">
+        <section className="bg-concrete py-16 md:py-20 lg:py-24" aria-labelledby="applications-heading">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-            <h2 id="applications-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10">
+            <h2 id="applications-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-10 tracking-tight">
               Applications
             </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {applications.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 rounded-xl border bg-card px-4 py-4 shadow-sm"
+                  className="flex items-center gap-3 border border-steel/20 bg-paper px-4 py-4"
                 >
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <span className="flex size-10 shrink-0 items-center justify-center bg-signal-orange/10 text-signal-orange">
                     <Grid3X3 className="size-5" aria-hidden />
                   </span>
                   <span className="font-medium text-foreground">{item.title}</span>
@@ -290,19 +273,19 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
         </section>
 
         {/* Process */}
-        <section className="bg-white py-16 md:py-20 lg:py-24" aria-labelledby="process-heading">
+        <section className="bg-paper py-16 md:py-20 lg:py-24" aria-labelledby="process-heading">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-            <h2 id="process-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10">
+            <h2 id="process-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-10 tracking-tight">
               {process.title}
             </h2>
             <div className="space-y-8 max-w-3xl">
               {process.steps.map((step) => (
                 <div key={step.number} className="flex gap-6">
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-[var(--color-secondary-blue)] text-white font-bold text-lg">
+                  <span className="flex size-12 shrink-0 items-center justify-center bg-ink font-mono text-lg font-semibold text-paper">
                     {step.number}
                   </span>
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+                    <h3 className="text-lg font-semibold text-foreground mb-2 tracking-tight">{step.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
                 </div>
@@ -313,16 +296,16 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* Gallery: project / service photos */}
         {galleryImages && galleryImages.length > 0 && (
-          <section className="bg-muted/40 py-16 md:py-20 lg:py-24" aria-labelledby="gallery-heading">
+          <section className="bg-concrete py-16 md:py-20 lg:py-24" aria-labelledby="gallery-heading">
             <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-              <h2 id="gallery-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10">
+              <h2 id="gallery-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-10 tracking-tight">
                 {galleryTitle ?? "Gallery"}
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {galleryImages.map((img, i) => (
                   <div
                     key={i}
-                    className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border bg-muted shadow-sm"
+                    className="relative aspect-[4/3] overflow-hidden border border-steel/20 bg-paper"
                   >
                     <Image
                       src={img.src}
@@ -341,16 +324,16 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* AEO: People Also Ask style Q&A */}
         {peopleAlsoAsk && peopleAlsoAsk.length > 0 && (
-          <section className="bg-white py-16 md:py-20 lg:py-24 border-t border-border" aria-labelledby="people-also-ask-heading">
+          <section className="bg-paper py-16 md:py-20 lg:py-24 border-t border-steel/20" aria-labelledby="people-also-ask-heading">
             <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
               <div className="max-w-3xl mx-auto">
-                <h2 id="people-also-ask-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+                <h2 id="people-also-ask-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-8 tracking-tight">
                   People Also Ask
                 </h2>
                 <div className="space-y-6">
                   {peopleAlsoAsk.map((item, i) => (
-                    <article key={i} className="border-b border-border pb-6 last:border-0 last:pb-0">
-                      <h3 className="text-lg font-semibold text-foreground mb-2">{item.question}</h3>
+                    <article key={i} className="border-b border-steel/20 pb-6 last:border-0 last:pb-0">
+                      <h3 className="text-lg font-semibold text-foreground mb-2 tracking-tight">{item.question}</h3>
                       <p className="text-muted-foreground leading-relaxed">{item.answer}</p>
                     </article>
                   ))}
@@ -362,13 +345,13 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* Optional: City-specific SEO paragraphs */}
         {seoParagraphs && seoParagraphs.length > 0 && (
-          <section className="bg-muted/40 py-16 md:py-20 lg:py-24" aria-label="Service information by location">
+          <section className="bg-concrete py-16 md:py-20 lg:py-24" aria-label="Service information by location">
             <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
               <div className="max-w-3xl mx-auto space-y-8 prose prose-lg text-muted-foreground max-w-none">
                 {seoParagraphs.map((block, i) => (
                   <div key={i}>
                     {block.title && (
-                      <h3 className="text-xl font-semibold text-foreground mb-2">{block.title}</h3>
+                      <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">{block.title}</h3>
                     )}
                     <p className="leading-relaxed">{block.content}</p>
                   </div>
@@ -382,15 +365,15 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
         {children}
 
         {/* Related Services */}
-        <section className="bg-white py-16 md:py-20 lg:py-24 border-t border-border" aria-labelledby="related-heading">
+        <section className="bg-paper py-16 md:py-20 lg:py-24 border-t border-steel/20" aria-labelledby="related-heading">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-            <h2 id="related-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+            <h2 id="related-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-8 tracking-tight">
               Related Services
             </h2>
             <ul className="flex flex-wrap gap-4" role="list">
               {relatedServices.map((link, i) => (
                 <li key={i} role="listitem">
-                  <Button asChild variant="outline" size="lg" className="rounded-lg">
+                  <Button asChild variant="outline" size="lg" className="rounded-none border-steel/30">
                     <Link href={link.href} className="inline-flex items-center gap-2">
                       {link.label}
                       <ChevronRight className="size-4" aria-hidden />
@@ -410,29 +393,27 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
           className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
           aria-labelledby="cta-heading"
         >
+          <div className="absolute inset-0 bg-ink" aria-hidden />
           <div
-            className="absolute inset-0 bg-gradient-to-br from-[#0066ff] via-[#0052cc] to-[#0A2540]"
-            aria-hidden
-          />
-          <div
-            className="absolute inset-0 opacity-30"
+            className="absolute inset-0"
             style={{
-              backgroundImage: `radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 50%)`,
+              backgroundImage:
+                "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
             }}
             aria-hidden
           />
           <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
-            <h2 id="cta-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-2xl mx-auto">
+            <h2 id="cta-heading" className="text-3xl md:text-4xl lg:text-5xl font-semibold text-paper mb-4 max-w-2xl mx-auto tracking-tight">
               {ctaTitle}
             </h2>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10">
+            <p className="text-lg md:text-xl text-paper/80 max-w-2xl mx-auto mb-10">
               {ctaDescription}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <Button
                 asChild
                 size="lg"
-                className="w-full sm:w-auto bg-white text-[#0066ff] hover:bg-white/95 font-semibold text-base px-8 py-6 rounded-lg shadow-lg"
+                className="w-full sm:w-auto rounded-none border border-transparent bg-signal-orange text-ink hover:border-paper hover:bg-signal-orange font-semibold text-base px-8 py-6"
               >
                 <GetQuoteLink href={whatsappUrl(ctaDescription)} className="inline-flex items-center gap-2">
                   Get Free Quote via WhatsApp
@@ -441,7 +422,7 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
               <Button
                 asChild
                 size="lg"
-                className="w-full sm:w-auto bg-[#25D366] text-white hover:bg-[#20BD5A] font-semibold text-base px-8 py-6 rounded-lg shadow-lg"
+                className="w-full sm:w-auto rounded-none bg-[#25D366] text-white hover:bg-[#20BD5A] font-semibold text-base px-8 py-6"
               >
                 <WhatsAppLink
                   href={whatsappUrl(ctaDescription)}
@@ -452,12 +433,12 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
                 </WhatsAppLink>
               </Button>
             </div>
-            <p className="text-white/80 text-sm">
-              <PhoneLink href={`tel:${company.phoneClean}`} className="hover:text-white font-medium">
+            <p className="text-paper/70 text-sm">
+              <PhoneLink href={`tel:${company.phoneClean}`} className="hover:text-signal-orange font-medium">
                 {company.phone}
               </PhoneLink>
               {" · "}
-              <a href={`mailto:${company.email}`} className="hover:text-white font-medium">
+              <a href={`mailto:${company.email}`} className="hover:text-signal-orange font-medium">
                 {company.email}
               </a>
             </p>
