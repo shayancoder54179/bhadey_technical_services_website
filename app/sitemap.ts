@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/services/gs8000-scanning`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/services/core-cutting`,
       lastModified: new Date(),
       changeFrequency: "weekly",
@@ -36,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/services/excavation`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/interlock-road-pavement`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,

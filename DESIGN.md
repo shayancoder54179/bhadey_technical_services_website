@@ -112,7 +112,7 @@ The palette is two saturated-adjacent colors and four neutrals — restrained on
 - **Label** (500, 0.75rem, 0.08em tracking, uppercase): Eyebrows, badges, stat unit suffixes, nav labels — always IBM Plex Mono.
 
 ### Named Rules
-**The Mono-Number Rule.** Any digit that represents a real spec (depth, tolerance, size range, year count, phone number in a data context) is set in IBM Plex Mono. Digits inside ordinary prose sentences stay in Inter. This is what separates "500cm" as a fact from "500cm" as filler.
+**The Mono-Number Rule.** Any digit that represents a real spec (depth, tolerance, size range, year count, phone number in a data context) is set in IBM Plex Mono. Digits inside ordinary prose sentences stay in Inter. This is what separates "1m" as a fact from "1m" as filler.
 
 ## 4. Elevation
 

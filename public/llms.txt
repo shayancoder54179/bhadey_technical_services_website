@@ -1,18 +1,23 @@
 # Bhadeya Technical Services LLC
 
-> UAE specialist in GPR (Ground Penetrating Radar) scanning, diamond core cutting, and excavation services. Founded 2019, based in Dubai, operating across all 6 UAE Emirates. Trusted by Dubai Mall, Emaar, ADNOC, Kempinski, and Sheikh Khalifa Hospital.
+> UAE specialist in GPR (Ground Penetrating Radar) scanning, diamond core cutting, excavation, and interlock and road pavement services. Founded 2019, based in Dubai, operating across all 6 UAE Emirates. Trusted by Dubai Mall, Emaar, ADNOC, Kempinski, and Sheikh Khalifa Hospital.
 
 ## Services
 
-- GPR Scanning (Proceq GP8000): https://www.bhadeya.com/services/gpr-scanning
+- GPR Concrete Scanning (Proceq GP8000): https://www.bhadeya.com/services/gpr-scanning
+- GPR Ground Scanning / underground utility locating (Proceq GS8000): https://www.bhadeya.com/services/gs8000-scanning
 - GPR Scanning Dubai (landing page): https://www.bhadeya.com/gpr-scanning-dubai
 - Core Cutting: https://www.bhadeya.com/services/core-cutting
 - Excavation: https://www.bhadeya.com/services/excavation
+- Interlock & Road Pavement: https://www.bhadeya.com/services/interlock-road-pavement
 - Oversized Cargo Movement: https://www.bhadeya.com/services/oversized-cargo
 
 ## Key Facts
 
-- Equipment: Proceq GP8000 (GPR, 500cm depth)
+- Equipment: Proceq GP8000 (concrete scanning, up to 1m depth in concrete)
+- Equipment: Proceq GS8000 (ground scanning, 3–5m in soil depending on ground conditions)
+- Scanning depth in concrete: 1m. Scanning depth in ground for excavation: 3–5m, soil-dependent
+- GPR scanning is performed before every excavation job
 - GPR accuracy: ±10mm under ideal conditions
 - Core cutting diameter range: 12mm to 500mm
 - Founded: 2019 — 7+ years experience

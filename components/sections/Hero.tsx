@@ -70,10 +70,12 @@ export function Hero() {
             variants={itemFadeUp}
             className="text-base sm:text-lg text-paper/75 max-w-[700px] leading-relaxed mx-auto"
           >
-            Protect your structure before you cut. We use Proceq GP8000
-            technology for precise subsurface detection up to{" "}
-            <span className="font-mono text-paper">500cm</span> depth.
-            Serving Dubai, Abu Dhabi, Sharjah &amp; across UAE.
+            Protect your structure before you cut, and your site before you
+            dig. Proceq GP8000 reads{" "}
+            <span className="font-mono text-paper">1m</span> into concrete;
+            Proceq GS8000 reads{" "}
+            <span className="font-mono text-paper">3&ndash;5m</span> into the
+            ground. Serving Dubai, Abu Dhabi, Sharjah &amp; across UAE.
           </motion.p>
 
           <motion.div

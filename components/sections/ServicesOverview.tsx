@@ -21,9 +21,11 @@ const ICON_MAP = {
 // Short instrument codes — an identifier per service, not a sequence, so no numbered markers.
 const SERVICE_CODES: Record<string, string> = {
   "gpr-scanning": "GPR",
+  "gs8000-scanning": "GS8000",
   "core-cutting": "CORE",
   excavation: "EXC",
   "oversized-cargo": "CARGO",
+  "interlock-road-pavement": "PAVE",
 };
 
 type ServiceItem = (typeof services)[number] & {

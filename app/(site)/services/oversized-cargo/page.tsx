@@ -88,11 +88,11 @@ const oversizedCargoPageData: ServicePageData = {
     title: "Our Capability",
     name: "Integrated Cargo Movement & GPR Support",
     description:
-      "Bhadeya Technical combines a professional escort fleet — certified escort vehicles, trained flagmen, and on-site technicians — with our industry-leading Proceq GP8000 GPR scanning equipment. This unique combination means we can assess the structural capacity of bridges and roads along your route before the load moves, ensuring no surprises on the day. It is the most comprehensive oversized cargo support service available in the UAE.",
+      "Bhadeya Technical combines a professional escort fleet — certified escort vehicles, trained flagmen, and on-site technicians — with our industry-leading Proceq GS8000 GPR scanning equipment. This unique combination means we can assess the structural capacity of bridges and roads along your route before the load moves, ensuring no surprises on the day. It is the most comprehensive oversized cargo support service available in the UAE.",
     specs: [
       { label: "Coverage", value: "All UAE Emirates" },
       { label: "Compliance", value: "RTA & UAE Authorities" },
-      { label: "Route scanning", value: "Proceq GP8000" },
+      { label: "Route scanning", value: "Proceq GS8000" },
       { label: "Support", value: "24/7 Emergency" },
     ],
     whyBest:
@@ -163,7 +163,7 @@ const oversizedCargoPageData: ServicePageData = {
         number: 4,
         title: "GPR infrastructure scanning (where required)",
         description:
-          "For bridges or road sections where structural capacity needs to be verified, our GPR team conducts a pre-movement scan using the Proceq GP8000. Results are documented and reviewed before the load moves.",
+          "For bridges or road sections where structural capacity needs to be verified, our GPR team conducts a pre-movement scan using the Proceq GS8000. Results are documented and reviewed before the load moves.",
       },
       {
         number: 5,
@@ -193,7 +193,7 @@ const oversizedCargoPageData: ServicePageData = {
     {
       title: "The Bhadeya Advantage: GPR Scanning for Heavy Load Routes",
       content:
-        "What makes Bhadeya Technical unique among UAE oversized cargo support providers is our GPR scanning capability. Before a heavy load passes over a bridge or section of road, we can assess the subsurface structural condition using our Proceq GP8000 ground penetrating radar. This gives clients and logistics teams verified confidence that the infrastructure can safely support the load — something no other UAE provider can offer as part of an integrated cargo movement service.",
+        "What makes Bhadeya Technical unique among UAE oversized cargo support providers is our GPR scanning capability. Before a heavy load passes over a bridge or section of road, we can assess the subsurface structural condition using our Proceq GS8000 ground penetrating radar. This gives clients and logistics teams verified confidence that the infrastructure can safely support the load — something no other UAE provider can offer as part of an integrated cargo movement service.",
     },
   ],
   peopleAlsoAsk: [
@@ -219,7 +219,7 @@ const oversizedCargoPageData: ServicePageData = {
     },
   ],
   relatedServices: [
-    { href: "/services/gpr-scanning", label: "GPR Scanning" },
+    { href: "/services/gpr-scanning", label: "GPR Concrete Scanning" },
     { href: "/services/excavation", label: "Excavation" },
   ],
   faq: {

@@ -763,7 +763,7 @@ function HowItWorks() {
    EQUIPMENT — PROCEQ GP8000
 ══════════════════════════════════════════════ */
 const SPECS = [
-  { label: "Scan Depth", value: "Up to 500 cm" },
+  { label: "Scan Depth", value: "Up to 1 m in concrete" },
   { label: "Frequency Range", value: "200 MHz – 4 GHz" },
   { label: "Display", value: "Live 2-D + 3-D view" },
   { label: "Connectivity", value: "Wi-Fi to Proceq Link app" },

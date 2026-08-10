@@ -44,10 +44,20 @@ const localBusinessSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "GPR Scanning",
+          name: "GPR Concrete Scanning",
           description:
-            "Ground Penetrating Radar scanning using Proceq GP8000 with up to 500cm depth",
+            "Ground Penetrating Radar concrete scanning using Proceq GP8000, up to 1 m depth in concrete",
           url: `${BASE_URL}/services/gpr-scanning`,
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "GPR Ground Scanning",
+          description:
+            "Ground scanning with Proceq GS8000 to locate buried utilities before excavation, 3-5 m depth depending on soil",
+          url: `${BASE_URL}/services/gs8000-scanning`,
         },
       },
       {
@@ -80,6 +90,16 @@ const localBusinessSchema = {
           url: `${BASE_URL}/services/oversized-cargo`,
         },
       },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Interlock & Road Pavement",
+          description:
+            "Interlock paving, repair and re-levelling, plus road pavement and hardstanding works across the UAE",
+          url: `${BASE_URL}/services/interlock-road-pavement`,
+        },
+      },
     ],
   },
   foundingDate: "2019",
@@ -92,6 +112,10 @@ const localBusinessSchema = {
     "Utility Detection",
     "Post-Tension Cable Detection",
     "Non-Destructive Testing",
+    "Underground Utility Mapping",
+    "Pre-Excavation Utility Surveys",
+    "Interlock Paving",
+    "Road Pavement",
   ],
   slogan: "Precision Scanning. Safe Construction.",
   sameAs: [],
@@ -154,7 +178,15 @@ const faqPageSchema = {
       name: "How deep can GPR scanning detect?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our Proceq GP8000 GPR system can detect subsurface features up to 500cm (5 meters) deep, depending on the material composition and conditions. For concrete slabs, typical detection depth is 40-80cm. The GP8000's wide frequency range (200 MHz – 4 GHz) allows it to resolve both shallow rebar and deep embedded utilities in a single pass.",
+        text: "It depends on the material. In concrete, our Proceq GP8000 scans up to 1 metre deep, which covers slabs, walls, beams and columns where rebar and post-tension cables typically sit within the first 10-30cm. In ground and soil, our Proceq GS8000 reaches 3-5 metres depending on soil conditions: dry sand allows deeper penetration, while wet ground or heavy clay reduces it. The GS8000 is the system we use to locate buried utilities before excavation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you scan the ground before excavation?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, always. Every excavation job begins with a GPR survey of the dig area using our Proceq GS8000 ground scanner, which reads 3-5 metres into the soil depending on ground conditions. We locate and mark buried power cables, water and sewer lines, telecom ducts, gas pipes and voids on the surface, and agree safe dig limits with you before any machine breaks ground. Scanning and excavation are both carried out in-house by Bhadeya Technical.",
       },
     },
     {
@@ -178,7 +210,7 @@ const faqPageSchema = {
       name: "What equipment do you use for GPR scanning?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We use the Proceq GP8000 ground penetrating radar system for subsurface scanning. It is an industry-leading, non-destructive testing instrument with real-time 3D visualization, trusted by leading contractors and consultants worldwide.",
+        text: "We operate two Proceq ground penetrating radar systems. The GP8000 is our concrete scanner, with real-time 3D visualization and scanning depth up to 1 metre in concrete, used before core cutting and drilling. The GS8000 is our ground scanner, used to map buried utilities before excavation at 3-5 metres depending on soil conditions. Both are Swiss-manufactured, industry-leading non-destructive testing instruments trusted by contractors and consultants worldwide.",
       },
     },
     {
@@ -212,9 +244,9 @@ const serviceSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "GPR Scanning",
+    name: "GPR Concrete Scanning",
     description:
-      "Ground Penetrating Radar scanning using Proceq GP8000 for subsurface imaging, rebar detection, utility mapping, and post-tension cable location up to 500cm depth.",
+      "Ground Penetrating Radar concrete scanning using Proceq GP8000 for rebar detection, post-tension cable location, conduit and void detection, up to 1 m depth in concrete.",
     provider: { "@id": `${BASE_URL}/#localbusiness` },
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -252,7 +284,7 @@ const serviceSchemas = [
     "@type": "Service",
     name: "Excavation Services",
     description:
-      "Professional excavation services for construction, infrastructure, and ground works across UAE.",
+      "Professional excavation services for construction, infrastructure, and ground works across UAE. Every dig preceded by GPR ground scanning to 3-5 m depending on soil conditions.",
     provider: { "@id": `${BASE_URL}/#localbusiness` },
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -284,6 +316,44 @@ const serviceSchemas = [
     url: `${BASE_URL}/services/oversized-cargo`,
     serviceType: "Cargo Transport",
     category: "Logistics",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "GPR Ground Scanning",
+    description:
+      "Underground utility locating and subsurface mapping with the Proceq GS8000 ground penetrating radar. Pre-excavation surveys to 3-5 m depending on soil conditions, with on-site marking and survey reports.",
+    provider: { "@id": `${BASE_URL}/#localbusiness` },
+    areaServed: [
+      { "@type": "City", name: "Dubai" },
+      { "@type": "City", name: "Abu Dhabi" },
+      { "@type": "City", name: "Sharjah" },
+      { "@type": "City", name: "Ras Al Khaimah" },
+      { "@type": "City", name: "Fujairah" },
+      { "@type": "City", name: "Al Ain" },
+    ],
+    url: `${BASE_URL}/services/gs8000-scanning`,
+    serviceType: "Underground Utility Scanning",
+    category: "Non-Destructive Testing",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Interlock & Road Pavement",
+    description:
+      "Interlock tile laying, repair and re-levelling, sub-base preparation, kerbstones, and road pavement and hardstanding works across the UAE.",
+    provider: { "@id": `${BASE_URL}/#localbusiness` },
+    areaServed: [
+      { "@type": "City", name: "Dubai" },
+      { "@type": "City", name: "Abu Dhabi" },
+      { "@type": "City", name: "Sharjah" },
+      { "@type": "City", name: "Ras Al Khaimah" },
+      { "@type": "City", name: "Fujairah" },
+      { "@type": "City", name: "Al Ain" },
+    ],
+    url: `${BASE_URL}/services/interlock-road-pavement`,
+    serviceType: "Paving Contractor",
+    category: "Construction Services",
   },
 ];
 

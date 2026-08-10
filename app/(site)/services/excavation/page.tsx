@@ -3,21 +3,23 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
 export const metadata: Metadata = {
-  title: "Excavation Services Dubai & UAE | Safe GPR-Guided Excavation | Bhadeya Technical",
+  title: "Excavation Services Dubai & UAE | We Scan Before We Dig | Bhadeya Technical",
   description:
-    "Professional excavation services in Dubai, Abu Dhabi & UAE. GPR-scanned excavation zones for maximum safety. Site preparation, utility trenching, foundation excavation. 7+ years experience.",
+    "Professional excavation services in Dubai, Abu Dhabi & UAE. Every dig starts with a GPR scan — our Proceq GS8000 reads 3-5m into the ground to locate buried utilities first. Site preparation, utility trenching, foundation excavation. 7+ years experience.",
   keywords: [
     "excavation services Dubai",
     "excavation UAE",
     "safe excavation Dubai",
     "utility trenching UAE",
     "foundation excavation Dubai",
+    "GPR scanning before excavation Dubai",
+    "pre-excavation utility survey UAE",
   ],
   alternates: { canonical: "https://www.bhadeya.com/services/excavation" },
   openGraph: {
-    title: "Excavation Dubai & UAE | GPR-Guided | Bhadeya Technical",
+    title: "Excavation Dubai & UAE | We Scan Before We Dig | Bhadeya Technical",
     description:
-      "Safe excavation with GPR-scanned zones in Dubai, Abu Dhabi & UAE. Site prep, trenching, foundations. 7+ years.",
+      "Every excavation starts with a GPR scan. Proceq GS8000 reads 3-5m into the ground to find buried utilities before the first bucket. Dubai, Abu Dhabi & UAE.",
     url: "https://www.bhadeya.com/services/excavation",
     type: "website",
   },
@@ -30,13 +32,13 @@ const excavationData: ServicePageData = {
     { label: "Excavation", href: "/services/excavation" },
   ],
   hero: {
-    title: "Professional Excavation Services in Dubai & UAE",
+    title: "Excavation in Dubai & UAE — We Scan Before We Dig",
     subtitle:
-      "Safe, efficient excavation with GPR-scanned zones. We identify underground utilities and obstructions before digging—reducing risk and delays. Site preparation, utility trenching, foundation excavation. 7+ years serving Dubai, Abu Dhabi, Sharjah and across the UAE.",
+      "Before any machine breaks ground, we survey the dig area with our Proceq GS8000 ground radar, reading 3–5 m into the soil depending on ground conditions. Buried cables, pipes and ducts are located and marked first, then we excavate. Site preparation, utility trenching, foundation excavation. 7+ years serving Dubai, Abu Dhabi, Sharjah and across the UAE.",
     stats: [
+      { value: "Scan first", label: "On every dig" },
+      { value: "3–5m", label: "Ground scan depth" },
       { value: "7+ Years", label: "Experience" },
-      { value: "GPR pre-scan", label: "Safety" },
-      { value: "All UAE", label: "Coverage" },
     ],
     ctaPrimaryLabel: "Get Free Quote",
     ctaSecondaryLabel: "Call Now: +971 55 692 6286",
@@ -49,13 +51,13 @@ const excavationData: ServicePageData = {
   overview: {
     title: "What Are Our Excavation Services?",
     description:
-      "Our excavation services cover site preparation, utility trenching, foundation excavation and grading for construction and civil projects across the UAE. What sets us apart is our integration of GPR scanning: we scan excavation zones before digging to locate underground utilities, cables and obstructions. This GPR-guided approach minimises the risk of utility strikes, protects existing infrastructure and keeps your project on schedule. We serve Dubai, Abu Dhabi, Sharjah and the wider UAE with experienced operators and full compliance with local safety regulations.",
+      "Before you excavate, you scan — that is the rule we work to on every job. Our excavation services cover site preparation, utility trenching, foundation excavation and grading for construction and civil projects across the UAE, and each one begins with a GPR survey of the dig area using our Proceq GS8000. It reads 3–5 m into the ground depending on soil conditions, locating power cables, water and sewer lines, telecom ducts, gas pipes and voids before the first bucket goes in. Because the scanning and the digging are both ours, there is no waiting on a third-party surveyor and no gap in responsibility between the survey and the excavation. We serve Dubai, Abu Dhabi, Sharjah and the wider UAE with experienced operators and full compliance with local safety regulations.",
     howItWorks: [
       {
         step: 1,
-        title: "Site assessment & GPR scanning",
+        title: "GPR scan of the dig area",
         description:
-          "We assess the site and perform GPR scanning to map underground utilities and obstructions. This defines safe excavation zones and highlights areas to avoid or hand-dig.",
+          "Nothing is excavated until the ground is scanned. We survey the dig area with the Proceq GS8000 to map buried utilities and obstructions, defining safe excavation zones and flagging anything that must be hand-dug.",
       },
       {
         step: 2,
@@ -71,7 +73,8 @@ const excavationData: ServicePageData = {
       },
     ],
     benefits: [
-      "GPR-scanned excavation zones for safety",
+      "GPR scan before every dig, without exception",
+      "Ground read to 3–5 m depending on soil",
       "Reduced risk of utility strikes",
       "Efficient project timelines",
       "Experienced and certified operators",
@@ -81,19 +84,20 @@ const excavationData: ServicePageData = {
   },
   equipment: {
     title: "Equipment & Approach",
-    name: "Professional Excavation + GPR Technology",
+    name: "Professional Excavation Machinery + Proceq GS8000",
     description:
-      "We combine modern excavation machinery with GPR scanning technology. Before any excavation we use our Proceq GP8000 GPR to map the subsurface. Our operators are trained in safe digging practices and we follow UAE safety standards. This integrated approach—GPR first, then controlled excavation—delivers safe, efficient results across Dubai, Abu Dhabi and the UAE.",
+      "We combine modern excavation machinery with the Proceq GS8000 ground scanning radar. Before any excavation we survey the dig area with the GS8000, which reads 3–5 m into the soil depending on ground conditions, and mark what is buried. Our operators are trained in safe digging practices and we follow UAE safety standards. This sequence—scan first, then controlled excavation—delivers safe, efficient results across Dubai, Abu Dhabi and the UAE.",
     specs: [
-      { label: "GPR depth", value: "Up to 500 cm" },
+      { label: "Ground scan depth", value: "3–5 m, soil-dependent" },
+      { label: "Scanner", value: "Proceq GS8000" },
       { label: "Experience", value: "7+ years" },
       { label: "Coverage", value: "All UAE" },
     ],
     whyBest:
-      "Many excavation contractors dig without subsurface mapping. We scan first with GPR, then excavate with full awareness of what is underground. This reduces utility strikes, delays and costly repairs—and gives you confidence that the work is done safely.",
+      "Many excavation contractors dig without subsurface mapping and find the utility with the bucket. We scan first with the GS8000, then excavate with full awareness of what is underground. This reduces utility strikes, delays and costly repairs—and gives you confidence that the work is done safely.",
   },
   features: [
-    { title: "Pre-excavation GPR scanning", description: "We locate utilities and obstructions before digging." },
+    { title: "GPR scan before every dig", description: "Proceq GS8000 locates utilities and obstructions before digging." },
     { title: "Utility-safe digging practices", description: "Controlled excavation and hand digging where needed." },
     { title: "Site preparation and grading", description: "Ready your site for construction or landscaping." },
     { title: "Trenching for utilities and drainage", description: "Precise trenches for pipes, cables and drainage." },
@@ -117,7 +121,7 @@ const excavationData: ServicePageData = {
         number: 1,
         title: "Consultation & GPR scan",
         description:
-          "We discuss your project and excavation requirements. We then perform GPR scanning over the planned excavation zone to map utilities and obstructions. You receive a clear picture of what is underground before any digging.",
+          "We discuss your project and excavation requirements, then scan the planned dig area with the Proceq GS8000 to map utilities and obstructions at 3–5 m depending on soil conditions. You receive a clear picture of what is underground before any digging — this step is not optional on our jobs.",
       },
       {
         number: 2,
@@ -153,11 +157,13 @@ const excavationData: ServicePageData = {
     {
       title: "Why Choose GPR-Guided Excavation",
       content:
-        "Excavating without subsurface information can lead to utility strikes, project delays and safety incidents. GPR-guided excavation gives you a map of what is underground before the first dig. Bhadeya Technical combines GPR scanning with professional excavation—so you get safe, efficient digging and peace of mind across Dubai and the UAE.",
+        "Excavating without subsurface information can lead to utility strikes, injuries, authority penalties and project delays. Scanning before you excavate gives you a map of what is underground before the first dig, and the cost of the scan is a fraction of the cost of one strike. Bhadeya Technical carries out the GPR survey and the excavation with its own team and its own Proceq GS8000—so you get safe, efficient digging, one point of responsibility, and peace of mind across Dubai and the UAE.",
     },
   ],
   relatedServices: [
-    { href: "/services/gpr-scanning", label: "GPR Scanning" },
+    { href: "/services/gs8000-scanning", label: "GPR Ground Scanning" },
+    { href: "/services/gpr-scanning", label: "GPR Concrete Scanning" },
+    { href: "/services/interlock-road-pavement", label: "Interlock & Road Pavement" },
     { href: "/services/core-cutting", label: "Core Cutting" },
   ],
   faq: {
@@ -166,7 +172,7 @@ const excavationData: ServicePageData = {
       {
         question: "Do you scan before excavation?",
         answer:
-          "Yes. We perform GPR scanning before excavation to map underground utilities and obstructions. This allows us to plan safe excavation zones and avoid utility strikes. It is standard on all our excavation work.",
+          "Yes — always, on every job. Before we excavate we scan the dig area with our Proceq GS8000 ground radar, which reads 3–5 metres into the soil depending on ground conditions. We map and mark buried power cables, water and sewer lines, telecom ducts, gas pipes and voids, agree the safe dig limits with you, and only then bring in the machine. It is not an optional extra on our excavation work — it is how the job starts.",
       },
       {
         question: "Which areas do you serve?",
@@ -187,7 +193,7 @@ const excavationData: ServicePageData = {
   },
   ctaTitle: "Need Excavation in Dubai or UAE?",
   ctaDescription:
-    "Get a free quote for excavation with GPR-scanned zones. We respond within 1 hour during business hours.",
+    "Get a free quote for excavation with a GPR ground scan before the first dig. We respond within 1 hour during business hours.",
 };
 
 export default function ExcavationPage() {

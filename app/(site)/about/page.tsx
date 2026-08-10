@@ -92,7 +92,8 @@ export default function AboutPage() {
                   to Sheikh Khalifa Hospital, our team has delivered expert
                   scanning and cutting services to the UAE&apos;s most
                   prestigious projects. We invest in the best equipment
-                  available—the Proceq GP8000 and professional core cutting systems—because
+                  available—the Proceq GP8000 for concrete, the Proceq GS8000 for
+                  ground scanning, and professional core cutting systems—because
                   our clients deserve nothing less than the most accurate
                   results.
                 </p>
@@ -178,7 +179,7 @@ export default function AboutPage() {
           >
             Our Equipment
           </h2>
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3 max-w-6xl mx-auto">
             <div className="border border-steel/20 bg-concrete/40 p-6">
               <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
                 <Radio className="size-6" aria-hidden />
@@ -187,10 +188,24 @@ export default function AboutPage() {
                 Proceq GP8000
               </h3>
               <ul className="text-muted-foreground text-sm space-y-1" role="list">
-                <li>• Industry-leading GPR scanner</li>
-                <li>• 500cm maximum depth</li>
+                <li>• Concrete scanning radar</li>
+                <li>• Up to 1m depth in concrete</li>
                 <li>• Real-time 3D visualization</li>
-                <li>• Used for GPR Scanning</li>
+                <li>• Used before cutting &amp; drilling</li>
+              </ul>
+            </div>
+            <div className="border border-steel/20 bg-concrete/40 p-6">
+              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                <Radio className="size-6" aria-hidden />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">
+                Proceq GS8000
+              </h3>
+              <ul className="text-muted-foreground text-sm space-y-1" role="list">
+                <li>• Ground scanning radar</li>
+                <li>• 3–5m in soil, depending on ground</li>
+                <li>• Buried utility mapping</li>
+                <li>• Used before excavation</li>
               </ul>
             </div>
             <div className="border border-steel/20 bg-concrete/40 p-6">

@@ -182,7 +182,7 @@ const coreCuttingData: ServicePageData = {
     },
   ],
   relatedServices: [
-    { href: "/services/gpr-scanning", label: "GPR Scanning" },
+    { href: "/services/gpr-scanning", label: "GPR Concrete Scanning" },
     { href: "/services/excavation", label: "Excavation" },
   ],
   faq: {

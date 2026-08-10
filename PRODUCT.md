@@ -25,7 +25,7 @@ Generic navy-blue-and-orange corporate services template: dot-grid hero backgrou
 1. The product is "see what's hidden before you cut" — let that show up structurally (depth/cross-section motifs), not just as decoration.
 2. Two-color discipline: black + the logo's orange only. No introduced third brand color.
 3. Contact is always one tap away (WhatsApp/call), never buried behind navigation.
-4. Technical specificity builds trust — real numbers (500cm, ±10mm, 12–500mm) over vague marketing language.
+4. Technical specificity builds trust — real numbers (1m in concrete, 3–5m in soil, ±10mm, 12–500mm) over vague marketing language. Depth figures are equipment-specific: the GP8000 scans concrete to 1m, the GS8000 scans ground to 3–5m depending on soil. Never quote a single blended depth number.
 
 ## Accessibility & Inclusion
 

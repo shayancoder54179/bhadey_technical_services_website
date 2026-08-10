@@ -3,9 +3,9 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
 export const metadata: Metadata = {
-  title: "GPR Scanning Services Dubai & UAE | Ground Penetrating Radar | Proceq GP8000",
+  title: "GPR Concrete Scanning Dubai & UAE | Ground Penetrating Radar | Proceq GP8000",
   description:
-    "Professional GPR scanning services in Dubai, Abu Dhabi, Sharjah & UAE. Using Proceq GP8000 with 500cm depth detection. Rebar detection, post-tension cable locating, utility mapping. Trusted by Dubai Mall, Emaar & ADNOC. Get free quote!",
+    "Professional GPR scanning services in Dubai, Abu Dhabi, Sharjah & UAE. Proceq GP8000 scans up to 1m into concrete; Proceq GS8000 reads 3-5m into ground. Rebar detection, post-tension cable locating, utility mapping. Trusted by Dubai Mall, Emaar & ADNOC. Get free quote!",
   keywords: [
     "GPR scanning Dubai",
     "GPR scanning UAE",
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.bhadeya.com/services/gpr-scanning" },
   openGraph: {
-    title: "GPR Scanning Services Dubai & UAE | Proceq GP8000 | Bhadeya Technical",
+    title: "GPR Concrete Scanning Dubai & UAE | Proceq GP8000 | Bhadeya Technical",
     description:
-      "Professional GPR scanning in Dubai, Abu Dhabi, Sharjah & UAE. 500cm depth, rebar & post-tension detection. Trusted by Dubai Mall, Emaar & ADNOC.",
+      "Professional GPR scanning in Dubai, Abu Dhabi, Sharjah & UAE. 1m in concrete, 3-5m in ground. Rebar & post-tension detection. Trusted by Dubai Mall, Emaar & ADNOC.",
     url: "https://www.bhadeya.com/services/gpr-scanning",
     type: "website",
   },
@@ -30,15 +30,16 @@ const gprPageData: ServicePageData = {
   breadcrumb: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/#services" },
-    { label: "GPR Scanning", href: "/services/gpr-scanning" },
+    { label: "GPR Concrete Scanning", href: "/services/gpr-scanning" },
   ],
   hero: {
-    title: "Professional GPR Scanning Services in Dubai & UAE",
+    title: "GPR Concrete Scanning in Dubai & UAE",
     subtitle:
-      "Ground Penetrating Radar (GPR) scanning using the industry-leading Proceq GP8000. Detect rebar, post-tension cables, utilities and voids up to 500cm depth—non-destructively and with full reporting. Trusted by Dubai Mall, Emaar and ADNOC.",
+      "Concrete scanning with the industry-leading Proceq GP8000. Detect rebar, post-tension cables, conduits and voids up to 1 m deep in concrete—non-destructively and with full reporting. For buried utilities in soil, our Proceq GS8000 reads 3–5 m depending on ground conditions. Trusted by Dubai Mall, Emaar and ADNOC.",
     stats: [
-      { value: "500cm", label: "Max scanning depth" },
-      { value: "Proceq GP8000", label: "Technology" },
+      { value: "1m", label: "Depth in concrete" },
+      { value: "3–5m", label: "Depth in soil (GS8000)" },
+      { value: "±10mm", label: "Positional accuracy" },
     ],
     ctaPrimaryLabel: "Get Free Quote via WhatsApp",
     ctaPrimaryHref:
@@ -87,18 +88,18 @@ const gprPageData: ServicePageData = {
     title: "Equipment We Use",
     name: "Proceq GP8000",
     description:
-      "The Proceq GP8000 is a state-of-the-art ground penetrating radar system that provides real-time 3D visualization of concrete and subsurface structures. It enables accurate detection of rebar, post-tension cables, conduits, voids and utilities at depths up to 500cm, with high resolution and reliability. Used by leading contractors and consultants worldwide, the GP8000 is the gold standard for GPR scanning in the UAE.",
+      "The Proceq GP8000 is a state-of-the-art ground penetrating radar system that provides real-time 3D visualization of concrete structures. It enables accurate detection of rebar, post-tension cables, conduits and voids at depths up to 1 m in concrete, with high resolution and reliability. Used by leading contractors and consultants worldwide, the GP8000 is the gold standard for concrete scanning in the UAE. For scanning the ground rather than concrete—locating buried utilities before excavation—we operate the Proceq GS8000, which reaches 3–5 m depending on soil conditions.",
     specs: [
-      { label: "Max depth", value: "500 cm" },
-      { label: "Technology", value: "Ground Penetrating Radar" },
+      { label: "Depth in concrete", value: "Up to 1 m" },
+      { label: "Positional accuracy", value: "±10 mm" },
       { label: "Output", value: "Real-time 3D imaging" },
-      { label: "Applications", value: "Concrete, asphalt, ground" },
+      { label: "Ground scanning", value: "GS8000, 3–5 m in soil" },
     ],
     whyBest:
-      "The Proceq GP8000 offers industry-leading depth and clarity. Its real-time 3D visualization helps our team and your engineers make fast, confident decisions on-site. We chose the GP8000 to deliver the highest quality GPR scanning services in Dubai and the UAE.",
+      "The GP8000 is built for concrete and the GS8000 is built for ground—we operate both, so the right instrument goes to the right job. Real-time 3D visualization helps our team and your engineers make fast, confident decisions on-site, and honest depth figures mean you know exactly what a scan can and cannot tell you before we mobilise.",
   },
   features: [
-    { title: "500cm maximum scanning depth", description: "Detect deep-embedded utilities and post-tension cables." },
+    { title: "Up to 1 m scanning depth in concrete", description: "Full coverage of slabs, walls, beams and columns." },
     { title: "Real-time 3D visualization", description: "See subsurface structures as we scan." },
     { title: "Rebar, PT cables & conduit detection", description: "Accurate mapping of all critical embedded elements." },
     { title: "Non-destructive and safe", description: "No damage to the structure; safe for occupants and workers." },
@@ -156,7 +157,7 @@ const gprPageData: ServicePageData = {
     {
       title: "GPR Scanning in Dubai",
       content:
-        "GPR scanning in Dubai is essential for high-rise, commercial and infrastructure projects. Before core cutting, drilling or demolition, contractors and consultants rely on GPR to locate rebar, post-tension cables and utilities. Bhadeya Technical provides professional GPR scanning services across Dubai using the Proceq GP8000, with 500cm depth capability and detailed reporting. We serve developers, main contractors and MEP teams on projects ranging from fit-outs to major new builds.",
+        "GPR scanning in Dubai is essential for high-rise, commercial and infrastructure projects. Before core cutting, drilling or demolition, contractors and consultants rely on GPR to locate rebar, post-tension cables and utilities. Bhadeya Technical provides professional GPR scanning services across Dubai using the Proceq GP8000, scanning up to 1 m into concrete with detailed reporting. For ground works we deploy the Proceq GS8000, which locates buried utilities at 3–5 m depending on soil conditions. We serve developers, main contractors and MEP teams on projects ranging from fit-outs to major new builds.",
     },
     {
       title: "GPR Scanning in Abu Dhabi",
@@ -178,7 +179,7 @@ const gprPageData: ServicePageData = {
     {
       question: "How accurate is GPR scanning?",
       answer:
-        "Our Proceq GP8000 GPR scanner detects rebar, post-tension cables, conduits, voids, and utilities with positional accuracy within ±10mm under ideal conditions. Accuracy depends on concrete mix, moisture content, and object depth — our technicians will advise if site conditions could affect results. The scanner covers depths up to 500cm.",
+        "Our Proceq GP8000 GPR scanner detects rebar, post-tension cables, conduits, voids, and utilities with positional accuracy within ±10mm under ideal conditions. Accuracy depends on concrete mix, moisture content, and object depth — our technicians will advise if site conditions could affect results. The GP8000 scans up to 1 m into concrete; for ground scanning our GS8000 reaches 3–5 m depending on soil.",
     },
     {
       question: "How long does GPR scanning take?",
@@ -193,6 +194,7 @@ const gprPageData: ServicePageData = {
   ],
   relatedServices: [
     { href: "/gpr-scanning-dubai", label: "Get a Fast GPR Quote in Dubai" },
+    { href: "/services/gs8000-scanning", label: "GPR Ground Scanning" },
     { href: "/services/core-cutting", label: "Core Cutting" },
     { href: "/services/excavation", label: "Excavation" },
   ],
@@ -207,7 +209,7 @@ const gprPageData: ServicePageData = {
       {
         question: "How deep can your GPR scanner detect objects?",
         answer:
-          "Our Proceq GP8000 GPR scanner can detect objects at depths up to 500cm (5 metres). This industry-leading depth allows us to identify deep-embedded utilities, post-tension cables, rebar, voids and other subsurface structures with high accuracy across Dubai and the UAE.",
+          "It depends on the material. In concrete, our Proceq GP8000 scans up to 1 metre deep — which covers slabs, walls, beams and columns, where rebar and post-tension cables normally sit within the first 10–30cm. In ground and soil, our Proceq GS8000 reaches 3–5 metres depending on soil conditions: dry sand allows deeper penetration, wet ground and heavy clay reduce it. We operate both machines across Dubai and the UAE, so concrete work and pre-excavation surveys each get the correct instrument.",
       },
       {
         question: "Which areas in the UAE do you serve?",
@@ -241,9 +243,9 @@ const pageSchemas = [
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://www.bhadeya.com/services/gpr-scanning#service",
-    name: "GPR Scanning Services",
+    name: "GPR Concrete Scanning",
     description:
-      "Ground Penetrating Radar scanning using Proceq GP8000 for subsurface imaging, rebar detection, utility mapping, and post-tension cable location up to 500cm depth across Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain.",
+      "Ground Penetrating Radar concrete scanning using Proceq GP8000 for rebar detection, post-tension cable location, conduit and void detection up to 1 m depth in concrete across Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain.",
     provider: { "@id": "https://www.bhadeya.com/#localbusiness" },
     areaServed: [
       { "@type": "City", name: "Dubai" },

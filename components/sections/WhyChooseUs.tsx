@@ -18,7 +18,7 @@ const FEATURES = [
   {
     title: "Industry-Leading Equipment",
     description:
-      "We use the Proceq GP8000 - the most advanced GPR system available - along with professional diamond core cutting equipment.",
+      "We run the Proceq GP8000 for concrete and the Proceq GS8000 for ground scanning, along with professional diamond core cutting equipment.",
     Icon: Cpu,
   },
   {
@@ -30,13 +30,13 @@ const FEATURES = [
   {
     title: "Safety First Approach",
     description:
-      "Every core cutting and excavation job begins with thorough GPR scanning. We never cut blind. Your structure's integrity and worker safety are our top priorities.",
+      "Every core cutting job begins with a concrete scan, and every excavation begins with a ground scan. We never cut blind and we never dig blind. Your structure's integrity and worker safety are our top priorities.",
     Icon: ShieldCheck,
   },
   {
-    title: "500cm Scanning Depth",
+    title: "Concrete & Ground Scanning",
     description:
-      "Our Proceq GP8000 achieves up to 500cm scanning depth, detecting deep-embedded utilities, post-tension cables, and structures that other scanners miss.",
+      "Two Proceq radars, not one. The GP8000 reads up to 1m into concrete for rebar and post-tension cables; the GS8000 reads 3–5m into the ground for buried utilities before excavation.",
     Icon: ArrowDownToLine,
   },
   {

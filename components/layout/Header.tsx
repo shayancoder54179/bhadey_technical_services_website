@@ -12,6 +12,8 @@ import {
   CircleDot,
   Shovel,
   Layers,
+  Magnet,
+  Truck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -38,6 +40,8 @@ const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> 
   CircleDot,
   Shovel,
   Layers,
+  Magnet,
+  Truck,
 };
 
 const WHATSAPP_URL = `${company.socialLinks.whatsapp}?text=${encodeURIComponent(
