@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 npm run dev        # Start dev server (http://localhost:3000)
-npm run build      # Build + generate sitemap (next build && next-sitemap)
+npm run build      # Production build (next build --turbopack)
 npm run start      # Start production server
 npm run lint       # ESLint check
 ```
@@ -47,7 +47,8 @@ Sections below the fold are **dynamically imported with `next/dynamic`** (no SSR
 - `components/seo/JsonLd.tsx` — JSON-LD schema markup
 - `components/seo/Breadcrumbs.tsx` — breadcrumb nav with schema
 - `components/seo/OptimizedImage.tsx` — lazy-loaded images with proper alt text
-- Sitemap auto-generated post-build via `next-sitemap` (config: `next-sitemap.config.js`, base URL: `https://www.bhadeya.com`)
+- `app/sitemap.ts` and `app/robots.ts` are the single source of truth for both files — they pull location pages from `data/locations.ts` and articles from `data/posts.ts`, so new entries appear automatically. Do not add generated copies under `public/`; static files there shadow these routes in local dev.
+- Location pages live at `/services/[service]/[city]`, built from `data/locations.ts` via `lib/location-route.tsx`. Content is hand-written per service/city pair — near-identical location pages read as doorway pages and get filtered from the index.
 
 ### Layout Components
 Global UI: `Header.tsx`, `Footer.tsx`, `WhatsAppButton.tsx`, `CallButton.tsx`, `BackToTop.tsx`, `PageTransition.tsx` — all in `components/layout/`.

@@ -1,7 +1,33 @@
 import type { MetadataRoute } from "next";
+import { locationRoutes } from "@/data/locations";
+import { posts } from "@/data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.bhadeya.com";
+
+  const locationPages: MetadataRoute.Sitemap = locationRoutes.map(
+    ({ service, city }) => ({
+      url: `${baseUrl}/services/${service}/${city}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })
+  );
+
+  const blogPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    },
+    ...posts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.dateModified),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+  ];
 
   return [
     {
@@ -10,12 +36,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-    {
-      url: `${baseUrl}/gpr-scanning-dubai`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
+    // /gpr-scanning-dubai is intentionally omitted: it is a noindex Ads
+    // landing page canonicalised to /services/gpr-scanning, so submitting
+    // it here would contradict the robots directive.
     {
       url: `${baseUrl}/services/gpr-scanning`,
       lastModified: new Date(),
@@ -70,5 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...locationPages,
+    ...blogPages,
   ];
 }

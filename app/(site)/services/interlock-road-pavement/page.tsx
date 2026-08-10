@@ -3,9 +3,9 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
 export const metadata: Metadata = {
-  title: "Interlock & Road Pavement Dubai & UAE | Paving Contractor | Bhadeya Technical",
+  title: "Interlock Paving & Road Works UAE",
   description:
-    "Interlock tile laying, repair and re-levelling, plus road pavement and hardstanding works in Dubai, Abu Dhabi, Sharjah & UAE. Proper excavation, sub-base and compaction so paving stays level. Get a free quote.",
+    "Interlock paving and road works across Dubai, Abu Dhabi and Sharjah. Driveways, car parks and access roads laid on a properly compacted sub-base.",
   keywords: [
     "interlock Dubai",
     "interlock tiles UAE",
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 };
 
 const interlockPageData: ServicePageData = {
+  slug: "interlock-road-pavement",
   breadcrumb: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/#services" },

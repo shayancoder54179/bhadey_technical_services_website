@@ -3,6 +3,8 @@ import Image from "next/image";
 import { ChevronRight, Phone, Check, Grid3X3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { ServiceJsonLd } from "@/components/seo/JsonLd";
+import { cities, locationRoutes, serviceLabels } from "@/data/locations";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 import { company } from "@/data/company";
 import { ServicePageFAQ } from "./ServicePageFAQ";
@@ -34,6 +36,7 @@ interface ServicePageTemplateProps {
 
 export function ServicePageTemplate({ data, children }: ServicePageTemplateProps) {
   const {
+    slug,
     breadcrumb,
     hero,
     overview,
@@ -51,8 +54,11 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
     ctaDescription,
   } = data;
 
+  const cityPages = locationRoutes.filter((r) => r.service === slug);
+
   return (
     <div className="min-h-screen bg-background">
+      <ServiceJsonLd slug={slug} />
       <div className="scroll-mt-20">
         <Breadcrumbs items={breadcrumb} />
 
@@ -363,6 +369,41 @@ export function ServicePageTemplate({ data, children }: ServicePageTemplateProps
 
         {/* Optional extra content (e.g. GPR vs Concrete comparison) */}
         {children}
+
+        {/* Where this service has a dedicated location page */}
+        {cityPages.length > 0 && (
+          <section
+            className="py-16 md:py-20 border-t border-steel/20"
+            aria-labelledby="service-areas-heading"
+          >
+            <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+              <h2
+                id="service-areas-heading"
+                className="mb-3 text-2xl font-semibold tracking-tight text-foreground md:text-3xl"
+              >
+                Where We Work
+              </h2>
+              <p className="mb-8 max-w-2xl text-muted-foreground">
+                Local pages covering the areas, ground conditions and site
+                requirements specific to each emirate.
+              </p>
+              <ul className="flex flex-wrap gap-4" role="list">
+                {cityPages.map(({ city }) => (
+                  <li key={city} role="listitem">
+                    <Link
+                      href={`/services/${slug}/${city}`}
+                      className="inline-flex items-center gap-2 rounded-md border border-steel/30 px-4 py-2.5 text-sm font-medium transition-colors hover:border-signal-orange hover:text-signal-orange"
+                    >
+                      {serviceLabels[slug] ?? "This service"} in{" "}
+                      {cities[city].name}
+                      <ChevronRight className="size-4" aria-hidden="true" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         {/* Related Services */}
         <section className="bg-paper py-16 md:py-20 lg:py-24 border-t border-steel/20" aria-labelledby="related-heading">

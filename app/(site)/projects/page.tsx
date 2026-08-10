@@ -7,10 +7,9 @@ import { company } from "@/data/company";
 import { ProjectsFilterGrid } from "@/components/projects/ProjectsFilterGrid";
 
 export const metadata: Metadata = {
-  title:
-    "Our Projects | GPR Scanning & Core Cutting Portfolio | Bhadeya Technical UAE",
+  title: "Our Projects Across the UAE",
   description:
-    "View our portfolio of GPR scanning, core cutting, and excavation projects across UAE. Trusted by Dubai Mall, Emaar, ADNOC, Kempinski, Yas Mall, Mediclinic & more.",
+    "GPR scanning, core cutting and excavation delivered on UAE landmark projects including The Dubai Mall, ADNOC Headquarters and Kempinski Hotel.",
   alternates: { canonical: "https://www.bhadeya.com/projects" },
   openGraph: {
     title: "Our Projects | Bhadeya Technical Services UAE",

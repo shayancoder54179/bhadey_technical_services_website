@@ -91,6 +91,8 @@ export interface PeopleAlsoAskItem {
 }
 
 export interface ServicePageData {
+  /** Route slug, e.g. "core-cutting". Selects this page's Service schema. */
+  slug: string;
   breadcrumb: BreadcrumbItem[];
   hero: ServiceHeroData;
   overview: OverviewData;

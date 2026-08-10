@@ -5,9 +5,9 @@ import type { ServicePageData } from "@/lib/service-page-types";
 import { Shield, CircleDot, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Core Cutting Services Dubai & UAE | Diamond Core Cutting | 12-500mm",
+  title: "Diamond Core Cutting Dubai & UAE",
   description:
-    "Professional diamond core cutting services in Dubai, Abu Dhabi & UAE. 12mm to 500mm diameter holes using professional equipment. GPR scanning included before every cut. Serving major projects across UAE.",
+    "Diamond core cutting in Dubai and across the UAE, 12 mm to 500 mm. Every hole is GPR scanned first, so we never cut into rebar or post-tension cables.",
   keywords: [
     "core cutting Dubai",
     "diamond core cutting UAE",
@@ -43,6 +43,7 @@ const CORE_SIZES = [
 ];
 
 const coreCuttingData: ServicePageData = {
+  slug: "core-cutting",
   breadcrumb: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/#services" },

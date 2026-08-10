@@ -4,9 +4,9 @@ import { LeadForm } from "./LeadForm";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 
 export const metadata: Metadata = {
-  title: "Ground Penetrating Radar (GPR) Scanning UAE | Concrete Scanning Company",
+  title: { absolute: "GPR Concrete Scanning Dubai | Bhadeya Technical" },
   description:
-    "Professional ground penetrating radar (GPR) concrete scanning services across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Trusted concrete scanning company detecting rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
+    "GPR concrete scanning across Dubai, Abu Dhabi and Sharjah. Rebar and post-tension cables located before you cut. Free quote on WhatsApp.",
   robots: { index: false, follow: true },
   alternates: { canonical: "https://www.bhadeya.com/services/gpr-scanning" },
   openGraph: {

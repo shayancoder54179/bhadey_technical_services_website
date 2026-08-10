@@ -3,9 +3,9 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
 export const metadata: Metadata = {
-  title: "GPR Concrete Scanning Dubai & UAE | Ground Penetrating Radar | Proceq GP8000",
+  title: "GPR Concrete Scanning Dubai & UAE",
   description:
-    "Professional GPR scanning services in Dubai, Abu Dhabi, Sharjah & UAE. Proceq GP8000 scans up to 1m into concrete; Proceq GS8000 reads 3-5m into ground. Rebar detection, post-tension cable locating, utility mapping. Trusted by Dubai Mall, Emaar & ADNOC. Get free quote!",
+    "Non-destructive GPR concrete scanning in Dubai and across the UAE. Rebar, post-tension cables and conduits located to 1 m before you cut or drill.",
   keywords: [
     "GPR scanning Dubai",
     "GPR scanning UAE",
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 };
 
 const gprPageData: ServicePageData = {
+  slug: "gpr-scanning",
   breadcrumb: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/#services" },
@@ -238,27 +239,9 @@ const gprPageData: ServicePageData = {
     "Get a free quote for GPR scanning with the Proceq GP8000. We respond within 1 hour during business hours.",
 };
 
+// The Service entity for this page is emitted by ServicePageTemplate from the
+// central registry in components/seo/JsonLd.tsx — only the FAQ lives here.
 const pageSchemas = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": "https://www.bhadeya.com/services/gpr-scanning#service",
-    name: "GPR Concrete Scanning",
-    description:
-      "Ground Penetrating Radar concrete scanning using Proceq GP8000 for rebar detection, post-tension cable location, conduit and void detection up to 1 m depth in concrete across Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain.",
-    provider: { "@id": "https://www.bhadeya.com/#localbusiness" },
-    areaServed: [
-      { "@type": "City", name: "Dubai" },
-      { "@type": "City", name: "Abu Dhabi" },
-      { "@type": "City", name: "Sharjah" },
-      { "@type": "City", name: "Ras Al Khaimah" },
-      { "@type": "City", name: "Fujairah" },
-      { "@type": "City", name: "Al Ain" },
-    ],
-    url: "https://www.bhadeya.com/services/gpr-scanning",
-    serviceType: "Ground Penetrating Radar Scanning",
-    category: "Non-Destructive Testing",
-  },
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",

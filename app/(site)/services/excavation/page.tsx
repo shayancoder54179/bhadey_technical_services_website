@@ -3,9 +3,9 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
 export const metadata: Metadata = {
-  title: "Excavation Services Dubai & UAE | We Scan Before We Dig | Bhadeya Technical",
+  title: "Excavation Services Dubai & UAE",
   description:
-    "Professional excavation services in Dubai, Abu Dhabi & UAE. Every dig starts with a GPR scan — our Proceq GS8000 reads 3-5m into the ground to locate buried utilities first. Site preparation, utility trenching, foundation excavation. 7+ years experience.",
+    "GPR-guided excavation across Dubai, Abu Dhabi and Sharjah. We scan the ground before digging, so your crew works from a utility map, not a guess.",
   keywords: [
     "excavation services Dubai",
     "excavation UAE",
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 };
 
 const excavationData: ServicePageData = {
+  slug: "excavation",
   breadcrumb: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/#services" },

@@ -55,4 +55,24 @@ export const faqs = [
     question: 'Do you provide interlock and road pavement works?',
     answer: 'Yes. We lay, repair and re-level interlock paving and carry out road pavement works for driveways, parking areas, warehouse yards, walkways and internal site roads across the UAE. This includes excavation, sub-base preparation and compaction, kerbstones and edge restraints, accurate levels and falls for drainage, block cutting, and reinstatement of sunken or uneven paving. Most interlock failures are sub-base failures, not tile failures — paving sinks because the ground beneath it was never compacted or levelled correctly. Since we handle the excavation, ground scanning and compaction ourselves, the layer that actually carries the load is done properly, and you deal with one contractor from the dig to the finished surface.'
   },
+  {
+    question: 'How much does GPR scanning cost in Dubai?',
+    answer: 'Cost is driven mainly by the area that needs scanning rather than the number of holes, because clearing a single position still means scanning a zone around it. Twenty penetrations clustered in one bay are far cheaper per hole than one isolated core in a large floor plate. The other factors that genuinely move the price are access and mobilisation — a ground-floor warehouse in Al Quoz is a different job from level 34 of a Business Bay tower — whether the work has to happen outside trading hours in an occupied building, what documentation you need at the end, and how urgently you need us. To give you a number that will not change on site we need the address and floor, roughly how much area is involved, what the element is, whether the building is occupied, and your date. Send that on WhatsApp and we will quote against it.'
+  },
+  {
+    question: 'How quickly can you get to site?',
+    answer: 'For most Dubai and Sharjah locations we can attend the same day or the following morning, and next-day is normal for Abu Dhabi city and the surrounding zones. The realistic constraint is usually not our availability but the site itself: where a permit to work is required — common on ADNOC, government and larger Abu Dhabi projects — the approval process sets the timeline, and where gate passes or site inductions are needed we arrange those before mobilising rather than losing a day at the gate. Tell us the site and your date and we will tell you honestly whether it is achievable.'
+  },
+  {
+    question: 'Can you scan or cut in an occupied building or outside working hours?',
+    answer: 'Yes, and a large share of our Dubai work is exactly this — trading malls, live hotels and occupied offices where the work has to happen at night or during shutdown windows. GPR is well suited to it because it is non-destructive and needs no exclusion zone or radiation shielding, unlike X-ray, so adjacent areas can stay occupied while we scan. For core cutting in occupied buildings we manage slurry and water containment so the area can be handed back clean and in use the following morning. Where the building requires a permit or a security escort for out-of-hours access, we work to that process.'
+  },
+  {
+    question: 'What happens if you find a cable exactly where we need to cut?',
+    answer: 'We stop and tell you before anything is cut. In most cases the position can be shifted by a small amount to clear the obstruction, and we mark the nearest safe alternative directly on the surface so your crew can proceed the same visit. Where the position genuinely cannot move — a fixed MEP penetration or a structural opening — that becomes a design conversation with your engineer or consultant rather than something we cut through and report afterwards. We would rather deliver an inconvenient finding than a convenient one that turns into a structural incident.'
+  },
+  {
+    question: 'Is GPR better than X-ray for concrete scanning?',
+    answer: 'For most UAE concrete scanning, yes — but not universally. GPR works from a single accessible face, needs no radiation exclusion zone, and gives real-time results the operator can mark straight onto the slab, which is why it has largely replaced X-ray on occupied buildings, ground-bearing slabs, rafts and retaining walls where X-ray is either impractical or impossible. X-ray does produce a clearer image in very heavily congested reinforcement, and is better at separating objects stacked directly above one another, but it requires access to both faces of the element and the area must be cleared on both sides. If you can reach both faces, clear the area, and need to resolve fine detail in congested concrete, X-ray will give the better image. For everything else, GPR is the appropriate method.'
+  },
 ]

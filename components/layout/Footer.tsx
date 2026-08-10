@@ -6,12 +6,14 @@ import { Phone, Mail, MessageCircle } from "lucide-react";
 import { PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 import { company } from "@/data/company";
 import { services } from "@/data/services";
+import { cities, locationRoutes, serviceLabels } from "@/data/locations";
 
 const FOOTER_BG = "#18181A";
 
 const quickLinks = [
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
+  { href: "/blog", label: "Guides" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -111,6 +113,26 @@ export function Footer() {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Service areas — gives the location pages a site-wide internal link
+            so they are not reachable only from the sitemap. */}
+        <div className="mt-10 border-t border-white/10 pt-6">
+          <h3 className="font-mono text-xs font-semibold tracking-wider uppercase text-signal-orange">
+            Service Areas
+          </h3>
+          <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2" role="list">
+            {locationRoutes.map(({ service, city }) => (
+              <li key={`${service}-${city}`}>
+                <Link
+                  href={`/services/${service}/${city}`}
+                  className="text-sm text-white/60 transition-colors hover:text-white"
+                >
+                  {serviceLabels[service]} in {cities[city].name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <p className="mt-8 text-xs leading-relaxed text-white/50">

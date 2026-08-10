@@ -3,9 +3,9 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
 export const metadata: Metadata = {
-  title: "Oversized Cargo Movement UAE | Heavy Load Transport Support | Bhadeya Technical",
+  title: "Oversized Cargo Movement UAE",
   description:
-    "Professional oversized cargo movement assistance across Dubai, Abu Dhabi, Sharjah & UAE. Route surveys, RTA permit support, escort & flagging services, and unique GPR road scanning before heavy loads. Get a free quote today.",
+    "Oversized and heavy cargo movement across the UAE. Route surveys, RTA permit support, escort and flagging for loads too large for a standard truck.",
   keywords: [
     "oversized cargo movement UAE",
     "heavy load transport Dubai",
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 };
 
 const oversizedCargoPageData: ServicePageData = {
+  slug: "oversized-cargo",
   breadcrumb: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/#services" },

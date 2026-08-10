@@ -18,10 +18,9 @@ import { company } from "@/data/company";
 import { ContactForm } from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title:
-    "Contact Us | Get Free GPR Scanning Quote | Bhadeya Technical Services UAE",
+  title: "Contact Us — Free Quote",
   description:
-    "Contact Bhadeya Technical Services LLC for GPR scanning, core cutting & excavation quotes. Call +971 55 692 6286 or email Bhadeyatechnical@gmail.com. Serving Dubai, Abu Dhabi, Sharjah & UAE.",
+    "Get a free quote for GPR scanning, core cutting or excavation anywhere in the UAE. Call +971 55 692 6286 or message us on WhatsApp for a same-day reply.",
   alternates: { canonical: "https://www.bhadeya.com/contact" },
   openGraph: {
     title: "Contact Us | Bhadeya Technical Services UAE",
@@ -238,6 +237,89 @@ export default function ContactPage() {
       </section>
 
       {/* Service Areas Section */}
+      {/* What to expect — reduces enquiry friction and tells people what
+          detail to send so the first quote is the final one. */}
+      <section
+        className="py-16 md:py-20 lg:py-24"
+        aria-labelledby="what-happens-heading"
+      >
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+          <h2
+            id="what-happens-heading"
+            className="mb-4 text-2xl font-semibold tracking-tight text-foreground md:text-3xl"
+          >
+            What happens after you get in touch
+          </h2>
+          <p className="mb-10 max-w-2xl text-muted-foreground">
+            Most enquiries reach us on WhatsApp, and most are answered the same
+            working day. Here is how a job typically runs from first message to
+            finished work.
+          </p>
+
+          <ol className="grid gap-8 md:grid-cols-3">
+            <li>
+              <span className="font-mono text-xs font-semibold tracking-wider text-signal-orange uppercase">
+                Step 1 — Same day
+              </span>
+              <h3 className="mt-2 text-lg font-semibold tracking-tight">
+                We scope the job
+              </h3>
+              <p className="mt-2 leading-relaxed text-muted-foreground">
+                We ask what needs scanning or cutting, where the site is, what
+                the element is, and when you need it. If the answer is
+                straightforward we quote on the spot. If the site is complex, we
+                arrange a visit before quoting rather than guessing.
+              </p>
+            </li>
+            <li>
+              <span className="font-mono text-xs font-semibold tracking-wider text-signal-orange uppercase">
+                Step 2 — Before mobilising
+              </span>
+              <h3 className="mt-2 text-lg font-semibold tracking-tight">
+                Access and permits
+              </h3>
+              <p className="mt-2 leading-relaxed text-muted-foreground">
+                Where the site needs a permit to work, a gate pass or an
+                induction, we sort that out before we travel. Where the work has
+                to happen at night or outside trading hours, we schedule to the
+                building&rsquo;s requirements.
+              </p>
+            </li>
+            <li>
+              <span className="font-mono text-xs font-semibold tracking-wider text-signal-orange uppercase">
+                Step 3 — On site
+              </span>
+              <h3 className="mt-2 text-lg font-semibold tracking-tight">
+                Scan, mark, then cut
+              </h3>
+              <p className="mt-2 leading-relaxed text-muted-foreground">
+                Findings are marked directly on the surface and issued as a PDF
+                report. Only then does anything get cut. If we find something
+                where you need the hole, you hear it before the cut, not after.
+              </p>
+            </li>
+          </ol>
+
+          <div className="mt-12 border-l-4 border-signal-orange bg-concrete py-5 pr-5 pl-6">
+            <h3 className="font-semibold tracking-tight">
+              Send these six things and we can quote properly
+            </h3>
+            <ul className="mt-3 grid gap-x-8 gap-y-1.5 text-muted-foreground sm:grid-cols-2">
+              <li>The site address, and which floor</li>
+              <li>Roughly how much area needs scanning</li>
+              <li>What the element is — slab, wall, column or ground</li>
+              <li>Whether the building is occupied</li>
+              <li>What documentation you need at the end</li>
+              <li>Your target date</li>
+            </ul>
+            <p className="mt-4 text-sm text-muted-foreground">
+              A quote given without these is a guess, and guesses get revised on
+              site. Six lines is usually enough for a number that holds.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section
         className="bg-paper py-16 md:py-20 lg:py-24"
         aria-labelledby="service-areas-heading"

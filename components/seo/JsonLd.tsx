@@ -246,7 +246,7 @@ const serviceSchemas = [
     "@type": "Service",
     name: "GPR Concrete Scanning",
     description:
-      "Ground Penetrating Radar concrete scanning using Proceq GP8000 for rebar detection, post-tension cable location, conduit and void detection, up to 1 m depth in concrete.",
+      "Ground Penetrating Radar concrete scanning using Proceq GP8000 for rebar detection, post-tension cable location, conduit and void detection up to 1 m depth in concrete across Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain.",
     provider: { "@id": `${BASE_URL}/#localbusiness` },
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -357,19 +357,24 @@ const serviceSchemas = [
   },
 ];
 
-const allSchemas = [
-  localBusinessSchema,
-  organizationSchema,
-  websiteSchema,
-  ...serviceSchemas,
-];
+// Entity-level schemas describe the business itself, so they belong on every
+// page. Service schemas describe one offering each and are emitted only by the
+// page that offering belongs to — see ServiceJsonLd.
+const globalSchemas = [localBusinessSchema, organizationSchema, websiteSchema];
+
+const serviceSchemaBySlug: Record<string, object> = Object.fromEntries(
+  serviceSchemas.map((schema) => [
+    schema.url.split("/").pop()!,
+    { ...schema, "@id": `${schema.url}#service` },
+  ])
+);
 
 export { faqPageSchema };
 
 export function JsonLd() {
   return (
     <>
-      {allSchemas.map((schema, index) => (
+      {globalSchemas.map((schema, index) => (
         <script
           key={index}
           type="application/ld+json"
@@ -377,5 +382,17 @@ export function JsonLd() {
         />
       ))}
     </>
+  );
+}
+
+/** Emits the Service schema for a single service page, keyed by its slug. */
+export function ServiceJsonLd({ slug }: { slug: string }) {
+  const schema = serviceSchemaBySlug[slug];
+  if (!schema) return null;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
   );
 }

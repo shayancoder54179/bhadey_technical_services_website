@@ -15,10 +15,9 @@ const CTASection = dynamic(
 );
 
 export const metadata: Metadata = {
-  title:
-    "About Bhadeya Technical Services LLC | GPR Scanning Experts Since 2019 | UAE",
+  title: { absolute: "About Bhadeya Technical Services LLC | UAE" },
   description:
-    "Learn about Bhadeya Technical Services LLC - UAE's trusted GPR scanning and core cutting company since 2019. 7+ years experience, serving Dubai, Abu Dhabi, Sharjah & all UAE.",
+    "Bhadeya Technical Services LLC has provided GPR scanning, core cutting and excavation across the UAE since 2019. Proceq GP8000 and GS8000 operators.",
   alternates: { canonical: "https://www.bhadeya.com/about" },
   openGraph: {
     title: "About Bhadeya Technical Services LLC | UAE",
@@ -318,6 +317,99 @@ export default function AboutPage() {
             <span>Kempinski</span>
             <span>•</span>
             <span>Sheikh Khalifa Hospital</span>
+          </div>
+        </div>
+      </section>
+
+      {/* How we work — the operating principles behind the service, written
+          out because they are what actually differentiate the work. */}
+      <section
+        className="py-16 md:py-20 lg:py-24"
+        aria-labelledby="how-we-work-heading"
+      >
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+          <h2
+            id="how-we-work-heading"
+            className="mb-4 text-2xl font-semibold tracking-tight text-foreground md:text-3xl"
+          >
+            How we work
+          </h2>
+          <p className="mb-12 max-w-2xl text-muted-foreground">
+            Four things decide whether subsurface work is done properly. They
+            are not complicated, but they are easy to skip under programme
+            pressure, and skipping them is what causes incidents.
+          </p>
+
+          <div className="grid gap-10 md:grid-cols-2 md:gap-x-14">
+            <div>
+              <h3 className="text-lg font-semibold tracking-tight">
+                We never cut blind
+              </h3>
+              <p className="mt-2 leading-relaxed text-muted-foreground">
+                Every core we cut is scanned first. Not a sample of them, not
+                the ones that look risky — every one. Because we run both the
+                scanning and the cutting, there is no gap in responsibility
+                between the survey and the cut, and nobody is waiting on a third
+                party in between.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold tracking-tight">
+                The right radar for the job
+              </h3>
+              <p className="mt-2 leading-relaxed text-muted-foreground">
+                Concrete and ground are different problems and need different
+                instruments. We operate the Proceq GP8000 for concrete, reading
+                up to 1 m, and the Proceq GS8000 for ground, reading 3–5 m
+                depending on soil. Running both means neither machine gets
+                stretched across a job it was not built for.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold tracking-tight">
+                Honest depth, not best-case depth
+              </h3>
+              <p className="mt-2 leading-relaxed text-muted-foreground">
+                Depth in ground is decided by the soil, not by marketing. Dry
+                sand can let the GS8000 read past 5 m; saline sabkha can pull it
+                below 3 m. We quote 3–5 m as the realistic working range and
+                tell you on site what your ground actually allows. If your
+                excavation goes deeper than we can read, you will know before
+                you dig.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold tracking-tight">
+                Findings you can act on
+              </h3>
+              <p className="mt-2 leading-relaxed text-muted-foreground">
+                Results are marked directly on the surface where the crew will
+                see them, and issued as a PDF report with annotated layouts for
+                the consultant or the permit file. If we find something where
+                you need the hole, you hear it before the cut — including when
+                that is the inconvenient answer.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-14 border-t border-steel/20 pt-10">
+            <h3 className="text-lg font-semibold tracking-tight">
+              Where we work
+            </h3>
+            <p className="mt-2 max-w-3xl leading-relaxed text-muted-foreground">
+              We cover all six emirates, and the work looks different in each.
+              Dubai is largely tower fit-outs on post-tensioned slabs, often out
+              of hours in occupied buildings. Abu Dhabi runs on permit-to-work
+              culture, with government and oil and gas projects that expect the
+              survey to stand up in a safety file. Sharjah is mostly older
+              industrial stock where the drawings are long gone and the scan
+              becomes the as-built. Since 2019 we have delivered work on
+              projects including The Dubai Mall, ADNOC Headquarters, Kempinski
+              Hotel and Sheikh Khalifa Hospital.
+            </p>
           </div>
         </div>
       </section>

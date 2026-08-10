@@ -31,6 +31,7 @@ import { trackGetQuoteClick, trackPhoneClick, trackWhatsAppClick } from "@/lib/t
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
+  { href: "/blog", label: "Guides" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

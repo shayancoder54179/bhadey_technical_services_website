@@ -3,9 +3,9 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
 export const metadata: Metadata = {
-  title: "GPR Ground Scanning Dubai & UAE | Underground Utility Locating | Proceq GS8000",
+  title: "Underground Utility Scanning UAE",
   description:
-    "Underground utility scanning in Dubai, Abu Dhabi & UAE with the Proceq GS8000. Locate buried cables, pipes and ducts before excavation — 3-5m depth depending on soil. On-site marking and survey reports. Get a free quote.",
+    "Underground utility scanning across the UAE before you excavate. The Proceq GS8000 maps cables, pipes and ducts to 3–5 m, marked on site and reported.",
   keywords: [
     "GS8000 scanning Dubai",
     "Proceq GS8000 UAE",
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 };
 
 const gs8000PageData: ServicePageData = {
+  slug: "gs8000-scanning",
   breadcrumb: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/#services" },

@@ -26,13 +26,15 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bhadeya.com"),
+  // Pages supply the topic only — the brand suffix is appended here, once.
+  // Keep page titles under ~38 chars so the composed title stays inside
+  // Google's ~60-character display limit.
   title: {
-    default:
-      "GPR Scanning & Core Cutting UAE | Bhadeya Technical Services",
-    template: "%s | Bhadeya Technical Services",
+    default: "GPR Scanning & Core Cutting Dubai | Bhadeya Technical",
+    template: "%s | Bhadeya Technical",
   },
   description:
-    "Leading GPR scanning, core cutting, excavation and interlock paving services in Dubai, Abu Dhabi, Sharjah & UAE. Proceq GP8000 for concrete, Proceq GS8000 for ground. 7+ years experience. Trusted by Dubai Mall, Emaar, ADNOC & more.",
+    "GPR concrete scanning, core cutting, excavation and interlock paving across Dubai, Abu Dhabi and Sharjah. Proceq GP8000 and GS8000. Free quote.",
   keywords: [
     "GPR scanning Dubai",
     "GPR scanning UAE",

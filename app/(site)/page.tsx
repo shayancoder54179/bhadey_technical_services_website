@@ -36,10 +36,11 @@ const CTASection = dynamic(
 );
 
 export const metadata: Metadata = {
-  title:
-    "GPR Scanning & Core Cutting Dubai & UAE | Bhadeya Technical Services",
+  title: {
+    absolute: "GPR Scanning & Core Cutting Dubai | Bhadeya Technical",
+  },
   description:
-    "Professional GPR scanning (Proceq GP8000 for concrete, GS8000 for ground), diamond core cutting, excavation and interlock paving services in Dubai, Abu Dhabi, Sharjah & UAE. Trusted for projects including Dubai Mall, Emaar, ADNOC. Get free quote today!",
+    "GPR concrete scanning, core cutting, excavation and interlock paving across Dubai, Abu Dhabi and Sharjah. Proceq GP8000 and GS8000. Free quote.",
   alternates: {
     canonical: "https://www.bhadeya.com",
   },
