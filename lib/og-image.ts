@@ -8,9 +8,9 @@
  */
 export const OG_IMAGES = [
   {
-    url: "/images/bts_logo.png",
+    url: "/images/og-card.png",
     width: 1200,
     height: 630,
-    alt: "Bhadeya Technical Services LLC - GPR Scanning & Core Cutting UAE",
+    alt: "Bhadeya Technical Services LLC - GPR Scanning & Core Cutting across the UAE",
   },
 ];
