@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Underground Utility Scanning UAE",
   description:
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
       "Locate buried utilities before you dig. Proceq GS8000 ground radar reads 3-5m into soil. Dubai, Abu Dhabi, Sharjah & across the UAE.",
     url: "https://www.bhadeya.com/services/gs8000-scanning",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

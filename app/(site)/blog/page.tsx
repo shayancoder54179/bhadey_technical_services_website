@@ -4,6 +4,7 @@ import { ArrowRight, Clock } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { posts } from "@/data/posts";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "GPR & Concrete Scanning Guides",
   description:
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
       "Practical guides on GPR scanning, core cutting and utility surveys in the UAE.",
     url: "https://www.bhadeya.com/blog",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

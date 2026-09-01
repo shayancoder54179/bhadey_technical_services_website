@@ -17,6 +17,7 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { company } from "@/data/company";
 import { ContactForm } from "@/components/contact/ContactForm";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Contact Us — Free Quote",
   description:
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
       "Get a free quote for GPR scanning, core cutting & excavation. Call +971 55 692 6286. Serving Dubai, Abu Dhabi, Sharjah & UAE.",
     url: "https://www.bhadeya.com/contact",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { company } from "@/data/company";
 import { ProjectsFilterGrid } from "@/components/projects/ProjectsFilterGrid";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Our Projects Across the UAE",
   description:
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
       "Portfolio of GPR scanning and core cutting projects. Trusted by Dubai Mall, Emaar, ADNOC & more.",
     url: "https://www.bhadeya.com/projects",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

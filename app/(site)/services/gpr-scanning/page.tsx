@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "GPR Concrete Scanning Dubai & UAE",
   description:
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
       "Professional GPR scanning in Dubai, Abu Dhabi, Sharjah & UAE. 1m in concrete, 3-5m in ground. Rebar & post-tension detection. Trusted by Dubai Mall, Emaar & ADNOC.",
     url: "https://www.bhadeya.com/services/gpr-scanning",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

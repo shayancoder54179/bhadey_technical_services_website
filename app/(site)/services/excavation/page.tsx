@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Excavation Services Dubai & UAE",
   description:
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
       "Every excavation starts with a GPR scan. Proceq GS8000 reads 3-5m into the ground to find buried utilities before the first bucket. Dubai, Abu Dhabi & UAE.",
     url: "https://www.bhadeya.com/services/excavation",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

@@ -118,6 +118,17 @@ const localBusinessSchema = {
     "Road Pavement",
   ],
   slogan: "Precision Scanning. Safe Construction.",
+  // `address` is required for LocalBusiness rich results. streetAddress and
+  // postalCode are intentionally omitted rather than guessed — add them once
+  // the registered trade-licence address is confirmed, and keep them identical
+  // to the Google Business Profile listing (NAP consistency).
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Business Bay",
+    addressRegion: "Dubai",
+    addressCountry: "AE",
+  },
+  priceRange: "$$",
   sameAs: [],
 };
 

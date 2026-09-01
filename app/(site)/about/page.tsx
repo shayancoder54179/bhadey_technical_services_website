@@ -5,6 +5,7 @@ import { Target, Eye, Heart, Radio, Drill, MapPin, Quote } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { company } from "@/data/company";
 
+import { OG_IMAGES } from "@/lib/og-image";
 const StatsBar = dynamic(
   () => import("@/components/sections/StatsBar").then((m) => m.StatsBar),
   { ssr: true }
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
       "UAE's trusted GPR scanning and core cutting company since 2019. 7+ years across Dubai, Abu Dhabi, Sharjah & UAE.",
     url: "https://www.bhadeya.com/about",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 
