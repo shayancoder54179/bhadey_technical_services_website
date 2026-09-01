@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Oversized Cargo Movement UAE",
   description:
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
       "Expert oversized cargo movement support across UAE — route surveys, RTA permits, escort & flagging, and GPR bridge scanning. Safe & compliant heavy load transport.",
     url: "https://www.bhadeya.com/services/oversized-cargo",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

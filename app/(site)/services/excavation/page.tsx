@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Excavation Services Dubai & UAE",
   description:
@@ -19,9 +20,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Excavation Dubai & UAE | We Scan Before We Dig | Bhadeya Technical",
     description:
-      "Every excavation starts with a GPR scan. Proceq GS8000 reads 3-5m into the ground to find buried utilities before the first bucket. Dubai, Abu Dhabi & UAE.",
+      "Every excavation starts with a GPR scan. Proceq GS8000 reads 5-10m into the ground to find buried utilities before the first bucket. Dubai, Abu Dhabi & UAE.",
     url: "https://www.bhadeya.com/services/excavation",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 
@@ -35,10 +37,10 @@ const excavationData: ServicePageData = {
   hero: {
     title: "Excavation in Dubai & UAE — We Scan Before We Dig",
     subtitle:
-      "Before any machine breaks ground, we survey the dig area with our Proceq GS8000 ground radar, reading 3–5 m into the soil depending on ground conditions. Buried cables, pipes and ducts are located and marked first, then we excavate. Site preparation, utility trenching, foundation excavation. 7+ years serving Dubai, Abu Dhabi, Sharjah and across the UAE.",
+      "Before any machine breaks ground, we survey the dig area with our Proceq GS8000 ground radar, reading 5–10 m into the soil depending on ground conditions. Buried cables, pipes and ducts are located and marked first, then we excavate. Site preparation, utility trenching, foundation excavation. 7+ years serving Dubai, Abu Dhabi, Sharjah and across the UAE.",
     stats: [
       { value: "Scan first", label: "On every dig" },
-      { value: "3–5m", label: "Ground scan depth" },
+      { value: "5–10m", label: "Ground scan depth" },
       { value: "7+ Years", label: "Experience" },
     ],
     ctaPrimaryLabel: "Get Free Quote",
@@ -52,7 +54,7 @@ const excavationData: ServicePageData = {
   overview: {
     title: "What Are Our Excavation Services?",
     description:
-      "Before you excavate, you scan — that is the rule we work to on every job. Our excavation services cover site preparation, utility trenching, foundation excavation and grading for construction and civil projects across the UAE, and each one begins with a GPR survey of the dig area using our Proceq GS8000. It reads 3–5 m into the ground depending on soil conditions, locating power cables, water and sewer lines, telecom ducts, gas pipes and voids before the first bucket goes in. Because the scanning and the digging are both ours, there is no waiting on a third-party surveyor and no gap in responsibility between the survey and the excavation. We serve Dubai, Abu Dhabi, Sharjah and the wider UAE with experienced operators and full compliance with local safety regulations.",
+      "Before you excavate, you scan — that is the rule we work to on every job. Our excavation services cover site preparation, utility trenching, foundation excavation and grading for construction and civil projects across the UAE, and each one begins with a GPR survey of the dig area using our Proceq GS8000. It reads 5–10 m into the ground depending on soil conditions, locating power cables, water and sewer lines, telecom ducts, gas pipes and voids before the first bucket goes in. Because the scanning and the digging are both ours, there is no waiting on a third-party surveyor and no gap in responsibility between the survey and the excavation. We serve Dubai, Abu Dhabi, Sharjah and the wider UAE with experienced operators and full compliance with local safety regulations.",
     howItWorks: [
       {
         step: 1,
@@ -75,7 +77,7 @@ const excavationData: ServicePageData = {
     ],
     benefits: [
       "GPR scan before every dig, without exception",
-      "Ground read to 3–5 m depending on soil",
+      "Ground read to 5–10 m depending on soil",
       "Reduced risk of utility strikes",
       "Efficient project timelines",
       "Experienced and certified operators",
@@ -87,9 +89,9 @@ const excavationData: ServicePageData = {
     title: "Equipment & Approach",
     name: "Professional Excavation Machinery + Proceq GS8000",
     description:
-      "We combine modern excavation machinery with the Proceq GS8000 ground scanning radar. Before any excavation we survey the dig area with the GS8000, which reads 3–5 m into the soil depending on ground conditions, and mark what is buried. Our operators are trained in safe digging practices and we follow UAE safety standards. This sequence—scan first, then controlled excavation—delivers safe, efficient results across Dubai, Abu Dhabi and the UAE.",
+      "We combine modern excavation machinery with the Proceq GS8000 ground scanning radar. Before any excavation we survey the dig area with the GS8000, which reads 5–10 m into the soil depending on ground conditions, and mark what is buried. Our operators are trained in safe digging practices and we follow UAE safety standards. This sequence—scan first, then controlled excavation—delivers safe, efficient results across Dubai, Abu Dhabi and the UAE.",
     specs: [
-      { label: "Ground scan depth", value: "3–5 m, soil-dependent" },
+      { label: "Ground scan depth", value: "5–10 m, soil-dependent" },
       { label: "Scanner", value: "Proceq GS8000" },
       { label: "Experience", value: "7+ years" },
       { label: "Coverage", value: "All UAE" },
@@ -122,7 +124,7 @@ const excavationData: ServicePageData = {
         number: 1,
         title: "Consultation & GPR scan",
         description:
-          "We discuss your project and excavation requirements, then scan the planned dig area with the Proceq GS8000 to map utilities and obstructions at 3–5 m depending on soil conditions. You receive a clear picture of what is underground before any digging — this step is not optional on our jobs.",
+          "We discuss your project and excavation requirements, then scan the planned dig area with the Proceq GS8000 to map utilities and obstructions at 5–10 m depending on soil conditions. You receive a clear picture of what is underground before any digging — this step is not optional on our jobs.",
       },
       {
         number: 2,
@@ -173,7 +175,7 @@ const excavationData: ServicePageData = {
       {
         question: "Do you scan before excavation?",
         answer:
-          "Yes — always, on every job. Before we excavate we scan the dig area with our Proceq GS8000 ground radar, which reads 3–5 metres into the soil depending on ground conditions. We map and mark buried power cables, water and sewer lines, telecom ducts, gas pipes and voids, agree the safe dig limits with you, and only then bring in the machine. It is not an optional extra on our excavation work — it is how the job starts.",
+          "Yes — always, on every job. Before we excavate we scan the dig area with our Proceq GS8000 ground radar, which reads 5–10 metres into the soil depending on ground conditions. We map and mark buried power cables, water and sewer lines, telecom ducts, gas pipes and voids, agree the safe dig limits with you, and only then bring in the machine. It is not an optional extra on our excavation work — it is how the job starts.",
       },
       {
         question: "Which areas do you serve?",

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { LeadForm } from "./LeadForm";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: { absolute: "GPR Concrete Scanning Dubai | Bhadeya Technical" },
   description:
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
       "Professional ground penetrating radar (GPR) concrete scanning services across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
     url: "https://www.bhadeya.com/gpr-scanning-dubai",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

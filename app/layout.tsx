@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
+import { OG_IMAGES } from "@/lib/og-image";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -98,21 +99,14 @@ export const metadata: Metadata = {
       "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
     description:
       "Leading GPR scanning, core cutting & excavation services in Dubai, Abu Dhabi, Sharjah & UAE. 7+ years of trusted experience.",
-    images: [
-      {
-        url: "/images/bts_logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Bhadeya Technical Services LLC - GPR Scanning & Core Cutting UAE",
-      },
-    ],
+    images: OG_IMAGES,
   },
   twitter: {
     card: "summary_large_image",
     title: "Bhadeya Technical Services LLC | GPR Scanning & Core Cutting UAE",
     description:
       "Leading GPR scanning, core cutting & excavation services across UAE.",
-    images: ["/images/bts_logo.png"],
+    images: [OG_IMAGES[0].url],
   },
   alternates: {
     canonical: "https://www.bhadeya.com",
@@ -142,6 +136,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable} overflow-x-hidden font-sans antialiased`}
+        suppressHydrationWarning
       >
         {children}
         <Analytics />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Interlock Paving & Road Works UAE",
   description:
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
       "Interlock laying, repair and re-levelling plus road pavement works across the UAE. Sub-base done properly so the surface stays level.",
     url: "https://www.bhadeya.com/services/interlock-road-pavement",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

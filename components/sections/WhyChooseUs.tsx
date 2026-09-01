@@ -36,7 +36,7 @@ const FEATURES = [
   {
     title: "Concrete & Ground Scanning",
     description:
-      "Two Proceq radars, not one. The GP8000 reads up to 1m into concrete for rebar and post-tension cables; the GS8000 reads 3–5m into the ground for buried utilities before excavation.",
+      "Two Proceq radars, not one. The GP8000 reads up to 1m into concrete for rebar and post-tension cables; the GS8000 reads 5–10m into the ground for buried utilities before excavation.",
     Icon: ArrowDownToLine,
   },
   {

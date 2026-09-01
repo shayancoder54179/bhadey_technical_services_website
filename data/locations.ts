@@ -38,7 +38,7 @@ export const cities: Record<string, City> = {
     ],
     authorities: ["Dubai Municipality", "DEWA", "RTA", "du and Etisalat"],
     groundNote:
-      "Ground conditions vary sharply across the emirate. Inland sites in Al Quoz and Dubai Investments Park are dry sand and read well, often past 5 m. Coastal and reclaimed ground around the Marina and Palm sits on saline fill where signal attenuates quickly, and we will tell you on site if the depth you need is not achievable.",
+      "Ground conditions vary sharply across the emirate. Inland sites in Al Quoz and Dubai Investments Park are dry sand and read well, often to the full 10 m. Coastal and reclaimed ground around the Marina and Palm sits on saline fill where signal attenuates quickly, and we will tell you on site if the depth you need is not achievable.",
   },
   "abu-dhabi": {
     slug: "abu-dhabi",
@@ -60,7 +60,7 @@ export const cities: Record<string, City> = {
       "ADNOC site permitting",
     ],
     groundNote:
-      "Much of Abu Dhabi Island and the coastal strip is sabkha with saline groundwater close to the surface, which is the hardest ground condition for radar and can pull working depth below 3 m. Inland at Khalifa City and Al Shamkha the ground is drier and reads considerably deeper.",
+      "Much of Abu Dhabi Island and the coastal strip is sabkha with saline groundwater close to the surface, which is the hardest ground condition for radar and can pull working depth below 5 m. Inland at Khalifa City and Al Shamkha the ground is drier and reads considerably deeper.",
   },
   sharjah: {
     slug: "sharjah",
@@ -77,7 +77,7 @@ export const cities: Record<string, City> = {
     ],
     authorities: ["Sharjah Municipality", "SEWA", "Etisalat"],
     groundNote:
-      "Sharjah's industrial belt sits on dry sand and compacted fill, which is good radar ground — we routinely read to the top of the 3–5 m range in the Industrial Areas and Al Sajaa. Older parts of Al Qasimia and Al Layyah carry decades of unrecorded service runs, which is exactly where scanning earns its cost.",
+      "Sharjah's industrial belt sits on dry sand and compacted fill, which is good radar ground — we routinely read to the top of the 5–10 m range in the Industrial Areas and Al Sajaa. Older parts of Al Qasimia and Al Layyah carry decades of unrecorded service runs, which is exactly where scanning earns its cost.",
   },
 };
 
@@ -351,7 +351,7 @@ export const locationContent: Record<
     dubai: {
       title: "Underground Utility Scanning in Dubai",
       description:
-        "Underground utility scanning across Dubai before excavation. The Proceq GS8000 maps cables, pipes and ducts to 3–5 m, marked on site and reported.",
+        "Underground utility scanning across Dubai before excavation. The Proceq GS8000 maps cables, pipes and ducts to 5–10 m, marked on site and reported.",
       h1: "Underground Utility Scanning in Dubai",
       intro:
         "Before you excavate anywhere in Dubai, you need to know what is under the ground — and a DEWA cable strike is a very expensive way to find out. We survey the dig area with the Proceq GS8000, mark the buried services on the surface, and issue a survey report so the excavation crew works from a map instead of a guess.",
@@ -362,7 +362,7 @@ export const locationContent: Record<
         },
         {
           heading: "Reclaimed and coastal ground limits depth",
-          body: "Ground conditions govern how deep radar reads, and Dubai spans the full range. Inland sand in Al Quoz and DIP reads well, sometimes past 5 m. Reclaimed and coastal ground around the Marina and Palm carries saline moisture that attenuates the signal quickly, and there we will tell you on site what the ground actually allows rather than quoting a best case.",
+          body: "Ground conditions govern how deep radar reads, and Dubai spans the full range. Inland sand in Al Quoz and DIP reads well, sometimes to the full 10 m. Reclaimed and coastal ground around the Marina and Palm carries saline moisture that attenuates the signal quickly, and there we will tell you on site what the ground actually allows rather than quoting a best case.",
         },
         {
           heading: "Coverage and response",
@@ -373,7 +373,7 @@ export const locationContent: Record<
         {
           question: "How deep can you scan under a Dubai site?",
           answer:
-            "Typically 3–5 m, and the ground decides which end of that range you get. Dry inland sand in Al Quoz or Dubai Investments Park can read past 5 m. Reclaimed coastal ground with saline moisture can pull it below 3 m. We assess conditions on site and tell you the realistic depth for your ground rather than quoting a best-case figure.",
+            "Typically 5–10 m, and the ground decides which end of that range you get. Dry inland sand in Al Quoz or Dubai Investments Park can read to the full 10 m. Reclaimed coastal ground with saline moisture can pull it below 5 m. We assess conditions on site and tell you the realistic depth for your ground rather than quoting a best-case figure.",
         },
         {
           question: "Is this the same as the concrete scanning service?",
@@ -397,7 +397,7 @@ export const locationContent: Record<
       localContext: [
         {
           heading: "Sabkha and saline groundwater are the real constraint",
-          body: "Abu Dhabi Island and the coastal strip sit largely on sabkha, with saline groundwater close to the surface. This is the most difficult ground condition for radar, and it can pull achievable depth below 3 m. We would rather tell you that at the survey stage than have you discover it when the excavation goes deeper than our data. Inland at Khalifa City and Al Shamkha the ground is drier and reads considerably deeper.",
+          body: "Abu Dhabi Island and the coastal strip sit largely on sabkha, with saline groundwater close to the surface. This is the most difficult ground condition for radar, and it can pull achievable depth below 5 m. We would rather tell you that at the survey stage than have you discover it when the excavation goes deeper than our data. Inland at Khalifa City and Al Shamkha the ground is drier and reads considerably deeper.",
         },
         {
           heading: "Surveys that have to stand up in a safety file",
@@ -412,7 +412,7 @@ export const locationContent: Record<
         {
           question: "Will sabkha ground stop you finding our utilities?",
           answer:
-            "It reduces depth rather than stopping the survey. Saline groundwater attenuates radar quickly, so on sabkha-dominated sites on Abu Dhabi Island achievable depth can fall below 3 m. We assess this on site and tell you what depth we can actually confirm. If your excavation goes deeper than the ground lets us read, you will know that before you dig, not after.",
+            "It reduces depth rather than stopping the survey. Saline groundwater attenuates radar quickly, so on sabkha-dominated sites on Abu Dhabi Island achievable depth can fall below 5 m. We assess this on site and tell you what depth we can actually confirm. If your excavation goes deeper than the ground lets us read, you will know that before you dig, not after.",
         },
         {
           question: "Can the survey support our permit and safety documentation?",

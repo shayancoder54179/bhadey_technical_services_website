@@ -4,6 +4,7 @@ import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 import { Shield, CircleDot, Wrench } from "lucide-react";
 
+import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Diamond Core Cutting Dubai & UAE",
   description:
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
       "Diamond core cutting 12mm–500mm in Dubai, Abu Dhabi & UAE. GPR before every cut. Professional equipment.",
     url: "https://www.bhadeya.com/services/core-cutting",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 

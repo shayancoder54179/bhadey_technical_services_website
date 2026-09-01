@@ -9,7 +9,7 @@ export const services = [
     overviewHighlight: '1m in Concrete | Proceq GP8000',
     overviewFeatures: ['Rebar detection', 'Post-tension cables', 'Utility mapping', '3D visualization'],
     iconColor: 'blue' as ServiceIconColor,
-    longDescription: 'Our GPR scanning service uses the industry-leading Proceq GP8000 ground penetrating radar system to detect and map objects embedded in concrete — rebar, post-tension cables, conduits and voids — before any cutting or drilling operations. Scanning depth in concrete is up to 1 m. This non-destructive testing method ensures maximum safety and prevents costly damage to embedded structures. For locating buried utilities in soil before excavation, we use the Proceq GS8000, which reaches 3–5 m depending on soil conditions.',
+    longDescription: 'Our GPR scanning service uses the industry-leading Proceq GP8000 ground penetrating radar system to detect and map objects embedded in concrete — rebar, post-tension cables, conduits and voids — before any cutting or drilling operations. Scanning depth in concrete is up to 1 m. This non-destructive testing method ensures maximum safety and prevents costly damage to embedded structures. For locating buried utilities in soil before excavation, we use the Proceq GS8000, which reaches 5–10 m depending on soil conditions.',
     icon: 'Radar', // lucide icon name
     slug: 'gpr-scanning',
     features: [
@@ -52,15 +52,15 @@ export const services = [
     id: 'gs8000-scanning',
     title: 'GPR Ground Scanning',
     fullTitle: 'GPR Ground Scanning & Underground Utility Mapping',
-    shortDescription: 'Ground scanning with the Proceq GS8000 to locate buried utilities before excavation — 3–5 m depth depending on soil.',
-    overviewHighlight: '3–5m in Soil | Proceq GS8000',
+    shortDescription: 'Ground scanning with the Proceq GS8000 to locate buried utilities before excavation — 5–10 m depth depending on soil.',
+    overviewHighlight: '5–10m in Soil | Proceq GS8000',
     overviewFeatures: ['Buried utility locating', 'Pre-excavation surveys', 'Grid mapping', 'Marked-up site drawings'],
     iconColor: 'green' as ServiceIconColor,
-    longDescription: 'Before any excavation begins, we scan the ground with the Proceq GS8000 to locate buried services — power cables, water and sewer lines, telecom ducts, gas pipes, tanks and voids. Working depth is typically 3–5 m depending on soil conditions: dry sand allows deeper penetration, while wet or heavy clay soils reduce it. Findings are marked on site and issued as a survey report, so excavation crews know exactly what is below before the first bucket goes in. This is a different instrument and a different job from concrete scanning — the GP8000 images the inside of concrete, the GS8000 images the ground.',
+    longDescription: 'Before any excavation begins, we scan the ground with the Proceq GS8000 to locate buried services — power cables, water and sewer lines, telecom ducts, gas pipes, tanks and voids. Working depth is typically 5–10 m depending on soil conditions: dry sand allows deeper penetration, while wet or heavy clay soils reduce it. Findings are marked on site and issued as a survey report, so excavation crews know exactly what is below before the first bucket goes in. This is a different instrument and a different job from concrete scanning — the GP8000 images the inside of concrete, the GS8000 images the ground.',
     icon: 'Magnet',
     slug: 'gs8000-scanning',
     features: [
-      'Working depth 3–5 m depending on soil conditions',
+      'Working depth 5–10 m depending on soil conditions',
       'Locates power, water, sewer, telecom, gas and unknown services',
       'Pre-excavation utility surveys and clearance',
       'Grid scanning with on-site marking and paint-out',
@@ -90,7 +90,7 @@ export const services = [
       'Infrastructure and municipality projects'
     ],
     stats: {
-      depth: '3–5m in soil',
+      depth: '5–10m in soil',
       technology: 'Proceq GS8000',
       coverage: 'All UAE'
     }
@@ -147,15 +147,15 @@ export const services = [
     title: 'Excavation',
     fullTitle: 'Professional Excavation Services',
     shortDescription: 'Safe and efficient excavation services for construction, utility installation, and site preparation across UAE.',
-    overviewHighlight: 'GPR Scan First | 3–5m Depth in Soil',
+    overviewHighlight: 'GPR Scan First | 5–10m Depth in Soil',
     overviewFeatures: ['GPR scan before every dig', 'Utility trenching', 'Foundation work', 'Safety compliance'],
     iconColor: 'navy' as ServiceIconColor,
-    longDescription: 'Before we excavate, we scan. Every excavation job starts with a GPR survey of the dig area using the Proceq GS8000, which reads 3–5 m into the ground depending on soil conditions, so buried services and obstructions are located and marked before any machine breaks ground. From there our excavation services cover site preparation, utility trenching, foundation excavation and grading — carried out with a map of what is underneath, not a guess.',
+    longDescription: 'Before we excavate, we scan. Every excavation job starts with a GPR survey of the dig area using the Proceq GS8000, which reads 5–10 m into the ground depending on soil conditions, so buried services and obstructions are located and marked before any machine breaks ground. From there our excavation services cover site preparation, utility trenching, foundation excavation and grading — carried out with a map of what is underneath, not a guess.',
     icon: 'Shovel',
     slug: 'excavation',
     features: [
       'GPR scanning before excavation on every job',
-      'Ground scanning to 3–5 m depending on soil',
+      'Ground scanning to 5–10 m depending on soil',
       'Utility-safe digging practices',
       'Site preparation and grading',
       'Trenching for utilities and drainage',
@@ -165,7 +165,7 @@ export const services = [
       'Efficient project completion'
     ],
     equipment: 'Professional Excavation Machinery + Proceq GS8000',
-    equipmentDescription: 'We utilize modern excavation equipment paired with the Proceq GS8000 ground scanning radar. The GS8000 surveys the dig area to 3–5 m depending on soil conditions before excavation begins, so utilities are located and marked rather than discovered by the bucket.',
+    equipmentDescription: 'We utilize modern excavation equipment paired with the Proceq GS8000 ground scanning radar. The GS8000 surveys the dig area to 5–10 m depending on soil conditions before excavation begins, so utilities are located and marked rather than discovered by the bucket.',
     benefits: [
       'Pre-scanned excavation zones for safety',
       'Reduced risk of utility strikes',
@@ -187,7 +187,7 @@ export const services = [
     stats: {
       experience: '7+ Years',
       safety: 'GPR scan before every dig',
-      depth: '3–5m in soil'
+      depth: '5–10m in soil'
     }
   },
   {

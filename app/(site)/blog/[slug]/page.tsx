@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ServicePageFAQ } from "@/components/services/ServicePageFAQ";
 import { posts, postBySlug, type PostBlock } from "@/data/posts";
 
+import { OG_IMAGES } from "@/lib/og-image";
 const BASE_URL = "https://www.bhadeya.com";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -30,6 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.datePublished,
       modifiedTime: post.dateModified,
+      images: post.image
+        ? [{ url: post.image, alt: post.heading }]
+        : OG_IMAGES,
     },
   };
 }
@@ -93,6 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
     "@id": `${url}#article`,
     headline: post.heading,
     description: post.description,
+    image: [`${BASE_URL}${post.image ?? OG_IMAGES[0].url}`],
     datePublished: post.datePublished,
     dateModified: post.dateModified,
     author: { "@id": `${BASE_URL}/#organization` },

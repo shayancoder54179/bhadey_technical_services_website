@@ -5,6 +5,7 @@ import { Target, Eye, Heart, Radio, Drill, MapPin, Quote } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { company } from "@/data/company";
 
+import { OG_IMAGES } from "@/lib/og-image";
 const StatsBar = dynamic(
   () => import("@/components/sections/StatsBar").then((m) => m.StatsBar),
   { ssr: true }
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
       "UAE's trusted GPR scanning and core cutting company since 2019. 7+ years across Dubai, Abu Dhabi, Sharjah & UAE.",
     url: "https://www.bhadeya.com/about",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 
@@ -202,7 +204,7 @@ export default function AboutPage() {
               </h3>
               <ul className="text-muted-foreground text-sm space-y-1" role="list">
                 <li>• Ground scanning radar</li>
-                <li>• 3–5m in soil, depending on ground</li>
+                <li>• 5–10m in soil, depending on ground</li>
                 <li>• Buried utility mapping</li>
                 <li>• Used before excavation</li>
               </ul>
@@ -361,7 +363,7 @@ export default function AboutPage() {
               <p className="mt-2 leading-relaxed text-muted-foreground">
                 Concrete and ground are different problems and need different
                 instruments. We operate the Proceq GP8000 for concrete, reading
-                up to 1 m, and the Proceq GS8000 for ground, reading 3–5 m
+                up to 1 m, and the Proceq GS8000 for ground, reading 5–10 m
                 depending on soil. Running both means neither machine gets
                 stretched across a job it was not built for.
               </p>
@@ -373,8 +375,8 @@ export default function AboutPage() {
               </h3>
               <p className="mt-2 leading-relaxed text-muted-foreground">
                 Depth in ground is decided by the soil, not by marketing. Dry
-                sand can let the GS8000 read past 5 m; saline sabkha can pull it
-                below 3 m. We quote 3–5 m as the realistic working range and
+                sand can let the GS8000 read to the full 10 m; saline sabkha can pull it
+                below 5 m. We quote 5–10 m as the realistic working range and
                 tell you on site what your ground actually allows. If your
                 excavation goes deeper than we can read, you will know before
                 you dig.

@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { faqPageSchema } from "@/components/seo/JsonLd";
 
+import { OG_IMAGES } from "@/lib/og-image";
 // Below-the-fold sections: SSR with lazy-loaded client JS for faster initial load
 const StatsBar = dynamic(
   () => import("@/components/sections/StatsBar").then((m) => m.StatsBar),
@@ -51,6 +52,7 @@ export const metadata: Metadata = {
       "Professional GPR scanning, core cutting & excavation services across UAE. Trusted by Dubai Mall, Emaar, ADNOC & more.",
     url: "https://www.bhadeya.com",
     type: "website",
+    images: OG_IMAGES,
   },
 };
 
