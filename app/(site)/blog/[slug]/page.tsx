@@ -31,7 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.datePublished,
       modifiedTime: post.dateModified,
-      images: OG_IMAGES,
+      images: post.image
+        ? [{ url: post.image, alt: post.heading }]
+        : OG_IMAGES,
     },
   };
 }
@@ -95,6 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
     "@id": `${url}#article`,
     headline: post.heading,
     description: post.description,
+    image: [`${BASE_URL}${post.image ?? OG_IMAGES[0].url}`],
     datePublished: post.datePublished,
     dateModified: post.dateModified,
     author: { "@id": `${BASE_URL}/#organization` },

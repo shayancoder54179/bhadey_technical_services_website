@@ -32,6 +32,13 @@ export interface Post {
   dateModified: string;
   readingMinutes: number;
   category: string;
+  /**
+   * Article hero image, site-root-relative (e.g. "/images/gpr-slab-scan.jpg").
+   * Feeds Article.image in the JSON-LD, which Google requires for Article rich
+   * results. Falls back to the shared OG image when unset — replace that
+   * fallback with a real per-post image (1200px wide minimum) to qualify.
+   */
+  image?: string;
   blocks: PostBlock[];
   faqs?: PostFAQ[];
   /** Internal links surfaced at the end of the article. */
