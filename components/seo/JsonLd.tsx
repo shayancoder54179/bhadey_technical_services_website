@@ -56,7 +56,7 @@ const localBusinessSchema = {
           "@type": "Service",
           name: "GPR Ground Scanning",
           description:
-            "Ground scanning with Proceq GS8000 to locate buried utilities before excavation, 3-5 m depth depending on soil",
+            "Ground scanning with Proceq GS8000 to locate buried utilities before excavation, 5-10 m depth depending on soil",
           url: `${BASE_URL}/services/gs8000-scanning`,
         },
       },
@@ -189,7 +189,7 @@ const faqPageSchema = {
       name: "How deep can GPR scanning detect?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It depends on the material. In concrete, our Proceq GP8000 scans up to 1 metre deep, which covers slabs, walls, beams and columns where rebar and post-tension cables typically sit within the first 10-30cm. In ground and soil, our Proceq GS8000 reaches 3-5 metres depending on soil conditions: dry sand allows deeper penetration, while wet ground or heavy clay reduces it. The GS8000 is the system we use to locate buried utilities before excavation.",
+        text: "It depends on the material. In concrete, our Proceq GP8000 scans up to 1 metre deep, which covers slabs, walls, beams and columns where rebar and post-tension cables typically sit within the first 10-30cm. In ground and soil, our Proceq GS8000 reaches 5-10 metres depending on soil conditions: dry sand allows deeper penetration, while wet ground or heavy clay reduces it. The GS8000 is the system we use to locate buried utilities before excavation.",
       },
     },
     {
@@ -197,7 +197,7 @@ const faqPageSchema = {
       name: "Do you scan the ground before excavation?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, always. Every excavation job begins with a GPR survey of the dig area using our Proceq GS8000 ground scanner, which reads 3-5 metres into the soil depending on ground conditions. We locate and mark buried power cables, water and sewer lines, telecom ducts, gas pipes and voids on the surface, and agree safe dig limits with you before any machine breaks ground. Scanning and excavation are both carried out in-house by Bhadeya Technical.",
+        text: "Yes, always. Every excavation job begins with a GPR survey of the dig area using our Proceq GS8000 ground scanner, which reads 5-10 metres into the soil depending on ground conditions. We locate and mark buried power cables, water and sewer lines, telecom ducts, gas pipes and voids on the surface, and agree safe dig limits with you before any machine breaks ground. Scanning and excavation are both carried out in-house by Bhadeya Technical.",
       },
     },
     {
@@ -221,7 +221,7 @@ const faqPageSchema = {
       name: "What equipment do you use for GPR scanning?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We operate two Proceq ground penetrating radar systems. The GP8000 is our concrete scanner, with real-time 3D visualization and scanning depth up to 1 metre in concrete, used before core cutting and drilling. The GS8000 is our ground scanner, used to map buried utilities before excavation at 3-5 metres depending on soil conditions. Both are Swiss-manufactured, industry-leading non-destructive testing instruments trusted by contractors and consultants worldwide.",
+        text: "We operate two Proceq ground penetrating radar systems. The GP8000 is our concrete scanner, with real-time 3D visualization and scanning depth up to 1 metre in concrete, used before core cutting and drilling. The GS8000 is our ground scanner, used to map buried utilities before excavation at 5-10 metres depending on soil conditions. Both are Swiss-manufactured, industry-leading non-destructive testing instruments trusted by contractors and consultants worldwide.",
       },
     },
     {
@@ -295,7 +295,7 @@ const serviceSchemas = [
     "@type": "Service",
     name: "Excavation Services",
     description:
-      "Professional excavation services for construction, infrastructure, and ground works across UAE. Every dig preceded by GPR ground scanning to 3-5 m depending on soil conditions.",
+      "Professional excavation services for construction, infrastructure, and ground works across UAE. Every dig preceded by GPR ground scanning to 5-10 m depending on soil conditions.",
     provider: { "@id": `${BASE_URL}/#localbusiness` },
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -333,7 +333,7 @@ const serviceSchemas = [
     "@type": "Service",
     name: "GPR Ground Scanning",
     description:
-      "Underground utility locating and subsurface mapping with the Proceq GS8000 ground penetrating radar. Pre-excavation surveys to 3-5 m depending on soil conditions, with on-site marking and survey reports.",
+      "Underground utility locating and subsurface mapping with the Proceq GS8000 ground penetrating radar. Pre-excavation surveys to 5-10 m depending on soil conditions, with on-site marking and survey reports.",
     provider: { "@id": `${BASE_URL}/#localbusiness` },
     areaServed: [
       { "@type": "City", name: "Dubai" },

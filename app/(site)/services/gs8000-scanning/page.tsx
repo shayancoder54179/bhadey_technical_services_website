@@ -6,7 +6,7 @@ import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Underground Utility Scanning UAE",
   description:
-    "Underground utility scanning across the UAE before you excavate. The Proceq GS8000 maps cables, pipes and ducts to 3–5 m, marked on site and reported.",
+    "Underground utility scanning across the UAE before you excavate. The Proceq GS8000 maps cables, pipes and ducts to 5–10 m, marked on site and reported.",
   keywords: [
     "GS8000 scanning Dubai",
     "Proceq GS8000 UAE",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GPR Ground Scanning Dubai & UAE | Underground Utility Locating | Bhadeya Technical",
     description:
-      "Locate buried utilities before you dig. Proceq GS8000 ground radar reads 3-5m into soil. Dubai, Abu Dhabi, Sharjah & across the UAE.",
+      "Locate buried utilities before you dig. Proceq GS8000 ground radar reads 5-10m into soil. Dubai, Abu Dhabi, Sharjah & across the UAE.",
     url: "https://www.bhadeya.com/services/gs8000-scanning",
     type: "website",
     images: OG_IMAGES,
@@ -38,9 +38,9 @@ const gs8000PageData: ServicePageData = {
   hero: {
     title: "GPR Ground Scanning in Dubai & UAE — Underground Utility Locating",
     subtitle:
-      "Know what is buried before you dig. Our Proceq GS8000 ground penetrating radar maps power cables, water and sewer lines, telecom ducts, gas pipes, tanks and voids at 3–5 m depending on soil conditions — marked on site and issued as a survey report before excavation begins.",
+      "Know what is buried before you dig. Our Proceq GS8000 ground penetrating radar maps power cables, water and sewer lines, telecom ducts, gas pipes, tanks and voids at 5–10 m depending on soil conditions — marked on site and issued as a survey report before excavation begins.",
     stats: [
-      { value: "3–5m", label: "Depth in soil" },
+      { value: "5–10m", label: "Depth in soil" },
       { value: "Proceq GS8000", label: "Equipment" },
       { value: "All UAE", label: "Coverage" },
     ],
@@ -53,7 +53,7 @@ const gs8000PageData: ServicePageData = {
   overview: {
     title: "What is GPR Ground Scanning?",
     description:
-      "Underground utility scanning is a ground survey carried out before excavation to find out what is buried beneath a site. Using the Proceq GS8000 ground penetrating radar, we push a survey cart over the area in a grid pattern, reading reflections from buried objects and building a map of the services below. Working depth is typically 3–5 m and depends on the soil: dry sand allows deeper penetration, while wet ground, heavy clay and saturated fill reduce it. Findings are marked directly on the surface and issued as a report, so the excavation crew works from a map instead of a guess. This is a different instrument and a different job from concrete scanning — the GP8000 images the inside of concrete, the GS8000 images the ground.",
+      "Underground utility scanning is a ground survey carried out before excavation to find out what is buried beneath a site. Using the Proceq GS8000 ground penetrating radar, we push a survey cart over the area in a grid pattern, reading reflections from buried objects and building a map of the services below. Working depth is typically 5–10 m and depends on the soil: dry sand allows deeper penetration, while wet ground, heavy clay and saturated fill reduce it. Findings are marked directly on the surface and issued as a report, so the excavation crew works from a map instead of a guess. This is a different instrument and a different job from concrete scanning — the GP8000 images the inside of concrete, the GS8000 images the ground.",
     howItWorks: [
       {
         step: 1,
@@ -89,16 +89,16 @@ const gs8000PageData: ServicePageData = {
     description:
       "The Proceq GS8000 is a subsurface mapping ground penetrating radar built specifically for utility locating in soil. It uses stepped-frequency continuous wave technology across an ultra-wide 0.2–3.4 GHz bandwidth, balancing penetration depth and object resolution in a single pass, and covers large areas quickly — which makes it suited to roads, yards, compounds and open sites as well as tight trench corridors.",
     specs: [
-      { label: "Working depth", value: "3–5 m, soil-dependent" },
+      { label: "Working depth", value: "5–10 m, soil-dependent" },
       { label: "Technology", value: "Stepped-frequency GPR" },
       { label: "Bandwidth", value: "0.2–3.4 GHz" },
       { label: "Output", value: "Mapped survey report" },
     ],
     whyBest:
-      "Depth in ground is decided by the soil, not by marketing. Dry desert sand can let the GS8000 read deeper than 5 m, while wet or clay-heavy ground can pull it back below 3 m — so we quote 3–5 m as the realistic working range and tell you on site what the conditions allow. Alongside it we run the Proceq GP8000 for concrete, which means the right radar goes to the right job rather than one machine being stretched across both.",
+      "Depth in ground is decided by the soil, not by marketing. Dry desert sand can let the GS8000 read to the full 10 m, while wet or clay-heavy ground can pull it back below 5 m — so we quote 5–10 m as the realistic working range and tell you on site what the conditions allow. Alongside it we run the Proceq GP8000 for concrete, which means the right radar goes to the right job rather than one machine being stretched across both.",
   },
   features: [
-    { title: "Working depth 3–5 m in soil", description: "Realistic range for UAE ground conditions." },
+    { title: "Working depth 5–10 m in soil", description: "Realistic range for UAE ground conditions." },
     { title: "Locates all common buried services", description: "Power, water, sewer, telecom, gas and unknown lines." },
     { title: "Detects tanks, voids and obstructions", description: "Not just utilities — anything that stops a dig." },
     { title: "On-site marking and paint-out", description: "Findings marked where the crew needs them." },
@@ -153,7 +153,7 @@ const gs8000PageData: ServicePageData = {
     {
       title: "Underground Utility Scanning in Abu Dhabi",
       content:
-        "In Abu Dhabi, pre-excavation surveys are routine on government, oil and gas and civil projects where a utility strike carries serious consequences. Our GS8000 ground scanning covers Abu Dhabi city, Mussafah, Khalifa City, Yas Island and the industrial zones, mapping buried services to 3–5 m depending on soil conditions and delivering documentation that supports project safety files.",
+        "In Abu Dhabi, pre-excavation surveys are routine on government, oil and gas and civil projects where a utility strike carries serious consequences. Our GS8000 ground scanning covers Abu Dhabi city, Mussafah, Khalifa City, Yas Island and the industrial zones, mapping buried services to 5–10 m depending on soil conditions and delivering documentation that supports project safety files.",
     },
     {
       title: "Why Scan the Ground Before Excavating",
@@ -165,12 +165,12 @@ const gs8000PageData: ServicePageData = {
     {
       question: "How deep can the GS8000 scan?",
       answer:
-        "Typically 3–5 m in soil, depending on ground conditions. Dry sand allows deeper penetration; wet ground, heavy clay and saturated fill reduce it. We assess conditions on site and tell you the realistic depth for your ground rather than quoting a best-case figure.",
+        "Typically 5–10 m in soil, depending on ground conditions. Dry sand allows deeper penetration; wet ground, heavy clay and saturated fill reduce it. We assess conditions on site and tell you the realistic depth for your ground rather than quoting a best-case figure.",
     },
     {
       question: "What is the difference between the GS8000 and the GP8000?",
       answer:
-        "The GS8000 scans ground and soil for buried utilities before excavation, reaching 3–5 m depending on conditions. The GP8000 scans concrete for rebar, post-tension cables and conduits before cutting or drilling, reaching up to 1 m in concrete. They are separate machines for separate jobs, and Bhadeya Technical operates both.",
+        "The GS8000 scans ground and soil for buried utilities before excavation, reaching 5–10 m depending on conditions. The GP8000 scans concrete for rebar, post-tension cables and conduits before cutting or drilling, reaching up to 1 m in concrete. They are separate machines for separate jobs, and Bhadeya Technical operates both.",
     },
     {
       question: "Can you detect plastic pipes?",
@@ -199,7 +199,7 @@ const gs8000PageData: ServicePageData = {
       {
         question: "How deep can you scan into the ground?",
         answer:
-          "Our Proceq GS8000 works to 3–5 metres in soil, depending on ground conditions. Dry sandy ground allows deeper penetration, while wet ground, clay and saturated fill reduce it. If your excavation is deeper than the ground allows us to read, we will tell you that up front rather than after the survey.",
+          "Our Proceq GS8000 works to 5–10 metres in soil, depending on ground conditions. Dry sandy ground allows deeper penetration, while wet ground, clay and saturated fill reduce it. If your excavation is deeper than the ground allows us to read, we will tell you that up front rather than after the survey.",
       },
       {
         question: "What can the GS8000 detect?",

@@ -424,15 +424,15 @@ export const posts: Post[] = [
       { type: "h2", text: "Depth: what the ground allows" },
       {
         type: "p",
-        text: "Working depth is typically 3 to 5 metres, and the soil decides which end of that range you get. This is the part of ground scanning most often oversold, so it is worth being precise about.",
+        text: "Working depth is typically 5 to 10 metres, and the soil decides which end of that range you get. This is the part of ground scanning most often oversold, so it is worth being precise about.",
       },
       {
         type: "ul",
         items: [
-          "Dry sand — the best case. Inland sites in Al Quoz, Dubai Investments Park and the Sharjah Industrial Areas can read past 5 m.",
+          "Dry sand — the best case. Inland sites in Al Quoz, Dubai Investments Park and the Sharjah Industrial Areas can read to the full 10 m.",
           "Compacted fill — generally good, depending on what the fill contains.",
           "Wet or clay-heavy ground — signal attenuates faster and depth drops.",
-          "Sabkha with saline groundwater — the hardest condition for radar. On Abu Dhabi Island and coastal strips this can pull achievable depth below 3 m.",
+          "Sabkha with saline groundwater — the hardest condition for radar. On Abu Dhabi Island and coastal strips this can pull achievable depth below 5 m.",
         ],
       },
       {
@@ -441,7 +441,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "This is why we quote 3–5 m as a realistic working range and assess the actual conditions on site. A survey that reports clean results to 5 m in saline sabkha is not a better survey — it is a less honest one.",
+        text: "This is why we quote 5–10 m as a realistic working range and assess the actual conditions on site. A survey that reports clean results to 10 m in saline sabkha is not a better survey — it is a less honest one.",
       },
       { type: "h2", text: "What a strike actually costs" },
       {
@@ -465,7 +465,7 @@ export const posts: Post[] = [
       { type: "h2", text: "Two different instruments" },
       {
         type: "p",
-        text: "Ground scanning and concrete scanning get conflated constantly, and they are separate jobs. The GS8000 images the ground to find buried utilities before excavation, reaching 3–5 m depending on soil. The GP8000 images the inside of concrete to find rebar and post-tension cables before cutting, reaching up to 1 m in concrete.",
+        text: "Ground scanning and concrete scanning get conflated constantly, and they are separate jobs. The GS8000 images the ground to find buried utilities before excavation, reaching 5–10 m depending on soil. The GP8000 images the inside of concrete to find rebar and post-tension cables before cutting, reaching up to 1 m in concrete.",
       },
       {
         type: "p",
@@ -485,7 +485,7 @@ export const posts: Post[] = [
       {
         question: "How deep can GPR detect buried utilities in the UAE?",
         answer:
-          "Typically 3 to 5 metres, decided by soil conditions rather than the equipment. Dry inland sand can read past 5 m. Wet ground and heavy clay reduce it. Sabkha with saline groundwater, common on Abu Dhabi Island and coastal strips, is the hardest condition and can pull achievable depth below 3 m. We assess the site and report the depth we can actually confirm.",
+          "Typically 5 to 10 metres, decided by soil conditions rather than the equipment. Dry inland sand can read to the full 10 m. Wet ground and heavy clay reduce it. Sabkha with saline groundwater, common on Abu Dhabi Island and coastal strips, is the hardest condition and can pull achievable depth below 5 m. We assess the site and report the depth we can actually confirm.",
       },
       {
         question: "Do I still need a survey if I have utility drawings from DEWA?",
@@ -495,7 +495,7 @@ export const posts: Post[] = [
       {
         question: "Is ground scanning the same as concrete scanning?",
         answer:
-          "No — different instruments for different jobs. The Proceq GS8000 images the ground to locate buried utilities before excavation, working to 3–5 m depending on soil. The Proceq GP8000 images the inside of concrete to locate rebar and post-tension cables before cutting or drilling, working to 1 m in concrete. We operate both.",
+          "No — different instruments for different jobs. The Proceq GS8000 images the ground to locate buried utilities before excavation, working to 5–10 m depending on soil. The Proceq GP8000 images the inside of concrete to locate rebar and post-tension cables before cutting or drilling, working to 1 m in concrete. We operate both.",
       },
     ],
     related: [
