@@ -15,8 +15,8 @@
 ## Key Facts
 
 - Equipment: Proceq GP8000 (concrete scanning, up to 1m depth in concrete)
-- Equipment: Proceq GS8000 (ground scanning, 3–5m in soil depending on ground conditions)
-- Scanning depth in concrete: 1m. Scanning depth in ground for excavation: 3–5m, soil-dependent
+- Equipment: Proceq GS8000 (ground scanning, 5–10m in soil depending on ground conditions)
+- Scanning depth in concrete: 1m. Scanning depth in ground for excavation: 5–10m, soil-dependent
 - GPR scanning is performed before every excavation job
 - GPR accuracy: ±10mm under ideal conditions
 - Core cutting diameter range: 12mm to 500mm
