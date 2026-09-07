@@ -197,7 +197,7 @@ const gprPageData: ServicePageData = {
   ],
   relatedServices: [
     { href: "/gpr-scanning-dubai", label: "Get a Fast GPR Quote in Dubai" },
-    { href: "/services/gs8000-scanning", label: "GPR Ground Scanning" },
+    { href: "/services/gpr-ground-scanning", label: "GPR Ground Scanning" },
     { href: "/services/core-cutting", label: "Core Cutting" },
     { href: "/services/excavation", label: "Excavation" },
   ],

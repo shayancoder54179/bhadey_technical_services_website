@@ -5,7 +5,7 @@
 ## Services
 
 - GPR Concrete Scanning (Proceq GP8000): https://www.bhadeya.com/services/gpr-scanning
-- GPR Ground Scanning / underground utility locating (Proceq GS8000): https://www.bhadeya.com/services/gs8000-scanning
+- GPR Ground Scanning / underground utility locating (Proceq GS8000): https://www.bhadeya.com/services/gpr-ground-scanning
 - GPR Scanning Dubai (landing page): https://www.bhadeya.com/gpr-scanning-dubai
 - Core Cutting: https://www.bhadeya.com/services/core-cutting
 - Excavation: https://www.bhadeya.com/services/excavation
@@ -25,6 +25,40 @@
 - Service area: Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah, Al Ain (all UAE)
 - Business hours: Sun–Thu 8AM–6PM, Sat 9AM–3PM (UAE time)
 - Contact: +971 55 692 6286
+
+## GPR Service Areas
+
+GPR Concrete Scanning by city:
+- Dubai: https://www.bhadeya.com/services/gpr-scanning/dubai
+- Abu Dhabi: https://www.bhadeya.com/services/gpr-scanning/abu-dhabi
+- Sharjah: https://www.bhadeya.com/services/gpr-scanning/sharjah
+- Ras Al Khaimah: https://www.bhadeya.com/services/gpr-scanning/ras-al-khaimah
+- Fujairah: https://www.bhadeya.com/services/gpr-scanning/fujairah
+- Al Ain: https://www.bhadeya.com/services/gpr-scanning/al-ain
+
+GPR Ground Scanning by city:
+- Dubai: https://www.bhadeya.com/services/gpr-ground-scanning/dubai
+- Abu Dhabi: https://www.bhadeya.com/services/gpr-ground-scanning/abu-dhabi
+- Sharjah: https://www.bhadeya.com/services/gpr-ground-scanning/sharjah
+- Ras Al Khaimah: https://www.bhadeya.com/services/gpr-ground-scanning/ras-al-khaimah
+- Fujairah: https://www.bhadeya.com/services/gpr-ground-scanning/fujairah
+- Al Ain: https://www.bhadeya.com/services/gpr-ground-scanning/al-ain
+
+Radar depth varies by ground: inland dry sand and gravel (Al Ain, Sharjah industrial belt,
+Al Quoz) read towards the top of the 5-10 m range; saline sabkha and reclaimed coastal ground
+(Abu Dhabi Island, Dubai Marina, Al Marjan) can fall below 5 m; wadi gravel and rock on the
+east coast scatter the signal and cut usable depth short.
+
+## Articles
+
+- What happens if you cut a post-tension cable: https://www.bhadeya.com/blog/cutting-through-post-tension-cable
+- GPR scanning vs X-ray for concrete: https://www.bhadeya.com/blog/gpr-scanning-vs-x-ray-concrete
+- What drives GPR scanning cost in Dubai: https://www.bhadeya.com/blog/gpr-scanning-cost-dubai
+- Utility surveys before excavation in the UAE: https://www.bhadeya.com/blog/utility-survey-before-excavation-uae
+- What a utility strike actually costs in the UAE: https://www.bhadeya.com/blog/utility-strike-cost-uae
+- GPR vs cable locator, which finds what: https://www.bhadeya.com/blog/gpr-vs-cable-locator
+- How deep does GPR scan in UAE ground: https://www.bhadeya.com/blog/how-deep-does-gpr-scan-uae
+- What a GPR ground survey costs in Dubai: https://www.bhadeya.com/blog/ground-scanning-cost-dubai
 
 ## Company
 

@@ -49,7 +49,7 @@ export const services = [
     }
   },
   {
-    id: 'gs8000-scanning',
+    id: 'gpr-ground-scanning',
     title: 'GPR Ground Scanning',
     fullTitle: 'GPR Ground Scanning & Underground Utility Mapping',
     shortDescription: 'Ground scanning with the Proceq GS8000 to locate buried utilities before excavation — 5–10 m depth depending on soil.',
@@ -58,7 +58,7 @@ export const services = [
     iconColor: 'green' as ServiceIconColor,
     longDescription: 'Before any excavation begins, we scan the ground with the Proceq GS8000 to locate buried services — power cables, water and sewer lines, telecom ducts, gas pipes, tanks and voids. Working depth is typically 5–10 m depending on soil conditions: dry sand allows deeper penetration, while wet or heavy clay soils reduce it. Findings are marked on site and issued as a survey report, so excavation crews know exactly what is below before the first bucket goes in. This is a different instrument and a different job from concrete scanning — the GP8000 images the inside of concrete, the GS8000 images the ground.',
     icon: 'Magnet',
-    slug: 'gs8000-scanning',
+    slug: 'gpr-ground-scanning',
     features: [
       'Working depth 5–10 m depending on soil conditions',
       'Locates power, water, sewer, telecom, gas and unknown services',
