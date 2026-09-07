@@ -501,12 +501,479 @@ export const posts: Post[] = [
     related: [
       {
         label: "Underground Utility Scanning",
-        href: "/services/gs8000-scanning",
+        href: "/services/gpr-ground-scanning",
       },
       { label: "Excavation Services", href: "/services/excavation" },
       {
         label: "Utility scanning in Dubai",
-        href: "/services/gs8000-scanning/dubai",
+        href: "/services/gpr-ground-scanning/dubai",
+      },
+    ],
+  },
+  {
+    slug: "utility-strike-cost-uae",
+    title: "What a Utility Strike Actually Costs in the UAE",
+    heading: "What it costs when an excavator hits a live cable",
+    description:
+      "The real cost of a utility strike on a UAE site: emergency repair, third-party liability, programme delay and the injury risk. Why a survey is the cheap option.",
+    excerpt:
+      "Contractors weigh a survey against its invoice. The honest comparison is against the repair bill, the outage claim, the standstill and the incident report.",
+    datePublished: "2026-09-07",
+    dateModified: "2026-09-07",
+    readingMinutes: 6,
+    category: "Ground scanning",
+    blocks: [
+      {
+        type: "p",
+        text: "Every contractor who has ever queried the price of a utility survey has made the same comparison: the survey costs money, and digging without one costs nothing. That comparison is wrong, and the reason it is wrong is that the cost of a strike does not arrive as a single invoice. It arrives in four separate places, and only one of them is the repair.",
+      },
+      { type: "h2", text: "The repair is the smallest part" },
+      {
+        type: "p",
+        text: "When a machine pulls through a live 11 kV feeder, the physical repair is a jointing crew, a length of cable and a few hours. That is the bill people imagine. It is real, and on a distribution cable it is not trivial, but it is the part of the event that is easiest to absorb.",
+      },
+      {
+        type: "p",
+        text: "What follows is harder. The utility owner does not just repair the cable and move on — it establishes who caused the damage, and the answer determines who pays for everything else.",
+      },
+      { type: "h2", text: "Third-party liability is the part that hurts" },
+      {
+        type: "p",
+        text: "A struck cable is rarely serving only your site. It feeds other buildings, other tenants, sometimes a district cooling plant or a set of commercial units. When it goes down, they lose supply, and their losses become a claim against whoever cut it.",
+      },
+      {
+        type: "p",
+        text: "This scales with what is at the other end of the cable. Take out the feed to an occupied tower or a trading retail centre and the exposure is not the cable, it is the hours of lost operation for everyone downstream. The same logic applies to a struck water main that floods adjacent basements, or a telecom duct that drops connectivity for a business park.",
+      },
+      {
+        type: "callout",
+        text: "The question that decides your exposure is not how deep the cable was. It is whether you took reasonable steps to establish it was there before you dug.",
+      },
+      { type: "h2", text: "Your own programme stops" },
+      {
+        type: "p",
+        text: "The third cost is the one contractors underestimate most consistently. After a strike, excavation in that area stops. It does not restart when the cable is repaired — it restarts when the utility owner, the consultant and often the municipality are satisfied about what happened and what is being done differently.",
+      },
+      {
+        type: "p",
+        text: "In practice that means an incident investigation, a method statement revision, and very often a requirement to carry out the utility survey that was skipped in the first place before anyone is allowed to break ground again. The survey still gets done. It just gets done after the strike, with the programme standing still and plant sitting idle on site.",
+      },
+      { type: "h2", text: "And someone is standing next to it" },
+      {
+        type: "p",
+        text: "A high-voltage strike is not a commercial event first. It is a safety event. Arc flash from a struck cable causes severe burns, and the operator and the banksman are the closest people to it. A gas line strike carries an obvious and immediate risk to everyone on site and beyond the hoarding.",
+      },
+      {
+        type: "p",
+        text: "This is the reason the major contractors and the ADNOC and DEWA-adjacent sites mandate surveys rather than recommending them. It stopped being a cost question for them a long time ago.",
+      },
+      { type: "h2", text: "Why the drawings do not protect you" },
+      {
+        type: "p",
+        text: "The common defence is that the drawings were obtained and followed. That helps, but it is weaker than most people assume, because authority records have known limitations that any investigation will surface.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Each utility owner records only its own assets, so no single drawing set shows everything.",
+          "Records reflect what was designed or recorded at installation, not always what was built.",
+          "Services get diverted around obstructions during construction and the diversion is not always drawn.",
+          "Private in-plot services installed by previous occupiers are recorded by nobody at all.",
+          "Depths shift as ground levels change through regrading and resurfacing.",
+        ],
+      },
+      {
+        type: "p",
+        text: "A survey does not replace the drawings. It checks them against the ground, which is the only record that matters at the moment the bucket goes in.",
+      },
+      { type: "h2", text: "The arithmetic" },
+      {
+        type: "p",
+        text: "A GPR ground survey of a trench corridor or a single plot is a few hours of work and priced accordingly. Set that against an emergency repair, a third-party outage claim, a stalled programme and an incident on your safety record, and the comparison is not close. Scanning first is not the cautious option. It is the cheap one.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Who is liable if we strike a cable that was not on the drawings?",
+        answer:
+          "Being absent from the drawings is not automatically a defence. The question asked is whether reasonable steps were taken to establish what was in the ground, and because authority records are known to be incomplete, relying on them alone is often judged insufficient on its own. A survey is the evidence that reasonable steps were taken.",
+      },
+      {
+        question: "Does a utility survey guarantee we will not hit anything?",
+        answer:
+          "No, and anyone who promises that is overselling. Ground radar has real limits — saturated ground, saline soil and very congested services all reduce what it can resolve. What a survey does is remove the unknowns it can see, tell you honestly where the ground limited the reading, and give you a documented basis for how you dig. Safe digging practice still applies on top of it.",
+      },
+      {
+        question: "How long does a survey take on a typical site?",
+        answer:
+          "A trench corridor or a single plot is usually surveyed and marked within a few hours. Larger footprints, road sections and full compounds are scoped by area and can run to a day or more. We confirm timing after reviewing the survey extent with you.",
+      },
+    ],
+    related: [
+      {
+        label: "GPR Ground Scanning",
+        href: "/services/gpr-ground-scanning",
+      },
+      {
+        label: "Utility surveys before excavation",
+        href: "/blog/utility-survey-before-excavation-uae",
+      },
+      { label: "Excavation Services", href: "/services/excavation" },
+    ],
+  },
+  {
+    slug: "gpr-vs-cable-locator",
+    title: "GPR vs Cable Locator: Which Finds What",
+    heading: "GPR vs electromagnetic cable locators underground",
+    description:
+      "An EML finds conductive services. GPR finds objects. Where each one works, where each one fails, and why serious UAE utility surveys use both together.",
+    excerpt:
+      "A cable locator cannot see a plastic water pipe. Radar cannot label what it finds. The two instruments answer different questions and are strongest together.",
+    datePublished: "2026-09-07",
+    dateModified: "2026-09-07",
+    readingMinutes: 7,
+    category: "Ground scanning",
+    blocks: [
+      {
+        type: "p",
+        text: "There are two instruments used to find buried services, and they work on completely different physics. Choosing between them by price or availability is how sites end up with a survey that was never capable of finding the thing that later got struck.",
+      },
+      { type: "h2", text: "How an electromagnetic locator works" },
+      {
+        type: "p",
+        text: "An electromagnetic locator, usually shortened to EML or just called a cable locator or CAT, detects electromagnetic fields around conductive services. It works in three ways: passively picking up the field radiating from a live power cable, passively picking up re-radiated broadcast signals travelling along long conductors, or actively applying a signal to a service with a transmitter and tracing it.",
+      },
+      {
+        type: "p",
+        text: "Where it works, it works very well. It is fast, it is cheap, and when a signal is applied directly to a known service it traces the route with good accuracy and gives a usable depth. For live power cables it is often the single most reliable instrument available.",
+      },
+      { type: "h2", text: "Where the cable locator goes blind" },
+      {
+        type: "p",
+        text: "The entire method depends on the target being conductive or carrying a traceable signal. That excludes a great deal of what is actually in UAE ground.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Plastic water, irrigation and drainage pipes — no conductor, no signal, invisible.",
+          "Concrete and clay drainage and sewer runs.",
+          "Fibre optic ducts with no tracer wire, or with a tracer wire that has broken.",
+          "De-energised and abandoned cables with no accessible connection point.",
+          "Buried tanks, chambers, voids, foundations and general obstructions.",
+        ],
+      },
+      {
+        type: "p",
+        text: "That list is not marginal. In Al Ain, where the irrigation network is extensive and largely plastic, an EML-only survey misses much of what the excavator will actually encounter. Across the older industrial areas, abandoned and de-energised runs are common and invisible to a passive sweep.",
+      },
+      { type: "h2", text: "How ground penetrating radar works" },
+      {
+        type: "p",
+        text: "GPR does not care whether a target conducts. It transmits electromagnetic pulses into the ground and records the reflections that come back from boundaries where the material properties change. A pipe, a duct, a cable, a tank, a void or a buried slab all create that contrast, so all of them produce a return.",
+      },
+      {
+        type: "p",
+        text: "That is the fundamental advantage: radar finds objects, not just conductors. It picks up plastic pipes, empty ducts, voids and obstructions that no locator will ever see, and it maps them spatially rather than tracing a single line at a time.",
+      },
+      { type: "h2", text: "Where radar has limits" },
+      {
+        type: "p",
+        text: "Radar has its own failure modes, and they are worth stating plainly rather than discovering on site.",
+      },
+      {
+        type: "ul",
+        items: [
+          "It does not identify what it finds. Radar shows you an object at a position and a depth; it does not tell you it is a water main rather than a duct.",
+          "Conductive and saline ground attenuates the signal. Coastal and reclaimed ground in the UAE is the hardest case, and depth drops accordingly.",
+          "Saturated ground, heavy clay and coarse gravel all reduce usable depth.",
+          "Dense congestion of services can make individual targets hard to separate.",
+          "Interpretation matters. The instrument produces data; the value is in who reads it.",
+        ],
+      },
+      { type: "h2", text: "Why the two belong together" },
+      {
+        type: "p",
+        text: "The instruments fail in opposite directions, which is exactly why a serious utility survey uses both. The EML identifies and traces the live conductive services with confidence and tells you what they are. Radar sweeps the same ground and picks up everything the locator could not see — the plastic, the abandoned, the non-conductive, the voids.",
+      },
+      {
+        type: "p",
+        text: "Run together, the EML gives identity to some of what radar found, and radar gives coverage the EML could not reach. Run alone, each leaves a category of service entirely unexamined.",
+      },
+      {
+        type: "callout",
+        text: "If a survey quote is significantly cheaper than the others, it is worth asking which instruments are being used. A passive EML sweep is a fraction of the work of a gridded radar survey, and it is not the same product.",
+      },
+      { type: "h2", text: "What we use" },
+      {
+        type: "p",
+        text: "Our ground surveys run on the Proceq GS8000, a stepped-frequency radar working to 5–10 m depending on soil, gridded across the survey area so the coverage is systematic rather than a set of single traces. Findings are marked on the ground surface with estimated depths and issued as a survey report. Where the ground has limited what the radar could resolve, we say so in the report rather than leaving a blank area to be read as clear.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Can GPR detect plastic pipes?",
+        answer:
+          "Yes. Radar responds to the contrast between an object and the surrounding soil rather than to conductivity, so plastic water, irrigation and drainage pipes produce a return. This is the single biggest advantage over an electromagnetic locator, which cannot see them at all because there is no conductor to detect.",
+      },
+      {
+        question: "Can GPR tell us what a detected service actually is?",
+        answer:
+          "Not on its own. Radar gives you position, depth and often an indication of size and material class, but it does not label a target as a water main or a telecom duct. That identification comes from combining the radar data with electromagnetic tracing, authority records and site knowledge — which is why interpretation is the part of the survey that matters most.",
+      },
+      {
+        question: "Is a cable locator ever enough by itself?",
+        answer:
+          "Only where you can be confident everything in the ground is conductive and traceable, which is rarely true on a UAE site. For a quick check over a known live power route it is a reasonable tool. As the whole of a pre-excavation survey it leaves plastic, abandoned and non-conductive services completely unexamined.",
+      },
+    ],
+    related: [
+      {
+        label: "GPR Ground Scanning",
+        href: "/services/gpr-ground-scanning",
+      },
+      {
+        label: "What a utility strike costs",
+        href: "/blog/utility-strike-cost-uae",
+      },
+      {
+        label: "Ground scanning in Al Ain",
+        href: "/services/gpr-ground-scanning/al-ain",
+      },
+    ],
+  },
+  {
+    slug: "how-deep-does-gpr-scan-uae",
+    title: "How Deep Does GPR Scan in UAE Ground?",
+    heading: "How deep GPR really reads in UAE ground",
+    description:
+      "GPR depth in UAE soil is 5–10 m and the ground decides which end you get. Why sabkha and reclaimed land cut it short, and where radar reads deepest.",
+    excerpt:
+      "Every equipment brochure quotes a maximum. What you get depends on moisture and salinity — and the UAE has both extremes within an hour of each other.",
+    datePublished: "2026-09-07",
+    dateModified: "2026-09-07",
+    readingMinutes: 6,
+    category: "Ground scanning",
+    blocks: [
+      {
+        type: "p",
+        text: "The most common question we get before a ground survey is how deep the radar reads. The honest answer is 5 to 10 m in UAE soil, and which end of that you get is decided by the ground rather than by the instrument. Anyone quoting a single fixed number for every site is quoting a brochure, not a survey.",
+      },
+      { type: "h2", text: "What actually limits radar depth" },
+      {
+        type: "p",
+        text: "Ground penetrating radar sends electromagnetic pulses into the ground and reads what comes back. Every metre the pulse travels, some energy is absorbed. Depth is simply the point at which too little energy returns to distinguish a reflection from noise. Two properties of the ground control that absorption.",
+      },
+      { type: "h3", text: "Moisture" },
+      {
+        type: "p",
+        text: "Water absorbs radar energy. Dry ground lets the pulse travel; saturated ground consumes it. This is why depth falls off sharply below the water table, and why a site surveyed after heavy rain or beside active irrigation can read noticeably shallower than the same site in dry conditions.",
+      },
+      { type: "h3", text: "Salinity" },
+      {
+        type: "p",
+        text: "Salt water is conductive, and conductive ground attenuates radar far more aggressively than fresh water alone. This is the dominant constraint along the UAE coast, and it is the reason coastal depth figures and inland depth figures are not comparable numbers.",
+      },
+      { type: "h2", text: "What that means emirate by emirate" },
+      {
+        type: "p",
+        text: "The UAE happens to contain most of the range radar can encounter, sometimes within a single emirate.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Al Ain and the inland gravel plains: the best ground in the country. Dry sand and gravel with a deep water table, reading towards the top of the range.",
+          "Sharjah industrial belt, Al Quoz, Dubai Investments Park: dry sand and compacted fill, clean returns, consistently good depth.",
+          "Abu Dhabi Island and the coastal strip: sabkha with saline groundwater near the surface. The hardest case, and depth can fall below 5 m.",
+          "Reclaimed ground — Dubai Marina, the Palm, Al Marjan, Al Hamra: saline fill, signal attenuates quickly, expect the lower end.",
+          "Fujairah and the east coast: wadi gravel and rock near the surface. Coarse gravel scatters energy and can cut depth well short of nominal.",
+        ],
+      },
+      { type: "h2", text: "Depth is not the only thing the ground decides" },
+      {
+        type: "p",
+        text: "There is a second effect that matters as much as depth and gets discussed far less. A strongly reflective or hard layer near the surface can mask everything beneath it, so the issue is not that the radar ran out of energy at 6 m — it is that a layer at 1.5 m prevented anything below it being resolved at all.",
+      },
+      {
+        type: "p",
+        text: "This comes up on rocky ground in the northern emirates and under buried slabs and old hardstanding anywhere. It is the reason a blank area on a radar plot must never be read as an empty area. If we could not see through something, that belongs in the report as a stated limitation.",
+      },
+      {
+        type: "callout",
+        text: "A blank area on a survey means one of two things: nothing is there, or the ground stopped us seeing. A report that does not distinguish between them is not doing its job.",
+      },
+      { type: "h2", text: "Is 5 m enough anyway?" },
+      {
+        type: "p",
+        text: "Usually, yes. Most buried utilities that excavation actually encounters sit within the first 2 to 3 m. Distribution power, water, telecom ducts and drainage are typically well inside that band, so even on difficult coastal ground the survey generally reaches past everything the machine is going to meet.",
+      },
+      {
+        type: "p",
+        text: "Depth becomes the deciding factor for deeper targets — trunk sewers, transmission mains, deep chambers and tanks, or site investigation ahead of piling. Those are the jobs where knowing the ground conditions before quoting matters, because they are the jobs where difficult ground can genuinely put the target out of reach.",
+      },
+      { type: "h2", text: "How we handle it" },
+      {
+        type: "p",
+        text: "We assess the conditions when we arrive and tell you the realistic depth for your ground before the survey rather than after it. If the depth you need is not achievable in the ground you have, that is a conversation to have on day one — not a limitation discovered in a report you have already paid for.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How deep can the GS8000 scan?",
+        answer:
+          "Typically 5–10 m in UAE ground. Dry inland sand and gravel read towards the top of that range; saline coastal and reclaimed ground can pull it below 5 m. We assess the site conditions and tell you what your specific ground supports rather than quoting the equipment maximum.",
+      },
+      {
+        question: "Why is concrete scanning quoted at 1 m and ground scanning at 5–10 m?",
+        answer:
+          "Different instruments for different materials. Concrete scanning uses the Proceq GP8000 at high frequency to resolve rebar and tendons at fine detail, which trades depth for resolution and reaches around 1 m in concrete. Ground scanning uses the GS8000 at lower frequency, which sacrifices fine detail for penetration through soil.",
+      },
+      {
+        question: "Does rain affect a ground survey?",
+        answer:
+          "Yes. Saturated ground absorbs radar energy, so a site surveyed shortly after heavy rain can read shallower than the same site in dry conditions. It rarely prevents a survey in the UAE, but where a job is depth-critical and the ground is wet, it is worth allowing it to drain first.",
+      },
+    ],
+    related: [
+      {
+        label: "GPR Ground Scanning",
+        href: "/services/gpr-ground-scanning",
+      },
+      {
+        label: "GPR vs cable locators",
+        href: "/blog/gpr-vs-cable-locator",
+      },
+      {
+        label: "GPR Concrete Scanning",
+        href: "/services/gpr-scanning",
+      },
+    ],
+  },
+  {
+    slug: "ground-scanning-cost-dubai",
+    title: "What a GPR Ground Survey Costs in Dubai",
+    heading: "What drives the cost of a utility survey in Dubai",
+    description:
+      "What a GPR ground scanning survey costs in Dubai and the UAE, what actually drives the price, and which quotes are cheap because they are a different service.",
+    excerpt:
+      "Survey pricing follows area, grid density, access and deliverable — not a flat rate per site. What moves the number, and what a suspiciously low quote is missing.",
+    datePublished: "2026-09-07",
+    dateModified: "2026-09-07",
+    readingMinutes: 6,
+    category: "Working with us",
+    blocks: [
+      {
+        type: "p",
+        text: "There is no published rate card for utility surveys in Dubai, and any firm that gives you a number before knowing the site is guessing. What we can do is set out exactly what moves the price, so you can scope a survey properly and read competing quotes for what they actually contain.",
+      },
+      { type: "h2", text: "Area and grid density" },
+      {
+        type: "p",
+        text: "Survey pricing is fundamentally area-based, but the area alone does not settle it. What settles it is how tightly the grid needs to be run across that area.",
+      },
+      {
+        type: "p",
+        text: "A trench corridor being cleared for a single service run needs a narrow, dense grid along the route. An open compound being mapped for as-built records needs full coverage at a spacing that will not miss a service between passes. Halving the grid spacing roughly doubles the time on site, so the detail you need is as much a cost driver as the footprint.",
+      },
+      { type: "h2", text: "What is on the surface" },
+      {
+        type: "p",
+        text: "Radar surveys need the cart in contact with the ground and moving in straight, recorded lines. Anything that prevents that costs time.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Clear, level hardstanding or compacted ground surveys fastest.",
+          "Rough, rutted or heavily obstructed ground slows the grid considerably.",
+          "Stored material, parked plant and active traffic mean either clearing the area or working around it in sections.",
+          "Landscaping, soft sand and steep falls all reduce the rate of progress.",
+        ],
+      },
+      { type: "h2", text: "Access and working hours" },
+      {
+        type: "p",
+        text: "A survey that can run during normal hours costs less than one that cannot. Live yards, trafficked roads and operating facilities frequently require night work, escorted access or short possession windows, and each of those adds mobilisation rather than survey time. Roads in particular often need the work done overnight, with traffic management arranged separately.",
+      },
+      { type: "h2", text: "The deliverable you need" },
+      {
+        type: "p",
+        text: "This is the driver most often left unspecified in an enquiry, and it makes a real difference to the price.",
+      },
+      {
+        type: "ul",
+        items: [
+          "On-site marking only — services painted on the ground for the excavation crew. The fastest option.",
+          "Marking plus a survey report with mapped findings and estimated depths. The normal deliverable.",
+          "Marked-up drawings over your own site plan, for larger sites and consultant submission.",
+          "CAD or GIS deliverables, where the project team needs the data in their own environment.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Processing and drafting happen off site, after the survey. If you need CAD output, say so in the enquiry — it is a different amount of work from paint on the ground, and retrofitting it afterwards is slower than planning for it.",
+      },
+      { type: "h2", text: "Ground conditions" },
+      {
+        type: "p",
+        text: "Difficult ground does not usually change the price directly, but it changes what the survey can deliver, and that is worth establishing before anyone commits. Saline coastal and reclaimed ground limits depth; rock and coarse gravel scatter the signal. If your target sits deeper than the ground will allow, we would rather tell you at quotation stage than issue a report that quietly fails to answer your question.",
+      },
+      { type: "h2", text: "Why some quotes are much cheaper" },
+      {
+        type: "p",
+        text: "When one quote comes in far below the others, it is usually not the same service. The common differences are worth checking directly.",
+      },
+      {
+        type: "ul",
+        items: [
+          "An electromagnetic locator sweep rather than a gridded radar survey — much faster, and blind to plastic and non-conductive services.",
+          "Spot checks along a route rather than systematic grid coverage of the area.",
+          "Marking on the ground with no report, where you assumed a report was included.",
+          "No stated treatment of areas the ground prevented reading, so limitations never appear.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "Ask any surveyor two questions: what instrument is being used, and what happens in the report to areas where the ground limited the reading. The answers separate a survey from a sweep.",
+      },
+      { type: "h2", text: "How to get an accurate quote quickly" },
+      {
+        type: "p",
+        text: "Tell us the location, the approximate survey area, what the surface is like, whether the work can happen in normal hours, and what you need at the end — marking, report, or CAD. With those five things we can quote properly rather than hedging, and in most of Dubai we can attend the same day or the following morning.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Do you charge per square metre or per day?",
+        answer:
+          "It depends on the job. Small, well-defined areas such as a trench corridor or a single plot are usually priced as a fixed job. Larger footprints and ongoing programmes are priced by area or by day, because progress rate varies so much with surface condition and grid density. We confirm which basis applies when we scope it.",
+      },
+      {
+        question: "Is the report included in the price?",
+        answer:
+          "In our quotes, yes — on-site marking and a survey report with mapped findings and estimated depths are the standard deliverable. CAD, GIS and marked-up drawings over your own site plan are scoped separately because they involve off-site drafting. It is worth confirming this point with any surveyor, as it is a common gap between quotes.",
+      },
+      {
+        question: "Can you scan and then carry out the excavation?",
+        answer:
+          "Yes. We provide excavation as well as the survey, and the crew works to the marked-up survey rather than to a drawing handed over by someone else. Combining them removes the gap where information gets lost between two contractors.",
+      },
+      {
+        question: "How quickly can you attend in Dubai?",
+        answer:
+          "For most Dubai locations, the same day or the following morning, subject to site access and permits. Abu Dhabi and Sharjah are usually next day. Al Ain, Ras Al Khaimah and Fujairah are planned visits, so a day of notice helps us cover the full scope in one mobilisation.",
+      },
+    ],
+    related: [
+      {
+        label: "GPR Ground Scanning",
+        href: "/services/gpr-ground-scanning",
+      },
+      {
+        label: "Concrete scanning cost in Dubai",
+        href: "/blog/gpr-scanning-cost-dubai",
+      },
+      {
+        label: "Ground scanning in Dubai",
+        href: "/services/gpr-ground-scanning/dubai",
       },
     ],
   },

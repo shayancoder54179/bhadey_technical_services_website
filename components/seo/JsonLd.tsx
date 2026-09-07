@@ -57,7 +57,7 @@ const localBusinessSchema = {
           name: "GPR Ground Scanning",
           description:
             "Ground scanning with Proceq GS8000 to locate buried utilities before excavation, 5-10 m depth depending on soil",
-          url: `${BASE_URL}/services/gs8000-scanning`,
+          url: `${BASE_URL}/services/gpr-ground-scanning`,
         },
       },
       {
@@ -343,7 +343,7 @@ const serviceSchemas = [
       { "@type": "City", name: "Fujairah" },
       { "@type": "City", name: "Al Ain" },
     ],
-    url: `${BASE_URL}/services/gs8000-scanning`,
+    url: `${BASE_URL}/services/gpr-ground-scanning`,
     serviceType: "Underground Utility Scanning",
     category: "Non-Destructive Testing",
   },

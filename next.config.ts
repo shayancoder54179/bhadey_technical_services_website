@@ -24,6 +24,19 @@ const nextConfig: NextConfig = {
         destination: "/services/gpr-scanning",
         permanent: true,
       },
+      // The ground scanning service moved off the instrument model number
+      // (gs8000) onto the term people actually search. Both the service page
+      // and its city pages keep their equity through these redirects.
+      {
+        source: "/services/gs8000-scanning",
+        destination: "/services/gpr-ground-scanning",
+        permanent: true,
+      },
+      {
+        source: "/services/gs8000-scanning/:city",
+        destination: "/services/gpr-ground-scanning/:city",
+        permanent: true,
+      },
       {
         source: "/faq",
         destination: "/#faq",

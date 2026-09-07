@@ -164,7 +164,7 @@ const excavationData: ServicePageData = {
     },
   ],
   relatedServices: [
-    { href: "/services/gs8000-scanning", label: "GPR Ground Scanning" },
+    { href: "/services/gpr-ground-scanning", label: "GPR Ground Scanning" },
     { href: "/services/gpr-scanning", label: "GPR Concrete Scanning" },
     { href: "/services/interlock-road-pavement", label: "Interlock & Road Pavement" },
     { href: "/services/core-cutting", label: "Core Cutting" },

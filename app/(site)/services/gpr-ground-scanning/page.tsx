@@ -4,10 +4,13 @@ import type { ServicePageData } from "@/lib/service-page-types";
 
 import { OG_IMAGES } from "@/lib/og-image";
 export const metadata: Metadata = {
-  title: "Underground Utility Scanning UAE",
+  title: "GPR Ground Scanning UAE | Underground Utility Locating",
   description:
     "Underground utility scanning across the UAE before you excavate. The Proceq GS8000 maps cables, pipes and ducts to 5–10 m, marked on site and reported.",
   keywords: [
+    "GPR ground scanning Dubai",
+    "GPR survey Dubai",
+    "ground penetrating radar Dubai",
     "GS8000 scanning Dubai",
     "Proceq GS8000 UAE",
     "underground utility scanning Dubai",
@@ -17,23 +20,23 @@ export const metadata: Metadata = {
     "subsurface utility mapping Dubai",
     "ground penetrating radar excavation UAE",
   ],
-  alternates: { canonical: "https://www.bhadeya.com/services/gs8000-scanning" },
+  alternates: { canonical: "https://www.bhadeya.com/services/gpr-ground-scanning" },
   openGraph: {
     title: "GPR Ground Scanning Dubai & UAE | Underground Utility Locating | Bhadeya Technical",
     description:
       "Locate buried utilities before you dig. Proceq GS8000 ground radar reads 5-10m into soil. Dubai, Abu Dhabi, Sharjah & across the UAE.",
-    url: "https://www.bhadeya.com/services/gs8000-scanning",
+    url: "https://www.bhadeya.com/services/gpr-ground-scanning",
     type: "website",
     images: OG_IMAGES,
   },
 };
 
 const gs8000PageData: ServicePageData = {
-  slug: "gs8000-scanning",
+  slug: "gpr-ground-scanning",
   breadcrumb: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/#services" },
-    { label: "GPR Ground Scanning", href: "/services/gs8000-scanning" },
+    { label: "GPR Ground Scanning", href: "/services/gpr-ground-scanning" },
   ],
   hero: {
     title: "GPR Ground Scanning in Dubai & UAE — Underground Utility Locating",

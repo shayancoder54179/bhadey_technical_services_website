@@ -187,7 +187,7 @@ const interlockPageData: ServicePageData = {
   ],
   relatedServices: [
     { href: "/services/excavation", label: "Excavation" },
-    { href: "/services/gs8000-scanning", label: "GPR Ground Scanning" },
+    { href: "/services/gpr-ground-scanning", label: "GPR Ground Scanning" },
     { href: "/services/core-cutting", label: "Core Cutting" },
   ],
   faq: {
