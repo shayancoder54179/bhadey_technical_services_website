@@ -1,27 +1,29 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Barlow, Barlow_Condensed, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { OG_IMAGES } from "@/lib/og-image";
-const inter = Inter({
-  variable: "--font-inter",
+const barlow = Barlow({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const barlowCondensed = Barlow_Condensed({
   variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-mono-plex",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono-spec",
   subsets: ["latin"],
-  weight: ["500"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -135,7 +137,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable} overflow-x-hidden font-sans antialiased`}
+        className={`${barlow.variable} ${barlowCondensed.variable} ${jetbrainsMono.variable} overflow-x-hidden font-sans antialiased`}
         suppressHydrationWarning
       >
         {children}

@@ -45,6 +45,8 @@ export interface EquipmentData {
   description: string;
   specs?: EquipmentSpec[];
   whyBest?: string;
+  /** Photo of the actual device in use on site */
+  image?: { src: string; alt: string; caption?: string };
 }
 
 export interface FeatureItem {

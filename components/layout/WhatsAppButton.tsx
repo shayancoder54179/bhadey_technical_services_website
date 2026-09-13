@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { company } from "@/data/company";
 import { trackWhatsAppClick } from "@/lib/tracking";
 
@@ -17,19 +17,19 @@ export function WhatsAppButton() {
       onClick={() => trackWhatsAppClick("floating_button")}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-40 flex size-12 items-center justify-center border border-black/10 transition-transform hover:scale-105 md:bottom-8 md:right-8 md:size-14"
+      className="fixed bottom-6 right-6 z-40 flex size-14 items-center justify-center rounded-full shadow-lift transition-transform hover:scale-105 md:bottom-8 md:right-8"
       style={{ backgroundColor: WHATSAPP_GREEN }}
       aria-label="Chat with us on WhatsApp"
       title="Chat with us on WhatsApp"
     >
-      <span className="absolute inset-0 animate-ping opacity-30">
+      <span className="absolute inset-0 animate-ping rounded-full opacity-25">
         <span
-          className="block size-full"
+          className="block size-full rounded-full"
           style={{ backgroundColor: WHATSAPP_GREEN }}
           aria-hidden
         />
       </span>
-      <MessageCircle className="relative size-6 text-white md:size-7" aria-hidden />
+      <WhatsAppIcon className="relative size-7 text-white" aria-hidden />
     </Link>
   );
 }

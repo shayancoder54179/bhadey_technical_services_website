@@ -62,9 +62,9 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
   const inputStyle: React.CSSProperties = {
     width: "100%",
     padding: "12px 16px",
-    background: "#18181A",
-    border: "1px solid rgba(245,130,15,0.3)",
-    color: "#FBFAF7",
+    background: "#FFFFFF",
+    border: "1px solid #CBD5E1",
+    color: "#0F172A",
     fontSize: "15px",
     fontFamily: "var(--font-inter), Inter, sans-serif",
     outline: "none",
@@ -76,7 +76,7 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
     marginBottom: "6px",
     fontSize: "13px",
     fontWeight: 600,
-    color: "#9CA3AF",
+    color: "#475569",
     textTransform: "uppercase",
     letterSpacing: "0.05em",
     fontFamily: "var(--font-inter), Inter, sans-serif",
@@ -95,8 +95,8 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
           onChange={handleChange}
           placeholder="e.g. Ahmed Al Mansouri"
           style={inputStyle}
-          onFocus={(e) => (e.target.style.borderColor = "#F5820F")}
-          onBlur={(e) => (e.target.style.borderColor = "rgba(245,130,15,0.3)")}
+          onFocus={(e) => (e.target.style.borderColor = "#EA580C")}
+          onBlur={(e) => (e.target.style.borderColor = "#CBD5E1")}
         />
       </div>
 
@@ -111,8 +111,8 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
           onChange={handleChange}
           placeholder="+971 50 000 0000"
           style={inputStyle}
-          onFocus={(e) => (e.target.style.borderColor = "#F5820F")}
-          onBlur={(e) => (e.target.style.borderColor = "rgba(245,130,15,0.3)")}
+          onFocus={(e) => (e.target.style.borderColor = "#EA580C")}
+          onBlur={(e) => (e.target.style.borderColor = "#CBD5E1")}
         />
       </div>
 
@@ -125,12 +125,12 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
           value={form.emirate}
           onChange={handleChange}
           style={{ ...inputStyle, cursor: "pointer" }}
-          onFocus={(e) => (e.target.style.borderColor = "#F5820F")}
-          onBlur={(e) => (e.target.style.borderColor = "rgba(245,130,15,0.3)")}
+          onFocus={(e) => (e.target.style.borderColor = "#EA580C")}
+          onBlur={(e) => (e.target.style.borderColor = "#CBD5E1")}
         >
           <option value="" disabled>Select your emirate…</option>
           {EMIRATES.map((em) => (
-            <option key={em} value={em} style={{ background: "#18181A" }}>
+            <option key={em} value={em} style={{ background: "#FFFFFF" }}>
               {em}
             </option>
           ))}
@@ -148,8 +148,8 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
           rows={4}
           placeholder="Describe your project — e.g. core cutting in a slab, renovation scan, utility mapping..."
           style={{ ...inputStyle, resize: "vertical", minHeight: "100px" }}
-          onFocus={(e) => (e.target.style.borderColor = "#F5820F")}
-          onBlur={(e) => (e.target.style.borderColor = "rgba(245,130,15,0.3)")}
+          onFocus={(e) => (e.target.style.borderColor = "#EA580C")}
+          onBlur={(e) => (e.target.style.borderColor = "#CBD5E1")}
         />
       </div>
 
@@ -158,9 +158,9 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
         style={{
           width: "100%",
           padding: "16px",
-          background: "#F5820F",
+          background: "#EA580C",
           border: "none",
-          color: "#0E0E0F",
+          color: "#FFFFFF",
           fontSize: "17px",
           fontWeight: 700,
           fontFamily: "var(--font-heading), 'Space Grotesk', sans-serif",

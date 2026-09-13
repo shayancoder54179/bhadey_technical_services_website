@@ -51,6 +51,10 @@ const interlockPageData: ServicePageData = {
       "https://wa.me/971556926286?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20interlock%20and%20road%20pavement%20works.",
     ctaSecondaryLabel: "Call Now: +971 55 692 6286",
     ctaSecondaryHref: "tel:+971556926286",
+    image: {
+      src: "/images/svc-paving-laying.webp",
+      alt: "Worker laying interlock paving blocks on a prepared sub-base",
+    },
   },
   overview: {
     title: "What Are Our Interlock & Road Pavement Services?",
@@ -87,6 +91,11 @@ const interlockPageData: ServicePageData = {
   },
   equipment: {
     title: "Equipment & Approach",
+    image: {
+      src: "/images/svc-paving-laying-2.webp",
+      alt: "Paving blocks being installed across a compacted and levelled sub-base",
+      caption: "Laying to line and level over a properly prepared sub-base.",
+    },
     name: "Compaction, Levelling & Paving Equipment",
     description:
       "Interlock and pavement works are carried out with plate compactors and rollers for the sub-base and final lock-up, block cutters for clean edge and fixture cuts, and laser levelling for accurate formation levels and falls. This is supported by our own excavation machinery and, where buried services may be present, by GPR ground scanning before we break ground — so the paving crew is never the one to discover a live cable.",
@@ -116,6 +125,12 @@ const interlockPageData: ServicePageData = {
     { title: "Road pavement and hardstanding" },
     { title: "Reinstatement after trenching works" },
     { title: "Sunken or uneven paving repair" },
+  ],
+  galleryTitle: "Paving & Road Works",
+  galleryImages: [
+    { src: "/images/svc-paving-laying.webp", alt: "Interlock paving blocks being laid to line and level" },
+    { src: "/images/svc-paving-laying-2.webp", alt: "Paver installation across a prepared sub-base" },
+    { src: "/images/svc-road-marking.webp", alt: "Finished road surface with fresh line marking" },
   ],
   process: {
     title: "Our Interlock & Pavement Process",

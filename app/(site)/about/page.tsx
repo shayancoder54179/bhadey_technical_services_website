@@ -39,10 +39,10 @@ export default function AboutPage() {
 
       {/* Page Hero */}
       <section
-        className={`relative py-16 md:py-20 lg:py-24 overflow-hidden ${sectionClass}`}
+        className={`relative section-y overflow-hidden ${sectionClass}`}
         aria-labelledby="about-hero-title"
       >
-        <div className="absolute inset-0 bg-ink" />
+        <div className="absolute inset-0 bg-graphite" />
         <div
           className="absolute inset-0"
           style={{
@@ -54,11 +54,11 @@ export default function AboutPage() {
           <header className="max-w-3xl">
             <h1
               id="about-hero-title"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-paper mb-4 tracking-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-white mb-4 tracking-tight"
             >
               About Bhadeya Technical Services L.L.C
             </h1>
-            <p className="text-lg text-paper/80">
+            <p className="text-lg text-white/75">
               Your Trusted Partner for GPR Scanning & Technical Services in UAE
               Since 2019
             </p>
@@ -68,7 +68,7 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <section
-        className="bg-paper py-16 md:py-20 lg:py-24"
+        className="section-y border-t border-hairline bg-surface"
         aria-labelledby="our-story-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -76,11 +76,11 @@ export default function AboutPage() {
             <div>
               <h2
                 id="our-story-heading"
-                className="text-2xl md:text-3xl font-semibold text-foreground mb-6 tracking-tight"
+                className="display-lg mb-6 text-graphite"
               >
                 Our Story
               </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-slate-deep leading-relaxed">
                 <p>
                   Founded in 2019, Bhadeya Technical Services L.L.C has grown to
                   become one of the UAE&apos;s most trusted providers of GPR
@@ -106,7 +106,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="aspect-[4/3] border border-steel/20 overflow-hidden">
+            <div className="aspect-[4/3] border border-hairline overflow-hidden">
               <Image
                 src="/images/7272030 (1).jpg"
                 alt="Bhadeya Technical Services GPR scanning expert at work in Dubai UAE - Proceq GP8000 ground penetrating radar on concrete"
@@ -123,44 +123,44 @@ export default function AboutPage() {
 
       {/* Our Mission & Values */}
       <section
-        className="bg-concrete py-16 md:py-20 lg:py-24"
+        className="section-y border-t border-hairline bg-mist"
         aria-labelledby="mission-values-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="mission-values-heading"
-            className="text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center tracking-tight"
+            className="display-lg mb-10 text-center text-graphite"
           >
             Our Mission & Values
           </h2>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
-            <div className="border border-steel/20 bg-paper p-6">
-              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+            <div className="rounded-xl border border-hairline bg-surface p-6 shadow-panel">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                 <Target className="size-6" aria-hidden />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Mission</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="display-sm mb-2 text-graphite">Mission</h3>
+              <p className="text-slate-deep leading-relaxed">
                 To provide the most accurate and reliable GPR scanning and
                 technical services in the UAE, ensuring safety and precision in
                 every project.
               </p>
             </div>
-            <div className="border border-steel/20 bg-paper p-6">
-              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+            <div className="rounded-xl border border-hairline bg-surface p-6 shadow-panel">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                 <Eye className="size-6" aria-hidden />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Vision</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="display-sm mb-2 text-graphite">Vision</h3>
+              <p className="text-slate-deep leading-relaxed">
                 To be the UAE&apos;s first choice for non-destructive testing
                 and construction technical services.
               </p>
             </div>
-            <div className="border border-steel/20 bg-paper p-6">
-              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+            <div className="rounded-xl border border-hairline bg-surface p-6 shadow-panel">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                 <Heart className="size-6" aria-hidden />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Values</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="display-sm mb-2 text-graphite">Values</h3>
+              <p className="text-slate-deep leading-relaxed">
                 Safety, Precision, Reliability, Innovation, Integrity
               </p>
             </div>
@@ -170,53 +170,53 @@ export default function AboutPage() {
 
       {/* Our Equipment */}
       <section
-        className="bg-paper py-16 md:py-20 lg:py-24"
+        className="section-y border-t border-hairline bg-surface"
         aria-labelledby="equipment-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="equipment-heading"
-            className="text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center tracking-tight"
+            className="display-lg mb-10 text-center text-graphite"
           >
             Our Equipment
           </h2>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3 max-w-6xl mx-auto">
-            <div className="border border-steel/20 bg-concrete/40 p-6">
-              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+            <div className="rounded-xl border border-hairline bg-mist p-6 shadow-panel">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                 <Radio className="size-6" aria-hidden />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">
+              <h3 className="display-sm mb-3 text-graphite">
                 Proceq GP8000
               </h3>
-              <ul className="text-muted-foreground text-sm space-y-1" role="list">
+              <ul className="text-slate-deep text-sm space-y-1" role="list">
                 <li>• Concrete scanning radar</li>
                 <li>• Up to 1m depth in concrete</li>
                 <li>• Real-time 3D visualization</li>
                 <li>• Used before cutting &amp; drilling</li>
               </ul>
             </div>
-            <div className="border border-steel/20 bg-concrete/40 p-6">
-              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+            <div className="rounded-xl border border-hairline bg-mist p-6 shadow-panel">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                 <Radio className="size-6" aria-hidden />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">
+              <h3 className="display-sm mb-3 text-graphite">
                 Proceq GS8000
               </h3>
-              <ul className="text-muted-foreground text-sm space-y-1" role="list">
+              <ul className="text-slate-deep text-sm space-y-1" role="list">
                 <li>• Ground scanning radar</li>
-                <li>• 5–10m in soil, depending on ground</li>
+                <li>• Up to 10m in soil, depending on ground</li>
                 <li>• Buried utility mapping</li>
                 <li>• Used before excavation</li>
               </ul>
             </div>
-            <div className="border border-steel/20 bg-concrete/40 p-6">
-              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+            <div className="rounded-xl border border-hairline bg-mist p-6 shadow-panel">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                 <Drill className="size-6" aria-hidden />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3 tracking-tight">
+              <h3 className="display-sm mb-3 text-graphite">
                 Professional Diamond Core Cutting Systems
               </h3>
-              <ul className="text-muted-foreground text-sm space-y-1" role="list">
+              <ul className="text-slate-deep text-sm space-y-1" role="list">
                 <li>• Professional-grade equipment</li>
                 <li>• 12–500mm diameter range</li>
                 <li>• Clean, precise cuts</li>
@@ -234,32 +234,32 @@ export default function AboutPage() {
 
       {/* Service Areas */}
       <section
-        className="bg-concrete py-16 md:py-20 lg:py-24"
+        className="section-y border-t border-hairline bg-mist"
         aria-labelledby="service-areas-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="service-areas-heading"
-            className="text-2xl md:text-3xl font-semibold text-foreground mb-6 text-center tracking-tight"
+            className="display-lg mb-6 text-center text-graphite"
           >
             Service Areas
           </h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
+          <p className="text-center text-slate-deep max-w-2xl mx-auto mb-10">
             We provide GPR scanning and core cutting services across the UAE.
           </p>
           <div className="max-w-2xl mx-auto">
-            <h3 className="font-mono text-xs uppercase tracking-widest text-steel mb-4 text-center">
+            <h3 className="font-mono text-xs uppercase tracking-widest text-slate-soft mb-4 text-center">
               Cities we serve
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3" role="list">
               {company.serviceAreas.map((city) => (
                 <li
                   key={city}
-                  className="flex items-center gap-2 border border-steel/20 bg-paper px-4 py-3 text-muted-foreground"
+                  className="flex items-center gap-2 border border-hairline bg-surface px-4 py-3 text-slate-deep"
                   role="listitem"
                 >
                   <MapPin
-                    className="size-4 shrink-0 text-signal-orange"
+                    className="size-4 shrink-0 text-safety"
                     aria-hidden
                   />
                   {city}
@@ -272,44 +272,44 @@ export default function AboutPage() {
 
       {/* Why Clients Choose Us */}
       <section
-        className="bg-paper py-16 md:py-20 lg:py-24"
+        className="section-y border-t border-hairline bg-surface"
         aria-labelledby="why-choose-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="why-choose-heading"
-            className="text-2xl md:text-3xl font-semibold text-foreground mb-4 text-center tracking-tight"
+            className="display-lg mb-4 text-center text-graphite"
           >
             Why Clients Choose Us
           </h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+          <p className="text-center text-slate-deep max-w-2xl mx-auto mb-12">
             Trusted by leading developers, contractors, and consultants across
             the UAE.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl mx-auto">
-            <blockquote className="border border-steel/20 bg-concrete/40 p-6 md:p-8">
-              <Quote className="size-10 text-signal-orange/40 mb-4" aria-hidden />
-              <p className="text-foreground font-medium mb-2">
+            <blockquote className="rounded-xl border border-hairline bg-mist p-6 shadow-panel md:p-8">
+              <Quote className="size-10 text-safety/40 mb-4" aria-hidden />
+              <p className="text-graphite font-medium mb-2">
                 &ldquo;They showed up on time, scanned before every cut, and
                 delivered clear reports. No surprises on site.&rdquo;
               </p>
-              <footer className="text-sm text-muted-foreground">
+              <footer className="text-sm text-slate-deep">
                 — Construction project manager, Dubai
               </footer>
             </blockquote>
-            <blockquote className="border border-steel/20 bg-concrete/40 p-6 md:p-8">
-              <Quote className="size-10 text-signal-orange/40 mb-4" aria-hidden />
-              <p className="text-foreground font-medium mb-2">
+            <blockquote className="rounded-xl border border-hairline bg-mist p-6 shadow-panel md:p-8">
+              <Quote className="size-10 text-safety/40 mb-4" aria-hidden />
+              <p className="text-graphite font-medium mb-2">
                 &ldquo;Best GPR and core cutting team we&apos;ve worked with in
                 the UAE. Equipment is top-notch, results are accurate.&rdquo;
               </p>
-              <footer className="text-sm text-muted-foreground">
+              <footer className="text-sm text-slate-deep">
                 — MEP contractor, Abu Dhabi
               </footer>
             </blockquote>
           </div>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-muted-foreground text-sm">
-            <span className="font-semibold text-foreground">Trusted by:</span>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-slate-deep text-sm">
+            <span className="font-semibold text-graphite">Trusted by:</span>
             <span>The Dubai Mall</span>
             <span>•</span>
             <span>ADNOC</span>
@@ -326,17 +326,17 @@ export default function AboutPage() {
       {/* How we work — the operating principles behind the service, written
           out because they are what actually differentiate the work. */}
       <section
-        className="py-16 md:py-20 lg:py-24"
+        className="section-y"
         aria-labelledby="how-we-work-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="how-we-work-heading"
-            className="mb-4 text-2xl font-semibold tracking-tight text-foreground md:text-3xl"
+            className="display-lg mb-4 text-graphite"
           >
             How we work
           </h2>
-          <p className="mb-12 max-w-2xl text-muted-foreground">
+          <p className="mb-12 max-w-2xl text-slate-deep">
             Four things decide whether subsurface work is done properly. They
             are not complicated, but they are easy to skip under programme
             pressure, and skipping them is what causes incidents.
@@ -347,7 +347,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-semibold tracking-tight">
                 We never cut blind
               </h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground">
+              <p className="mt-2 leading-relaxed text-slate-deep">
                 Every core we cut is scanned first. Not a sample of them, not
                 the ones that look risky — every one. Because we run both the
                 scanning and the cutting, there is no gap in responsibility
@@ -360,7 +360,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-semibold tracking-tight">
                 The right radar for the job
               </h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground">
+              <p className="mt-2 leading-relaxed text-slate-deep">
                 Concrete and ground are different problems and need different
                 instruments. We operate the Proceq GP8000 for concrete, reading
                 up to 1 m, and the Proceq GS8000 for ground, reading 5–10 m
@@ -373,7 +373,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-semibold tracking-tight">
                 Honest depth, not best-case depth
               </h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground">
+              <p className="mt-2 leading-relaxed text-slate-deep">
                 Depth in ground is decided by the soil, not by marketing. Dry
                 sand can let the GS8000 read to the full 10 m; saline sabkha can pull it
                 below 5 m. We quote 5–10 m as the realistic working range and
@@ -387,7 +387,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-semibold tracking-tight">
                 Findings you can act on
               </h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground">
+              <p className="mt-2 leading-relaxed text-slate-deep">
                 Results are marked directly on the surface where the crew will
                 see them, and issued as a PDF report with annotated layouts for
                 the consultant or the permit file. If we find something where
@@ -397,11 +397,11 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="mt-14 border-t border-steel/20 pt-10">
+          <div className="mt-14 border-t border-hairline pt-10">
             <h3 className="text-lg font-semibold tracking-tight">
               Where we work
             </h3>
-            <p className="mt-2 max-w-3xl leading-relaxed text-muted-foreground">
+            <p className="mt-2 max-w-3xl leading-relaxed text-slate-deep">
               We cover all six emirates, and the work looks different in each.
               Dubai is largely tower fit-outs on post-tensioned slabs, often out
               of hours in occupied buildings. Abu Dhabi runs on permit-to-work

@@ -82,10 +82,10 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
 
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-16 md:py-20"
+        className="section-y relative overflow-hidden"
         aria-labelledby="location-hero-title"
       >
-        <div className="absolute inset-0 bg-ink" />
+        <div className="absolute inset-0 bg-graphite" aria-hidden />
         <div
           className="absolute inset-0"
           style={{
@@ -95,30 +95,30 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
         />
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="flex max-w-3xl flex-col gap-6">
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 px-3 py-1 text-xs font-medium tracking-wide text-white/70 uppercase">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-safety-bright/40 bg-safety/10 px-3.5 py-1.5 spec-label text-safety-bright">
               <MapPin className="size-3.5" aria-hidden="true" />
               {cityData.name}
             </span>
             <h1
               id="location-hero-title"
-              className="text-3xl font-bold tracking-tight text-white text-balance md:text-4xl lg:text-5xl"
+              className="display-xl text-white"
             >
               {content.h1}
             </h1>
-            <p className="text-base leading-relaxed text-white/75 md:text-lg">
+            <p className="max-w-[54ch] text-[1.0625rem] leading-relaxed text-white/75">
               {content.intro}
             </p>
             <div className="flex flex-wrap gap-3 pt-1">
               <GetQuoteLink
                 href="/contact"
                 source="location_page_hero"
-                className="inline-flex items-center justify-center rounded-md bg-signal-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-signal-orange/90"
+                className="inline-flex h-13 items-center justify-center rounded-md bg-safety px-8 text-base font-semibold text-white shadow-lift transition-all hover:bg-safety/90"
               >
                 Get a Free Quote
               </GetQuoteLink>
               <PhoneLink
                 href={`tel:${company.phoneClean}`}
-                className="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="inline-flex h-13 items-center justify-center gap-2 rounded-md border border-white/25 bg-white/5 px-6 text-base font-semibold text-white backdrop-blur-sm transition-colors hover:border-white/45 hover:bg-white/10"
               >
                 <Phone className="size-4" aria-hidden="true" />
                 {company.phone}
@@ -129,21 +129,21 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
       </section>
 
       {/* Local context */}
-      <section className="py-14 md:py-20" aria-labelledby="local-context-title">
+      <section className="section-y bg-surface" aria-labelledby="local-context-title">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="local-context-title"
-            className="text-2xl font-bold tracking-tight text-balance md:text-3xl"
+            className="display-lg text-graphite"
           >
             {serviceLabel} in {cityData.name}
           </h2>
           <div className="mt-8 flex flex-col gap-8 md:gap-10">
             {content.localContext.map((block) => (
               <div key={block.heading} className="max-w-3xl">
-                <h3 className="text-lg font-semibold tracking-tight">
+                <h3 className="display-sm text-graphite">
                   {block.heading}
                 </h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">
+                <p className="mt-2 leading-relaxed text-slate-deep">
                   {block.body}
                 </p>
               </div>
@@ -154,7 +154,7 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
 
       {/* Areas + ground conditions */}
       <section
-        className="border-y bg-muted/40 py-14 md:py-20"
+        className="section-y bg-mist"
         aria-labelledby="coverage-title"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -162,31 +162,31 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
             <div>
               <h2
                 id="coverage-title"
-                className="text-2xl font-bold tracking-tight md:text-3xl"
+                className="display-lg text-graphite"
               >
                 Areas we cover in {cityData.name}
               </h2>
               <ul className="mt-6 grid gap-2 sm:grid-cols-2">
                 {cityData.areas.map((area) => (
-                  <li key={area} className="flex items-start gap-2 text-sm">
+                  <li key={area} className="flex items-start gap-2 text-sm text-slate-deep">
                     <Check
-                      className="mt-0.5 size-4 shrink-0 text-signal-orange"
+                      className="mt-0.5 size-4 shrink-0 text-safety"
                       aria-hidden="true"
                     />
                     <span>{area}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-sm text-muted-foreground">
+              <p className="mt-6 text-sm text-slate-soft">
                 Utility owners and permitting bodies we work alongside here:{" "}
                 {cityData.authorities.join(", ")}.
               </p>
             </div>
             <div>
-              <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
+              <h2 className="display-lg text-graphite">
                 Ground conditions in {cityData.name}
               </h2>
-              <p className="mt-6 leading-relaxed text-muted-foreground">
+              <p className="mt-6 leading-relaxed text-slate-deep">
                 {cityData.groundNote}
               </p>
             </div>
@@ -203,18 +203,18 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
       />
 
       {/* Cross-links */}
-      <section className="py-14 md:py-20" aria-labelledby="related-title">
+      <section className="section-y bg-surface" aria-labelledby="related-title">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="related-title"
-            className="text-2xl font-bold tracking-tight md:text-3xl"
+            className="display-lg text-graphite"
           >
             Related pages
           </h2>
           <div className="mt-8 grid gap-10 md:grid-cols-2">
             {siblingCities.length > 0 && (
               <div>
-                <h3 className="text-sm font-semibold tracking-wide uppercase text-muted-foreground">
+                <h3 className="spec-label text-safety">
                   {serviceLabel} elsewhere in the UAE
                 </h3>
                 <ul className="mt-4 flex flex-col gap-2">
@@ -222,7 +222,7 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
                     <li key={`${r.service}-${r.city}`}>
                       <Link
                         href={`/services/${r.service}/${r.city}`}
-                        className="text-signal-orange underline-offset-4 hover:underline"
+                        className="font-medium text-graphite underline decoration-safety decoration-2 underline-offset-4 transition-colors hover:text-safety"
                       >
                         {serviceLabels[r.service]} in {cities[r.city].name}
                       </Link>
@@ -231,7 +231,7 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
                   <li>
                     <Link
                       href={`/services/${service}`}
-                      className="text-signal-orange underline-offset-4 hover:underline"
+                      className="font-medium text-graphite underline decoration-safety decoration-2 underline-offset-4 transition-colors hover:text-safety"
                     >
                       {serviceLabel} across the UAE
                     </Link>
@@ -241,7 +241,7 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
             )}
             {otherServicesHere.length > 0 && (
               <div>
-                <h3 className="text-sm font-semibold tracking-wide uppercase text-muted-foreground">
+                <h3 className="spec-label text-safety">
                   Other services in {cityData.name}
                 </h3>
                 <ul className="mt-4 flex flex-col gap-2">
@@ -249,7 +249,7 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
                     <li key={`${r.service}-${r.city}`}>
                       <Link
                         href={`/services/${r.service}/${r.city}`}
-                        className="text-signal-orange underline-offset-4 hover:underline"
+                        className="font-medium text-graphite underline decoration-safety decoration-2 underline-offset-4 transition-colors hover:text-safety"
                       >
                         {serviceLabels[r.service]} in {cities[r.city].name}
                       </Link>
@@ -263,12 +263,12 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-ink py-14 md:py-20">
+      <section className="section-y relative overflow-hidden bg-graphite">
         <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
-          <h2 className="text-2xl font-bold tracking-tight text-white text-balance md:text-3xl">
+          <h2 className="display-lg text-white">
             Need {serviceLabel.toLowerCase()} in {cityData.name}?
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-white/70">
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/75">
             Tell us the site and what you need done. We will give you a clear
             quote and a realistic date, usually the same day.
           </p>
@@ -276,13 +276,13 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
             <GetQuoteLink
               href="/contact"
               source="location_page_footer"
-              className="inline-flex items-center justify-center rounded-md bg-signal-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-signal-orange/90"
+              className="inline-flex h-13 items-center justify-center rounded-md bg-safety px-8 text-base font-semibold text-white shadow-lift transition-all hover:bg-safety/90"
             >
               Get a Free Quote
             </GetQuoteLink>
             <PhoneLink
               href={`tel:${company.phoneClean}`}
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              className="inline-flex h-13 items-center justify-center gap-2 rounded-md border border-white/25 bg-white/5 px-6 text-base font-semibold text-white backdrop-blur-sm transition-colors hover:border-white/45 hover:bg-white/10"
             >
               <Phone className="size-4" aria-hidden="true" />
               {company.phone}

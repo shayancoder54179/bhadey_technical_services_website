@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GPR Ground Scanning Dubai & UAE | Underground Utility Locating | Bhadeya Technical",
     description:
-      "Locate buried utilities before you dig. Proceq GS8000 ground radar reads 5-10m into soil. Dubai, Abu Dhabi, Sharjah & across the UAE.",
+      "Locate buried utilities before you dig. Proceq GS8000 ground radar reads up to 10m into soil. Dubai, Abu Dhabi, Sharjah & across the UAE.",
     url: "https://www.bhadeya.com/services/gpr-ground-scanning",
     type: "website",
     images: OG_IMAGES,
@@ -41,9 +41,9 @@ const gs8000PageData: ServicePageData = {
   hero: {
     title: "GPR Ground Scanning in Dubai & UAE — Underground Utility Locating",
     subtitle:
-      "Know what is buried before you dig. Our Proceq GS8000 ground penetrating radar maps power cables, water and sewer lines, telecom ducts, gas pipes, tanks and voids at 5–10 m depending on soil conditions — marked on site and issued as a survey report before excavation begins.",
+      "Know what is buried before you dig. Our Proceq GS8000 ground penetrating radar maps power cables, water and sewer lines, telecom ducts, gas pipes, tanks and voids at up to 10 m depending on soil conditions — marked on site and issued as a survey report before excavation begins.",
     stats: [
-      { value: "5–10m", label: "Depth in soil" },
+      { value: "Up to 10m", label: "Depth in soil" },
       { value: "Proceq GS8000", label: "Equipment" },
       { value: "All UAE", label: "Coverage" },
     ],
@@ -52,6 +52,10 @@ const gs8000PageData: ServicePageData = {
       "https://wa.me/971556926286?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20GS8000%20underground%20utility%20scanning.",
     ctaSecondaryLabel: "Call Now: +971 55 692 6286",
     ctaSecondaryHref: "tel:+971556926286",
+    image: {
+      src: "/images/svc-ground-scanning.webp",
+      alt: "Large UAE earthworks site of the kind surveyed with the Proceq GS8000 before excavation",
+    },
   },
   overview: {
     title: "What is GPR Ground Scanning?",
@@ -88,6 +92,11 @@ const gs8000PageData: ServicePageData = {
   },
   equipment: {
     title: "Equipment We Use",
+    image: {
+      src: "/images/svc-earthworks-aerial.webp",
+      alt: "Large earthworks site of the kind surveyed with the Proceq GS8000 before excavation begins",
+      caption: "Ground surveyed and marked with the GS8000 before the first bucket.",
+    },
     name: "Proceq GS8000",
     description:
       "The Proceq GS8000 is a subsurface mapping ground penetrating radar built specifically for utility locating in soil. It uses stepped-frequency continuous wave technology across an ultra-wide 0.2–3.4 GHz bandwidth, balancing penetration depth and object resolution in a single pass, and covers large areas quickly — which makes it suited to roads, yards, compounds and open sites as well as tight trench corridors.",
@@ -117,6 +126,12 @@ const gs8000PageData: ServicePageData = {
     { title: "Utility mapping for as-built records" },
     { title: "Landscaping and compound works" },
     { title: "Infrastructure and municipality projects" },
+  ],
+  galleryTitle: "Ground Scanning in Action",
+  galleryImages: [
+    { src: "/images/svc-ground-scanning.webp", alt: "Wide earthworks site prepared for a pre-excavation utility survey" },
+    { src: "/images/svc-earthworks-aerial.webp", alt: "Aerial view of an excavation site where buried services must be located first" },
+    { src: "/images/WhatsApp Image 2025-12-28 at 00.56.38.jpeg", alt: "Scan grid marked on a surface with the located obstruction ringed in red" },
   ],
   process: {
     title: "Our Underground Scanning Process",
@@ -156,7 +171,7 @@ const gs8000PageData: ServicePageData = {
     {
       title: "Underground Utility Scanning in Abu Dhabi",
       content:
-        "In Abu Dhabi, pre-excavation surveys are routine on government, oil and gas and civil projects where a utility strike carries serious consequences. Our GS8000 ground scanning covers Abu Dhabi city, Mussafah, Khalifa City, Yas Island and the industrial zones, mapping buried services to 5–10 m depending on soil conditions and delivering documentation that supports project safety files.",
+        "In Abu Dhabi, pre-excavation surveys are routine on government, oil and gas and civil projects where a utility strike carries serious consequences. Our GS8000 ground scanning covers Abu Dhabi city, Mussafah, Khalifa City, Yas Island and the industrial zones, mapping buried services to up to 10 m depending on soil conditions and delivering documentation that supports project safety files.",
     },
     {
       title: "Why Scan the Ground Before Excavating",
@@ -173,7 +188,7 @@ const gs8000PageData: ServicePageData = {
     {
       question: "What is the difference between the GS8000 and the GP8000?",
       answer:
-        "The GS8000 scans ground and soil for buried utilities before excavation, reaching 5–10 m depending on conditions. The GP8000 scans concrete for rebar, post-tension cables and conduits before cutting or drilling, reaching up to 1 m in concrete. They are separate machines for separate jobs, and Bhadeya Technical operates both.",
+        "The GS8000 scans ground and soil for buried utilities before excavation, reaching 5–10 m depending on conditions. The GP8000 scans concrete for rebar, post-tension cables and conduits before cutting or drilling, reaching up to 1.5 m in concrete. They are separate machines for separate jobs, and Bhadeya Technical operates both.",
     },
     {
       question: "Can you detect plastic pipes?",

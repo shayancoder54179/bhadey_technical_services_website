@@ -5,21 +5,38 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-ink: #0e0e0f;
-  --color-ink-raised: #18181a;
-  --color-signal-orange: #f5820f;
-  --color-concrete: #eeeae2;
-  --color-concrete-tint: #e2ddd2;
-  --color-paper: #fbfaf7;
-  --color-steel: #5b6570;
-  /* TEMP migration aliases — remove once every file references the tokens above directly. See .impeccable/redesign-progress.md */
-  --color-primary-navy: var(--color-ink);
-  --color-accent-orange: var(--color-signal-orange);
-  --color-secondary-blue: var(--color-steel);
+  /* ── "Site Survey" palette — industrial slate + safety orange ───────────── */
+  --color-graphite: #0b1220;        /* deepest dark surface */
+  --color-graphite-raised: #0f172a; /* raised dark: bars, panels on dark */
+  --color-graphite-soft: #1e293b;   /* dark hairlines / inset fills */
+  --color-safety: #ea580c;          /* the single accent */
+  --color-safety-bright: #fb923c;   /* accent on dark surfaces (contrast-safe) */
+  --color-mist: #e9eef5;            /* alternating light section bg — tinted enough to read against white */
+  --color-mist-tint: #dbe3ec;       /* recessed fills on light */
+  --color-surface: #ffffff;         /* cards, content surfaces */
+  --color-slate-soft: #64748b;      /* muted text, captions */
+  --color-slate-deep: #334155;      /* body copy on light */
+  --color-hairline: #e2e8f0;        /* borders on light */
+
+  /* Aliases from the previous "Depth Gauge" system — the rest of the site
+     still references these names, so they now resolve to Site Survey values.
+     Remove once every page has been migrated to the names above. */
+  --color-ink: var(--color-graphite);
+  --color-ink-raised: var(--color-graphite-raised);
+  --color-signal-orange: var(--color-safety);
+  --color-concrete: var(--color-mist);
+  --color-concrete-tint: var(--color-mist-tint);
+  --color-paper: var(--color-surface);
+  --color-steel: var(--color-slate-soft);
+  --color-primary-navy: var(--color-graphite);
+  --color-accent-orange: var(--color-safety);
+  --color-secondary-blue: var(--color-slate-soft);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-mono-plex), ui-monospace, monospace;
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-heading), var(--font-body), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-mono-spec), ui-monospace, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,83 +66,93 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: 0px;
-  --radius-md: 2px;
-  --radius-lg: 2px;
-  --radius-xl: 3px;
-  --radius-2xl: 3px;
-  --radius-3xl: 4px;
-  --radius-4xl: 4px;
+
+  /* Site Survey rounds its corners — a deliberate break from the old 0px system */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-2xl: 18px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+
+  /* Elevation: soft, low-spread, slate-tinted — never pure black */
+  --shadow-panel: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-lift: 0 2px 4px rgba(15, 23, 42, 0.05), 0 12px 28px rgba(15, 23, 42, 0.10);
+  --shadow-deep: 0 24px 60px rgba(11, 18, 32, 0.22);
 }
 
 :root {
-  --radius: 0.125rem;
-  /* The Depth Gauge: Ink #0E0E0F + Signal Orange #F5820F. See DESIGN.md. */
-  --background: oklch(0.94 0.012 80);
-  --foreground: oklch(0.14 0 0);
-  --card: oklch(0.985 0.004 80);
-  --card-foreground: oklch(0.14 0 0);
-  --popover: oklch(0.985 0.004 80);
-  --popover-foreground: oklch(0.14 0 0);
-  --primary: oklch(0.14 0 0);
-  --primary-foreground: oklch(0.985 0.004 80);
-  --secondary: oklch(0.72 0.19 46);
-  --secondary-foreground: oklch(0.14 0 0);
-  --muted: oklch(0.9 0.014 75);
-  --muted-foreground: oklch(0.44 0.01 240);
-  --accent: oklch(0.72 0.19 46);
-  --accent-foreground: oklch(0.14 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.85 0.012 75);
-  --input: oklch(0.85 0.012 75);
-  --ring: oklch(0.72 0.19 46);
-  --chart-1: oklch(0.72 0.19 46);
-  --chart-2: oklch(0.14 0 0);
-  --chart-3: oklch(0.44 0.01 240);
-  --chart-4: oklch(0.6 0.15 60);
-  --chart-5: oklch(0.5 0.02 240);
-  --sidebar: oklch(0.94 0.012 80);
-  --sidebar-foreground: oklch(0.14 0 0);
-  --sidebar-primary: oklch(0.14 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0.004 80);
-  --sidebar-accent: oklch(0.9 0.014 75);
-  --sidebar-accent-foreground: oklch(0.14 0 0);
-  --sidebar-border: oklch(0.85 0.012 75);
-  --sidebar-ring: oklch(0.72 0.19 46);
+  --radius: 0.375rem;
+  /* Back-compat font aliases — the PPC landing page still names these. */
+  --font-inter: var(--font-body);
+  --font-mono-plex: var(--font-mono-spec);
+  /* "Site Survey": graphite slate #0B1220 + safety orange #EA580C. See DESIGN.md. */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #0f172a;
+  --primary-foreground: #f8fafc;
+  --secondary: #ebf0f5;
+  --secondary-foreground: #0f172a;
+  --muted: #ebf0f5;
+  --muted-foreground: #64748b;
+  --accent: #ea580c;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #ea580c;
+  --chart-1: #ea580c;
+  --chart-2: #0f172a;
+  --chart-3: #64748b;
+  --chart-4: #fb923c;
+  --chart-5: #94a3b8;
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #0f172a;
+  --sidebar-primary-foreground: #f8fafc;
+  --sidebar-accent: #ebf0f5;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #ea580c;
 }
 
 .dark {
-  --background: oklch(0.09 0 0);
-  --foreground: oklch(0.985 0.004 80);
-  --card: oklch(0.12 0 0);
-  --card-foreground: oklch(0.985 0.004 80);
-  --popover: oklch(0.12 0 0);
-  --popover-foreground: oklch(0.985 0.004 80);
-  --primary: oklch(0.985 0.004 80);
-  --primary-foreground: oklch(0.09 0 0);
-  --secondary: oklch(0.72 0.19 46);
-  --secondary-foreground: oklch(0.09 0 0);
-  --muted: oklch(0.19 0 0);
-  --muted-foreground: oklch(0.65 0.01 240);
-  --accent: oklch(0.72 0.19 46);
-  --accent-foreground: oklch(0.09 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.72 0.19 46);
-  --chart-1: oklch(0.72 0.19 46);
-  --chart-2: oklch(0.985 0.004 80);
-  --chart-3: oklch(0.65 0.01 240);
-  --chart-4: oklch(0.6 0.15 60);
-  --chart-5: oklch(0.5 0.02 240);
-  --sidebar: oklch(0.09 0 0);
-  --sidebar-foreground: oklch(0.985 0.004 80);
-  --sidebar-primary: oklch(0.985 0.004 80);
-  --sidebar-primary-foreground: oklch(0.09 0 0);
-  --sidebar-accent: oklch(0.19 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0.004 80);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.72 0.19 46);
+  --background: #0b1220;
+  --foreground: #f8fafc;
+  --card: #0f172a;
+  --card-foreground: #f8fafc;
+  --popover: #0f172a;
+  --popover-foreground: #f8fafc;
+  --primary: #f8fafc;
+  --primary-foreground: #0b1220;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #fb923c;
+  --accent-foreground: #0b1220;
+  --destructive: #f87171;
+  --border: rgba(248, 250, 252, 0.12);
+  --input: rgba(248, 250, 252, 0.16);
+  --ring: #fb923c;
+  --chart-1: #fb923c;
+  --chart-2: #f8fafc;
+  --chart-3: #94a3b8;
+  --chart-4: #ea580c;
+  --chart-5: #64748b;
+  --sidebar: #0b1220;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #f8fafc;
+  --sidebar-primary-foreground: #0b1220;
+  --sidebar-accent: #1e293b;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: rgba(248, 250, 252, 0.12);
+  --sidebar-ring: #fb923c;
 }
 
 /* Smooth scrolling */
@@ -145,14 +172,14 @@ html {
 
 /* Custom scrollbar - brand colors */
 :root {
-  --scrollbar-track: oklch(0.9 0.014 75);
-  --scrollbar-thumb: oklch(0.72 0.19 46);
-  --scrollbar-thumb-hover: oklch(0.6 0.19 46);
+  --scrollbar-track: #ebf0f5;
+  --scrollbar-thumb: #ea580c;
+  --scrollbar-thumb-hover: #c2410c;
 }
 .dark {
-  --scrollbar-track: oklch(0.19 0 0);
-  --scrollbar-thumb: oklch(0.72 0.19 46);
-  --scrollbar-thumb-hover: oklch(0.8 0.19 46);
+  --scrollbar-track: #1e293b;
+  --scrollbar-thumb: #fb923c;
+  --scrollbar-thumb-hover: #fdba74;
 }
 * {
   scrollbar-width: thin;
@@ -175,7 +202,7 @@ html {
 
 /* Selection color - brand */
 ::selection {
-  background: rgba(245, 130, 15, 0.28);
+  background: rgba(234, 88, 12, 0.24);
   color: var(--foreground);
 }
 
@@ -184,13 +211,13 @@ html {
   outline: none;
 }
 :focus-visible {
-  outline: 2px solid oklch(0.72 0.19 46);
+  outline: 2px solid #ea580c;
   outline-offset: 2px;
 }
 a:focus-visible,
 button:focus-visible,
 [tabindex="0"]:focus-visible {
-  outline: 2px solid oklch(0.72 0.19 46);
+  outline: 2px solid #ea580c;
   outline-offset: 2px;
 }
 
@@ -218,7 +245,7 @@ button:focus-visible,
   overflow: visible;
   clip: auto;
   white-space: normal;
-  background: #0e0e0f;
+  background: #0f172a;
   color: white;
   border-radius: 2px;
   font-weight: 600;
@@ -267,7 +294,8 @@ a:active {
     @apply overflow-x-hidden bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--font-heading), var(--font-body), ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -276,3 +304,79 @@ a:active {
     @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16;
   }
 }
+/* ─────────────────────────────────────────────────────────────────────────────
+   Site Survey — shared section primitives
+   Barlow Condensed is narrow and tall, so display type runs bigger and tighter
+   than the previous Space Grotesk scale or it reads undersized.
+   ───────────────────────────────────────────────────────────────────────────── */
+@layer components {
+  .display-xl {
+    font-family: var(--font-heading), sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5.4vw, 4.5rem);
+    line-height: 0.94;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .display-lg {
+    font-family: var(--font-heading), sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.125rem, 4.2vw, 3.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  .display-sm {
+    font-family: var(--font-heading), sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.375rem, 2vw, 1.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  /* Mono eyebrow with a leading rule — replaces the old centered pill badge */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-family: var(--font-mono-spec), monospace;
+    /* 12px floor: 10-11px uppercase mono at wide tracking is not comfortably readable */
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #c2410c; /* safety-700 — 4.5:1+ on the light mist background */
+  }
+  .eyebrow::before {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    background: currentColor;
+    flex: none;
+  }
+  /* On graphite surfaces the base safety orange only reaches ~4.5:1 at this size,
+     so dark sections use the brighter tint (~8.7:1) instead. */
+  .eyebrow-dark {
+    color: var(--color-safety-bright);
+  }
+  /* Mono spec label — the smallest type allowed anywhere in the system */
+  .spec-label {
+    font-family: var(--font-mono-spec), monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  /* Section rhythm — one class so every section breathes identically */
+  .section-y {
+    padding-block: clamp(4rem, 8vw, 7rem);
+  }
+}
+
+/* touch */
+
+
+
+
+
+
+

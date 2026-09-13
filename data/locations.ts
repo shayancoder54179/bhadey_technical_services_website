@@ -248,7 +248,7 @@ export const locationContent: Record<
         {
           question: "Can you scan thickened industrial floor slabs?",
           answer:
-            "Yes. Heavy industrial slabs in Mussafah and ICAD often carry dense reinforcement and can be considerably thicker than commercial floors. The GP8000 reads to 1 m in concrete, which covers the great majority of industrial slabs. Where a slab is thicker than we can image fully, we say so and report what we can confirm rather than implying full coverage.",
+            "Yes. Heavy industrial slabs in Mussafah and ICAD often carry dense reinforcement and can be considerably thicker than commercial floors. The GP8000 reads to 1.5 m in concrete, which covers the great majority of industrial slabs. Where a slab is thicker than we can image fully, we say so and report what we can confirm rather than implying full coverage.",
         },
       ],
     },

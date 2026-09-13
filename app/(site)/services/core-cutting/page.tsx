@@ -103,6 +103,11 @@ const coreCuttingData: ServicePageData = {
   },
   equipment: {
     title: "Equipment We Use",
+    image: {
+      src: "/images/WhatsApp Image 2025-12-28 at 00.56.41 (1).jpeg",
+      alt: "Diamond core drill rig cutting a concrete slab on a Bhadeya job site",
+      caption: "Our diamond core rig mid-cut, after the slab was GPR scanned.",
+    },
     name: "Professional Diamond Core Cutting Systems",
     description:
       "We use professional-grade diamond core cutting systems for reliability, precision and performance. Our equipment delivers clean, accurate cuts with minimal noise and vibration, and supports a full range of diameters from 12mm to 500mm. Combined with our pre-cut GPR scanning, we deliver safe core cutting services across Dubai, Abu Dhabi and the UAE.",
@@ -223,14 +228,14 @@ function CoreCuttingExtras() {
     <>
       {/* Size chart */}
       <section
-        className="bg-concrete py-16 md:py-20 lg:py-24 border-t border-steel/20"
+        className="section-y border-t border-hairline bg-mist"
         aria-labelledby="size-chart-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-          <h2 id="size-chart-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-4 tracking-tight">
+          <h2 id="size-chart-heading" className="display-lg mb-4 text-graphite">
             Core Hole Size Range: 12mm to 500mm
           </h2>
-          <p className="text-muted-foreground max-w-3xl mb-10">
+          <p className="mb-10 max-w-[70ch] text-slate-deep">
             We offer the full range of core diameters for construction and MEP works. From small anchor holes to large structural openings—all with GPR scanning before every cut.
           </p>
           <div className="overflow-x-auto">
@@ -238,13 +243,13 @@ function CoreCuttingExtras() {
               {CORE_SIZES.map((item) => (
                 <div
                   key={item.mm}
-                  className="flex flex-col items-center border border-steel/20 bg-paper p-4 min-w-[100px]"
+                  className="flex min-w-[110px] flex-col items-center rounded-xl border border-hairline bg-surface p-4 shadow-panel transition-all duration-300 hover:-translate-y-1 hover:shadow-lift"
                 >
-                  <span className="flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+                  <span className="flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                     <CircleDot className="size-6" aria-hidden />
                   </span>
-                  <span className="font-mono font-semibold text-foreground text-lg mt-2 tabular-nums">{item.label}</span>
-                  <span className="text-xs text-muted-foreground text-center mt-1">{item.use}</span>
+                  <span className="mt-2 font-mono text-lg font-bold tabular-nums text-graphite">{item.label}</span>
+                  <span className="mt-1 text-center text-xs text-slate-deep">{item.use}</span>
                 </div>
               ))}
             </div>
@@ -254,27 +259,27 @@ function CoreCuttingExtras() {
 
       {/* GPR Scanning Before Every Cut */}
       <section
-        className="bg-paper py-16 md:py-20 lg:py-24 border-t border-steel/20"
+        className="section-y border-t border-hairline bg-surface"
         aria-labelledby="gpr-safety-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-          <div className="max-w-3xl mx-auto border border-steel/20 bg-concrete/50 p-8 md:p-10">
+          <div className="mx-auto max-w-3xl rounded-xl border border-hairline bg-mist p-8 shadow-panel md:p-10">
             <div className="flex items-start gap-4 mb-6">
-              <span className="flex size-14 shrink-0 items-center justify-center bg-signal-orange/10 text-signal-orange">
+              <span className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-safety/10 text-safety">
                 <Shield className="size-7" aria-hidden />
               </span>
               <div>
-                <h2 id="gpr-safety-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-2 tracking-tight">
+                <h2 id="gpr-safety-heading" className="display-lg mb-2 text-graphite">
                   GPR Scanning Before Every Cut
                 </h2>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="leading-relaxed text-slate-deep">
                   We never cut blind. Before any core cutting we perform GPR scanning with the Proceq GP8000 to locate rebar, post-tension cables and utilities. We then mark safe positions and only cut where approved. This protects the structure, avoids costly damage and keeps your project on track. It is our standard practice on every job in Dubai and the UAE.
                 </p>
               </div>
             </div>
             <Link
               href="/services/gpr-scanning"
-              className="inline-flex items-center border-b-2 border-transparent text-foreground font-semibold hover:border-signal-orange"
+              className="inline-flex items-center gap-1.5 border-b-2 border-safety pb-0.5 font-semibold text-graphite transition-colors hover:text-safety"
             >
               Learn more about our GPR scanning →
             </Link>
@@ -284,22 +289,22 @@ function CoreCuttingExtras() {
 
       {/* Professional equipment showcase */}
       <section
-        className="bg-concrete py-16 md:py-20 lg:py-24 border-t border-steel/20"
+        className="section-y border-t border-hairline bg-mist"
         aria-labelledby="equipment-showcase-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-          <h2 id="equipment-showcase-heading" className="text-2xl md:text-3xl font-semibold text-foreground mb-6 tracking-tight">
+          <h2 id="equipment-showcase-heading" className="display-lg mb-6 text-graphite">
             Professional Equipment Showcase
           </h2>
           <div className="flex flex-col md:flex-row gap-6 items-start max-w-4xl">
-            <span className="flex size-20 shrink-0 items-center justify-center bg-signal-orange/10 text-signal-orange">
+            <span className="flex size-20 shrink-0 items-center justify-center rounded-xl bg-safety/10 text-safety">
               <Wrench className="size-10" aria-hidden />
             </span>
             <div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                We use <strong className="text-foreground">professional diamond</strong> core cutting systems for all our core cutting work. Our equipment is the preferred choice on major construction projects in the UAE and worldwide, offering reliability, precision and strong support. Our team is trained on professional-grade equipment and we maintain our tools to the highest standards—so you get clean, accurate holes and minimal downtime on site.
+              <p className="mb-4 leading-relaxed text-slate-deep">
+                We use <strong className="font-semibold text-graphite">professional diamond</strong> core cutting systems for all our core cutting work. Our equipment is the preferred choice on major construction projects in the UAE and worldwide, offering reliability, precision and strong support. Our team is trained on professional-grade equipment and we maintain our tools to the highest standards—so you get clean, accurate holes and minimal downtime on site.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="leading-relaxed text-slate-deep">
                 Combined with our pre-cut GPR scanning, our professional core cutting allows us to deliver the safest, most reliable core cutting service in Dubai, Abu Dhabi and across the UAE.
               </p>
             </div>

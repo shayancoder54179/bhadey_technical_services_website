@@ -3,9 +3,9 @@ import {
   Phone,
   Mail,
   Clock,
-  MessageCircle,
   MapPin,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -60,28 +60,28 @@ export default function ContactPage() {
 
       {/* Page Hero */}
       <section
-        className={`relative py-16 md:py-20 lg:py-24 overflow-hidden ${sectionClass}`}
+        className={`relative section-y overflow-hidden ${sectionClass}`}
         aria-labelledby="contact-hero-title"
       >
-        <div className="absolute inset-0 bg-ink" />
+        <div className="absolute inset-0 bg-graphite" />
         <div
           className="absolute inset-0"
+          aria-hidden
           style={{
             backgroundImage:
-              "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
+              "radial-gradient(120% 90% at 12% 20%, rgba(234,88,12,0.16) 0%, transparent 60%)",
           }}
         />
-        <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+        <div className="relative mx-auto max-w-7xl px-6 pb-16 sm:px-8 lg:px-12 xl:px-16">
           <header className="max-w-3xl">
-            <h1
-              id="contact-hero-title"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-paper mb-4 tracking-tight"
-            >
-              Contact Us
+            <p className="eyebrow eyebrow-dark">Reply within 1&ndash;2 hours</p>
+            <h1 id="contact-hero-title" className="display-xl mt-5 text-white">
+              Tell us what needs scanning, cutting or digging.
             </h1>
-            <p className="text-lg text-paper/80">
-              Get a free quote for GPR scanning, core cutting, or excavation
-              services
+            <p className="mt-5 max-w-[54ch] text-[1.0625rem] leading-relaxed text-white/75">
+              Free quotes for GPR scanning, core cutting and excavation anywhere
+              in the UAE. Call, WhatsApp, or send the form &mdash; whichever is
+              quicker for you.
             </p>
           </header>
         </div>
@@ -89,7 +89,7 @@ export default function ContactPage() {
 
       {/* Contact Info Cards */}
       <section
-        className="relative -mt-10 z-10"
+        className="relative z-10 -mt-14 pb-4"
         aria-labelledby="contact-cards-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -99,60 +99,60 @@ export default function ContactPage() {
           >
             Contact options
           </div>
-          <div className="grid grid-cols-1 gap-px border border-steel/20 bg-steel/20 md:grid-cols-3">
-            <div className="bg-paper p-6">
-              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            <div className="rounded-xl border border-hairline bg-surface p-6 shadow-lift">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                 <Phone className="size-6" aria-hidden />
               </div>
-              <h2 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Call Us</h2>
+              <h2 className="display-sm mb-2 text-graphite">Call Us</h2>
               <a
                 href={`tel:${company.phoneClean}`}
-                className="font-mono text-lg font-semibold text-foreground hover:text-signal-orange block"
+                className="block font-mono text-lg font-semibold text-graphite transition-colors hover:text-safety"
               >
                 {company.phone}
               </a>
-              <p className="text-sm text-muted-foreground mt-1">
+              <p className="mt-1 text-sm text-slate-soft">
                 Available during business hours
               </p>
               <a
                 href={company.socialLinks.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-[#25D366] hover:underline mt-2"
+                className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#128C4B] transition-colors hover:text-[#25D366]"
               >
-                <MessageCircle className="size-4" />
+                <WhatsAppIcon className="size-4" aria-hidden />
                 WhatsApp
               </a>
             </div>
 
-            <div className="bg-paper p-6">
-              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+            <div className="rounded-xl border border-hairline bg-surface p-6 shadow-lift">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                 <Mail className="size-6" aria-hidden />
               </div>
-              <h2 className="text-xl font-semibold text-foreground mb-2 tracking-tight">Email Us</h2>
+              <h2 className="display-sm mb-2 text-graphite">Email Us</h2>
               <a
                 href={`mailto:${company.email}`}
-                className="text-lg font-semibold text-foreground hover:text-signal-orange block break-all"
+                className="block break-all font-semibold text-graphite transition-colors hover:text-safety"
               >
                 {company.email}
               </a>
-              <p className="text-sm text-muted-foreground mt-1">
+              <p className="mt-1 text-sm text-slate-soft">
                 We respond within 2 hours
               </p>
             </div>
 
-            <div className="bg-paper p-6">
-              <div className="mb-3 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange">
+            <div className="rounded-xl border border-hairline bg-surface p-6 shadow-lift">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety">
                 <Clock className="size-6" aria-hidden />
               </div>
-              <h2 className="text-xl font-semibold text-foreground mb-2 tracking-tight">
+              <h2 className="display-sm mb-2 text-graphite">
                 Working Hours
               </h2>
-              <p className="text-foreground font-medium">
+              <p className="font-medium text-graphite">
                 Sun - Thu: 8:00 AM - 6:00 PM
               </p>
-              <p className="text-muted-foreground">Saturday: 9:00 AM - 3:00 PM</p>
-              <p className="text-muted-foreground">Friday: Closed</p>
+              <p className="text-slate-deep">Saturday: 9:00 AM - 3:00 PM</p>
+              <p className="text-slate-deep">Friday: Closed</p>
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function ContactPage() {
 
       {/* Main Section - Split Layout */}
       <section
-        className="py-16 md:py-20 lg:py-24 bg-concrete"
+        className="section-y bg-mist"
         aria-labelledby="contact-form-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -173,11 +173,11 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left - Contact Form */}
             <div className="lg:col-span-3">
-              <div className="border border-steel/20 bg-paper p-6 md:p-8">
-                <h3 className="text-2xl font-semibold text-foreground mb-2 tracking-tight">
+              <div className="border border-hairline bg-surface p-6 md:p-8">
+                <h3 className="display-lg mb-2 text-graphite">
                   Get a Free Quote
                 </h3>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-slate-deep mb-8">
                   Fill out the form below and we&apos;ll get back to you within
                   1-2 hours.
                 </p>
@@ -187,14 +187,14 @@ export default function ContactPage() {
 
             {/* Right - Additional Info */}
             <div className="lg:col-span-2 space-y-3">
-              <div className="border border-steel/20 bg-paper p-6">
+              <div className="rounded-xl border border-hairline bg-surface p-6 shadow-lift">
                 <Badge
                   variant="outline"
-                  className="mb-4 rounded-none border-signal-orange text-signal-orange"
+                  className="mb-4 rounded-md border-safety text-safety"
                 >
                   Quick Response Guaranteed
                 </Badge>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-slate-deep mb-6">
                   We typically respond within 1-2 hours during business hours.
                 </p>
 
@@ -202,32 +202,32 @@ export default function ContactPage() {
                   href={company.socialLinks.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 w-full h-14 bg-[#25D366] text-white font-semibold hover:bg-[#20BD5A] transition-colors mb-6"
+                  className="mb-6 flex h-14 w-full items-center justify-center gap-3 rounded-md bg-[#25D366] font-semibold text-white shadow-lift transition-colors hover:bg-[#20BD5A]"
                 >
-                  <MessageCircle className="size-6" />
+                  <WhatsAppIcon className="size-6" aria-hidden />
                   Chat on WhatsApp
                 </a>
 
-                <p className="text-sm text-muted-foreground mb-3">
+                <p className="text-sm text-slate-deep mb-3">
                   For urgent inquiries, call us directly:
                 </p>
                 <a
                   href={`tel:${company.phoneClean}`}
-                  className="font-mono text-lg font-semibold text-foreground hover:text-signal-orange"
+                  className="font-mono text-lg font-semibold text-graphite hover:text-safety"
                 >
                   {company.phone}
                 </a>
               </div>
 
-              <div className="border border-steel/20 bg-paper p-6">
-                <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2 tracking-tight">
-                  <MapPin className="size-5 text-signal-orange" />
+              <div className="rounded-xl border border-hairline bg-surface p-6 shadow-lift">
+                <h4 className="font-semibold text-graphite mb-3 flex items-center gap-2 tracking-tight">
+                  <MapPin className="size-5 text-safety" />
                   Service Areas
                 </h4>
-                <ul className="grid grid-cols-1 gap-2 text-sm text-muted-foreground" role="list">
+                <ul className="grid grid-cols-1 gap-2 text-sm text-slate-deep" role="list">
                   {company.serviceAreas.map((city) => (
                     <li key={city} className="flex items-center gap-2">
-                      <span className="size-1.5 bg-signal-orange" />
+                      <span className="size-1.5 bg-safety" />
                       {city}
                     </li>
                   ))}
@@ -242,17 +242,17 @@ export default function ContactPage() {
       {/* What to expect — reduces enquiry friction and tells people what
           detail to send so the first quote is the final one. */}
       <section
-        className="py-16 md:py-20 lg:py-24"
+        className="section-y"
         aria-labelledby="what-happens-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="what-happens-heading"
-            className="mb-4 text-2xl font-semibold tracking-tight text-foreground md:text-3xl"
+            className="display-lg mb-4 text-graphite"
           >
             What happens after you get in touch
           </h2>
-          <p className="mb-10 max-w-2xl text-muted-foreground">
+          <p className="mb-10 max-w-2xl text-slate-deep">
             Most enquiries reach us on WhatsApp, and most are answered the same
             working day. Here is how a job typically runs from first message to
             finished work.
@@ -260,13 +260,13 @@ export default function ContactPage() {
 
           <ol className="grid gap-8 md:grid-cols-3">
             <li>
-              <span className="font-mono text-xs font-semibold tracking-wider text-signal-orange uppercase">
+              <span className="spec-label text-safety">
                 Step 1 — Same day
               </span>
               <h3 className="mt-2 text-lg font-semibold tracking-tight">
                 We scope the job
               </h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground">
+              <p className="mt-2 leading-relaxed text-slate-deep">
                 We ask what needs scanning or cutting, where the site is, what
                 the element is, and when you need it. If the answer is
                 straightforward we quote on the spot. If the site is complex, we
@@ -274,13 +274,13 @@ export default function ContactPage() {
               </p>
             </li>
             <li>
-              <span className="font-mono text-xs font-semibold tracking-wider text-signal-orange uppercase">
+              <span className="spec-label text-safety">
                 Step 2 — Before mobilising
               </span>
               <h3 className="mt-2 text-lg font-semibold tracking-tight">
                 Access and permits
               </h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground">
+              <p className="mt-2 leading-relaxed text-slate-deep">
                 Where the site needs a permit to work, a gate pass or an
                 induction, we sort that out before we travel. Where the work has
                 to happen at night or outside trading hours, we schedule to the
@@ -288,13 +288,13 @@ export default function ContactPage() {
               </p>
             </li>
             <li>
-              <span className="font-mono text-xs font-semibold tracking-wider text-signal-orange uppercase">
+              <span className="spec-label text-safety">
                 Step 3 — On site
               </span>
               <h3 className="mt-2 text-lg font-semibold tracking-tight">
                 Scan, mark, then cut
               </h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground">
+              <p className="mt-2 leading-relaxed text-slate-deep">
                 Findings are marked directly on the surface and issued as a PDF
                 report. Only then does anything get cut. If we find something
                 where you need the hole, you hear it before the cut, not after.
@@ -302,11 +302,11 @@ export default function ContactPage() {
             </li>
           </ol>
 
-          <div className="mt-12 border-l-4 border-signal-orange bg-concrete py-5 pr-5 pl-6">
+          <div className="mt-12 border-l-4 border-safety bg-mist py-5 pr-5 pl-6">
             <h3 className="font-semibold tracking-tight">
               Send these six things and we can quote properly
             </h3>
-            <ul className="mt-3 grid gap-x-8 gap-y-1.5 text-muted-foreground sm:grid-cols-2">
+            <ul className="mt-3 grid gap-x-8 gap-y-1.5 text-slate-deep sm:grid-cols-2">
               <li>The site address, and which floor</li>
               <li>Roughly how much area needs scanning</li>
               <li>What the element is — slab, wall, column or ground</li>
@@ -314,7 +314,7 @@ export default function ContactPage() {
               <li>What documentation you need at the end</li>
               <li>Your target date</li>
             </ul>
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-4 text-sm text-slate-deep">
               A quote given without these is a guess, and guesses get revised on
               site. Six lines is usually enough for a number that holds.
             </p>
@@ -323,17 +323,17 @@ export default function ContactPage() {
       </section>
 
       <section
-        className="bg-paper py-16 md:py-20 lg:py-24"
+        className="section-y border-t border-hairline bg-surface"
         aria-labelledby="service-areas-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="service-areas-heading"
-            className="text-2xl md:text-3xl font-semibold text-foreground mb-4 text-center tracking-tight"
+            className="display-lg mb-4 text-center text-graphite"
           >
             Service Areas
           </h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
+          <p className="text-center text-slate-deep max-w-2xl mx-auto mb-10">
             We provide GPR scanning, core cutting, and excavation services across
             all major UAE emirates.
           </p>
@@ -341,9 +341,9 @@ export default function ContactPage() {
             {company.serviceAreas.map((city) => (
               <span
                 key={city}
-                className="inline-flex items-center gap-2 border border-steel/20 bg-concrete px-5 py-2.5 text-foreground font-medium"
+                className="inline-flex items-center gap-2 border border-hairline bg-mist px-5 py-2.5 text-graphite font-medium"
               >
-                <MapPin className="size-4 text-signal-orange" />
+                <MapPin className="size-4 text-safety" />
                 {city}
               </span>
             ))}
@@ -353,13 +353,13 @@ export default function ContactPage() {
 
       {/* FAQ Section */}
       <section
-        className="bg-concrete py-16 md:py-20 lg:py-24"
+        className="section-y border-t border-hairline bg-mist"
         aria-labelledby="contact-faq-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="contact-faq-heading"
-            className="text-2xl md:text-3xl font-semibold text-foreground mb-10 text-center tracking-tight"
+            className="display-lg mb-10 text-center text-graphite"
           >
             Frequently Asked Questions
           </h2>
@@ -370,7 +370,7 @@ export default function ContactPage() {
                   <AccordionTrigger className="text-left">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                  <AccordionContent className="text-slate-deep leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

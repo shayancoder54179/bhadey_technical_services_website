@@ -47,6 +47,10 @@ const oversizedCargoPageData: ServicePageData = {
     ctaPrimaryLabel: "Get Free Quote",
     ctaSecondaryLabel: "Call Now: +971 55 692 6286",
     ctaSecondaryHref: "tel:+971556926286",
+    image: {
+      src: "/images/svc-oversized-cargo.webp",
+      alt: "Oversized load on a multi-axle trailer with ground crew during a supervised move",
+    },
   },
   overview: {
     title: "What is Oversized Cargo Movement?",

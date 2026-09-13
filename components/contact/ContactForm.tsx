@@ -122,11 +122,11 @@ ${message}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <p className="text-sm text-muted-foreground">
+      <p className="text-sm text-slate-deep">
         Your inquiry details will be sent directly to our team via WhatsApp for the fastest response.
       </p>
       <div className="space-y-2">
-        <label htmlFor="fullName" className="text-sm font-medium text-foreground">
+        <label htmlFor="fullName" className="text-sm font-medium text-graphite">
           Full Name <span className="text-destructive">*</span>
         </label>
         <Input
@@ -146,7 +146,7 @@ ${message}
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="phone" className="text-sm font-medium text-foreground">
+        <label htmlFor="phone" className="text-sm font-medium text-graphite">
           Phone Number <span className="text-destructive">*</span>
         </label>
         <Input
@@ -167,7 +167,7 @@ ${message}
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
-          <label htmlFor="serviceRequired" className="text-sm font-medium text-foreground">
+          <label htmlFor="serviceRequired" className="text-sm font-medium text-graphite">
             Service Required
           </label>
           <Select
@@ -191,7 +191,7 @@ ${message}
           </Select>
         </div>
         <div className="space-y-2">
-          <label htmlFor="projectLocation" className="text-sm font-medium text-foreground">
+          <label htmlFor="projectLocation" className="text-sm font-medium text-graphite">
             Project Location
           </label>
           <Select
@@ -217,7 +217,7 @@ ${message}
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="message" className="text-sm font-medium text-foreground">
+        <label htmlFor="message" className="text-sm font-medium text-graphite">
           Message / Project Details <span className="text-destructive">*</span>
         </label>
         <Textarea
@@ -239,12 +239,12 @@ ${message}
       <div className="space-y-2">
         <Button
           type="submit"
-          className="h-12 w-full gap-2 rounded-none bg-signal-orange text-ink hover:bg-signal-orange/90 focus-visible:ring-signal-orange"
+          className="h-12 w-full gap-2 rounded-md bg-safety text-graphite hover:bg-safety/90 focus-visible:ring-safety"
         >
           <MessageCircle className="size-5 shrink-0" aria-hidden />
           Send via WhatsApp
         </Button>
-        <p className="text-xs text-muted-foreground text-center">
+        <p className="text-xs text-slate-deep text-center">
           You&apos;ll be redirected to WhatsApp with your inquiry details
         </p>
       </div>
