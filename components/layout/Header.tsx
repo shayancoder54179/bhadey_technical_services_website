@@ -4,18 +4,9 @@ import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Menu,
-  Phone,
-  ChevronDown,
-  Radar,
-  CircleDot,
-  Shovel,
-  Layers,
-  Magnet,
-  Truck,
-} from "lucide-react";
+import { Menu, Phone, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/layout/Logo";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -26,6 +17,7 @@ import {
 } from "@/components/ui/sheet";
 import { company } from "@/data/company";
 import { services } from "@/data/services";
+import { SERVICE_PHOTOS, SERVICE_PHOTO_POSITION } from "@/lib/service-photos";
 import { trackGetQuoteClick, trackPhoneClick, trackWhatsAppClick } from "@/lib/tracking";
 
 const navLinks = [
@@ -36,14 +28,6 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  Radar,
-  CircleDot,
-  Shovel,
-  Layers,
-  Magnet,
-  Truck,
-};
 
 const WHATSAPP_URL = `${company.socialLinks.whatsapp}?text=${encodeURIComponent(
   "Hello, I would like to inquire about your GPR scanning and technical services."
@@ -51,10 +35,10 @@ const WHATSAPP_URL = `${company.socialLinks.whatsapp}?text=${encodeURIComponent(
 
 const navLinkClass = (active: boolean) =>
   cn(
-    "border-b-2 border-transparent px-1 py-2 text-sm font-medium transition-colors",
+    "border-b-2 border-transparent px-1 py-2 text-sm font-semibold tracking-wide transition-colors",
     active
-      ? "border-signal-orange text-signal-orange"
-      : "text-paper/75 hover:border-signal-orange/50 hover:text-paper"
+      ? "border-safety text-safety"
+      : "text-slate-deep hover:border-safety/40 hover:text-graphite"
   );
 
 export function Header() {
@@ -80,8 +64,10 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 h-20 border-b border-white/10 transition-colors duration-300",
-        scrolled ? "bg-ink-raised/95 backdrop-blur-sm" : "bg-ink-raised"
+        "fixed top-0 left-0 right-0 z-50 h-20 border-b transition-all duration-300",
+        scrolled
+          ? "border-hairline bg-surface/95 shadow-panel backdrop-blur-md"
+          : "border-transparent bg-surface"
       )}
       role="banner"
     >
@@ -89,22 +75,15 @@ export function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center bg-paper px-2 py-1.5 transition-opacity hover:opacity-90"
+          className="flex items-center transition-opacity hover:opacity-80"
           aria-label="Bhadeya Technical Services - Home"
         >
-          <Image
-            src="/images/bts_logo.png"
-            alt="Bhadeya Technical Services LLC - GPR scanning diamond core cutting excavation Dubai UAE"
-            width={180}
-            height={60}
-            priority={true}
-            className="h-9 w-auto md:h-10 object-contain"
-          />
+          <Logo tone="dark" size="md" priority />
         </Link>
 
         {/* Desktop nav */}
         <nav
-          className="hidden items-center gap-2 lg:flex"
+          className="hidden h-full items-center gap-2 lg:flex"
           aria-label="Main navigation"
         >
           <Link href="/" className={navLinkClass(isActive("/"))}>
@@ -112,8 +91,11 @@ export function Header() {
           </Link>
 
           {/* Services dropdown */}
+          {/* full-height wrapper so `top-full` anchors the panel to the bottom of
+              the header bar rather than the bottom of the button, which used to
+              make the panel overlap the logo */}
           <div
-            className="relative"
+            className="relative flex h-full items-center"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
@@ -135,31 +117,45 @@ export function Header() {
             </button>
             {servicesOpen && (
               <div
-                className="absolute left-1/2 top-full z-50 mt-0 w-[min(90vw,640px)] -translate-x-1/2 border border-white/10 bg-ink-raised p-4"
+                className="absolute left-1/2 top-full z-50 mt-0 w-[min(92vw,720px)] -translate-x-1/2 rounded-b-xl border border-hairline border-t-0 bg-surface p-4 shadow-lift"
                 role="menu"
               >
                 <div className="grid grid-cols-1 gap-1 sm:grid-cols-2">
                   {services.map((service) => {
-                    const Icon = serviceIcons[service.icon] ?? Radar;
+                    const photo = SERVICE_PHOTOS[service.id];
+                    const position =
+                      SERVICE_PHOTO_POSITION[service.id] ?? "object-center";
                     return (
                       <Link
                         key={service.id}
                         href={`/services/${service.slug}`}
-                        className="flex gap-3 p-3 transition-colors hover:bg-white/5"
+                        className="group flex gap-3.5 rounded-lg p-2.5 transition-colors hover:bg-mist"
                         role="menuitem"
                         onClick={() => setServicesOpen(false)}
                       >
-                        <div className="flex size-10 shrink-0 items-center justify-center bg-signal-orange/10 text-signal-orange">
-                          <Icon className="size-5" aria-hidden />
-                        </div>
-                        <div className="min-w-0">
-                          <span className="font-semibold text-paper">
+                        <span className="relative size-16 shrink-0 overflow-hidden rounded-md bg-graphite">
+                          {photo && (
+                            <Image
+                              src={photo}
+                              alt=""
+                              fill
+                              aria-hidden
+                              sizes="64px"
+                              className={cn(
+                                "object-cover transition-transform duration-500 group-hover:scale-105",
+                                position
+                              )}
+                            />
+                          )}
+                        </span>
+                        <span className="min-w-0">
+                          <span className="font-display text-base font-semibold text-graphite group-hover:text-safety">
                             {service.title}
                           </span>
-                          <p className="mt-0.5 line-clamp-2 text-xs text-paper/60">
+                          <span className="mt-0.5 line-clamp-2 block text-xs leading-snug text-slate-soft">
                             {service.shortDescription}
-                          </p>
-                        </div>
+                          </span>
+                        </span>
                       </Link>
                     );
                   })}
@@ -180,7 +176,7 @@ export function Header() {
           <a
             href={`tel:${company.phoneClean}`}
             onClick={() => trackPhoneClick(company.phoneClean)}
-            className="flex items-center gap-2 font-mono text-sm text-paper/80 transition-colors hover:text-signal-orange"
+            className="flex items-center gap-2 font-mono text-sm font-medium text-slate-deep transition-colors hover:text-safety"
             aria-label={`Call us: ${company.phone}`}
           >
             <Phone className="size-4 shrink-0" aria-hidden />
@@ -189,7 +185,7 @@ export function Header() {
           <Button
             asChild
             size="default"
-            className="rounded-none border border-transparent bg-signal-orange font-semibold text-ink hover:border-ink hover:bg-signal-orange"
+            className="rounded-md bg-safety font-semibold text-white shadow-panel transition-all hover:bg-safety/90 hover:shadow-lift"
           >
             <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("header")}>
               Get Free Quote
@@ -205,13 +201,13 @@ export function Header() {
               href="https://wa.me/971556926286?text=Hello, I would like to inquire about your GPR scanning services."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-signal-orange px-3 py-1.5 text-xs font-semibold text-ink transition-opacity hover:opacity-90"
+              className="rounded-md bg-safety px-3 py-2 text-xs font-semibold text-white transition-opacity hover:opacity-90"
               onClick={() => trackWhatsAppClick("mobile_header")}
             >
               Free Quote
             </a>
             <SheetTrigger
-              className="flex size-10 items-center justify-center text-paper hover:bg-white/10"
+              className="flex size-11 items-center justify-center rounded-md text-graphite transition-colors hover:bg-mist-tint"
               aria-label="Open menu"
             >
               <Menu className="size-6" aria-hidden />
@@ -219,40 +215,31 @@ export function Header() {
           </div>
           <SheetContent
             side="right"
-            className="flex w-full max-w-sm flex-col border-l border-white/10 bg-ink text-paper"
+            className="flex w-full max-w-sm flex-col border-l border-hairline bg-surface text-graphite"
             showCloseButton={true}
           >
             <SheetHeader>
               <Link href="/" className="mb-2 block w-fit" onClick={() => setMobileOpen(false)}>
-                <div className="inline-block bg-paper px-2 py-1.5">
-                  <Image
-                    src="/images/bts_logo.png"
-                    alt="Bhadeya Technical Services LLC - GPR scanning core cutting Dubai UAE"
-                    width={180}
-                    height={60}
-                    className="h-11 w-auto object-contain"
-                    loading="lazy"
-                  />
-                </div>
+                <Logo tone="dark" size="md" />
               </Link>
               <SheetTitle className="sr-only">Menu</SheetTitle>
             </SheetHeader>
             <nav className="flex flex-1 flex-col gap-1 overflow-y-auto" aria-label="Mobile navigation">
               <Link
                 href="/"
-                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
+                className="rounded-md px-3 py-3 font-semibold text-slate-deep transition-colors hover:bg-mist-tint hover:text-graphite"
                 onClick={() => setMobileOpen(false)}
               >
                 Home
               </Link>
-              <span className="mt-2 px-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper/50">
+              <span className="mt-3 px-3 font-mono text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-slate-soft">
                 Services
               </span>
               {services.map((service) => (
                 <Link
                   key={service.id}
                   href={`/services/${service.slug}`}
-                  className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
+                  className="rounded-md px-3 py-3 font-semibold text-slate-deep transition-colors hover:bg-mist-tint hover:text-graphite"
                   onClick={() => setMobileOpen(false)}
                 >
                   {service.title}
@@ -260,29 +247,29 @@ export function Header() {
               ))}
               <Link
                 href="/projects"
-                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
+                className="rounded-md px-3 py-3 font-semibold text-slate-deep transition-colors hover:bg-mist-tint hover:text-graphite"
                 onClick={() => setMobileOpen(false)}
               >
                 Projects
               </Link>
               <Link
                 href="/about"
-                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
+                className="rounded-md px-3 py-3 font-semibold text-slate-deep transition-colors hover:bg-mist-tint hover:text-graphite"
                 onClick={() => setMobileOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
+                className="rounded-md px-3 py-3 font-semibold text-slate-deep transition-colors hover:bg-mist-tint hover:text-graphite"
                 onClick={() => { setMobileOpen(false); trackGetQuoteClick(); }}
               >
                 Contact
               </Link>
-              <div className="my-4 border-t border-white/10" />
+              <div className="my-4 border-t border-hairline" />
               <a
                 href={`tel:${company.phoneClean}`}
-                className="flex items-center gap-2 px-3 py-2.5 font-medium text-paper hover:bg-white/5"
+                className="flex items-center gap-2 rounded-md px-3 py-3 font-semibold text-slate-deep transition-colors hover:bg-mist-tint hover:text-graphite"
                 onClick={() => { setMobileOpen(false); trackPhoneClick(); }}
               >
                 <Phone className="size-4" aria-hidden />
@@ -290,7 +277,7 @@ export function Header() {
               </a>
               <a
                 href={`mailto:${company.email}`}
-                className="px-3 py-2.5 font-medium text-paper hover:bg-white/5"
+                className="rounded-md px-3 py-3 font-semibold text-slate-deep transition-colors hover:bg-mist-tint hover:text-graphite"
                 onClick={() => setMobileOpen(false)}
               >
                 {company.email}
@@ -298,7 +285,7 @@ export function Header() {
               <Button
                 asChild
                 size="lg"
-                className="mt-4 w-full rounded-none bg-signal-orange font-semibold text-ink hover:bg-signal-orange/90"
+                className="mt-4 w-full rounded-md bg-safety font-semibold text-white hover:bg-safety/90"
               >
                 <Link
                   href={WHATSAPP_URL}

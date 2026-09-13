@@ -20,7 +20,7 @@ export default function NotFound() {
         aria-label="Page not found"
       >
         <div
-          className="absolute inset-0 bg-concrete"
+          className="absolute inset-0 bg-mist"
           style={{
             backgroundImage:
               "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(245,130,15,0.06) 0%, transparent 50%)",
@@ -37,13 +37,13 @@ export default function NotFound() {
               className="h-14 w-auto md:h-16 object-contain"
             />
           </Link>
-          <p className="font-mono text-6xl sm:text-7xl font-bold text-signal-orange/30 mb-2">
+          <p className="font-mono text-6xl sm:text-7xl font-bold text-safety/30 mb-2">
             404
           </p>
-          <h1 className="text-2xl sm:text-3xl font-semibold text-ink mb-4 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-semibold text-graphite mb-4 tracking-tight">
             Page Not Found
           </h1>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-slate-deep mb-8">
             The page you are looking for does not exist or has been moved.
           </p>
 
@@ -53,14 +53,14 @@ export default function NotFound() {
           >
             <Link
               href="/"
-              className="inline-flex items-center gap-2 border border-transparent bg-signal-orange px-5 py-2.5 font-semibold text-ink transition-colors hover:border-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal-orange"
+              className="inline-flex items-center gap-2 border border-transparent bg-safety px-5 py-2.5 font-semibold text-graphite transition-colors hover:border-graphite focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-safety"
             >
               <Home className="size-4" aria-hidden />
               Homepage
             </Link>
             <Link
               href="/services/gpr-scanning"
-              className="inline-flex items-center gap-2 border-2 border-ink px-5 py-2.5 font-semibold text-ink transition-colors hover:bg-ink/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+              className="inline-flex items-center gap-2 border-2 border-graphite px-5 py-2.5 font-semibold text-graphite transition-colors hover:bg-graphite/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
             >
               <Wrench className="size-4" aria-hidden />
               Our Services
@@ -68,17 +68,17 @@ export default function NotFound() {
           </nav>
 
           <section
-            className="border border-steel/20 bg-paper p-6 text-left"
+            className="rounded-xl border border-hairline bg-surface p-6 text-left shadow-panel"
             aria-labelledby="contact-heading"
           >
-            <h2 id="contact-heading" className="text-lg font-semibold text-foreground mb-3 tracking-tight">
+            <h2 id="contact-heading" className="display-sm mb-3 text-graphite">
               Need help? Contact us
             </h2>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm text-slate-deep">
               <li>
                 <a
                   href={`tel:${company.phoneClean}`}
-                  className="inline-flex items-center gap-2 font-mono text-foreground hover:text-signal-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal-orange"
+                  className="inline-flex items-center gap-2 font-mono text-graphite hover:text-safety focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-safety"
                   aria-label={`Call ${company.phone}`}
                 >
                   <Phone className="size-4 shrink-0" aria-hidden />
@@ -88,7 +88,7 @@ export default function NotFound() {
               <li>
                 <a
                   href={`mailto:${company.email}`}
-                  className="inline-flex items-center gap-2 text-foreground hover:text-signal-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal-orange"
+                  className="inline-flex items-center gap-2 text-graphite hover:text-safety focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-safety"
                   aria-label={`Email ${company.email}`}
                 >
                   <Mail className="size-4 shrink-0" aria-hidden />

@@ -36,7 +36,7 @@ const FEATURES = [
   {
     title: "Concrete & Ground Scanning",
     description:
-      "Two Proceq radars, not one. The GP8000 reads up to 1m into concrete for rebar and post-tension cables; the GS8000 reads 5–10m into the ground for buried utilities before excavation.",
+      "Two Proceq radars, not one. The GP8000 reads up to 1.5 m into concrete for rebar and post-tension cables; the GS8000 reaches up to 10 m into the ground for buried utilities before excavation.",
     Icon: ArrowDownToLine,
   },
   {
@@ -77,37 +77,46 @@ const headerVariants = {
 export function WhyChooseUs() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "-60px 0px -60px 0px",
-    threshold: 0.1,
+    rootMargin: "300px 0px 300px 0px",
+    threshold: 0,
   });
 
   return (
     <section
       ref={ref}
-      className="bg-concrete py-16 md:py-20 lg:py-24"
+      className="section-y bg-mist"
       aria-labelledby="why-choose-us-heading"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Alternating layout: image placeholder left, content right */}
-        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12 xl:gap-16 mb-14 md:mb-16">
+        <div className="mb-12 flex flex-col lg:flex-row lg:items-center lg:gap-14 xl:gap-16 md:mb-14">
           {/* Image placeholder — left on desktop */}
           <motion.div
             variants={headerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             transition={{ duration: 0.5 }}
-            className="order-2 lg:order-1 flex-shrink-0 w-full lg:w-[45%] aspect-[4/3] border border-steel/20 overflow-hidden"
-            aria-hidden
+            className="relative order-2 aspect-[4/3] w-full flex-shrink-0 overflow-hidden rounded-xl shadow-lift ring-1 ring-hairline lg:order-1 lg:w-[45%]"
           >
             <Image
               src="/images/7272030 (1).jpg"
-              alt="Bhadeya Technical Services LLC professional team - GPR scanning experts at work in Dubai UAE ground penetrating radar"
-              width={800}
-              height={600}
-              className="w-full h-full object-cover"
+              alt="Bhadeya Technical Services team performing ground penetrating radar scanning on a Dubai construction site"
+              fill
+              className="object-cover"
               sizes="(max-width: 1024px) 100vw, 45vw"
               loading="lazy"
             />
+            <div
+              className="absolute inset-0"
+              aria-hidden
+              style={{
+                background:
+                  "linear-gradient(to top, rgba(11,18,32,0.55) 0%, transparent 55%)",
+              }}
+            />
+            <p className="spec-label absolute bottom-4 left-5 text-white/90">
+              Live site · UAE
+            </p>
           </motion.div>
 
           {/* Header content — right on desktop */}
@@ -119,23 +128,23 @@ export function WhyChooseUs() {
           >
             <motion.p
               variants={headerVariants}
-              className="font-mono text-xs font-semibold uppercase tracking-widest text-signal-orange mb-3"
-              aria-hidden
+              className="eyebrow"
             >
-              Why Bhadeya
+              7+ years in the UAE
             </motion.p>
             <motion.h2
               id="why-choose-us-heading"
               variants={headerVariants}
-              className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 leading-tight tracking-tight"
+              className="display-lg mt-4 text-graphite"
             >
               Why Leading UAE Companies Trust Bhadeya Technical Services
             </motion.h2>
             <motion.p
               variants={headerVariants}
-              className="text-lg text-muted-foreground max-w-xl"
+              className="mt-5 max-w-xl text-lg leading-relaxed text-slate-deep"
             >
-              7+ years of precision, safety, and reliability in every project
+              7+ years of precision, safety and reliability — on hospitals,
+              malls, hotels and infrastructure across the Emirates.
             </motion.p>
           </motion.header>
         </div>
@@ -145,7 +154,7 @@ export function WhyChooseUs() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 gap-px border border-steel/20 bg-steel/20 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
         >
           {FEATURES.map((feature) => {
             const Icon = feature.Icon as LucideIcon;
@@ -155,21 +164,20 @@ export function WhyChooseUs() {
                 variants={cardVariants}
                 transition={{ duration: 0.4 }}
                 className={cn(
-                  "bg-paper p-6",
-                  "transition-colors duration-300 ease-out",
-                  "hover:bg-concrete/50"
+                  "rounded-xl border border-hairline bg-surface p-6 shadow-panel",
+                  "transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lift"
                 )}
               >
                 <div
-                  className="mb-4 flex size-12 items-center justify-center bg-signal-orange/10 text-signal-orange"
+                  className="mb-4 flex size-12 items-center justify-center rounded-lg bg-safety/10 text-safety"
                   aria-hidden
                 >
                   <Icon className="size-6" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2 tracking-tight">
+                <h3 className="display-sm mb-2 text-graphite">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-[0.9375rem] leading-relaxed text-slate-deep">
                   {feature.description}
                 </p>
               </motion.article>

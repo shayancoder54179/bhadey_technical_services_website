@@ -236,7 +236,7 @@ export const posts: Post[] = [
           "Many penetrations to clear quickly — GPR, real-time marking",
           "Ground-bearing slab, raft or retaining wall — GPR",
           "Extremely congested reinforcement, both faces accessible — X-ray gives a clearer image",
-          "Depth beyond about 1 m in concrete — neither is reliable; discuss the element with an engineer",
+          "Depth beyond about 1.5 m in concrete — neither is reliable; discuss the element with an engineer",
         ],
       },
       {
@@ -465,7 +465,7 @@ export const posts: Post[] = [
       { type: "h2", text: "Two different instruments" },
       {
         type: "p",
-        text: "Ground scanning and concrete scanning get conflated constantly, and they are separate jobs. The GS8000 images the ground to find buried utilities before excavation, reaching 5–10 m depending on soil. The GP8000 images the inside of concrete to find rebar and post-tension cables before cutting, reaching up to 1 m in concrete.",
+        text: "Ground scanning and concrete scanning get conflated constantly, and they are separate jobs. The GS8000 images the ground to find buried utilities before excavation, reaching up to 10 m depending on soil. The GP8000 images the inside of concrete to find rebar and post-tension cables before cutting, reaching up to 1.5 m in concrete.",
       },
       {
         type: "p",
@@ -495,7 +495,7 @@ export const posts: Post[] = [
       {
         question: "Is ground scanning the same as concrete scanning?",
         answer:
-          "No — different instruments for different jobs. The Proceq GS8000 images the ground to locate buried utilities before excavation, working to 5–10 m depending on soil. The Proceq GP8000 images the inside of concrete to locate rebar and post-tension cables before cutting or drilling, working to 1 m in concrete. We operate both.",
+          "No — different instruments for different jobs. The Proceq GS8000 images the ground to locate buried utilities before excavation, working to up to 10 m depending on soil. The Proceq GP8000 images the inside of concrete to locate rebar and post-tension cables before cutting or drilling, working to 1.5 m in concrete. We operate both.",
       },
     ],
     related: [
@@ -706,7 +706,7 @@ export const posts: Post[] = [
       { type: "h2", text: "What we use" },
       {
         type: "p",
-        text: "Our ground surveys run on the Proceq GS8000, a stepped-frequency radar working to 5–10 m depending on soil, gridded across the survey area so the coverage is systematic rather than a set of single traces. Findings are marked on the ground surface with estimated depths and issued as a survey report. Where the ground has limited what the radar could resolve, we say so in the report rather than leaving a blank area to be read as clear.",
+        text: "Our ground surveys run on the Proceq GS8000, a stepped-frequency radar working to up to 10 m depending on soil, gridded across the survey area so the coverage is systematic rather than a set of single traces. Findings are marked on the ground surface with estimated depths and issued as a survey report. Where the ground has limited what the radar could resolve, we say so in the report rather than leaving a blank area to be read as clear.",
       },
     ],
     faqs: [
@@ -825,7 +825,7 @@ export const posts: Post[] = [
       {
         question: "Why is concrete scanning quoted at 1 m and ground scanning at 5–10 m?",
         answer:
-          "Different instruments for different materials. Concrete scanning uses the Proceq GP8000 at high frequency to resolve rebar and tendons at fine detail, which trades depth for resolution and reaches around 1 m in concrete. Ground scanning uses the GS8000 at lower frequency, which sacrifices fine detail for penetration through soil.",
+          "Different instruments for different materials. Concrete scanning uses the Proceq GP8000 at high frequency to resolve rebar and tendons at fine detail, which trades depth for resolution and reaches around 1.5 m in concrete. Ground scanning uses the GS8000 at lower frequency, which sacrifices fine detail for penetration through soil.",
       },
       {
         question: "Does rain affect a ground survey?",

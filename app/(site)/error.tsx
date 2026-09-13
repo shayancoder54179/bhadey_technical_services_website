@@ -26,15 +26,15 @@ export default function Error({
       >
         <div className="max-w-lg mx-auto">
           <div
-            className="mx-auto flex size-16 items-center justify-center bg-signal-orange/10 text-signal-orange mb-6"
+            className="mx-auto flex size-16 items-center justify-center bg-safety/10 text-safety mb-6"
             aria-hidden
           >
             <AlertCircle className="size-8" />
           </div>
-          <h1 className="text-2xl sm:text-3xl font-semibold text-ink mb-4 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-semibold text-graphite mb-4 tracking-tight">
             Something went wrong
           </h1>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-slate-deep mb-8">
             We encountered an error. Please try again or contact us if it
             persists.
           </p>
@@ -42,13 +42,13 @@ export default function Error({
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <Button
               onClick={reset}
-              className="inline-flex items-center gap-2 rounded-none bg-signal-orange hover:bg-signal-orange/90 text-ink focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-2"
+              className="inline-flex items-center gap-2 rounded-md bg-safety hover:bg-safety/90 text-graphite focus-visible:ring-2 focus-visible:ring-safety focus-visible:ring-offset-2"
               aria-label="Try again"
             >
               <RefreshCw className="size-4" aria-hidden />
               Try again
             </Button>
-            <Button asChild variant="outline" className="rounded-none border-ink">
+            <Button asChild variant="outline" className="rounded-md border-hairline bg-surface font-semibold text-graphite shadow-panel transition-all hover:border-safety hover:text-safety">
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
@@ -59,17 +59,17 @@ export default function Error({
           </div>
 
           <section
-            className="border border-steel/20 bg-paper p-6 text-left"
+            className="rounded-xl border border-hairline bg-surface p-6 text-left shadow-panel"
             aria-labelledby="support-heading"
           >
-            <h2 id="support-heading" className="text-lg font-semibold text-foreground mb-3 tracking-tight">
+            <h2 id="support-heading" className="display-sm mb-3 text-graphite">
               Contact support
             </h2>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm text-slate-deep">
               <li>
                 <a
                   href={`tel:${company.phoneClean}`}
-                  className="inline-flex items-center gap-2 font-mono text-foreground hover:text-signal-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal-orange"
+                  className="inline-flex items-center gap-2 font-mono text-graphite hover:text-safety focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-safety"
                   aria-label={`Call ${company.phone}`}
                 >
                   <Phone className="size-4 shrink-0" aria-hidden />
@@ -79,7 +79,7 @@ export default function Error({
               <li>
                 <a
                   href={`mailto:${company.email}`}
-                  className="inline-flex items-center gap-2 text-foreground hover:text-signal-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal-orange"
+                  className="inline-flex items-center gap-2 text-graphite hover:text-safety focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-safety"
                   aria-label={`Email ${company.email}`}
                 >
                   <Mail className="size-4 shrink-0" aria-hidden />

@@ -4,7 +4,6 @@ import {
   Footer,
   WhatsAppButton,
   CallButton,
-  BackToTop,
   PageTransition,
 } from "@/components/layout";
 
@@ -26,7 +25,6 @@ export default function SiteLayout({
       <Footer />
       <WhatsAppButton />
       <CallButton />
-      <BackToTop />
     </>
   );
 }

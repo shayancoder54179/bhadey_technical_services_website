@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { LeadForm } from "./LeadForm";
+import { Logo } from "@/components/layout/Logo";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 
 import { OG_IMAGES } from "@/lib/og-image";
@@ -20,21 +21,29 @@ export const metadata: Metadata = {
   },
 };
 
-/* ─── design tokens — matches the main site's DESIGN.md (Ink + Signal Orange) ─── */
+/* ─── design tokens — "Site Survey" (graphite slate + safety orange).
+   Mirrors app/globals.css; see .impeccable/site-survey-progress.md ─── */
 const C = {
-  bg: "#0E0E0F",
-  card: "#18181A",
-  gold: "#F5820F",
-  goldLight: "#FFA555",
-  navy: "#18181A",
-  text: "#FBFAF7",
-  muted: "#9CA3AF",
-  border: "rgba(245,130,15,0.22)",
+  bg: "#0B1220",       // graphite
+  card: "#0F172A",     // graphite-raised
+  cardRaised: "#1E293B", // graphite-soft — for a panel sitting ON a card
+  gold: "#EA580C",     // safety orange
+  goldLight: "#FB923C", // safety-bright — accents on dark
+  navy: "#0F172A",
+  text: "#FFFFFF",
+  muted: "#94A3B8",    // slate-400, cool to match the palette
+  border: "rgba(148,163,184,0.18)",
+  // light plate, for blocks that would otherwise be dark-on-dark
+  mist: "#E9EEF5",   // alternating light band, matches the main site
+  plate: "#FFFFFF",
+  plateText: "#0F172A",
+  plateMuted: "#475569",
+  plateBorder: "#E2E8F0",
 };
 
 const font = {
-  barlow: "var(--font-heading), 'Space Grotesk', sans-serif",
-  dm: "var(--font-inter), 'Inter', sans-serif",
+  barlow: "var(--font-heading), 'Barlow Condensed', sans-serif",
+  dm: "var(--font-body), 'Barlow', sans-serif",
 };
 
 /* ══════════════════════════════════════════════
@@ -46,8 +55,8 @@ function MinimalHeader() {
   return (
     <header
       style={{
-        background: C.card,
-        borderBottom: "1px solid rgba(255,255,255,0.1)",
+        background: C.plate,
+        borderBottom: `1px solid ${C.plateBorder}`,
         position: "sticky",
         top: 0,
         zIndex: 50,
@@ -69,32 +78,25 @@ function MinimalHeader() {
           justifyContent: "space-between",
         }}
       >
-        {/* Logo — on a Paper plate, matching the main site header */}
-        <div style={{ display: "flex", alignItems: "center", background: "#FBFAF7", padding: "6px 8px" }}>
-          <Image
-            src="/images/bts_logo.png"
-            alt="Bhadeya Technical Services"
-            width={170}
-            height={50}
-            className="header-logo"
-            style={{ objectFit: "contain", height: 40, width: "auto" }}
-            priority
-          />
-        </div>
+        {/* Logo — the black eagle needs a light bar, same as the main site header */}
+        <Logo tone="dark" size="md" />
 
-        {/* CTA phone — flat Signal Orange, no gradient/pill */}
+        {/* CTA phone — rounded, white on orange; the flat black-on-orange
+            rectangle read as harsh against the light bar */}
         <PhoneLink
           href="tel:+971556926286"
           style={{
             display: "flex",
             alignItems: "center",
             gap: 8,
-            padding: "10px 18px",
+            padding: "11px 20px",
             background: C.gold,
+            borderRadius: 8,
+            boxShadow: "0 2px 4px rgba(15,23,42,0.05), 0 12px 28px rgba(15,23,42,0.10)",
             fontFamily: font.barlow,
             fontWeight: 700,
-            fontSize: 15,
-            color: C.card,
+            fontSize: 16,
+            color: "#FFFFFF",
             textDecoration: "none",
             letterSpacing: "0.02em",
             whiteSpace: "nowrap",
@@ -165,7 +167,7 @@ function Hero() {
               alignItems: "center",
               gap: 8,
               padding: "6px 14px",
-              background: "rgba(245,130,15,0.12)",
+              background: "rgba(234,88,12,0.12)",
               border: `1px solid ${C.border}`,
               borderRadius: 100,
               marginBottom: 24,
@@ -296,23 +298,25 @@ function Hero() {
           </WhatsAppLink>
         </div>
 
-        {/* Right: lead form */}
+        {/* Right: lead form — a light plate so it separates hard from the dark
+            hero instead of sinking into it */}
         <div
           className="hero-form"
           style={{
-            background: C.card,
-            border: `1px solid ${C.border}`,
+            background: C.plate,
+            border: `1px solid ${C.plateBorder}`,
             borderRadius: 16,
             padding: "36px 32px",
+            boxShadow: "0 24px 60px rgba(11,18,32,0.35)",
           }}
         >
           <p
             style={{
               fontFamily: font.barlow,
               fontWeight: 700,
-              fontSize: 22,
-              color: C.text,
-              letterSpacing: "0.02em",
+              fontSize: 26,
+              color: C.plateText,
+              letterSpacing: "0.01em",
               marginBottom: 4,
             }}
           >
@@ -322,7 +326,7 @@ function Hero() {
             style={{
               fontFamily: font.dm,
               fontSize: 14,
-              color: C.muted,
+              color: C.plateMuted,
               marginBottom: 28,
             }}
           >
@@ -353,9 +357,9 @@ function LogoStrip() {
   return (
     <section
       style={{
-        background: C.card,
-        borderTop: `1px solid ${C.border}`,
-        borderBottom: `1px solid ${C.border}`,
+        background: C.mist,
+        borderTop: `1px solid ${C.plateBorder}`,
+        borderBottom: `1px solid ${C.plateBorder}`,
         padding: "20px 0",
         overflow: "hidden",
       }}
@@ -391,11 +395,11 @@ function LogoStrip() {
             fontFamily: font.dm,
             fontSize: 12,
             fontWeight: 600,
-            color: C.muted,
+            color: C.plateMuted,
             letterSpacing: "0.1em",
             textTransform: "uppercase",
             whiteSpace: "nowrap",
-            borderRight: `1px solid ${C.border}`,
+            borderRight: `1px solid ${C.plateBorder}`,
             marginRight: 28,
           }}
         >
@@ -413,7 +417,7 @@ function LogoStrip() {
                   alignItems: "center",
                   gap: 24,
                   padding: "0 36px",
-                  borderRight: `1px solid ${C.border}`,
+                  borderRight: `1px solid ${C.plateBorder}`,
                   flexShrink: 0,
                 }}
               >
@@ -422,7 +426,7 @@ function LogoStrip() {
                     fontFamily: font.barlow,
                     fontWeight: 700,
                     fontSize: 15,
-                    color: C.muted,
+                    color: C.plateMuted,
                     letterSpacing: "0.12em",
                     whiteSpace: "nowrap",
                   }}
@@ -488,7 +492,7 @@ const FEATURES = [
 
 function WhyChoose() {
   return (
-    <section style={{ background: C.bg, padding: "80px 20px" }}>
+    <section style={{ background: C.plate, padding: "80px 20px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         {/* Section header */}
         <div style={{ textAlign: "center", marginBottom: 56 }}>
@@ -510,7 +514,7 @@ function WhyChoose() {
               fontFamily: font.barlow,
               fontWeight: 800,
               fontSize: "clamp(32px, 4vw, 50px)",
-              color: C.text,
+              color: C.plateText,
               letterSpacing: "-0.01em",
               lineHeight: 1.05,
             }}
@@ -533,8 +537,8 @@ function WhyChoose() {
             <div
               key={f.title}
               style={{
-                background: C.card,
-                border: `1px solid ${C.border}`,
+                background: C.plate,
+                border: `1px solid ${C.plateBorder}`,
                 borderRadius: 16,
                 padding: "36px 28px",
                 display: "flex",
@@ -550,7 +554,7 @@ function WhyChoose() {
                   height: 56,
                   borderRadius: 14,
                   background: "rgba(212,160,23,0.1)",
-                  border: `1px solid ${C.border}`,
+                  border: `1px solid ${C.plateBorder}`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -566,7 +570,7 @@ function WhyChoose() {
                   fontFamily: font.barlow,
                   fontWeight: 700,
                   fontSize: 22,
-                  color: C.text,
+                  color: C.plateText,
                   letterSpacing: "0.01em",
                   lineHeight: 1.1,
                 }}
@@ -578,7 +582,7 @@ function WhyChoose() {
                 style={{
                   fontFamily: font.dm,
                   fontSize: 15,
-                  color: C.muted,
+                  color: C.plateMuted,
                   lineHeight: 1.65,
                   margin: 0,
                 }}
@@ -619,7 +623,7 @@ function HowItWorks() {
     <section
       id="how-it-works"
       style={{
-        background: C.bg,
+        background: C.mist,
         padding: "80px 20px",
       }}
     >
@@ -644,7 +648,7 @@ function HowItWorks() {
               fontFamily: font.barlow,
               fontWeight: 800,
               fontSize: "clamp(32px, 4vw, 50px)",
-              color: C.text,
+              color: C.plateText,
               letterSpacing: "-0.01em",
               lineHeight: 1.05,
             }}
@@ -680,6 +684,7 @@ function HowItWorks() {
                   width: 56,
                   height: 56,
                   background: C.gold,
+            borderRadius: 8,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -699,7 +704,7 @@ function HowItWorks() {
                   fontFamily: font.barlow,
                   fontWeight: 700,
                   fontSize: 24,
-                  color: C.text,
+                  color: C.plateText,
                   letterSpacing: "0.01em",
                   lineHeight: 1.1,
                   marginBottom: 16,
@@ -712,7 +717,7 @@ function HowItWorks() {
                 style={{
                   fontFamily: font.dm,
                   fontSize: 15,
-                  color: C.muted,
+                  color: C.plateMuted,
                   lineHeight: 1.7,
                   margin: 0,
                   maxWidth: 300,
@@ -745,6 +750,7 @@ function HowItWorks() {
               display: "inline-block",
               padding: "16px 40px",
               background: C.gold,
+            borderRadius: 8,
               fontFamily: font.barlow,
               fontWeight: 700,
               fontSize: 18,
@@ -765,7 +771,7 @@ function HowItWorks() {
    EQUIPMENT — PROCEQ GP8000
 ══════════════════════════════════════════════ */
 const SPECS = [
-  { label: "Scan Depth", value: "Up to 1 m in concrete" },
+  { label: "Scan Depth", value: "Up to 1.5 m in concrete" },
   { label: "Frequency Range", value: "200 MHz – 4 GHz" },
   { label: "Display", value: "Live 2-D + 3-D view" },
   { label: "Connectivity", value: "Wi-Fi to Proceq Link app" },
@@ -784,7 +790,7 @@ const DETECTS = [
 
 function Equipment() {
   return (
-    <section style={{ background: C.card, padding: "80px 20px", borderTop: `1px solid ${C.border}` }}>
+    <section style={{ background: C.plate, padding: "80px 20px", borderTop: `1px solid ${C.plateBorder}` }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         {/* Section header */}
         <div style={{ textAlign: "center", marginBottom: 56 }}>
@@ -806,7 +812,7 @@ function Equipment() {
               fontFamily: font.barlow,
               fontWeight: 800,
               fontSize: "clamp(32px, 4vw, 50px)",
-              color: C.text,
+              color: C.plateText,
               letterSpacing: "-0.01em",
               lineHeight: 1.05,
             }}
@@ -818,7 +824,7 @@ function Equipment() {
             style={{
               fontFamily: font.dm,
               fontSize: 16,
-              color: C.muted,
+              color: C.plateMuted,
               maxWidth: 560,
               margin: "16px auto 0",
               lineHeight: 1.65,
@@ -828,6 +834,38 @@ function Equipment() {
             The GP8000 is the current industry benchmark for concrete NDT scanning.
           </p>
         </div>
+
+        {/* The actual device on a job, not a catalogue render */}
+        <figure
+          style={{
+            margin: "0 auto 48px",
+            maxWidth: 760,
+            borderRadius: 16,
+            overflow: "hidden",
+            border: `1px solid ${C.plateBorder}`,
+            boxShadow: "0 24px 60px rgba(11,18,32,0.45)",
+          }}
+        >
+          <Image
+            src="/images/WhatsApp Image 2025-12-28 at 00.56.41.jpeg"
+            alt="Proceq GP8000 ground penetrating radar held against a concrete soffit on a Bhadeya job site"
+            width={1600}
+            height={739}
+            sizes="(max-width: 800px) 100vw, 760px"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+          <figcaption
+            style={{
+              fontFamily: font.dm,
+              fontSize: 13,
+              color: C.plateMuted,
+              background: C.plate,
+              padding: "12px 16px",
+            }}
+          >
+            Our GP8000 scanning a concrete soffit before core drilling.
+          </figcaption>
+        </figure>
 
         {/* Two columns */}
         <div
@@ -845,7 +883,7 @@ function Equipment() {
                 fontFamily: font.barlow,
                 fontWeight: 700,
                 fontSize: 18,
-                color: C.text,
+                color: C.plateText,
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
                 marginBottom: 20,
@@ -855,7 +893,7 @@ function Equipment() {
             </p>
             <div
               style={{
-                border: `1px solid ${C.border}`,
+                border: `1px solid ${C.plateBorder}`,
                 borderRadius: 12,
                 overflow: "hidden",
               }}
@@ -869,14 +907,14 @@ function Equipment() {
                     alignItems: "center",
                     padding: "16px 20px",
                     background: i % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent",
-                    borderBottom: i < SPECS.length - 1 ? `1px solid ${C.border}` : "none",
+                    borderBottom: i < SPECS.length - 1 ? `1px solid ${C.plateBorder}` : "none",
                   }}
                 >
                   <span
                     style={{
                       fontFamily: font.dm,
                       fontSize: 14,
-                      color: C.muted,
+                      color: C.plateMuted,
                       fontWeight: 500,
                     }}
                   >
@@ -887,7 +925,7 @@ function Equipment() {
                       fontFamily: font.barlow,
                       fontSize: 16,
                       fontWeight: 700,
-                      color: C.text,
+                      color: C.plateText,
                       letterSpacing: "0.03em",
                     }}
                   >
@@ -905,7 +943,7 @@ function Equipment() {
                 fontFamily: font.barlow,
                 fontWeight: 700,
                 fontSize: 18,
-                color: C.text,
+                color: C.plateText,
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
                 marginBottom: 20,
@@ -923,7 +961,7 @@ function Equipment() {
                     gap: 14,
                     padding: "14px 18px",
                     background: "rgba(212,160,23,0.06)",
-                    border: `1px solid ${C.border}`,
+                    border: `1px solid ${C.plateBorder}`,
                     borderRadius: 10,
                   }}
                 >
@@ -940,7 +978,7 @@ function Equipment() {
                     style={{
                       fontFamily: font.dm,
                       fontSize: 15,
-                      color: C.text,
+                      color: C.plateText,
                       fontWeight: 500,
                     }}
                   >
@@ -1010,7 +1048,7 @@ const GALLERY_PHOTOS = [
 
 function Gallery() {
   return (
-    <section style={{ background: C.bg, padding: "80px 20px" }}>
+    <section style={{ background: C.mist, padding: "80px 20px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         {/* Section header */}
         <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -1032,7 +1070,7 @@ function Gallery() {
               fontFamily: font.barlow,
               fontWeight: 800,
               fontSize: "clamp(32px, 4vw, 50px)",
-              color: C.text,
+              color: C.plateText,
               letterSpacing: "-0.01em",
               lineHeight: 1.05,
             }}
@@ -1141,7 +1179,7 @@ function Gallery() {
           style={{
             fontFamily: font.dm,
             fontSize: 13,
-            color: C.muted,
+            color: C.plateMuted,
             textAlign: "center",
             marginTop: 20,
           }}
@@ -1155,212 +1193,6 @@ function Gallery() {
 
 /* ══════════════════════════════════════════════
    SERVICE AREAS — 6 EMIRATE CARDS
-══════════════════════════════════════════════ */
-const SERVICE_AREAS = [
-  {
-    name: "Dubai",
-    note: "Primary hub · same-day",
-    highlights: ["Downtown", "JLT", "DIFC", "Al Quoz", "Deira"],
-    primary: true,
-  },
-  {
-    name: "Abu Dhabi",
-    note: "Available within 24 hrs",
-    highlights: ["Yas Island", "Reem Island", "Khalidiyah", "Mussafah"],
-    primary: false,
-  },
-  {
-    name: "Sharjah",
-    note: "Available within 24 hrs",
-    highlights: ["Industrial Area", "Al Majaz", "Al Nahda"],
-    primary: false,
-  },
-  {
-    name: "Ras Al Khaimah",
-    note: "Available — contact us",
-    highlights: ["RAK City", "Al Nakheel", "Jebel Ali area"],
-    primary: false,
-  },
-  {
-    name: "Fujairah",
-    note: "Available — contact us",
-    highlights: ["Port area", "Commercial districts"],
-    primary: false,
-  },
-  {
-    name: "Al Ain",
-    note: "Available — contact us",
-    highlights: ["Old town", "Industrial zones"],
-    primary: false,
-  },
-];
-
-function ServiceAreas() {
-  return (
-    <section
-      style={{
-        background: C.card,
-        padding: "80px 20px",
-        borderTop: `1px solid ${C.border}`,
-      }}
-    >
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        {/* Section header */}
-        <div style={{ textAlign: "center", marginBottom: 56 }}>
-          <p
-            style={{
-              fontFamily: font.dm,
-              fontSize: 13,
-              fontWeight: 600,
-              color: C.gold,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: 12,
-            }}
-          >
-            Coverage
-          </p>
-          <h2
-            style={{
-              fontFamily: font.barlow,
-              fontWeight: 800,
-              fontSize: "clamp(32px, 4vw, 50px)",
-              color: C.text,
-              letterSpacing: "-0.01em",
-              lineHeight: 1.05,
-            }}
-          >
-            WE COVER{" "}
-            <span style={{ color: C.gold }}>ALL 6 EMIRATES</span>
-          </h2>
-          <p
-            style={{
-              fontFamily: font.dm,
-              fontSize: 16,
-              color: C.muted,
-              maxWidth: 480,
-              margin: "16px auto 0",
-              lineHeight: 1.65,
-            }}
-          >
-            Based in Dubai, we mobilise across the UAE with no extra logistics
-            fees for most locations.
-          </p>
-        </div>
-
-        {/* 3×2 card grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: 20,
-          }}
-        >
-          {SERVICE_AREAS.map((area) => (
-            <div
-              key={area.name}
-              style={{
-                background: area.primary
-                  ? "rgba(212,160,23,0.08)"
-                  : "rgba(255,255,255,0.02)",
-                border: `1px solid ${area.primary ? C.gold : C.border}`,
-                borderRadius: 14,
-                padding: "28px 24px",
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              {/* Primary badge */}
-              {area.primary && (
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 16,
-                    right: 16,
-                    padding: "4px 10px",
-                    background: C.gold,
-                    borderRadius: 100,
-                    fontFamily: font.dm,
-                    fontSize: 11,
-                    fontWeight: 700,
-                    color: C.bg,
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Primary
-                </div>
-              )}
-
-              {/* Location pin icon */}
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={area.primary ? C.gold : C.muted}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                style={{ marginBottom: 14 }}
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-
-              <h3
-                style={{
-                  fontFamily: font.barlow,
-                  fontWeight: 800,
-                  fontSize: 26,
-                  color: area.primary ? C.gold : C.text,
-                  letterSpacing: "0.01em",
-                  marginBottom: 4,
-                }}
-              >
-                {area.name}
-              </h3>
-
-              <p
-                style={{
-                  fontFamily: font.dm,
-                  fontSize: 13,
-                  color: C.muted,
-                  marginBottom: 18,
-                  fontWeight: 500,
-                }}
-              >
-                {area.note}
-              </p>
-
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                {area.highlights.map((h) => (
-                  <span
-                    key={h}
-                    style={{
-                      padding: "4px 10px",
-                      background: "rgba(255,255,255,0.05)",
-                      border: `1px solid ${C.border}`,
-                      borderRadius: 6,
-                      fontFamily: font.dm,
-                      fontSize: 12,
-                      color: C.muted,
-                    }}
-                  >
-                    {h}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ══════════════════════════════════════════════
-   FAQ ACCORDION — pure HTML details/summary
 ══════════════════════════════════════════════ */
 const FAQS = [
   {
@@ -1395,7 +1227,7 @@ const FAQS = [
 
 function FaqAccordion() {
   return (
-    <section style={{ background: C.bg, padding: "80px 20px" }}>
+    <section style={{ background: C.plate, padding: "80px 20px" }}>
       <style>{`
         details.faq-item summary { list-style: none; }
         details.faq-item summary::-webkit-details-marker { display: none; }
@@ -1430,7 +1262,7 @@ function FaqAccordion() {
               fontFamily: font.barlow,
               fontWeight: 800,
               fontSize: "clamp(30px, 4vw, 48px)",
-              color: C.text,
+              color: C.plateText,
               letterSpacing: "-0.01em",
               lineHeight: 1.05,
             }}
@@ -1448,8 +1280,8 @@ function FaqAccordion() {
               key={i}
               className="faq-item"
               style={{
-                background: C.card,
-                border: `1px solid ${C.border}`,
+                background: C.plate,
+                border: `1px solid ${C.plateBorder}`,
                 borderRadius: 12,
                 overflow: "hidden",
                 transition: "border-color 0.2s",
@@ -1465,7 +1297,7 @@ function FaqAccordion() {
                   fontFamily: font.barlow,
                   fontWeight: 700,
                   fontSize: 18,
-                  color: C.text,
+                  color: C.plateText,
                   letterSpacing: "0.01em",
                   lineHeight: 1.3,
                   userSelect: "none",
@@ -1490,14 +1322,14 @@ function FaqAccordion() {
               <div
                 style={{
                   padding: "0 24px 24px",
-                  borderTop: `1px solid ${C.border}`,
+                  borderTop: `1px solid ${C.plateBorder}`,
                 }}
               >
                 <p
                   style={{
                     fontFamily: font.dm,
                     fontSize: 15,
-                    color: C.muted,
+                    color: C.plateMuted,
                     lineHeight: 1.75,
                     margin: "16px 0 0",
                   }}
@@ -1514,79 +1346,7 @@ function FaqAccordion() {
 }
 
 /* ══════════════════════════════════════════════
-   BOTTOM LEAD FORM
-══════════════════════════════════════════════ */
-function BottomLeadForm() {
-  return (
-    <section
-      id="lead-form"
-      style={{
-        background: C.bg,
-        padding: "80px 20px",
-        borderTop: `1px solid ${C.border}`,
-      }}
-    >
-      <div style={{ maxWidth: 560, margin: "0 auto" }}>
-        {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <p
-            style={{
-              fontFamily: font.dm,
-              fontSize: 13,
-              fontWeight: 600,
-              color: C.gold,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: 12,
-            }}
-          >
-            Free Quote
-          </p>
-          <h2
-            style={{
-              fontFamily: font.barlow,
-              fontWeight: 800,
-              fontSize: "clamp(30px, 4vw, 46px)",
-              color: C.text,
-              letterSpacing: "-0.01em",
-              lineHeight: 1.05,
-              marginBottom: 12,
-            }}
-          >
-            GET YOUR FREE GPR
-            <br />
-            <span style={{ color: C.gold }}>SCANNING QUOTE</span>
-          </h2>
-          <p
-            style={{
-              fontFamily: font.dm,
-              fontSize: 15,
-              color: C.muted,
-              lineHeight: 1.65,
-            }}
-          >
-            Fill in the form and we&apos;ll respond within minutes on WhatsApp.
-          </p>
-        </div>
-
-        {/* Card wrapping the form */}
-        <div
-          style={{
-            background: C.card,
-            border: `1px solid ${C.border}`,
-            borderRadius: 16,
-            padding: "36px 32px",
-          }}
-        >
-          <LeadForm formId="gpr_landing_bottom_form" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ══════════════════════════════════════════════
-   FINAL CTA SECTION
+   FINAL CTA
 ══════════════════════════════════════════════ */
 function FinalCta() {
   return (
@@ -1713,7 +1473,7 @@ function FooterStrip() {
     <footer
       style={{
         background: C.card,
-        borderTop: "1px solid rgba(245,130,15,0.3)",
+        borderTop: "1px solid rgba(234,88,12,0.3)",
         padding: "28px 20px",
       }}
     >
@@ -1728,16 +1488,8 @@ function FooterStrip() {
           gap: 16,
         }}
       >
-        {/* Brand — logo on a Paper plate, matching the main site footer */}
-        <div style={{ display: "flex", alignItems: "center", background: "#FBFAF7", padding: "6px 8px" }}>
-          <Image
-            src="/images/bts_logo.png"
-            alt="Bhadeya Technical Services"
-            width={140}
-            height={40}
-            style={{ objectFit: "contain" }}
-          />
-        </div>
+        {/* Brand */}
+        <Logo tone="light" size="md" />
 
         {/* Links */}
         <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
@@ -1981,6 +1733,10 @@ export default function GprScanningDubaiPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(landingPageSchema) }}
       />
+      {/* Kept deliberately short: a paid-traffic page converts on one clear
+          promise, proof, and a form — not on thirteen sections. ServiceAreas
+          was cut (coverage is already stated in the hero and the FAQ) and the
+          standalone BottomLeadForm was folded into the final CTA. */}
       <MinimalHeader />
       <Hero />
       <LogoStrip />
@@ -1988,9 +1744,7 @@ export default function GprScanningDubaiPage() {
       <HowItWorks />
       <Equipment />
       <Gallery />
-      <ServiceAreas />
       <FaqAccordion />
-      <BottomLeadForm />
       <FinalCta />
       <FooterStrip />
       <StickyMobileBar />

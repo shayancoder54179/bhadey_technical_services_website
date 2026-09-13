@@ -60,10 +60,10 @@ export default function ProjectsPage() {
 
       {/* Page Hero */}
       <section
-        className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
+        className="relative section-y overflow-hidden"
         aria-labelledby="projects-hero-title"
       >
-        <div className="absolute inset-0 bg-ink" />
+        <div className="absolute inset-0 bg-graphite" />
         <div
           className="absolute inset-0"
           style={{
@@ -75,11 +75,11 @@ export default function ProjectsPage() {
           <header className="max-w-3xl">
             <h1
               id="projects-hero-title"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-paper mb-4 tracking-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-white mb-4 tracking-tight"
             >
               Our Projects & Portfolio
             </h1>
-            <p className="text-lg text-paper/80">
+            <p className="text-lg text-white/75">
               Trusted across UAE&apos;s most prestigious developments
             </p>
           </header>
@@ -88,7 +88,7 @@ export default function ProjectsPage() {
 
       {/* Filter + Projects Grid */}
       <section
-        className="bg-paper py-16 md:py-20 lg:py-24 scroll-mt-20"
+        className="bg-surface section-y scroll-mt-20"
         aria-labelledby="projects-grid-heading"
       >
         <h2 id="projects-grid-heading" className="sr-only">
@@ -101,25 +101,25 @@ export default function ProjectsPage() {
 
       {/* Stats Banner */}
       <section
-        className="border-y border-white/10 bg-ink py-8 md:py-10"
+        className="border-y border-white/10 bg-graphite py-8 md:py-10"
         aria-label="Portfolio statistics"
       >
         <div className="mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
-          <p className="font-mono text-lg md:text-xl font-semibold text-paper">
-            <span className="text-signal-orange">7+</span> Years &middot; <span className="text-signal-orange">6+</span> Cities &middot; Trusted by UAE&apos;s Best
+          <p className="font-mono text-lg md:text-xl font-semibold text-white">
+            <span className="text-safety">7+</span> Years &middot; <span className="text-safety">6+</span> Cities &middot; Trusted by UAE&apos;s Best
           </p>
         </div>
       </section>
 
       {/* Notable Clients */}
       <section
-        className="bg-concrete py-16 md:py-20"
+        className="bg-mist py-16 md:py-20"
         aria-labelledby="trusted-by-heading"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="trusted-by-heading"
-            className="text-2xl md:text-3xl font-semibold text-foreground text-center mb-10 tracking-tight"
+            className="display-lg mb-10 text-center text-graphite"
           >
             Trusted By
           </h2>
@@ -127,13 +127,13 @@ export default function ProjectsPage() {
             {NOTABLE_CLIENTS.map((client) => (
               <span
                 key={client}
-                className="inline-flex items-center border border-steel/20 bg-paper px-5 py-3 text-sm md:text-base font-semibold text-foreground"
+                className="inline-flex items-center border border-hairline bg-surface px-5 py-3 text-sm md:text-base font-semibold text-graphite"
               >
                 {client}
               </span>
             ))}
           </div>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-center text-slate-deep max-w-2xl mx-auto">
             And hundreds of residential buildings, commercial properties, banks,
             and interior companies across UAE
           </p>
@@ -142,10 +142,10 @@ export default function ProjectsPage() {
 
       {/* CTA */}
       <section
-        className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
+        className="relative section-y overflow-hidden"
         aria-labelledby="cta-heading"
       >
-        <div className="absolute inset-0 bg-ink" aria-hidden />
+        <div className="absolute inset-0 bg-graphite" aria-hidden />
         <div
           className="absolute inset-0"
           style={{
@@ -157,11 +157,11 @@ export default function ProjectsPage() {
         <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
           <h2
             id="cta-heading"
-            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-paper mb-4 max-w-2xl mx-auto tracking-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 max-w-2xl mx-auto tracking-tight"
           >
             Have a project? Let&apos;s discuss how we can help.
           </h2>
-          <p className="text-lg md:text-xl text-paper/80 max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-white/75 max-w-2xl mx-auto mb-10">
             Get a free quote for GPR scanning, core cutting, or excavation. We
             respond within 1 hour during business hours.
           </p>
@@ -169,7 +169,7 @@ export default function ProjectsPage() {
             <Button
               asChild
               size="lg"
-              className="w-full sm:w-auto rounded-none border border-transparent bg-signal-orange text-ink hover:border-paper hover:bg-signal-orange font-semibold text-base px-8 py-6"
+              className="h-13 w-full rounded-md bg-safety px-8 text-base font-semibold text-white shadow-lift transition-all hover:bg-safety/90 sm:w-auto"
             >
               <GetQuoteLink href="/contact" className="inline-flex items-center gap-2">
                 Get Quote
@@ -178,7 +178,7 @@ export default function ProjectsPage() {
             <Button
               asChild
               size="lg"
-              className="w-full sm:w-auto rounded-none bg-[#25D366] text-white hover:bg-[#20BD5A] font-semibold text-base px-8 py-6"
+              className="h-13 w-full rounded-md bg-[#25D366] px-8 text-base font-semibold text-white shadow-lift transition-colors hover:bg-[#20BD5A] sm:w-auto"
             >
               <WhatsAppLink href={whatsappUrl} className="inline-flex items-center gap-2">
                 <WhatsAppIcon aria-hidden />

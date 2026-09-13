@@ -1,16 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail, ArrowRight } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
+import { Logo } from "@/components/layout/Logo";
 import { company } from "@/data/company";
 import { services } from "@/data/services";
 import { cities, locationRoutes, serviceLabels } from "@/data/locations";
 
-const FOOTER_BG = "#18181A";
-
-const quickLinks = [
+const companyLinks = [
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/blog", label: "Guides" },
@@ -21,130 +20,170 @@ const whatsappUrl = `${company.socialLinks.whatsapp}?text=${encodeURIComponent(
   "Hello, I would like to inquire about your GPR scanning and technical services."
 )}`;
 
+// Group the location routes by service so the internal links read as an
+// organised index instead of a flat wall of near-identical sentences.
+const areasByService = locationRoutes.reduce<Record<string, string[]>>(
+  (acc, { service, city }) => {
+    (acc[service] ??= []).push(city);
+    return acc;
+  },
+  {}
+);
+
+const hours = [
+  company.hours.weekday,
+  company.hours.saturday,
+  company.hours.friday,
+];
+
 export function Footer() {
   return (
     <footer
-      className="border-t border-signal-orange/30 text-white"
-      style={{ backgroundColor: FOOTER_BG }}
+      className="border-t-2 border-safety bg-graphite-raised text-white"
       role="contentinfo"
     >
-      <div className="mx-auto max-w-7xl px-6 py-10 sm:px-8 lg:px-12 xl:px-16">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+        {/* ── Top: brand + navigation + contact ─────────────────────────── */}
+        <div className="grid gap-10 py-14 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr] lg:gap-12">
           {/* Brand */}
-          <div>
-            <Link href="/" className="inline-block">
-              <div className="inline-block bg-paper p-2.5">
-                <Image
-                  src="/images/bts_logo.png"
-                  alt="Bhadeya Technical Services LLC - GPR scanning core cutting excavation Dubai UAE"
-                  width={200}
-                  height={72}
-                  className="h-12 w-auto object-contain"
-                  loading="lazy"
-                />
-              </div>
+          <div className="min-w-0">
+            <Link href="/" className="inline-block" aria-label="Bhadeya Technical Services — home">
+              <Logo tone="light" size="md" />
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-white/70 max-w-xs">
-              UAE&apos;s trusted partner for GPR scanning, core cutting, and excavation. 7+ years serving Dubai, Abu Dhabi, Sharjah &amp; beyond.
+            <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
+              UAE&apos;s trusted partner for GPR scanning, core cutting and
+              excavation. 7+ years serving Dubai, Abu Dhabi, Sharjah and beyond.
             </p>
+            <WhatsAppLink
+              href={whatsappUrl}
+              source="footer"
+              className="mt-6 inline-flex items-center gap-2 rounded-md bg-safety px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-safety/90"
+            >
+              Get a free quote
+              <ArrowRight className="size-4" aria-hidden />
+            </WhatsAppLink>
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-signal-orange">
+          <nav aria-labelledby="footer-services">
+            <h3 id="footer-services" className="spec-label text-safety-bright">
               Services
             </h3>
-            <ul className="mt-3 space-y-2" role="list">
+            <ul className="mt-4 space-y-2.5" role="list">
               {services.map((service) => (
                 <li key={service.id}>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
+                    className="text-sm text-white/75 transition-colors hover:text-safety-bright"
                   >
                     {service.title}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Contact */}
-          <div>
-            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-signal-orange">
-              Contact
+          {/* Company */}
+          <nav aria-labelledby="footer-company">
+            <h3 id="footer-company" className="spec-label text-safety-bright">
+              Company
             </h3>
-            <div className="mt-3 space-y-2">
-              <PhoneLink
-                href={`tel:${company.phoneClean}`}
-                className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
-                aria-label={`Call: ${company.phone}`}
-              >
-                <Phone className="size-4 shrink-0" aria-hidden />
-                {company.phone}
-              </PhoneLink>
-              <a
-                href={`mailto:${company.email}`}
-                className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
-                aria-label={`Email: ${company.email}`}
-              >
-                <Mail className="size-4 shrink-0" aria-hidden />
-                {company.email}
-              </a>
-              <WhatsAppLink
-                href={whatsappUrl}
-                source="footer"
-                className="flex items-center gap-2 text-sm text-[#25D366] transition-colors hover:underline"
-                aria-label="Chat with us on WhatsApp"
-              >
-                <MessageCircle className="size-4 shrink-0" aria-hidden />
-                WhatsApp
-              </WhatsAppLink>
-            </div>
-            <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-1" role="list">
-              {quickLinks.map(({ href, label }) => (
-                <li key={label}>
+            <ul className="mt-4 space-y-2.5" role="list">
+              {companyLinks.map(({ href, label }) => (
+                <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-white/70 transition-colors hover:text-white"
+                    className="text-sm text-white/75 transition-colors hover:text-safety-bright"
                   >
                     {label}
                   </Link>
                 </li>
               ))}
             </ul>
+          </nav>
+
+          {/* Contact + hours */}
+          <div>
+            <h3 className="spec-label text-safety-bright">Contact</h3>
+
+            <PhoneLink
+              href={`tel:${company.phoneClean}`}
+              className="mt-4 flex items-center gap-2.5 font-mono text-lg font-semibold text-white transition-colors hover:text-safety-bright"
+              aria-label={`Call ${company.phone}`}
+            >
+              <Phone className="size-[18px] shrink-0 text-safety-bright" aria-hidden />
+              {company.phone}
+            </PhoneLink>
+
+            <a
+              href={`mailto:${company.email}`}
+              className="mt-3 flex items-center gap-2.5 break-all text-sm text-white/75 transition-colors hover:text-safety-bright"
+              aria-label={`Email ${company.email}`}
+            >
+              <Mail className="size-[18px] shrink-0 text-safety-bright" aria-hidden />
+              {company.email}
+            </a>
+
+            <WhatsAppLink
+              href={whatsappUrl}
+              source="footer"
+              className="mt-3 flex items-center gap-2.5 text-sm font-medium text-[#4ade80] transition-colors hover:text-[#86efac]"
+              aria-label="Chat with us on WhatsApp"
+            >
+              <WhatsAppIcon className="size-[18px] shrink-0" aria-hidden />
+              WhatsApp
+            </WhatsAppLink>
+
+            <dl className="mt-6 space-y-1.5 border-t border-white/10 pt-5 text-sm">
+              {hours.map((slot) => (
+                <div key={slot.days} className="flex justify-between gap-4">
+                  <dt className="text-white/60">{slot.days}</dt>
+                  <dd className="font-mono text-white/90">{slot.time}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
 
-        {/* Service areas — gives the location pages a site-wide internal link
-            so they are not reachable only from the sitemap. */}
-        <div className="mt-10 border-t border-white/10 pt-6">
-          <h3 className="font-mono text-xs font-semibold tracking-wider uppercase text-signal-orange">
-            Service Areas
-          </h3>
-          <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2" role="list">
-            {locationRoutes.map(({ service, city }) => (
-              <li key={`${service}-${city}`}>
-                <Link
-                  href={`/services/${service}/${city}`}
-                  className="text-sm text-white/60 transition-colors hover:text-white"
-                >
-                  {serviceLabels[service]} in {cities[city].name}
-                </Link>
-              </li>
+        {/* ── Service areas: grouped index, one row per service ──────────── */}
+        <div className="border-t border-white/10 py-10">
+          <h3 className="spec-label text-safety-bright">Service Areas</h3>
+          <div className="mt-5 space-y-4">
+            {Object.entries(areasByService).map(([service, serviceCities]) => (
+              <div
+                key={service}
+                className="grid gap-2 sm:grid-cols-[190px_1fr] sm:items-baseline sm:gap-6"
+              >
+                <p className="text-sm font-semibold text-white/85">
+                  {serviceLabels[service as keyof typeof serviceLabels]}
+                </p>
+                <ul className="flex flex-wrap gap-x-2 gap-y-2" role="list">
+                  {serviceCities.map((city) => (
+                    <li key={city}>
+                      <Link
+                        href={`/services/${service}/${city}`}
+                        className="inline-block rounded-full border border-white/15 px-3 py-1 text-[0.8125rem] text-white/70 transition-colors hover:border-safety hover:text-safety-bright"
+                      >
+                        {cities[city as keyof typeof cities].name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
-
-        <p className="mt-8 text-xs leading-relaxed text-white/50">
-          Serving {company.serviceAreas.join(", ")}.
-        </p>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="mx-auto px-6 py-5 sm:px-8 lg:px-12 xl:px-16">
-          <p className="text-center text-sm text-white/60 sm:text-left">
-            © {new Date().getFullYear()} Bhadeya Technical Services L.L.C. All rights reserved.
+      {/* ── Bottom bar ──────────────────────────────────────────────────── */}
+      <div className="border-t border-white/10 bg-graphite">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12 xl:px-16">
+          <p className="text-sm text-white/60">
+            © {new Date().getFullYear()} Bhadeya Technical Services L.L.C. All
+            rights reserved.
+          </p>
+          <p className="text-xs text-white/45">
+            Serving {company.serviceAreas.join(" · ")}
           </p>
         </div>
       </div>

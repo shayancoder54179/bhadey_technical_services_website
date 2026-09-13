@@ -1,71 +1,86 @@
 "use client";
 
-import { Accordion as AccordionPrimitive } from "radix-ui";
-import { Plus, Minus } from "lucide-react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionContent,
-} from "@/components/ui/accordion";
+import * as React from "react";
+import Link from "next/link";
+import { Plus, ArrowRight } from "lucide-react";
+import { Accordion, AccordionItem, AccordionContent } from "@/components/ui/accordion";
+import { QaTrigger } from "@/components/ui/qa-accordion";
 import { faqs } from "@/data/faqs";
 import { cn } from "@/lib/utils";
 
-function FAQAccordionTrigger({
-  className,
-  children,
-  ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
-  return (
-    <AccordionPrimitive.Header className="flex">
-      <AccordionPrimitive.Trigger
-        data-slot="accordion-trigger"
-        className={cn(
-          "group focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-sm font-medium transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50",
-          className
-        )}
-        {...props}
-      >
-        {children}
-        <Plus className="text-steel pointer-events-none size-5 shrink-0 translate-y-0.5 group-data-[state=open]:hidden" />
-        <Minus className="text-signal-orange pointer-events-none size-5 shrink-0 translate-y-0.5 hidden group-data-[state=open]:block" />
-      </AccordionPrimitive.Trigger>
-    </AccordionPrimitive.Header>
-  );
-}
+// The homepage shows a readable shortlist; the rest stay in the DOM behind a
+// toggle so they remain crawlable and consistent with the FAQPage schema.
+const VISIBLE_COUNT = 6;
 
 export function FAQ() {
-  return (
-    <section
-      className="bg-paper py-16 md:py-20 lg:py-24"
-      aria-labelledby="faq-heading"
-    >
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-        <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <p
-            className="font-mono text-xs font-semibold uppercase tracking-widest text-signal-orange mb-3"
-            aria-hidden
-          >
-            FAQ
-          </p>
-          <h2
-            id="faq-heading"
-            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight"
-          >
-            Frequently Asked Questions About GPR Scanning & Core Cutting
-          </h2>
-        </header>
+  const [showAll, setShowAll] = React.useState(false);
+  const hiddenCount = faqs.length - VISIBLE_COUNT;
 
-        <div className="max-w-3xl mx-auto border-t border-steel/20">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`faq-${index}`} className="border-steel/20">
-                <FAQAccordionTrigger>{faq.question}</FAQAccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+  return (
+    <section className="section-y bg-surface" aria-labelledby="faq-heading">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <header className="lg:sticky lg:top-28 lg:self-start">
+            <h2 id="faq-heading" className="display-lg text-graphite">
+              Questions we get on every site.
+            </h2>
+            <p className="mt-5 text-[0.9375rem] leading-relaxed text-slate-deep">
+              Still unsure whether your job needs a scan? Call us — we will tell
+              you straight, even when the answer is no.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-6 inline-flex items-center gap-1.5 border-b-2 border-safety pb-0.5 text-sm font-semibold text-graphite transition-colors hover:text-safety"
+            >
+              Ask us directly
+              <ArrowRight className="size-4" aria-hidden />
+            </Link>
+          </header>
+
+          <div>
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full divide-y divide-hairline border-y border-hairline"
+            >
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`faq-${index}`}
+                  className={cn(
+                    "border-none",
+                    // kept in the DOM for crawlers, hidden from the reader until expanded
+                    !showAll && index >= VISIBLE_COUNT && "hidden"
+                  )}
+                >
+                  <QaTrigger>{faq.question}</QaTrigger>
+                  <AccordionContent className="px-4 pb-5 pr-12 text-[0.9375rem] leading-relaxed text-slate-deep">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+
+            {hiddenCount > 0 && (
+              <button
+                type="button"
+                onClick={() => setShowAll((v) => !v)}
+                aria-expanded={showAll}
+                className="mt-6 inline-flex items-center gap-2 rounded-md border border-hairline bg-mist px-5 py-3 text-sm font-semibold text-graphite shadow-panel transition-all hover:border-safety hover:text-safety hover:shadow-lift"
+              >
+                {showAll
+                  ? "Show fewer questions"
+                  : `Show all ${faqs.length} questions`}
+                <Plus
+                  className={cn(
+                    "size-4 transition-transform",
+                    showAll && "rotate-45"
+                  )}
+                  aria-hidden
+                />
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </section>

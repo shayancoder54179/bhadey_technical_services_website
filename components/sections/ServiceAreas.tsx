@@ -6,7 +6,7 @@ import { MapPin } from "lucide-react";
 import { company } from "@/data/company";
 import { cn } from "@/lib/utils";
 
-const SERVICES_LINE = "GPR Scanning | Core Cutting | Excavation";
+const SERVICES_LINE = "GPR · Core Cutting · Excavation";
 
 const CITY_DESCRIPTIONS: Record<string, string> = {
   Dubai:
@@ -35,8 +35,8 @@ const cardVariants = {
 export function ServiceAreas() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    rootMargin: "-60px 0px -60px 0px",
-    threshold: 0.08,
+    rootMargin: "300px 0px 300px 0px",
+    threshold: 0,
   });
 
   const cities = company.serviceAreas;
@@ -44,30 +44,27 @@ export function ServiceAreas() {
   return (
     <section
       ref={ref}
-      className="bg-concrete py-16 md:py-20 lg:py-24"
+      className="section-y bg-mist"
       aria-labelledby="service-areas-heading"
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
-        <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <p
-            className="font-mono text-xs font-semibold uppercase tracking-widest text-signal-orange mb-3"
-            aria-hidden
-          >
-            Service Areas
-          </p>
-          <h2
-            id="service-areas-heading"
-            className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight"
-          >
-            GPR Scanning & Core Cutting Services Across UAE
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            We provide our full range of technical services across all major
-            emirates
+        <header className="mb-12 grid gap-6 border-b border-hairline pb-10 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-16 md:mb-14">
+          <div>
+            <p className="eyebrow">6 emirates · same-day callout</p>
+            <h2
+              id="service-areas-heading"
+              className="display-lg mt-4 text-graphite"
+            >
+              Mobile teams across every emirate.
+            </h2>
+          </div>
+          <p className="text-lg leading-relaxed text-slate-deep">
+            Same scanning, cutting and excavation capability wherever your site
+            is — from Downtown Dubai to Fujairah.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-px border border-steel/20 bg-steel/20 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {cities.map((city, index) => (
             <motion.article
               key={city}
@@ -76,21 +73,16 @@ export function ServiceAreas() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               className={cn(
-                "bg-paper p-6",
-                "transition-colors duration-300 ease-out hover:bg-concrete/50"
+                "rounded-xl border border-hairline bg-surface p-6 shadow-panel",
+                "transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lift"
               )}
             >
-              <h3 className="text-xl font-semibold text-foreground mb-2 flex items-center gap-2 tracking-tight">
-                <MapPin
-                  className="size-5 shrink-0 text-signal-orange"
-                  aria-hidden
-                />
+              <h3 className="display-sm mb-2 flex items-center gap-2 text-graphite">
+                <MapPin className="size-5 shrink-0 text-safety" aria-hidden />
                 {city}
               </h3>
-              <p className="text-sm font-medium text-muted-foreground mb-2">
-                {SERVICES_LINE}
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="spec-label mb-3 text-slate-soft">{SERVICES_LINE}</p>
+              <p className="text-sm leading-relaxed text-slate-deep">
                 {CITY_DESCRIPTIONS[city] ??
                   `Serving ${city} construction projects with professional GPR scanning and core cutting services.`}
               </p>

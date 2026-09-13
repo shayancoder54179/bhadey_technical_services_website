@@ -3,6 +3,7 @@
 import { Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { company } from "@/data/company";
 import { cn } from "@/lib/utils";
 
@@ -13,39 +14,38 @@ const whatsappUrl = `${company.socialLinks.whatsapp}?text=${encodeURIComponent(
 export function CTASection() {
   return (
     <section
-      className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
+      className="section-y relative overflow-hidden"
       aria-labelledby="cta-heading"
     >
       {/* Flat Ink background */}
-      <div className="absolute inset-0 bg-ink" aria-hidden />
+      <div className="absolute inset-0 bg-graphite" aria-hidden />
       <div
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(245,130,15,0.10) 0%, transparent 55%)",
+            "radial-gradient(ellipse 70% 60% at 25% 0%, rgba(234,88,12,0.18) 0%, transparent 60%)",
         }}
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8 lg:px-12 xl:px-16">
-        <h2
-          id="cta-heading"
-          className="text-3xl md:text-4xl lg:text-5xl font-semibold text-paper mb-4 max-w-2xl mx-auto tracking-tight"
-        >
-          Ready to Start Your Project?
-        </h2>
-        <p className="text-lg md:text-xl text-paper/80 max-w-2xl mx-auto mb-10">
-          Get a free consultation and quote for your GPR scanning, core cutting,
-          or excavation needs. We respond within 1 hour during business hours.
-        </p>
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-6 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:px-12 xl:px-16">
+        <div>
+          <p className="eyebrow eyebrow-dark">Response within 1 hour</p>
+          <h2 id="cta-heading" className="display-lg mt-4 text-white">
+            Tell us what you need scanned, cut or dug.
+          </h2>
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
+            Free consultation and quote for GPR scanning, core cutting or
+            excavation. We respond within 1 hour during business hours.
+          </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
           <Button
             asChild
             size="lg"
             className={cn(
-              "w-full sm:w-auto rounded-none border border-transparent bg-signal-orange text-ink hover:border-paper hover:bg-signal-orange",
-              "font-semibold text-base px-8 py-6"
+              "h-13 w-full rounded-md bg-safety px-8 text-base font-semibold text-white shadow-lift sm:w-auto",
+              "transition-all hover:bg-safety/90"
             )}
           >
             <GetQuoteLink href="/contact">Get Free Quote</GetQuoteLink>
@@ -54,8 +54,8 @@ export function CTASection() {
             asChild
             size="lg"
             className={cn(
-              "w-full sm:w-auto rounded-none bg-[#25D366] text-white hover:bg-[#20BD5A]",
-              "font-semibold text-base px-8 py-6"
+              "h-13 w-full rounded-md bg-[#25D366] px-8 text-base font-semibold text-white shadow-lift sm:w-auto",
+              "transition-colors hover:bg-[#20BD5A]"
             )}
           >
             <WhatsAppLink href={whatsappUrl} className="inline-flex items-center gap-2">
@@ -65,53 +65,47 @@ export function CTASection() {
           </Button>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 text-paper/90">
-          <PhoneLink
-            href={`tel:${company.phoneClean}`}
-            className="inline-flex items-center gap-2 font-mono text-base font-medium hover:text-signal-orange transition-colors"
-            aria-label={`Call ${company.phone}`}
-          >
-            <Phone className="size-5 shrink-0" aria-hidden />
-            {company.phone}
-          </PhoneLink>
-          <a
-            href={`mailto:${company.email}`}
-            className="inline-flex items-center gap-2 text-base font-medium hover:text-signal-orange transition-colors"
-            aria-label={`Email ${company.email}`}
-          >
-            <Mail className="size-5 shrink-0" aria-hidden />
-            {company.email}
-          </a>
         </div>
 
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-paper/70 text-sm">
-          <span className="inline-flex items-center gap-2">
-            <Clock className="size-4 shrink-0" aria-hidden />
-            <strong className="text-paper/90">Working hours:</strong>
-          </span>
-          <span>
-            {company.hours.weekday.days}: {company.hours.weekday.time}
-          </span>
-          <span>
-            {company.hours.saturday.days}: {company.hours.saturday.time}
-          </span>
-          <span>{company.hours.friday.days}: {company.hours.friday.time}</span>
+        {/* Contact panel */}
+        <div className="rounded-xl bg-white p-6 shadow-deep md:p-8">
+          <p className="spec-label text-safety">Direct lines</p>
+
+          <div className="mt-5 flex flex-col gap-4">
+            <PhoneLink
+              href={`tel:${company.phoneClean}`}
+              className="inline-flex items-center gap-3 font-mono text-lg font-semibold text-graphite transition-colors hover:text-safety"
+              aria-label={`Call ${company.phone}`}
+            >
+              <Phone className="size-5 shrink-0 text-safety" aria-hidden />
+              {company.phone}
+            </PhoneLink>
+            <a
+              href={`mailto:${company.email}`}
+              className="inline-flex items-center gap-3 break-all text-[0.9375rem] font-medium text-slate-deep transition-colors hover:text-safety"
+              aria-label={`Email ${company.email}`}
+            >
+              <Mail className="size-5 shrink-0 text-safety" aria-hidden />
+              {company.email}
+            </a>
+          </div>
+
+          <dl className="mt-6 space-y-2 border-t border-hairline pt-5 text-sm">
+            <div className="flex items-center gap-2 pb-1">
+              <Clock className="size-4 shrink-0 text-safety" aria-hidden />
+              <span className="spec-label text-slate-soft">Working hours</span>
+            </div>
+            {[company.hours.weekday, company.hours.saturday, company.hours.friday].map(
+              (slot) => (
+                <div key={slot.days} className="flex justify-between gap-4">
+                  <dt className="text-slate-soft">{slot.days}</dt>
+                  <dd className="font-mono font-medium text-graphite">{slot.time}</dd>
+                </div>
+              )
+            )}
+          </dl>
         </div>
       </div>
     </section>
-  );
-}
-
-function WhatsAppIcon({ className, ...props }: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={cn("size-5", className)}
-      {...props}
-    >
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-    </svg>
   );
 }
