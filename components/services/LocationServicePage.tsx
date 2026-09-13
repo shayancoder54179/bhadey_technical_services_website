@@ -44,7 +44,9 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
     "@id": `${url}#service`,
     name: `${serviceLabel} in ${cityData.name}`,
     description: content.description,
-    provider: { "@id": `${BASE_URL}/#localbusiness` },
+    provider: { "@id": `${BASE_URL}/#organization` },
+    telephone: company.phoneClean,
+    image: `${BASE_URL}/images/bts_logo.png`,
     areaServed: { "@type": "City", name: cityData.name },
     url,
     serviceType: serviceLabel,
@@ -155,7 +157,7 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
       {/* Areas + ground conditions */}
       <section
         className="section-y bg-mist"
-        aria-labelledby="coverage-title"
+        aria-labelledby="coverage-title ground-conditions-title"
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="grid gap-10 md:grid-cols-2 md:gap-14">
@@ -183,7 +185,7 @@ export function LocationServicePage({ service, city }: LocationServicePageProps)
               </p>
             </div>
             <div>
-              <h2 className="display-lg text-graphite">
+              <h2 id="ground-conditions-title" className="display-lg text-graphite">
                 Ground conditions in {cityData.name}
               </h2>
               <p className="mt-6 leading-relaxed text-slate-deep">

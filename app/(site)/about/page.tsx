@@ -5,7 +5,7 @@ import { Target, Eye, Heart, Radio, Drill, MapPin, Quote } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { company } from "@/data/company";
 
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 const StatsBar = dynamic(
   () => import("@/components/sections/StatsBar").then((m) => m.StatsBar),
   { ssr: true }
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "Bhadeya Technical Services LLC has provided GPR scanning, core cutting and excavation across the UAE since 2019. Proceq GP8000 and GS8000 operators.",
   alternates: { canonical: "https://www.bhadeya.com/about" },
   openGraph: {
+    ...OG_DEFAULTS,
     title: "About Bhadeya Technical Services LLC | UAE",
     description:
       "UAE's trusted GPR scanning and core cutting company since 2019. 7+ years across Dubai, Abu Dhabi, Sharjah & UAE.",
@@ -28,6 +29,10 @@ export const metadata: Metadata = {
     type: "website",
     images: OG_IMAGES,
   },
+  twitter: twitterCard(
+    "About Bhadeya Technical Services LLC | UAE",
+    "UAE's trusted GPR scanning and core cutting company since 2019. 7+ years across Dubai, Abu Dhabi, Sharjah & UAE."
+  ),
 };
 
 const sectionClass = "scroll-mt-20";
@@ -190,7 +195,7 @@ export default function AboutPage() {
               </h3>
               <ul className="text-slate-deep text-sm space-y-1" role="list">
                 <li>• Concrete scanning radar</li>
-                <li>• Up to 1m depth in concrete</li>
+                <li>• Up to 1.5 m depth in concrete</li>
                 <li>• Real-time 3D visualization</li>
                 <li>• Used before cutting &amp; drilling</li>
               </ul>
@@ -363,7 +368,7 @@ export default function AboutPage() {
               <p className="mt-2 leading-relaxed text-slate-deep">
                 Concrete and ground are different problems and need different
                 instruments. We operate the Proceq GP8000 for concrete, reading
-                up to 1 m, and the Proceq GS8000 for ground, reading 5–10 m
+                up to 1.5 m, and the Proceq GS8000 for ground, reading 5–10 m
                 depending on soil. Running both means neither machine gets
                 stretched across a job it was not built for.
               </p>

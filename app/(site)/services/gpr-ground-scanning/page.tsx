@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
-  title: "GPR Ground Scanning UAE | Underground Utility Locating",
+  title: "GPR Underground Utility Scanning UAE",
   description:
     "Underground utility scanning across the UAE before you excavate. The Proceq GS8000 maps cables, pipes and ducts to 5–10 m, marked on site and reported.",
   keywords: [
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.bhadeya.com/services/gpr-ground-scanning" },
   openGraph: {
+    ...OG_DEFAULTS,
     title: "GPR Ground Scanning Dubai & UAE | Underground Utility Locating | Bhadeya Technical",
     description:
       "Locate buried utilities before you dig. Proceq GS8000 ground radar reads up to 10m into soil. Dubai, Abu Dhabi, Sharjah & across the UAE.",
@@ -29,6 +30,10 @@ export const metadata: Metadata = {
     type: "website",
     images: OG_IMAGES,
   },
+  twitter: twitterCard(
+    "GPR Ground Scanning Dubai & UAE | Underground Utility Locating | Bhadeya Technical",
+    "Locate buried utilities before you dig. Proceq GS8000 ground radar reads up to 10m into soil. Dubai, Abu Dhabi, Sharjah & across the UAE."
+  ),
 };
 
 const gs8000PageData: ServicePageData = {
@@ -246,6 +251,35 @@ const gs8000PageData: ServicePageData = {
     "Get a free quote for a GS8000 underground utility survey. Send us your site location and dig area and we respond within 1 hour during business hours.",
 };
 
+// Mirrors the FAQ schema on /services/gpr-scanning so the two sibling GPR
+// pages are marked up consistently. Derived from the same items the page
+// renders, so the markup cannot contradict the visible answers.
+const pageSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: gs8000PageData.faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  },
+];
+
 export default function GS8000ScanningPage() {
-  return <ServicePageTemplate data={gs8000PageData} />;
+  return (
+    <>
+      {pageSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <ServicePageTemplate data={gs8000PageData} />
+    </>
+  );
 }

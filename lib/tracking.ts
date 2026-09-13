@@ -1,15 +1,17 @@
-// GA4 Measurement ID
-const GA_MEASUREMENT_ID = "G-6FWYL6PN3Q";
+// gtag accepts a heterogeneous argument list ("event", name, params), so the
+// tuple is typed as unknown[] rather than any[] — same flexibility, but callers
+// cannot silently pass a mistyped value through.
+type GtagArgs = unknown[];
 
 // Declare gtag on window
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: GtagArgs) => void;
   }
 }
 
 // Helper to safely call gtag
-const safeGtag = (...args: any[]) => {
+const safeGtag = (...args: GtagArgs) => {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag(...args);
   }

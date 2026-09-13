@@ -36,7 +36,7 @@ Service detail pages use a shared template pattern:
 - Each `/app/services/[slug]/page.tsx` passes data to the template
 
 ### Homepage Sections
-Sections below the fold are **dynamically imported with `next/dynamic`** (no SSR) to reduce initial bundle. Sections live in `components/sections/`.
+Sections below the fold are **dynamically imported with `next/dynamic`** to split the client bundle, but each passes `{ ssr: true }` so the content is still server-rendered and crawlable. Do not switch these to `ssr: false` — it would hide the homepage copy from search and AI crawlers. Sections live in `components/sections/`.
 
 ### Analytics & Tracking
 - GA4 event tracking via `lib/tracking.ts` and `lib/googleAds.ts`

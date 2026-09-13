@@ -17,13 +17,14 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { company } from "@/data/company";
 import { ContactForm } from "@/components/contact/ContactForm";
 
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Contact Us — Free Quote",
   description:
     "Get a free quote for GPR scanning, core cutting or excavation anywhere in the UAE. Call +971 55 692 6286 or message us on WhatsApp for a same-day reply.",
   alternates: { canonical: "https://www.bhadeya.com/contact" },
   openGraph: {
+    ...OG_DEFAULTS,
     title: "Contact Us | Bhadeya Technical Services UAE",
     description:
       "Get a free quote for GPR scanning, core cutting & excavation. Call +971 55 692 6286. Serving Dubai, Abu Dhabi, Sharjah & UAE.",
@@ -31,6 +32,10 @@ export const metadata: Metadata = {
     type: "website",
     images: OG_IMAGES,
   },
+  twitter: twitterCard(
+    "Contact Us | Bhadeya Technical Services UAE",
+    "Get a free quote for GPR scanning, core cutting & excavation. Call +971 55 692 6286. Serving Dubai, Abu Dhabi, Sharjah & UAE."
+  ),
 };
 
 const sectionClass = "scroll-mt-20";
@@ -220,10 +225,10 @@ export default function ContactPage() {
               </div>
 
               <div className="rounded-xl border border-hairline bg-surface p-6 shadow-lift">
-                <h4 className="font-semibold text-graphite mb-3 flex items-center gap-2 tracking-tight">
+                <h3 className="font-semibold text-graphite mb-3 flex items-center gap-2 tracking-tight">
                   <MapPin className="size-5 text-safety" />
-                  Service Areas
-                </h4>
+                  Where we work
+                </h3>
                 <ul className="grid grid-cols-1 gap-2 text-sm text-slate-deep" role="list">
                   {company.serviceAreas.map((city) => (
                     <li key={city} className="flex items-center gap-2">

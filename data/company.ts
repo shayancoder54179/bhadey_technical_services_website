@@ -14,6 +14,17 @@ export const company = {
     saturday: { days: 'Saturday', time: '9:00 AM - 3:00 PM' },
     friday: { days: 'Friday', time: 'Closed' }
   },
+  /**
+   * Registered locality. Confirmed correct; streetAddress and postalCode are
+   * still unknown. Add them here when the trade licence is to hand and keep
+   * them identical to the Google Business Profile listing (NAP consistency) —
+   * components/seo/JsonLd.tsx reads this, so schema updates with it.
+   */
+  address: {
+    locality: 'Business Bay',
+    region: 'Dubai',
+    country: 'AE',
+  },
   serviceAreas: ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ras Al Khaimah', 'Fujairah', 'Al Ain'],
   stats: {
     yearsExperience: '7+',

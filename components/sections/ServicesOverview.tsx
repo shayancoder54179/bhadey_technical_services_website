@@ -163,8 +163,7 @@ export function ServicesOverview() {
                     href={`/services/${service.slug}`}
                     className="mt-6 inline-flex items-center gap-1.5 self-start border-b-2 border-transparent pb-0.5 text-sm font-semibold text-graphite transition-colors hover:border-safety hover:text-safety focus:border-safety focus:outline-none"
                   >
-                    Learn more
-                    <span className="sr-only"> about {service.title}</span>
+                    {service.title}
                     <ArrowRight
                       className="size-4 transition-transform group-hover:translate-x-1"
                       aria-hidden

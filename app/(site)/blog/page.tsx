@@ -4,13 +4,14 @@ import { ArrowRight, Clock } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { posts } from "@/data/posts";
 
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "GPR & Concrete Scanning Guides",
   description:
     "Practical guides on GPR concrete scanning, core cutting and pre-excavation utility surveys in the UAE, written by the team that does the work.",
   alternates: { canonical: "https://www.bhadeya.com/blog" },
   openGraph: {
+    ...OG_DEFAULTS,
     title: "GPR & Concrete Scanning Guides | Bhadeya Technical",
     description:
       "Practical guides on GPR scanning, core cutting and utility surveys in the UAE.",
@@ -18,6 +19,10 @@ export const metadata: Metadata = {
     type: "website",
     images: OG_IMAGES,
   },
+  twitter: twitterCard(
+    "GPR & Concrete Scanning Guides | Bhadeya Technical",
+    "Practical guides on GPR scanning, core cutting and utility surveys in the UAE."
+  ),
 };
 
 const dateFormat = new Intl.DateTimeFormat("en-GB", {
