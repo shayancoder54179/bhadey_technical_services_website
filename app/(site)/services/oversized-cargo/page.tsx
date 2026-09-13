@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 import type { ServicePageData } from "@/lib/service-page-types";
 
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Oversized Cargo Movement UAE",
   description:
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.bhadeya.com/services/oversized-cargo" },
   openGraph: {
+    ...OG_DEFAULTS,
     title: "Oversized Cargo Movement UAE | Bhadeya Technical Services",
     description:
       "Expert oversized cargo movement support across UAE — route surveys, RTA permits, escort & flagging, and GPR bridge scanning. Safe & compliant heavy load transport.",
@@ -26,6 +27,10 @@ export const metadata: Metadata = {
     type: "website",
     images: OG_IMAGES,
   },
+  twitter: twitterCard(
+    "Oversized Cargo Movement UAE | Bhadeya Technical Services",
+    "Expert oversized cargo movement support across UAE — route surveys, RTA permits, escort & flagging, and GPR bridge scanning. Safe & compliant heavy load transport."
+  ),
 };
 
 const oversizedCargoPageData: ServicePageData = {

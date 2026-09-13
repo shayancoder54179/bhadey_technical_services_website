@@ -4,7 +4,7 @@ import { LeadForm } from "./LeadForm";
 import { Logo } from "@/components/layout/Logo";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: { absolute: "GPR Concrete Scanning Dubai | Bhadeya Technical" },
   description:
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
   alternates: { canonical: "https://www.bhadeya.com/services/gpr-scanning" },
   openGraph: {
+    ...OG_DEFAULTS,
     title: "Ground Penetrating Radar (GPR) Scanning UAE | Concrete Scanning Company",
     description:
       "Professional ground penetrating radar (GPR) concrete scanning services across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp.",
@@ -19,6 +20,10 @@ export const metadata: Metadata = {
     type: "website",
     images: OG_IMAGES,
   },
+  twitter: twitterCard(
+    "Ground Penetrating Radar (GPR) Scanning UAE | Concrete Scanning Company",
+    "Professional ground penetrating radar (GPR) concrete scanning services across the UAE — Dubai, Abu Dhabi, Sharjah & beyond. Detect rebar, conduits & voids before drilling or cutting. 7+ years experience. Get a free quote on WhatsApp."
+  ),
 };
 
 /* ─── design tokens — "Site Survey" (graphite slate + safety orange).
@@ -301,8 +306,10 @@ function Hero() {
         {/* Right: lead form — a light plate so it separates hard from the dark
             hero instead of sinking into it */}
         <div
+          id="lead-form"
           className="hero-form"
           style={{
+            scrollMarginTop: 24,
             background: C.plate,
             border: `1px solid ${C.plateBorder}`,
             borderRadius: 16,
@@ -1649,7 +1656,16 @@ const landingPageSchema = [
     alternateName: "Ground Penetrating Radar Scanning UAE",
     description:
       "Professional GPR concrete scanning across the UAE. Detect rebar, conduits, post-tension cables and voids before drilling or cutting using the Proceq GP8000. Same-day response in Dubai, next-day across all emirates.",
-    provider: { "@id": "https://www.bhadeya.com/#localbusiness" },
+    // This route is in the (landing) group, which does not render <JsonLd/>,
+    // so the organization node is not present on this page. Inline the provider
+    // rather than referencing an @id that resolves to nothing here.
+    provider: {
+      "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+      "@id": "https://www.bhadeya.com/#organization",
+      name: "Bhadeya Technical Services LLC",
+      url: "https://www.bhadeya.com",
+      telephone: "+971556926286",
+    },
     areaServed: [
       { "@type": "City", name: "Dubai" },
       { "@type": "City", name: "Abu Dhabi" },

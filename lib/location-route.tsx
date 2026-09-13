@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LocationServicePage } from "@/components/services/LocationServicePage";
 import { locationContent } from "@/data/locations";
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 
 const BASE_URL = "https://www.bhadeya.com";
 
@@ -30,12 +30,14 @@ export function makeLocationRoute(service: string) {
       description: content.description,
       alternates: { canonical: url },
       openGraph: {
+        ...OG_DEFAULTS,
         title: content.title,
         description: content.description,
         url,
         type: "website",
         images: OG_IMAGES,
       },
+      twitter: twitterCard(content.title, content.description),
     };
   }
 

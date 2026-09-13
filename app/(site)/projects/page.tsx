@@ -6,13 +6,14 @@ import { cn } from "@/lib/utils";
 import { company } from "@/data/company";
 import { ProjectsFilterGrid } from "@/components/projects/ProjectsFilterGrid";
 
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Our Projects Across the UAE",
   description:
     "GPR scanning, core cutting and excavation delivered on UAE landmark projects including The Dubai Mall, ADNOC Headquarters and Kempinski Hotel.",
   alternates: { canonical: "https://www.bhadeya.com/projects" },
   openGraph: {
+    ...OG_DEFAULTS,
     title: "Our Projects | Bhadeya Technical Services UAE",
     description:
       "Portfolio of GPR scanning and core cutting projects. Trusted by Dubai Mall, Emaar, ADNOC & more.",
@@ -20,6 +21,10 @@ export const metadata: Metadata = {
     type: "website",
     images: OG_IMAGES,
   },
+  twitter: twitterCard(
+    "Our Projects | Bhadeya Technical Services UAE",
+    "Portfolio of GPR scanning and core cutting projects. Trusted by Dubai Mall, Emaar, ADNOC & more."
+  ),
 };
 
 const NOTABLE_CLIENTS = [

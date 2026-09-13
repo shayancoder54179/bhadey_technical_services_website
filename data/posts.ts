@@ -6,6 +6,11 @@
  * question a UAE contractor or consultant actually searches for before hiring.
  */
 
+/**
+ * Body copy in `p`, `callout` and `ul` blocks may contain inline internal links
+ * written as [label](/path). Only site-relative paths render as links; see
+ * renderInline() in app/(site)/blog/[slug]/page.tsx.
+ */
 export type PostBlock =
   | { type: "p"; text: string }
   | { type: "h2"; text: string }
@@ -48,7 +53,7 @@ export interface Post {
 export const posts: Post[] = [
   {
     slug: "cutting-through-post-tension-cable",
-    title: "What Happens If You Cut a Post-Tension Cable",
+    title: "If You Cut a Post-Tension Cable",
     heading: "What happens if you cut a post-tension cable",
     description:
       "Cutting a post-tension tendon is a structural incident, not a repair job. What actually happens, what it costs, and how scanning prevents it.",
@@ -125,7 +130,7 @@ export const posts: Post[] = [
       { type: "h2", text: "What scanning actually involves" },
       {
         type: "p",
-        text: "Ground penetrating radar images the inside of the slab non-destructively. We use the Proceq GP8000, which reads up to 1 m into concrete and produces real-time 3D visualisation of what is embedded — reinforcement, post-tension ducts, conduits and voids.",
+        text: "Ground penetrating radar images the inside of the slab non-destructively. We use the Proceq GP8000 for [GPR concrete scanning](/services/gpr-scanning), which reads up to 1.5 m into concrete and produces real-time 3D visualisation of what is embedded — reinforcement, post-tension ducts, conduits and voids.",
       },
       {
         type: "p",
@@ -241,7 +246,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "For the great majority of UAE concrete scanning — locating rebar, post-tension tendons and conduits before coring or drilling — GPR is the appropriate method, which is why it has become the default across the region. We operate the Proceq GP8000, reading up to 1 m into concrete with real-time 3D visualisation.",
+        text: "For the great majority of UAE concrete scanning — locating rebar, post-tension tendons and conduits before coring or drilling — GPR is the appropriate method, which is why it has become the default across the region. Our [concrete scanning service](/services/gpr-scanning) operates the Proceq GP8000, reading up to 1.5 m into concrete with real-time 3D visualisation.",
       },
     ],
     faqs: [
@@ -380,7 +385,7 @@ export const posts: Post[] = [
 
   {
     slug: "utility-survey-before-excavation-uae",
-    title: "Utility Surveys Before Excavation in the UAE",
+    title: "Utility Surveys Before Excavation UAE",
     heading: "Before you dig: utility surveys on UAE sites",
     description:
       "Why utility drawings are not enough before excavation in the UAE, what a GPR ground survey actually finds, and how soil conditions limit how deep it reads.",
@@ -411,7 +416,7 @@ export const posts: Post[] = [
       { type: "h2", text: "What a GPR ground survey actually does" },
       {
         type: "p",
-        text: "We survey the dig area with the Proceq GS8000, pushing a survey cart over the ground in a grid pattern and reading reflections from buried objects. The result is a map of what is physically beneath the site — power cables, water and sewer lines, telecom ducts, gas pipes, tanks and voids.",
+        text: "We survey the dig area with the Proceq GS8000 as part of our [underground utility scanning service](/services/gpr-ground-scanning), pushing a survey cart over the ground in a grid pattern and reading reflections from buried objects. The result is a map of what is physically beneath the site — power cables, water and sewer lines, telecom ducts, gas pipes, tanks and voids.",
       },
       {
         type: "p",
@@ -465,7 +470,7 @@ export const posts: Post[] = [
       { type: "h2", text: "Two different instruments" },
       {
         type: "p",
-        text: "Ground scanning and concrete scanning get conflated constantly, and they are separate jobs. The GS8000 images the ground to find buried utilities before excavation, reaching up to 10 m depending on soil. The GP8000 images the inside of concrete to find rebar and post-tension cables before cutting, reaching up to 1.5 m in concrete.",
+        text: "Ground scanning and concrete scanning get conflated constantly, and they are separate jobs. The GS8000 images the ground to find buried utilities before excavation, reaching up to 10 m depending on soil — that is our [GPR ground scanning service](/services/gpr-ground-scanning). The GP8000 images the inside of concrete to find rebar and post-tension cables before cutting, reaching up to 1.5 m in concrete, which is [GPR concrete scanning](/services/gpr-scanning).",
       },
       {
         type: "p",
@@ -512,7 +517,7 @@ export const posts: Post[] = [
   },
   {
     slug: "utility-strike-cost-uae",
-    title: "What a Utility Strike Actually Costs in the UAE",
+    title: "What a Utility Strike Costs in the UAE",
     heading: "What it costs when an excavator hits a live cable",
     description:
       "The real cost of a utility strike on a UAE site: emergency repair, third-party liability, programme delay and the injury risk. Why a survey is the cheap option.",
@@ -706,7 +711,7 @@ export const posts: Post[] = [
       { type: "h2", text: "What we use" },
       {
         type: "p",
-        text: "Our ground surveys run on the Proceq GS8000, a stepped-frequency radar working to up to 10 m depending on soil, gridded across the survey area so the coverage is systematic rather than a set of single traces. Findings are marked on the ground surface with estimated depths and issued as a survey report. Where the ground has limited what the radar could resolve, we say so in the report rather than leaving a blank area to be read as clear.",
+        text: "Our [ground surveys](/services/gpr-ground-scanning) run on the Proceq GS8000, a stepped-frequency radar working to up to 10 m depending on soil, gridded across the survey area so the coverage is systematic rather than a set of single traces. Findings are marked on the ground surface with estimated depths and issued as a survey report. Where the ground has limited what the radar could resolve, we say so in the report rather than leaving a blank area to be read as clear.",
       },
     ],
     faqs: [
@@ -823,7 +828,7 @@ export const posts: Post[] = [
           "Typically 5–10 m in UAE ground. Dry inland sand and gravel read towards the top of that range; saline coastal and reclaimed ground can pull it below 5 m. We assess the site conditions and tell you what your specific ground supports rather than quoting the equipment maximum.",
       },
       {
-        question: "Why is concrete scanning quoted at 1 m and ground scanning at 5–10 m?",
+        question: "Why is concrete scanning quoted at 1.5 m and ground scanning at 5–10 m?",
         answer:
           "Different instruments for different materials. Concrete scanning uses the Proceq GP8000 at high frequency to resolve rebar and tendons at fine detail, which trades depth for resolution and reaches around 1.5 m in concrete. Ground scanning uses the GS8000 at lower frequency, which sacrifices fine detail for penetration through soil.",
       },

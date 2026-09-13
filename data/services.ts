@@ -43,7 +43,7 @@ export const services = [
       'Structural integrity evaluation'
     ],
     stats: {
-      depth: '1m in concrete',
+      depth: '1.5m in concrete',
       accuracy: '±10mm',
       technology: 'Proceq GP8000'
     }

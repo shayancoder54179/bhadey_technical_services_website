@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ServicePageFAQ } from "@/components/services/ServicePageFAQ";
 import { posts, postBySlug, type PostBlock } from "@/data/posts";
 
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 const BASE_URL = "https://www.bhadeya.com";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.description,
     alternates: { canonical: url },
     openGraph: {
+      ...OG_DEFAULTS,
       title: post.title,
       description: post.description,
       url,
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? [{ url: post.image, alt: post.heading }]
         : OG_IMAGES,
     },
+    twitter: twitterCard(post.title, post.description),
   };
 }
 
@@ -44,6 +46,39 @@ const dateFormat = new Intl.DateTimeFormat("en-GB", {
   year: "numeric",
   timeZone: "UTC",
 });
+
+/**
+ * Renders inline internal links written as [label](/path) inside body copy.
+ *
+ * Article bodies previously had no way to link anywhere, so the GPR content
+ * cluster could not pass any internal signal to the service pages it is about.
+ * Only site-relative paths are accepted — anything else is left as plain text,
+ * so a stray external or javascript: URL in the data layer cannot render as a
+ * link.
+ */
+const INLINE_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
+
+function renderInline(text: string) {
+  const nodes: React.ReactNode[] = [];
+  let last = 0;
+  let match: RegExpExecArray | null;
+  INLINE_LINK.lastIndex = 0;
+  while ((match = INLINE_LINK.exec(text)) !== null) {
+    if (match.index > last) nodes.push(text.slice(last, match.index));
+    nodes.push(
+      <Link
+        key={`${match[2]}-${match.index}`}
+        href={match[2]}
+        className="font-medium text-safety underline underline-offset-2 hover:no-underline"
+      >
+        {match[1]}
+      </Link>
+    );
+    last = match.index + match[0].length;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes.length > 0 ? nodes : text;
+}
 
 function Block({ block }: { block: PostBlock }) {
   switch (block.type) {
@@ -64,7 +99,7 @@ function Block({ block }: { block: PostBlock }) {
         <ul className="my-5 flex list-disc flex-col gap-2 pl-5 text-slate-deep">
           {block.items.map((item) => (
             <li key={item} className="leading-relaxed">
-              {item}
+              {renderInline(item)}
             </li>
           ))}
         </ul>
@@ -72,13 +107,13 @@ function Block({ block }: { block: PostBlock }) {
     case "callout":
       return (
         <p className="my-7 border-l-4 border-safety bg-muted/50 py-4 pr-4 pl-5 leading-relaxed font-medium">
-          {block.text}
+          {renderInline(block.text)}
         </p>
       );
     default:
       return (
         <p className="my-5 leading-relaxed text-slate-deep">
-          {block.text}
+          {renderInline(block.text)}
         </p>
       );
   }

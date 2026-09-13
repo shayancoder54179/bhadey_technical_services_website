@@ -4,7 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { faqPageSchema } from "@/components/seo/JsonLd";
 
-import { OG_IMAGES } from "@/lib/og-image";
+import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 // Below-the-fold sections: SSR with lazy-loaded client JS for faster initial load
 const StatsBar = dynamic(
   () => import("@/components/sections/StatsBar").then((m) => m.StatsBar),
@@ -46,6 +46,7 @@ export const metadata: Metadata = {
     canonical: "https://www.bhadeya.com",
   },
   openGraph: {
+    ...OG_DEFAULTS,
     title:
       "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
     description:
@@ -54,6 +55,10 @@ export const metadata: Metadata = {
     type: "website",
     images: OG_IMAGES,
   },
+  twitter: twitterCard(
+    "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
+    "Professional GPR scanning, core cutting & excavation services across UAE. Trusted by Dubai Mall, Emaar, ADNOC & more."
+  ),
 };
 
 // Scroll margin for fixed header (h-20) so anchor links aren't hidden
