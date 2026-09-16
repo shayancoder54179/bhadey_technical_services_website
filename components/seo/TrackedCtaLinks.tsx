@@ -6,6 +6,7 @@ import {
   trackPhoneClick,
   trackWhatsAppClick,
 } from "@/lib/tracking";
+import { notifyContactTap } from "@/lib/leadNotify";
 
 interface GetQuoteLinkProps {
   href: string;
@@ -40,7 +41,15 @@ interface PhoneLinkProps {
 
 export function PhoneLink({ href, children, className, ...props }: PhoneLinkProps) {
   return (
-    <a href={href} onClick={() => trackPhoneClick()} className={className} {...props}>
+    <a
+      href={href}
+      onClick={() => {
+        trackPhoneClick();
+        notifyContactTap("Call");
+      }}
+      className={className}
+      {...props}
+    >
       {children}
     </a>
   );
@@ -58,7 +67,10 @@ export function WhatsAppLink({ href, children, className, source, ...props }: Wh
   return (
     <a
       href={href}
-      onClick={() => trackWhatsAppClick(source)}
+      onClick={() => {
+        trackWhatsAppClick(source);
+        notifyContactTap("WhatsApp");
+      }}
       target="_blank"
       rel="noopener noreferrer"
       className={className}

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { trackFormSubmit, trackWhatsAppClick } from "@/lib/tracking";
+import { notifyFormLead } from "@/lib/leadNotify";
 
 interface FormState {
   name: string;
@@ -25,6 +26,7 @@ const EMIRATES = [
 ];
 
 export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState<FormState>({
     name: "",
     phone: "",
@@ -42,21 +44,50 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    trackFormSubmit(formId);
+    if (submitting) return;
+    setSubmitting(true);
 
-    const message = [
+    const lines = [
       "Hello Bhadeya, I'd like a free quote for GPR Scanning.",
       `Name: ${form.name}`,
       `Phone: ${form.phone}`,
       `Emirate: ${form.emirate}`,
-      `Project: ${form.description}`,
-    ].join("\n");
+    ];
+    if (form.description.trim()) lines.push(`Project: ${form.description.trim()}`);
 
-    const url = `https://wa.me/971556926286?text=${encodeURIComponent(message)}`;
-    const opened = window.open(url, "_blank", "noopener,noreferrer");
-    if (opened) {
-      trackWhatsAppClick(formId);
-    }
+    const url = `https://wa.me/971556926286?text=${encodeURIComponent(lines.join("\n"))}`;
+
+    // Email the client the lead itself, so it survives even if the visitor
+    // never presses send in WhatsApp. Not awaited - WhatsApp comes first.
+    notifyFormLead({
+      name: form.name,
+      phone: form.phone,
+      emirate: form.emirate,
+      description: form.description,
+    });
+
+    trackFormSubmit(formId);
+    trackWhatsAppClick(formId);
+
+    // On phones, navigate in place: window.open is treated as a popup by Safari
+    // and by the in-app browsers that ads traffic arrives in, and a blocked
+    // popup means the lead silently never reaches WhatsApp. Desktop keeps the
+    // new tab so the landing page stays open behind web.whatsapp.com.
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const go = () => {
+      if (isMobile) {
+        window.location.href = url;
+      } else if (!window.open(url, "_blank", "noopener,noreferrer")) {
+        // Popup blocked on desktop too - fall back rather than lose the lead.
+        window.location.href = url;
+      }
+      setSubmitting(false);
+    };
+
+    // Give the GA4 hits a moment to leave before the browser hands off to
+    // WhatsApp. form_submit is the conversion Google Ads imports, so losing it
+    // here is what left the campaign with no signal to bid on.
+    window.setTimeout(go, 250);
   }
 
   const inputStyle: React.CSSProperties = {
@@ -138,11 +169,10 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
       </div>
 
       <div>
-        <label htmlFor="lp-description" style={labelStyle}>Project Description *</label>
+        <label htmlFor="lp-description" style={labelStyle}>Project Description (optional)</label>
         <textarea
           id="lp-description"
           name="description"
-          required
           value={form.description}
           onChange={handleChange}
           rows={4}
@@ -155,6 +185,7 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
 
       <button
         type="submit"
+        disabled={submitting}
         style={{
           width: "100%",
           padding: "16px",
@@ -165,7 +196,8 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
           fontWeight: 700,
           fontFamily: "var(--font-heading), 'Space Grotesk', sans-serif",
           letterSpacing: "0.03em",
-          cursor: "pointer",
+          cursor: submitting ? "wait" : "pointer",
+          opacity: submitting ? 0.7 : 1,
           transition: "opacity 0.2s, transform 0.1s",
         }}
         onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.92")}
@@ -173,7 +205,7 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
         onMouseDown={(e) => (e.currentTarget.style.transform = "scale(0.99)")}
         onMouseUp={(e) => (e.currentTarget.style.transform = "scale(1)")}
       >
-        Get Free Quote via WhatsApp →
+        {submitting ? "Opening WhatsApp…" : "Get Free Quote via WhatsApp →"}
       </button>
     </form>
   );
