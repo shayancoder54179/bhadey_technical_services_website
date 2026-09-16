@@ -11,16 +11,18 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
   "@id": `${BASE_URL}/#organization`,
-  name: "Bhadeya Technical Services LLC",
+  name: company.name,
   description:
     "Leading GPR scanning, core cutting and excavation services in UAE",
   url: BASE_URL,
-  telephone: "+971556926286",
-  email: "Bhadeyatechnical@gmail.com",
+  telephone: company.phoneClean,
+  email: company.email,
   image: {
     "@type": "ImageObject",
     url: `${BASE_URL}/images/bts_logo.png`,
   },
+  // ISO times mirror company.hours, which stores display strings
+  // ("8:00 AM - 6:00 PM") rather than schema.org "08:00" values — keep in sync by hand.
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -33,6 +35,14 @@ const organizationSchema = {
       dayOfWeek: "Saturday",
       opens: "09:00",
       closes: "15:00",
+    },
+    // Friday is closed; schema.org states this as a zero-length 00:00-00:00 span
+    // so the day is explicitly covered rather than merely unmentioned.
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: "00:00",
+      closes: "00:00",
     },
   ],
   areaServed: [
@@ -109,7 +119,7 @@ const organizationSchema = {
       },
     ],
   },
-  foundingDate: "2019",
+  foundingDate: String(company.foundingYear),
   knowsAbout: [
     "GPR Scanning",
     "Ground Penetrating Radar",
@@ -126,13 +136,29 @@ const organizationSchema = {
   ],
   slogan: "Precision Scanning. Safe Construction.",
   // `address` is required for LocalBusiness rich results. Sourced from
-  // data/company.ts so the site has one NAP source of truth; streetAddress and
-  // postalCode are still omitted rather than guessed (see the note there).
+  // data/company.ts so the site has one NAP source of truth. The street address
+  // is no longer unknown — it comes from the DED trade licence / Ejari tenancy
+  // contract. postalCode stays omitted because Dubai does not use postal codes.
   address: {
     "@type": "PostalAddress",
+    streetAddress: company.address.streetAddress,
     addressLocality: company.address.locality,
     addressRegion: company.address.region,
     addressCountry: company.address.country,
+  },
+  // Plot coordinates resolved from the Makani number on the tenancy contract.
+  // Keep in step with the Google Business Profile pin.
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: company.address.geo.latitude,
+    longitude: company.address.geo.longitude,
+  },
+  // DED trade licence number — a verifiable registration signal that Google
+  // Business Profile review and entity matching can cross-check.
+  identifier: {
+    "@type": "PropertyValue",
+    name: "Dubai DED Trade License",
+    value: company.license.number,
   },
   priceRange: "$$",
   logo: {
@@ -143,8 +169,8 @@ const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+971556926286",
-    email: "Bhadeyatechnical@gmail.com",
+    telephone: company.phoneClean,
+    email: company.email,
     contactType: "customer service",
     areaServed: ["AE"],
     availableLanguage: ["English", "Arabic"],
@@ -159,7 +185,7 @@ const websiteSchema = {
   "@type": "WebSite",
   "@id": `${BASE_URL}/#website`,
   url: BASE_URL,
-  name: "Bhadeya Technical Services LLC",
+  name: company.name,
   description:
     "GPR scanning, core cutting and excavation services across the UAE",
   publisher: {
@@ -194,7 +220,7 @@ const serviceSchemas = [
     description:
       "Ground Penetrating Radar concrete scanning using Proceq GP8000 for rebar detection, post-tension cable location, conduit and void detection up to 1.5 m depth in concrete across Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain.",
     provider: { "@id": `${BASE_URL}/#organization` },
-    telephone: "+971556926286",
+    telephone: company.phoneClean,
     image: `${BASE_URL}/images/bts_logo.png`,
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -215,7 +241,7 @@ const serviceSchemas = [
     description:
       "Diamond core cutting services from 12mm to 500mm diameter using professional equipment for structural testing and utility installations.",
     provider: { "@id": `${BASE_URL}/#organization` },
-    telephone: "+971556926286",
+    telephone: company.phoneClean,
     image: `${BASE_URL}/images/bts_logo.png`,
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -236,7 +262,7 @@ const serviceSchemas = [
     description:
       "Professional excavation services for construction, infrastructure, and ground works across UAE. Every dig preceded by GPR ground scanning to 5-10 m depending on soil conditions.",
     provider: { "@id": `${BASE_URL}/#organization` },
-    telephone: "+971556926286",
+    telephone: company.phoneClean,
     image: `${BASE_URL}/images/bts_logo.png`,
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -257,7 +283,7 @@ const serviceSchemas = [
     description:
       "Specialised oversized and heavy cargo transport and logistics across all UAE emirates.",
     provider: { "@id": `${BASE_URL}/#organization` },
-    telephone: "+971556926286",
+    telephone: company.phoneClean,
     image: `${BASE_URL}/images/bts_logo.png`,
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -278,7 +304,7 @@ const serviceSchemas = [
     description:
       "Underground utility locating and subsurface mapping with the Proceq GS8000 ground penetrating radar. Pre-excavation surveys to 5-10 m depending on soil conditions, with on-site marking and survey reports.",
     provider: { "@id": `${BASE_URL}/#organization` },
-    telephone: "+971556926286",
+    telephone: company.phoneClean,
     image: `${BASE_URL}/images/bts_logo.png`,
     areaServed: [
       { "@type": "City", name: "Dubai" },
@@ -299,7 +325,7 @@ const serviceSchemas = [
     description:
       "Interlock tile laying, repair and re-levelling, sub-base preparation, kerbstones, and road pavement and hardstanding works across the UAE.",
     provider: { "@id": `${BASE_URL}/#organization` },
-    telephone: "+971556926286",
+    telephone: company.phoneClean,
     image: `${BASE_URL}/images/bts_logo.png`,
     areaServed: [
       { "@type": "City", name: "Dubai" },

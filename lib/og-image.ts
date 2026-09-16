@@ -11,7 +11,7 @@ export const OG_IMAGES = [
     url: "/images/og-card.png",
     width: 1200,
     height: 630,
-    alt: "Bhadeya Technical Services LLC - GPR Scanning & Core Cutting across the UAE",
+    alt: "Bhadeya Technical Services L.L.C - GPR Scanning & Core Cutting across the UAE",
   },
 ];
 
@@ -24,7 +24,7 @@ export const OG_IMAGES = [
  * survive, then override title/description/url per page.
  */
 export const OG_DEFAULTS = {
-  siteName: "Bhadeya Technical Services LLC",
+  siteName: "Bhadeya Technical Services L.L.C",
   locale: "en_AE",
   images: OG_IMAGES,
 } as const;

@@ -4,6 +4,7 @@ import {
   Mail,
   Clock,
   MapPin,
+  Building2,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Badge } from "@/components/ui/badge";
@@ -154,10 +155,14 @@ export default function ContactPage() {
                 Working Hours
               </h2>
               <p className="font-medium text-graphite">
-                Sun - Thu: 8:00 AM - 6:00 PM
+                {company.hours.weekday.days}: {company.hours.weekday.time}
               </p>
-              <p className="text-slate-deep">Saturday: 9:00 AM - 3:00 PM</p>
-              <p className="text-slate-deep">Friday: Closed</p>
+              <p className="text-slate-deep">
+                {company.hours.saturday.days}: {company.hours.saturday.time}
+              </p>
+              <p className="text-slate-deep">
+                {company.hours.friday.days}: {company.hours.friday.time}
+              </p>
             </div>
           </div>
         </div>
@@ -237,6 +242,42 @@ export default function ContactPage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              {/* Registered office — kept byte-identical to the Google Business
+                  Profile listing so the NAP signals match. */}
+              <div className="rounded-xl border border-hairline bg-surface p-6 shadow-lift">
+                <h3 className="font-semibold text-graphite mb-3 flex items-center gap-2 tracking-tight">
+                  <Building2 className="size-5 text-safety" />
+                  Registered office
+                </h3>
+                <address className="text-sm not-italic leading-relaxed text-slate-deep">
+                  <span className="block font-medium text-graphite">
+                    {company.name}
+                  </span>
+                  {company.address.streetAddress}
+                  <br />
+                  {company.address.locality}, {company.address.region}
+                  <br />
+                  {company.address.countryName}
+                </address>
+                <dl className="mt-4 space-y-1.5 border-t border-hairline pt-4 text-sm">
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-slate-soft">Makani</dt>
+                    <dd className="font-mono text-graphite">
+                      {company.address.makani}
+                    </dd>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-slate-soft">Trade Licence</dt>
+                    <dd className="font-mono text-graphite">
+                      {company.license.number}
+                    </dd>
+                  </div>
+                </dl>
+                <p className="mt-3 text-xs text-slate-soft">
+                  Issued by the {company.license.issuer}.
+                </p>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { Home, Wrench, Mail, Phone } from "lucide-react";
 import { company } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Page Not Found | Bhadeya Technical Services LLC",
+  title: `Page Not Found | ${company.name}`,
   description:
     "The page you are looking for could not be found. Return to Bhadeya Technical Services homepage or contact us for GPR scanning and core cutting in UAE.",
   robots: { index: false, follow: true },
@@ -31,7 +31,7 @@ export default function NotFound() {
           <Link href="/" className="mb-8 inline-block">
             <Image
               src="/images/bts_logo.png"
-              alt="Bhadeya Technical Services LLC - GPR scanning and diamond core cutting Dubai UAE"
+              alt={`${company.name} - GPR scanning and diamond core cutting Dubai UAE`}
               width={200}
               height={70}
               className="h-14 w-auto md:h-16 object-contain"

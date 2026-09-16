@@ -71,9 +71,9 @@ export const metadata: Metadata = {
     "subsurface scanning UAE",
     "Bhadeya Technical Services",
   ],
-  authors: [{ name: "Bhadeya Technical Services LLC" }],
-  creator: "Bhadeya Technical Services LLC",
-  publisher: "Bhadeya Technical Services LLC",
+  authors: [{ name: "Bhadeya Technical Services L.L.C" }],
+  creator: "Bhadeya Technical Services L.L.C",
+  publisher: "Bhadeya Technical Services L.L.C",
   robots: {
     index: true,
     follow: true,
@@ -96,16 +96,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_AE",
     url: "https://www.bhadeya.com",
-    siteName: "Bhadeya Technical Services LLC",
+    siteName: "Bhadeya Technical Services L.L.C",
     title:
-      "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
+      "Bhadeya Technical Services L.L.C | #1 GPR Scanning & Core Cutting in UAE",
     description:
       "Leading GPR scanning, core cutting & excavation services in Dubai, Abu Dhabi, Sharjah & UAE. 7+ years of trusted experience.",
     images: OG_IMAGES,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bhadeya Technical Services LLC | GPR Scanning & Core Cutting UAE",
+    title: "Bhadeya Technical Services L.L.C | GPR Scanning & Core Cutting UAE",
     description:
       "Leading GPR scanning, core cutting & excavation services across UAE.",
     images: [OG_IMAGES[0].url],

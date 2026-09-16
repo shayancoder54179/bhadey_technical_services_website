@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 import { Logo } from "@/components/layout/Logo";
@@ -134,6 +134,19 @@ export function Footer() {
               WhatsApp
             </WhatsAppLink>
 
+            {/* Registered address — must stay byte-identical to the Google
+                Business Profile listing for NAP consistency. */}
+            <address className="mt-3 flex items-start gap-2.5 text-sm not-italic leading-relaxed text-white/75">
+              <MapPin className="mt-0.5 size-[18px] shrink-0 text-safety-bright" aria-hidden />
+              <span>
+                {company.address.streetAddress}
+                <br />
+                {company.address.locality}, {company.address.region}
+                <br />
+                {company.address.countryName}
+              </span>
+            </address>
+
             <dl className="mt-6 space-y-1.5 border-t border-white/10 pt-5 text-sm">
               {hours.map((slot) => (
                 <div key={slot.days} className="flex justify-between gap-4">
@@ -178,10 +191,16 @@ export function Footer() {
       {/* ── Bottom bar ──────────────────────────────────────────────────── */}
       <div className="border-t border-white/10 bg-graphite">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12 xl:px-16">
-          <p className="text-sm text-white/60">
-            © {new Date().getFullYear()} Bhadeya Technical Services L.L.C. All
-            rights reserved.
-          </p>
+          <div className="space-y-1">
+            <p className="text-sm text-white/60">
+              © {new Date().getFullYear()} Bhadeya Technical Services L.L.C. All
+              rights reserved.
+            </p>
+            <p className="text-xs text-white/45">
+              Trade Licence No. {company.license.number} ·{" "}
+              {company.license.issuerShort}
+            </p>
+          </div>
           <p className="text-xs text-white/45">
             Serving {company.serviceAreas.join(" · ")}
           </p>
