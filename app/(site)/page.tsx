@@ -38,26 +38,26 @@ const CTASection = dynamic(
 
 export const metadata: Metadata = {
   title: {
-    absolute: "GPR Scanning & Core Cutting Dubai | Bhadeya Technical",
+    absolute: "Bhadeya Technical | Scanning, Cutting & Civil Works UAE",
   },
   description:
-    "GPR concrete scanning, core cutting, excavation and interlock paving across Dubai, Abu Dhabi and Sharjah. Proceq GP8000 and GS8000. Free quote.",
+    "Bhadeya Technical Services L.L.C - GPR scanning, core cutting and excavation across Dubai, Abu Dhabi and Sharjah. DED licensed. Free quote on WhatsApp.",
   alternates: {
     canonical: "https://www.bhadeya.com",
   },
   openGraph: {
     ...OG_DEFAULTS,
     title:
-      "Bhadeya Technical Services L.L.C | #1 GPR Scanning & Core Cutting in UAE",
+      "Bhadeya Technical Services L.L.C | Scanning, Cutting & Civil Works",
     description:
-      "Professional GPR scanning, core cutting & excavation services across UAE. Trusted by Dubai Mall, Emaar, ADNOC & more.",
+      "Bhadeya Technical Services L.L.C - GPR scanning, core cutting and excavation across Dubai, Abu Dhabi and Sharjah. DED licensed. Free quote on WhatsApp.",
     url: "https://www.bhadeya.com",
     type: "website",
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "Bhadeya Technical Services L.L.C | #1 GPR Scanning & Core Cutting in UAE",
-    "Professional GPR scanning, core cutting & excavation services across UAE. Trusted by Dubai Mall, Emaar, ADNOC & more."
+    "Bhadeya Technical Services L.L.C | Scanning, Cutting & Civil Works",
+    "Bhadeya Technical Services L.L.C - GPR scanning, core cutting and excavation across Dubai, Abu Dhabi and Sharjah. DED licensed. Free quote on WhatsApp."
   ),
 };
 

@@ -4,32 +4,34 @@ import type { ServicePageData } from "@/lib/service-page-types";
 
 import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
-  title: "GPR Concrete Scanning Dubai & UAE",
+  title: "GPR Survey & Concrete Scanning UAE",
   description:
-    "Non-destructive GPR concrete scanning in Dubai and across the UAE. Rebar, post-tension cables and conduits located up to 1.5 m before you cut or drill.",
+    "UAE-wide GPR survey and concrete scanning. Locate rebar, post-tension cables and conduits before you cut or drill — no radiation, single-sided access.",
   keywords: [
-    "GPR scanning Dubai",
+    "GPR survey UAE",
+    "GPR survey",
     "GPR scanning UAE",
-    "ground penetrating radar Dubai",
+    "ground penetrating radar near me",
+    "GPR scanning near me",
     "Proceq GP8000 scanning",
-    "rebar detection Dubai",
-    "post tension cable detection UAE",
+    "post tension scanning",
+    "concrete x-ray alternative",
+    "rebar detection UAE",
     "subsurface scanning UAE",
-    "utility detection Dubai",
   ],
   alternates: { canonical: "https://www.bhadeya.com/services/gpr-scanning" },
   openGraph: {
     ...OG_DEFAULTS,
-    title: "GPR Concrete Scanning Dubai & UAE | Proceq GP8000 | Bhadeya Technical",
+    title: "GPR Survey & Concrete Scanning Services UAE | Bhadeya Technical",
     description:
-      "Professional GPR scanning in Dubai, Abu Dhabi, Sharjah & UAE. 1.5m in concrete, up to 10m in ground. Rebar & post-tension detection. Trusted by Dubai Mall, Emaar & ADNOC.",
+      "GPR survey and concrete scanning across the UAE. 1.5m in concrete, up to 10m in ground. Rebar, post-tension and utility detection with no radiation and no site evacuation.",
     url: "https://www.bhadeya.com/services/gpr-scanning",
     type: "website",
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "GPR Concrete Scanning Dubai & UAE | Proceq GP8000 | Bhadeya Technical",
-    "Professional GPR scanning in Dubai, Abu Dhabi, Sharjah & UAE. 1.5m in concrete, up to 10m in ground. Rebar & post-tension detection. Trusted by Dubai Mall, Emaar & ADNOC."
+    "GPR Survey & Concrete Scanning Services UAE | Bhadeya Technical",
+    "GPR survey and concrete scanning across the UAE. 1.5m in concrete, up to 10m in ground. Rebar, post-tension and utility detection with no radiation and no site evacuation."
   ),
 };
 
@@ -41,9 +43,9 @@ const gprPageData: ServicePageData = {
     { label: "GPR Concrete Scanning", href: "/services/gpr-scanning" },
   ],
   hero: {
-    title: "GPR Concrete Scanning in Dubai & UAE",
+    title: "GPR Survey & Concrete Scanning Across the UAE",
     subtitle:
-      "Concrete scanning with the industry-leading Proceq GP8000. Detect rebar, post-tension cables, conduits and voids up to 1.5 m deep in concrete—non-destructively and with full reporting. For buried utilities in soil, our Proceq GS8000 reads up to 10 m depending on ground conditions. Trusted by Dubai Mall, Emaar and ADNOC.",
+      "A GPR survey with the industry-leading Proceq GP8000 detects rebar, post-tension cables, conduits and voids up to 1.5 m deep in concrete—non-destructively, with no radiation and no need to evacuate the area, and with full reporting. For buried utilities in soil, our Proceq GS8000 reads up to 10 m depending on ground conditions. We survey across Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain, and are trusted by Dubai Mall, Emaar and ADNOC.",
     stats: [
       { value: "1.5m", label: "Depth in concrete" },
       { value: "Up to 10m", label: "Depth in soil (GS8000)" },
@@ -60,9 +62,9 @@ const gprPageData: ServicePageData = {
     },
   },
   overview: {
-    title: "What is GPR Scanning?",
+    title: "What is a GPR Survey?",
     description:
-      "GPR (Ground Penetrating Radar) scanning is a non-destructive testing method that uses radar pulses to image the subsurface of concrete and ground. It detects and maps rebar, post-tension cables, electrical conduits, plumbing, voids and other embedded objects before any cutting, drilling or excavation. This prevents costly damage, ensures structural safety and protects workers. In Dubai and across the UAE, GPR scanning is a standard requirement for safe construction and renovation projects.",
+      "A GPR (Ground Penetrating Radar) survey is a non-destructive testing method that uses radar pulses to image the subsurface of concrete and ground. It detects and maps rebar, post-tension cables, electrical conduits, plumbing, voids and other embedded objects before any cutting, drilling or excavation. Because the survey is done from one accessible face with no ionising radiation, work can continue around it — unlike concrete x-ray, which needs access to both sides of the element and the area cleared. This prevents costly damage, ensures structural safety and protects workers. Across the UAE, a GPR survey is a standard requirement before safe construction and renovation work.",
     howItWorks: [
       {
         step: 1,
@@ -138,7 +140,7 @@ const gprPageData: ServicePageData = {
   ],
   galleryTitle: "GPR Scanning in Action",
   process: {
-    title: "Our GPR Scanning Process",
+    title: "Our GPR Survey Process",
     steps: [
       {
         number: 1,
@@ -168,6 +170,16 @@ const gprPageData: ServicePageData = {
   },
   seoParagraphs: [
     {
+      title: "GPR Survey Across the UAE",
+      content:
+        "Bhadeya Technical carries out GPR surveys across the whole country, not one emirate. Our service areas are Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain, and both scanners are based at our office in Al Khabeesi, Deira, Dubai — so a survey team and the equipment travel together to your site rather than being hired in. For most Dubai and Sharjah addresses we can attend the same day, with same-day service available for Dubai projects booked before 12PM, and next-day mobilisation is normal for Abu Dhabi city and the surrounding zones. We work Sunday to Thursday, 8:00 AM to 6:00 PM, and Saturday 9:00 AM to 3:00 PM, and reply to survey requests within 1 hour during those hours.",
+    },
+    {
+      title: "Post-Tension Scanning Before You Cut",
+      content:
+        "Post-tension scanning is the single most safety-critical reason to survey a slab before drilling. Post-tension strands sit under extreme tension — typically 140–200 kN per strand — and cutting one can cause immediate slab collapse rather than a repairable hole. Concrete slabs in UAE high-rise and commercial buildings very often contain them, which is why every penetration point we clear is surveyed first. Our Proceq GP8000 images the strand layout in real-time 3D so the technician can mark both the cable runs and the safe drilling zones directly on the surface, then issue a report showing positions and depths. If a strand sits exactly where you need to cut, we stop and tell you before anything is drilled, and mark the nearest clear alternative.",
+    },
+    {
       title: "GPR Scanning in Dubai",
       content:
         "GPR scanning in Dubai is essential for high-rise, commercial and infrastructure projects. Before core cutting, drilling or demolition, contractors and consultants rely on GPR to locate rebar, post-tension cables and utilities. Bhadeya Technical provides professional GPR scanning services across Dubai using the Proceq GP8000, scanning up to 1.5 m into concrete with detailed reporting. For ground works we deploy the Proceq GS8000, which locates buried utilities at up to 10 m depending on soil conditions. We serve developers, main contractors and MEP teams on projects ranging from fit-outs to major new builds.",
@@ -185,9 +197,9 @@ const gprPageData: ServicePageData = {
   ],
   peopleAlsoAsk: [
     {
-      question: "What is the cost of GPR scanning in Dubai?",
+      question: "How much does a GPR survey cost?",
       answer:
-        "GPR scanning costs in Dubai vary based on the area to be scanned, complexity, and location. Contact Bhadeya Technical Services for a free, customized quote. We offer competitive pricing for all project sizes.",
+        "GPR survey costs in Dubai and the wider UAE vary based on the area to be scanned, complexity, access and location. Contact Bhadeya Technical Services with your site address and scan area for a free, customized quote. We offer competitive pricing for all project sizes.",
     },
     {
       question: "How accurate is GPR scanning?",
@@ -212,8 +224,23 @@ const gprPageData: ServicePageData = {
     { href: "/services/excavation", label: "Excavation" },
   ],
   faq: {
-    title: "Frequently Asked Questions About GPR Scanning",
+    title: "Frequently Asked Questions About GPR Surveys",
     items: [
+      {
+        question: "Is there a GPR scanning company near me?",
+        answer:
+          "If your site is in the UAE, yes. We are based in Al Khabeesi, Deira, Dubai, and both the Proceq GP8000 concrete scanner and the GS8000 ground scanner are kept here — we are a mobile survey team and bring everything to site. We cover Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain. Most Dubai and Sharjah addresses can be attended the same day, with same-day service available for Dubai projects booked before 12PM, and next-day mobilisation is normal for Abu Dhabi city and the surrounding zones. We work Sunday to Thursday 8:00 AM to 6:00 PM and Saturday 9:00 AM to 3:00 PM, and reply within 1 hour during those hours. Send us your site address on WhatsApp and we will confirm how soon we can reach you.",
+      },
+      {
+        question: "GPR scanning vs concrete x-ray — which is safer?",
+        answer:
+          "GPR is the safer method on almost every UAE site. It uses low-power radio-frequency pulses and emits no ionising radiation, so there is no exclusion zone, no radiation shielding, no permits for radioactive sources and no need to evacuate the area — adjacent floors and occupied spaces can keep working while we survey. It also needs access to one face only, so ground-bearing slabs, rafts and retaining walls can be scanned at all, and results appear in real time so safe zones are marked on the concrete during the visit rather than after film is developed. Concrete x-ray requires both faces of the element to be accessible and both sides cleared of people, though it does resolve finer detail in very heavily congested reinforcement. For everything else, GPR is the appropriate method.",
+      },
+      {
+        question: "Do you carry out post-tension scanning?",
+        answer:
+          "Yes — post-tension cable detection is a core part of every concrete survey we do. The Proceq GP8000 images strand runs in real-time 3D up to 1.5 m into concrete, and we mark both the cables and the clear drilling positions on the surface before any core cutting or drilling begins. Post-tension strands carry roughly 140–200 kN each, so cutting one risks slab collapse rather than a repairable hole. Where a required penetration falls directly on a strand, we stop, tell you, and mark the nearest safe alternative rather than cutting and reporting afterwards.",
+      },
       {
         question: "What is GPR scanning and why is it important?",
         answer:
@@ -246,9 +273,9 @@ const gprPageData: ServicePageData = {
       },
     ],
   },
-  ctaTitle: "Ready for Professional GPR Scanning in Dubai or UAE?",
+  ctaTitle: "Need a GPR Survey Anywhere in the UAE?",
   ctaDescription:
-    "Get a free quote for GPR scanning with the Proceq GP8000. We respond within 1 hour during business hours.",
+    "Get a free quote for a GPR survey with the Proceq GP8000. Send us your site address and we respond within 1 hour during business hours.",
 };
 
 // The Service entity for this page is emitted by ServicePageTemplate from the
