@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_DEFAULTS,
     title:
-      "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
+      "Bhadeya Technical Services L.L.C | #1 GPR Scanning & Core Cutting in UAE",
     description:
       "Professional GPR scanning, core cutting & excavation services across UAE. Trusted by Dubai Mall, Emaar, ADNOC & more.",
     url: "https://www.bhadeya.com",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "Bhadeya Technical Services LLC | #1 GPR Scanning & Core Cutting in UAE",
+    "Bhadeya Technical Services L.L.C | #1 GPR Scanning & Core Cutting in UAE",
     "Professional GPR scanning, core cutting & excavation services across UAE. Trusted by Dubai Mall, Emaar, ADNOC & more."
   ),
 };

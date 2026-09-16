@@ -11,7 +11,7 @@ export default function Loading() {
       <div className="bg-surface p-3 inline-block">
         <Image
           src="/images/bts_logo.png"
-          alt="Bhadeya Technical Services LLC - GPR scanning and core cutting Dubai UAE - Loading"
+          alt="Bhadeya Technical Services L.L.C - GPR scanning and core cutting Dubai UAE - Loading"
           width={220}
           height={80}
           className="h-16 w-auto object-contain animate-pulse md:h-20"

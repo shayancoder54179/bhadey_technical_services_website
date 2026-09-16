@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { LeadForm } from "./LeadForm";
 import { Logo } from "@/components/layout/Logo";
+import { company } from "@/data/company";
 import { GetQuoteLink, PhoneLink, WhatsAppLink } from "@/components/seo/TrackedCtaLinks";
 
 import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
@@ -1662,9 +1663,19 @@ const landingPageSchema = [
     provider: {
       "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
       "@id": "https://www.bhadeya.com/#organization",
-      name: "Bhadeya Technical Services LLC",
+      name: company.name,
       url: "https://www.bhadeya.com",
-      telephone: "+971556926286",
+      telephone: company.phoneClean,
+      email: company.email,
+      // Same PostalAddress as components/seo/JsonLd.tsx so this route's org node
+      // does not contradict the site-wide one. No postalCode (Dubai has none).
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: company.address.streetAddress,
+        addressLocality: company.address.locality,
+        addressRegion: company.address.region,
+        addressCountry: company.address.country,
+      },
     },
     areaServed: [
       { "@type": "City", name: "Dubai" },

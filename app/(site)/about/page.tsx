@@ -16,13 +16,13 @@ const CTASection = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: { absolute: "About Bhadeya Technical Services LLC | UAE" },
+  title: { absolute: `About ${company.name} | UAE` },
   description:
-    "Bhadeya Technical Services LLC has provided GPR scanning, core cutting and excavation across the UAE since 2019. Proceq GP8000 and GS8000 operators.",
+    `${company.name} has provided GPR scanning, core cutting and excavation across the UAE since 2019. Proceq GP8000 and GS8000 operators.`,
   alternates: { canonical: "https://www.bhadeya.com/about" },
   openGraph: {
     ...OG_DEFAULTS,
-    title: "About Bhadeya Technical Services LLC | UAE",
+    title: `About ${company.name} | UAE`,
     description:
       "UAE's trusted GPR scanning and core cutting company since 2019. 7+ years across Dubai, Abu Dhabi, Sharjah & UAE.",
     url: "https://www.bhadeya.com/about",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "About Bhadeya Technical Services LLC | UAE",
+    `About ${company.name} | UAE`,
     "UAE's trusted GPR scanning and core cutting company since 2019. 7+ years across Dubai, Abu Dhabi, Sharjah & UAE."
   ),
 };
