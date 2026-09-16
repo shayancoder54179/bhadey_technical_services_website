@@ -8,13 +8,13 @@ import { ProjectsFilterGrid } from "@/components/projects/ProjectsFilterGrid";
 
 import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
-  title: "Our Projects Across the UAE",
+  title: "GPR Scanning & Core Cutting Projects",
   description:
-    "GPR scanning, core cutting and excavation delivered on UAE landmark projects including The Dubai Mall, ADNOC Headquarters and Kempinski Hotel.",
+    "GPR scanning, core cutting and excavation delivered on UAE landmark projects including The Dubai Mall, ADNOC Headquarters and Kempinski Hotel, since 2019.",
   alternates: { canonical: "https://www.bhadeya.com/projects" },
   openGraph: {
     ...OG_DEFAULTS,
-    title: "Our Projects | Bhadeya Technical Services UAE",
+    title: "GPR Scanning & Core Cutting Projects | Bhadeya Technical",
     description:
       "Portfolio of GPR scanning and core cutting projects. Trusted by Dubai Mall, Emaar, ADNOC & more.",
     url: "https://www.bhadeya.com/projects",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "Our Projects | Bhadeya Technical Services UAE",
+    "GPR Scanning & Core Cutting Projects | Bhadeya Technical",
     "Portfolio of GPR scanning and core cutting projects. Trusted by Dubai Mall, Emaar, ADNOC & more."
   ),
 };
@@ -82,10 +82,11 @@ export default function ProjectsPage() {
               id="projects-hero-title"
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-white mb-4 tracking-tight"
             >
-              Our Projects & Portfolio
+              GPR Scanning & Core Cutting Projects Across the UAE
             </h1>
             <p className="text-lg text-white/75">
-              Trusted across UAE&apos;s most prestigious developments
+              GPR concrete scanning, utility surveys, core cutting and
+              excavation delivered since 2019
             </p>
           </header>
         </div>
@@ -97,7 +98,7 @@ export default function ProjectsPage() {
         aria-labelledby="projects-grid-heading"
       >
         <h2 id="projects-grid-heading" className="sr-only">
-          Filter and browse our project portfolio
+          Filter our GPR scanning and core cutting projects
         </h2>
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
           <ProjectsFilterGrid />
@@ -164,7 +165,7 @@ export default function ProjectsPage() {
             id="cta-heading"
             className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 max-w-2xl mx-auto tracking-tight"
           >
-            Have a project? Let&apos;s discuss how we can help.
+            Need GPR scanning or core cutting on your project?
           </h2>
           <p className="text-lg md:text-xl text-white/75 max-w-2xl mx-auto mb-10">
             Get a free quote for GPR scanning, core cutting, or excavation. We

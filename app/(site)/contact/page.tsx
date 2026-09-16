@@ -20,13 +20,13 @@ import { ContactForm } from "@/components/contact/ContactForm";
 
 import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
-  title: "Contact Us — Free Quote",
+  title: "Contact Us: Free GPR Scanning Quote",
   description:
-    "Get a free quote for GPR scanning, core cutting or excavation anywhere in the UAE. Call +971 55 692 6286 or message us on WhatsApp for a same-day reply.",
+    "Free quotes for GPR scanning, core cutting and excavation anywhere in the UAE. Call +971 55 692 6286 or message us on WhatsApp for a reply the same day.",
   alternates: { canonical: "https://www.bhadeya.com/contact" },
   openGraph: {
     ...OG_DEFAULTS,
-    title: "Contact Us | Bhadeya Technical Services UAE",
+    title: "Contact Us: Free GPR Scanning Quote | Bhadeya Technical",
     description:
       "Get a free quote for GPR scanning, core cutting & excavation. Call +971 55 692 6286. Serving Dubai, Abu Dhabi, Sharjah & UAE.",
     url: "https://www.bhadeya.com/contact",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "Contact Us | Bhadeya Technical Services UAE",
+    "Contact Us: Free GPR Scanning Quote | Bhadeya Technical",
     "Get a free quote for GPR scanning, core cutting & excavation. Call +971 55 692 6286. Serving Dubai, Abu Dhabi, Sharjah & UAE."
   ),
 };
@@ -82,12 +82,12 @@ export default function ContactPage() {
           <header className="max-w-3xl">
             <p className="eyebrow eyebrow-dark">Reply within 1&ndash;2 hours</p>
             <h1 id="contact-hero-title" className="display-xl mt-5 text-white">
-              Tell us what needs scanning, cutting or digging.
+              Contact us for GPR scanning, core cutting or excavation.
             </h1>
             <p className="mt-5 max-w-[54ch] text-[1.0625rem] leading-relaxed text-white/75">
-              Free quotes for GPR scanning, core cutting and excavation anywhere
-              in the UAE. Call, WhatsApp, or send the form &mdash; whichever is
-              quicker for you.
+              Free quotes for GPR concrete scanning, GPR ground scanning, core
+              cutting and excavation anywhere in the UAE. Call, WhatsApp, or
+              send the form &mdash; whichever is quicker for you.
             </p>
           </header>
         </div>
@@ -178,14 +178,14 @@ export default function ContactPage() {
             id="contact-form-heading"
             className="sr-only"
           >
-            Send us a message
+            Request a GPR scanning or core cutting quote
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left - Contact Form */}
             <div className="lg:col-span-3">
               <div className="border border-hairline bg-surface p-6 md:p-8">
                 <h3 className="display-lg mb-2 text-graphite">
-                  Get a Free Quote
+                  Get a Free GPR Scanning or Core Cutting Quote
                 </h3>
                 <p className="text-slate-deep mb-8">
                   Fill out the form below and we&apos;ll get back to you within
@@ -296,7 +296,7 @@ export default function ContactPage() {
             id="what-happens-heading"
             className="display-lg mb-4 text-graphite"
           >
-            What happens after you get in touch
+            What happens after you request a GPR scanning quote
           </h2>
           <p className="mb-10 max-w-2xl text-slate-deep">
             Most enquiries reach us on WhatsApp, and most are answered the same
@@ -377,7 +377,7 @@ export default function ContactPage() {
             id="service-areas-heading"
             className="display-lg mb-4 text-center text-graphite"
           >
-            Service Areas
+            Where We Provide GPR Scanning and Core Cutting
           </h2>
           <p className="text-center text-slate-deep max-w-2xl mx-auto mb-10">
             We provide GPR scanning, core cutting, and excavation services across
@@ -407,7 +407,7 @@ export default function ContactPage() {
             id="contact-faq-heading"
             className="display-lg mb-10 text-center text-graphite"
           >
-            Frequently Asked Questions
+            GPR Scanning Quote FAQs
           </h2>
           <div className="max-w-2xl mx-auto">
             <Accordion type="single" collapsible className="w-full">

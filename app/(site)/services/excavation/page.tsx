@@ -4,10 +4,11 @@ import type { ServicePageData } from "@/lib/service-page-types";
 
 import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
-  title: "Excavation Services Dubai & UAE",
+  title: "Subsurface Excavation Services UAE",
   description:
-    "GPR-guided excavation across Dubai, Abu Dhabi and Sharjah. We scan the ground before digging, so your crew works from a utility map, not a guess.",
+    "Subsurface excavation across Dubai, Abu Dhabi and Sharjah. We GPR scan the ground before we dig, so your crew works from a real utility map, not a guess.",
   keywords: [
+    "subsurface excavation services Dubai",
     "excavation services Dubai",
     "excavation UAE",
     "safe excavation Dubai",
@@ -40,7 +41,7 @@ const excavationData: ServicePageData = {
     { label: "Excavation", href: "/services/excavation" },
   ],
   hero: {
-    title: "Excavation in Dubai & UAE — We Scan Before We Dig",
+    title: "Subsurface Excavation in Dubai & UAE — We Scan Before We Dig",
     subtitle:
       "Before any machine breaks ground, we survey the dig area with our Proceq GS8000 ground radar, reading 5–10 m into the soil depending on ground conditions. Buried cables, pipes and ducts are located and marked first, then we excavate. Site preparation, utility trenching, foundation excavation. 7+ years serving Dubai, Abu Dhabi, Sharjah and across the UAE.",
     stats: [
@@ -57,7 +58,7 @@ const excavationData: ServicePageData = {
     },
   },
   overview: {
-    title: "What Are Our Excavation Services?",
+    title: "What Our Subsurface Excavation Services Cover",
     description:
       "Before you excavate, you scan — that is the rule we work to on every job. Our excavation services cover site preparation, utility trenching, foundation excavation and grading for construction and civil projects across the UAE, and each one begins with a GPR survey of the dig area using our Proceq GS8000. It reads 5–10 m into the ground depending on soil conditions, locating power cables, water and sewer lines, telecom ducts, gas pipes and voids before the first bucket goes in. Because the scanning and the digging are both ours, there is no waiting on a third-party surveyor and no gap in responsibility between the survey and the excavation. We serve Dubai, Abu Dhabi, Sharjah and the wider UAE with experienced operators and full compliance with local safety regulations.",
     howItWorks: [
@@ -164,9 +165,9 @@ const excavationData: ServicePageData = {
   },
   seoParagraphs: [
     {
-      title: "Excavation Services in Dubai",
+      title: "Subsurface Excavation Services in Dubai",
       content:
-        "Excavation services in Dubai are in demand for new builds, infrastructure and MEP projects. Safe excavation requires knowing what is underground. Bhadeya Technical provides excavation with GPR scanning—we map utilities and obstructions before digging, reducing the risk of strikes and delays. We serve Dubai with 7+ years of experience and a focus on safety and efficiency.",
+        "Subsurface excavation services in Dubai are in demand for new builds, infrastructure and MEP projects, and in a city this densely serviced the risk is rarely the soil — it is what runs through it. Safe excavation requires knowing what is underground before the bucket finds it. Bhadeya Technical provides excavation with a GPR ground survey included: we map utilities and obstructions before digging, reducing the risk of strikes and delays. We serve Dubai with 7+ years of experience and a focus on safety and efficiency.",
     },
     {
       title: "Excavation Services in Abu Dhabi",

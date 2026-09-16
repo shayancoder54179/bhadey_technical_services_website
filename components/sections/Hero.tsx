@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Phone, ShieldCheck, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GetQuoteLink, PhoneLink } from "@/components/seo/TrackedCtaLinks";
+import { company } from "@/data/company";
 
 const container = {
   hidden: { opacity: 1 },
@@ -43,16 +44,28 @@ export function Hero() {
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 pb-14 pt-26 sm:px-8 md:pt-28 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:px-12 lg:pb-16 lg:pt-30 xl:px-16">
         {/* ── Copy column ─────────────────────────────────────────────── */}
         <motion.div variants={container} initial="hidden" animate="visible">
+          {/* The services used to be named here, but the h1 below now carries
+              them — repeating the same three terms directly above it read as
+              keyword stuffing. This slot earns its place with credentials
+              instead; every value is from data/company.ts. */}
           <motion.p variants={fadeUp} className="eyebrow eyebrow-dark">
-            GPR Scanning · Core Cutting · UAE
+            Proceq GP8000 &amp; GS8000 · UAE-wide · Since {company.foundingYear}
           </motion.p>
 
-          <motion.h1
-            variants={h1Variant}
-            className="display-xl mt-5 text-white"
-          >
-            Know what&apos;s beneath{" "}
-            <span className="text-safety-bright">before</span> you cut.
+          {/* The services line sits inside the h1 rather than in the eyebrow
+              above it: the h1 is the strongest on-page signal after the title,
+              and naming the services there is what Google matches against.
+              It deliberately leads with breadth ("Scanning, Core Cutting &
+              Excavation") instead of a single head term, so the homepage does
+              not compete with /services/gpr-scanning for the same query. */}
+          <motion.h1 variants={h1Variant} className="mt-5 text-white">
+            <span className="block text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">
+              GPR Scanning, Core Cutting &amp; Excavation in the UAE
+            </span>
+            <span className="display-xl mt-3 block">
+              Know what&apos;s beneath{" "}
+              <span className="text-safety-bright">before</span> you cut.
+            </span>
           </motion.h1>
 
           <motion.p

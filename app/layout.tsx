@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   // Keep page titles under ~38 chars so the composed title stays inside
   // Google's ~60-character display limit.
   title: {
-    default: "Bhadeya Technical | Scanning, Cutting & Civil Works UAE",
+    default: "Bhadeya Technical | GPR Scanning Company in UAE",
     template: "%s | Bhadeya Technical",
   },
   description:

@@ -38,7 +38,7 @@ const CTASection = dynamic(
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Bhadeya Technical | Scanning, Cutting & Civil Works UAE",
+    absolute: "Bhadeya Technical | GPR Scanning Company in UAE",
   },
   description:
     "Bhadeya Technical Services L.L.C - GPR scanning, core cutting and excavation across Dubai, Abu Dhabi and Sharjah. DED licensed. Free quote on WhatsApp.",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     ...OG_DEFAULTS,
     title:
-      "Bhadeya Technical Services L.L.C | Scanning, Cutting & Civil Works",
+      "Bhadeya Technical Services L.L.C | GPR Scanning Company in UAE",
     description:
       "Bhadeya Technical Services L.L.C - GPR scanning, core cutting and excavation across Dubai, Abu Dhabi and Sharjah. DED licensed. Free quote on WhatsApp.",
     url: "https://www.bhadeya.com",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "Bhadeya Technical Services L.L.C | Scanning, Cutting & Civil Works",
+    "Bhadeya Technical Services L.L.C | GPR Scanning Company in UAE",
     "Bhadeya Technical Services L.L.C - GPR scanning, core cutting and excavation across Dubai, Abu Dhabi and Sharjah. DED licensed. Free quote on WhatsApp."
   ),
 };

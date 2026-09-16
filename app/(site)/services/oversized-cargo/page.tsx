@@ -6,7 +6,7 @@ import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Oversized Cargo Movement UAE",
   description:
-    "Oversized and heavy cargo movement across the UAE. Route surveys, RTA permit support, escort and flagging for loads too large for a standard truck.",
+    "Oversized and heavy cargo movement across the UAE. Route surveys, RTA permit support, escort and flagging for loads too large for a standard truck. Get a quote.",
   keywords: [
     "oversized cargo movement UAE",
     "heavy load transport Dubai",
@@ -41,7 +41,7 @@ const oversizedCargoPageData: ServicePageData = {
     { label: "Oversized Cargo Movement", href: "/services/oversized-cargo" },
   ],
   hero: {
-    title: "Oversized Cargo Movement",
+    title: "Oversized Cargo Movement Across the UAE",
     subtitle:
       "Safe & Compliant Oversized Load Transport Assistance Across UAE. Professional roadside assistance, escort, and logistics support for the movement of oversized and heavy cargo across Dubai, Abu Dhabi, Sharjah, and all UAE emirates.",
     stats: [

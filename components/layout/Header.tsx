@@ -73,9 +73,11 @@ export function Header() {
     >
       <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-between gap-4 px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Logo */}
+        {/* min-w-0 lets the logo give way instead of being overlapped when the
+            row runs out of room on narrow phones. */}
         <Link
           href="/"
-          className="flex items-center transition-opacity hover:opacity-80"
+          className="flex min-w-0 items-center overflow-hidden transition-opacity hover:opacity-80"
           aria-label="Bhadeya Technical Services - Home"
         >
           <Logo tone="dark" size="md" priority />
@@ -195,13 +197,19 @@ export function Header() {
 
         {/* Mobile menu trigger */}
         <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-          <div className="flex items-center gap-2 lg:hidden">
-            {/* WhatsApp CTA — mobile header only */}
+          <div className="flex shrink-0 items-center gap-2 lg:hidden">
+            {/* WhatsApp CTA — tablets and large phones only.
+                Below 640px the logo, this button and the menu trigger do not
+                fit side by side and this button overlapped the logo's
+                "TECHNICAL SERVICES" line. The mobile menu already carries a
+                full-width "Get Free Quote", and the floating WhatsApp and call
+                buttons stay on screen, so hiding it here loses no contact
+                route on the phones where it does not fit. */}
             <a
               href="https://wa.me/971556926286?text=Hello, I would like to inquire about your GPR scanning services."
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md bg-safety px-3 py-2 text-xs font-semibold text-white transition-opacity hover:opacity-90"
+              className="hidden whitespace-nowrap rounded-md bg-safety px-3 py-2 text-xs font-semibold text-white transition-opacity hover:opacity-90 sm:inline-block"
               onClick={() => trackWhatsAppClick("mobile_header")}
             >
               Free Quote
