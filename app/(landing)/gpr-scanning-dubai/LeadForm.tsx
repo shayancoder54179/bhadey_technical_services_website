@@ -77,9 +77,18 @@ export function LeadForm({ formId = "gpr_landing_whatsapp" }: LeadFormProps) {
     const go = () => {
       if (isMobile) {
         window.location.href = url;
-      } else if (!window.open(url, "_blank", "noopener,noreferrer")) {
-        // Popup blocked on desktop too - fall back rather than lose the lead.
-        window.location.href = url;
+      } else {
+        // No "noopener" in the feature string: with it, window.open returns
+        // null even on success, which would make the blocked-popup check below
+        // fire every time and navigate this tab away as well. Sever the opener
+        // afterwards instead, which gives the same protection.
+        const opened = window.open(url, "_blank");
+        if (opened) {
+          opened.opener = null;
+        } else {
+          // Genuinely blocked - fall back rather than lose the lead.
+          window.location.href = url;
+        }
       }
       setSubmitting(false);
     };
