@@ -175,9 +175,9 @@ export const locationContent: Record<
 > = {
   "gpr-scanning": {
     dubai: {
-      title: "GPR Concrete Scanning in Dubai",
+      title: "Concrete Scanning Dubai - Same-Day GPR",
       description:
-        "GPR concrete scanning across Dubai. Rebar, post-tension cables and conduits located up to 1.5 m before you cut or drill. Same-day callout on most sites.",
+        "Post-tension slab scanning for Dubai fit-outs in Business Bay, Downtown, the Marina, Al Quoz and Jebel Ali. Same-day or next-morning callout with PDF report.",
       h1: "GPR Concrete Scanning in Dubai",
       intro:
         "Most of our Dubai scanning work is in towers. Fit-out contractors in Business Bay, Downtown and the Marina need to core through slabs that are almost always post-tensioned, and a single cut through a live tendon turns a routine penetration into a structural repair and an incident report. We scan the slab with the Proceq GP8000, mark the safe zones on the surface, and issue a report before anyone starts drilling.",
@@ -214,9 +214,9 @@ export const locationContent: Record<
       ],
     },
     "abu-dhabi": {
-      title: "GPR Concrete Scanning in Abu Dhabi",
+      title: "Concrete Scanning Abu Dhabi - Permits",
       description:
-        "GPR concrete scanning across Abu Dhabi. Rebar and post-tension detection to 1.5 m, with documentation suited to ADNOC and government project safety files.",
+        "Concrete scanning for Abu Dhabi permit-to-work files — ADNOC sites, Mussafah and ICAD industrial slabs, Khalifa City, Al Reem and Yas. Gate passes arranged.",
       h1: "GPR Concrete Scanning in Abu Dhabi",
       intro:
         "Abu Dhabi work runs to a different rhythm than Dubai. A larger share of it sits on government, oil and gas, and infrastructure projects where a permit to work has to be raised before anything is cut, and where the scan report becomes part of the project safety file rather than just a note to the site engineer. We scan with the Proceq GP8000 and issue documentation built for that scrutiny.",
@@ -253,9 +253,9 @@ export const locationContent: Record<
       ],
     },
     sharjah: {
-      title: "GPR Concrete Scanning in Sharjah",
+      title: "Concrete Scanning Sharjah - Warehouses",
       description:
-        "GPR concrete scanning across Sharjah. Rebar, conduits and post-tension cables located before coring — warehouse slabs, industrial floors and older buildings.",
+        "Concrete scanning for Sharjah warehouse and workshop floors — Industrial Areas 1 to 18, Al Sajaa, Muwaileh and Al Qasimia. Grid scanning for clustered holes.",
       h1: "GPR Concrete Scanning in Sharjah",
       intro:
         "Sharjah scanning is mostly industrial and mostly older. Warehouse slabs in the Industrial Areas get cored for machinery bases, drainage and new service runs, and the buildings are frequently old enough that the drawings are long gone or were never accurate. Scanning is not a formality here — it is often the only record of what is in the slab.",
@@ -292,9 +292,9 @@ export const locationContent: Record<
       ],
     },
     "ras-al-khaimah": {
-      title: "GPR Concrete Scanning in Ras Al Khaimah",
+      title: "Slab & Machine Base Scanning in RAK",
       description:
-        "GPR concrete scanning across Ras Al Khaimah. Rebar, post-tension cables and conduits located before you core industrial slabs, machine bases or resort decks.",
+        "GPR concrete scanning across Ras Al Khaimah — machine bases and silo walls at the northern plants, post-tensioned resort decks at Al Marjan and Al Hamra.",
       h1: "GPR Concrete Scanning in Ras Al Khaimah",
       intro:
         "RAK work splits between two worlds. In the north there are cement plants, ceramics factories and quarry infrastructure where we scan heavily reinforced slabs, machine bases and silo walls before anchors go in. On the coast there is resort and hotel construction at Al Marjan and Al Hamra, where the decks are post-tensioned and every MEP penetration needs clearing first. We scan with the Proceq GP8000, mark safe zones on the surface and issue a report before anyone drills.",
@@ -331,9 +331,9 @@ export const locationContent: Record<
       ],
     },
     fujairah: {
-      title: "GPR Concrete Scanning in Fujairah",
+      title: "Terminal Concrete Scanning, Fujairah",
       description:
-        "GPR concrete scanning in Fujairah. Non-destructive rebar and conduit location for port, terminal and tank farm concrete — no radiation permit or exclusion zone needed.",
+        "Concrete scanning for Fujairah port, terminal and tank farm structures. No radiation source, no exclusion zone and no hot work permit. Scheduled site visits.",
       h1: "GPR Concrete Scanning in Fujairah",
       intro:
         "Fujairah concrete work is dominated by the port, the oil terminals and the tank farms, and that environment rules out X-ray almost entirely. GPR does not need a radiation source, an exclusion zone or a hot work permit, so we can scan inside an operating terminal while the facility keeps working. We locate reinforcement, conduits and voids with the Proceq GP8000, mark the safe zones and issue a report before any coring or anchoring starts.",
@@ -370,9 +370,9 @@ export const locationContent: Record<
       ],
     },
     "al-ain": {
-      title: "GPR Concrete Scanning in Al Ain",
+      title: "Scanning for Al Ain Refurbishments",
       description:
-        "GPR concrete scanning in Al Ain. Rebar, conduits and post-tension cables located before coring in hospitals, schools, university and government buildings.",
+        "Concrete scanning in occupied Al Ain hospitals, schools, university and government buildings. Non-destructive, no exclusion zone, out-of-hours visits available.",
       h1: "GPR Concrete Scanning in Al Ain",
       intro:
         "Al Ain concrete scanning is mostly institutional work — hospitals, schools, the university, government and municipality buildings, most of them occupied and most of them being refurbished rather than built. GPR fits that setting because it is non-destructive and needs no exclusion zone, so we can scan a corridor slab with the department next door still working. We mark safe zones on the surface and issue a report before the coring crew starts.",
@@ -412,9 +412,9 @@ export const locationContent: Record<
 
   "core-cutting": {
     dubai: {
-      title: "Diamond Core Cutting in Dubai",
+      title: "Same-Day Core Drilling Across Dubai",
       description:
-        "Diamond core cutting across Dubai, 12 mm to 500 mm. Every hole is GPR scanned first, so we never cut into rebar or post-tension cables. Same-day callout.",
+        "Core drilling 12 mm to 500 mm for Dubai fit-outs and warehouses — Downtown, Business Bay, Al Quoz, DIP and Jebel Ali. GPR scanned first, night works available.",
       h1: "Diamond Core Cutting in Dubai",
       intro:
         "We core from 12 mm to 500 mm across Dubai, and we scan before every one of them. That order matters more here than almost anywhere, because Dubai slabs are post-tensioned by default and a cut tendon is not a patch-and-continue problem — it is a structural incident with a stop-work notice attached. Scanning and cutting are both ours, so nobody is waiting on a third party between the two.",
@@ -451,9 +451,9 @@ export const locationContent: Record<
       ],
     },
     "abu-dhabi": {
-      title: "Diamond Core Cutting in Abu Dhabi",
+      title: "Permit-Ready Core Drilling, Abu Dhabi",
       description:
-        "Diamond core cutting across Abu Dhabi, 12 mm to 500 mm. GPR scanned before every cut, with documentation suited to permit-to-work project requirements.",
+        "Core drilling 12 mm to 500 mm on Abu Dhabi sites, with the survey evidence your permit to work needs. Mussafah and ICAD floors, gate passes arranged first.",
       h1: "Diamond Core Cutting in Abu Dhabi",
       intro:
         "Coring in Abu Dhabi usually means paperwork before machinery. Government, oil and gas and infrastructure projects want an approved permit and evidence the slab has been surveyed before a core barrel touches concrete. We scan with the GP8000, issue the survey documentation the permit needs, then cut from 12 mm to 500 mm.",
@@ -490,9 +490,9 @@ export const locationContent: Record<
       ],
     },
     sharjah: {
-      title: "Diamond Core Cutting in Sharjah",
+      title: "Core Drilling for Sharjah Workshops",
       description:
-        "Diamond core cutting across Sharjah, 12 mm to 500 mm. Warehouse slabs, machinery bases and workshop floors, GPR scanned before every cut.",
+        "Core drilling 12 mm to 500 mm for machinery bases, wash bays and warehouse slabs across Sharjah Industrial Areas 1 to 18 and Al Sajaa. Slurry contained.",
       h1: "Diamond Core Cutting in Sharjah",
       intro:
         "Sharjah coring is industrial work — machinery bases in the Industrial Areas, drainage for wash bays and workshops, service penetrations through warehouse slabs. The buildings are often old, the drawings are often missing, and the slabs frequently contain service runs added by previous occupiers. We scan first, then cut from 12 mm to 500 mm.",
@@ -532,9 +532,9 @@ export const locationContent: Record<
 
   "gpr-ground-scanning": {
     dubai: {
-      title: "Underground Utility Scanning in Dubai",
+      title: "Pre-Excavation Utility Survey, Dubai",
       description:
-        "Underground utility scanning across Dubai before excavation. The Proceq GS8000 maps cables, pipes and ducts to 5–10 m, marked on site and reported.",
+        "Utility surveys before you dig in Dubai — DEWA power, district cooling, du and Etisalat ducts marked on site. Same-day callout, depth assessed for your ground.",
       h1: "Underground Utility Scanning in Dubai",
       intro:
         "Before you excavate anywhere in Dubai, you need to know what is under the ground — and a DEWA cable strike is a very expensive way to find out. We survey the dig area with the Proceq GS8000, mark the buried services on the surface, and issue a survey report so the excavation crew works from a map instead of a guess.",
@@ -571,9 +571,9 @@ export const locationContent: Record<
       ],
     },
     "abu-dhabi": {
-      title: "Underground Utility Scanning Abu Dhabi",
+      title: "Dig Surveys for Abu Dhabi Permits",
       description:
-        "Pre-excavation utility surveys across Abu Dhabi. The Proceq GS8000 maps buried services before you dig, with documentation for project safety files.",
+        "Pre-excavation utility surveys across Abu Dhabi Island, Mussafah, ICAD, Khalifa City and Yas. Honest depth limits on sabkha, reporting for project safety files.",
       h1: "Underground Utility Scanning in Abu Dhabi",
       intro:
         "Pre-excavation surveys are routine on Abu Dhabi government, oil and gas and civil projects, and for good reason — on an operating ADNOC site a utility strike is a safety event before it is a commercial one. We survey the dig area with the Proceq GS8000, mark what is buried, and issue documentation that supports the project safety file.",
@@ -611,9 +611,9 @@ export const locationContent: Record<
     },
  
     sharjah: {
-      title: "Underground Utility Scanning in Sharjah",
+      title: "Utility Survey Before Digging, Sharjah",
       description:
-        "GPR ground scanning across Sharjah before excavation. The Proceq GS8000 maps buried cables, pipes and ducts to 5–10 m, marked on site and issued as a report.",
+        "Pre-excavation utility surveys across the Sharjah industrial belt, where piecemeal re-servicing since the 1970s left no full record. Marked on site, reported.",
       h1: "Underground Utility Scanning in Sharjah",
       intro:
         "Sharjah is where a utility survey pays for itself fastest, because the industrial belt has been built, extended and re-serviced piecemeal since the 1970s and nobody holds a complete record of what is down there. We survey the dig area with the Proceq GS8000, mark buried services on the surface with estimated depths, and issue a survey report so the excavation crew works from a map rather than a hunch.",
@@ -650,9 +650,9 @@ export const locationContent: Record<
       ],
     },
     "ras-al-khaimah": {
-      title: "Underground Utility Scanning in RAK",
+      title: "Dig Surveys for RAK Plant & Coast",
       description:
-        "GPR ground scanning in Ras Al Khaimah before you excavate. Buried cables, pipes and tanks located across quarry, industrial and coastal sites, marked and reported.",
+        "Pre-excavation utility surveys in Ras Al Khaimah — high-voltage feeds and process water lines on quarry and plant sites, reclaimed coastal ground at Al Marjan.",
       h1: "Underground Utility Scanning in Ras Al Khaimah",
       intro:
         "RAK excavation risk sits mostly around the quarry and industrial belt in the north, where heavy plant runs on buried high-voltage feeds, and around the coastal development at Al Marjan and Al Hamra, where new infrastructure is being laid into ground that already holds several generations of services. We survey the dig area with the Proceq GS8000, mark what is buried on the surface, and issue a report before the machines start.",
@@ -689,9 +689,9 @@ export const locationContent: Record<
       ],
     },
     fujairah: {
-      title: "Underground Utility Scanning in Fujairah",
+      title: "Pipeline & Utility Survey, Fujairah",
       description:
-        "GPR ground scanning in Fujairah before excavation. Buried pipelines, cables and tanks located across port, terminal and free zone ground, marked and reported.",
+        "Pre-excavation surveys for Fujairah port, terminal and tank farm ground, where the thing under your dig may be a pipeline. Services marked on site and reported.",
       h1: "Underground Utility Scanning in Fujairah",
       intro:
         "In Fujairah the thing under the ground might be a pipeline, and that changes the arithmetic completely. Between the port, the oil terminals, the tank farms and the pipeline corridors running to the coast, this is ground where the consequence of a strike is measured in incidents rather than invoices. We survey with the Proceq GS8000, mark what is buried on the surface, and issue a report before any excavation is approved.",
@@ -728,9 +728,9 @@ export const locationContent: Record<
       ],
     },
     "al-ain": {
-      title: "Underground Utility Scanning in Al Ain",
+      title: "Utility Survey Before Digging, Al Ain",
       description:
-        "GPR ground scanning in Al Ain before excavation. Dry inland ground reads deep — buried cables, irrigation and utilities located to the top of the 5–10 m range.",
+        "Pre-excavation utility surveys in Al Ain. Dry inland ground reads to the top of the 5–10 m range, and radar finds the plastic irrigation lines locators miss.",
       h1: "Underground Utility Scanning in Al Ain",
       intro:
         "Al Ain gives us the best radar ground in the country. Dry inland sand and gravel with the water table well below the surface means the signal runs deep and the data is clean, so surveys here reach the top of the 5–10 m range that coastal sites rarely allow. We survey the dig area with the Proceq GS8000, mark buried services on the surface, and issue a report before excavation begins.",
