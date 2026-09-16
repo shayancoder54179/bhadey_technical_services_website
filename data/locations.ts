@@ -175,7 +175,7 @@ export const locationContent: Record<
 > = {
   "gpr-scanning": {
     dubai: {
-      title: "Concrete Scanning Dubai - Same-Day GPR",
+      title: "Same-Day Concrete Scanning, Dubai",
       description:
         "Post-tension slab scanning for Dubai fit-outs in Business Bay, Downtown, the Marina, Al Quoz and Jebel Ali. Same-day or next-morning callout with PDF report.",
       h1: "GPR Concrete Scanning in Dubai",

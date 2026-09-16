@@ -4,7 +4,7 @@ import type { ServicePageData } from "@/lib/service-page-types";
 
 import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
-  title: "GPR Survey & Concrete Scanning UAE",
+  title: "Concrete Scanning Dubai & UAE | GPR Survey",
   description:
     "UAE-wide GPR survey and concrete scanning. Locate rebar, post-tension cables and conduits before you cut or drill — no radiation, single-sided access.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.bhadeya.com/services/gpr-scanning" },
   openGraph: {
     ...OG_DEFAULTS,
-    title: "GPR Survey & Concrete Scanning Services UAE | Bhadeya Technical",
+    title: "Concrete Scanning Dubai & UAE | GPR Rebar & PT Detection | Bhadeya Technical",
     description:
       "GPR survey and concrete scanning across the UAE. 1.5m in concrete, up to 10m in ground. Rebar, post-tension and utility detection with no radiation and no site evacuation.",
     url: "https://www.bhadeya.com/services/gpr-scanning",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "GPR Survey & Concrete Scanning Services UAE | Bhadeya Technical",
+    "Concrete Scanning Dubai & UAE | GPR Rebar & PT Detection | Bhadeya Technical",
     "GPR survey and concrete scanning across the UAE. 1.5m in concrete, up to 10m in ground. Rebar, post-tension and utility detection with no radiation and no site evacuation."
   ),
 };
@@ -43,7 +43,7 @@ const gprPageData: ServicePageData = {
     { label: "GPR Concrete Scanning", href: "/services/gpr-scanning" },
   ],
   hero: {
-    title: "GPR Survey & Concrete Scanning Across the UAE",
+    title: "Concrete Scanning in Dubai & Across the UAE",
     subtitle:
       "A GPR survey with the industry-leading Proceq GP8000 detects rebar, post-tension cables, conduits and voids up to 1.5 m deep in concrete—non-destructively, with no radiation and no need to evacuate the area, and with full reporting. For buried utilities in soil, our Proceq GS8000 reads up to 10 m depending on ground conditions. We survey across Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain, and are trusted by Dubai Mall, Emaar and ADNOC.",
     stats: [
@@ -255,16 +255,6 @@ const gprPageData: ServicePageData = {
         question: "Which areas in the UAE do you serve?",
         answer:
           "We provide GPR scanning across the UAE including Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain. Our team is mobile and can reach any project site in the Emirates.",
-      },
-      {
-        question: "Do you scan before core cutting?",
-        answer:
-          "Yes. We always perform GPR scanning before any core cutting as a standard safety practice. This ensures no embedded rebar, post-tension cables or utilities are damaged during the cutting process.",
-      },
-      {
-        question: "How long does a GPR scan take?",
-        answer:
-          "It depends on the area. A typical single-zone scan can take 30 minutes to 2 hours. Larger projects may take a full day or more. We provide time estimates during our initial consultation.",
       },
       {
         question: "Is GPR scanning safe?",
