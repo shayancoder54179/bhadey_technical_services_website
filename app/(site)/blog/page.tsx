@@ -6,13 +6,13 @@ import { posts } from "@/data/posts";
 
 import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
-  title: "GPR & Concrete Scanning Guides",
+  title: "GPR Scanning Guides for UAE Sites",
   description:
-    "Practical guides on GPR concrete scanning, core cutting and pre-excavation utility surveys in the UAE, written by the team that does the work.",
+    "Practical guides to GPR concrete scanning, core cutting and pre-excavation utility surveys in the UAE, written by the crew that runs the radar on site.",
   alternates: { canonical: "https://www.bhadeya.com/blog" },
   openGraph: {
     ...OG_DEFAULTS,
-    title: "GPR & Concrete Scanning Guides | Bhadeya Technical",
+    title: "GPR Scanning Guides for UAE Sites | Bhadeya Technical",
     description:
       "Practical guides on GPR scanning, core cutting and utility surveys in the UAE.",
     url: "https://www.bhadeya.com/blog",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "GPR & Concrete Scanning Guides | Bhadeya Technical",
+    "GPR Scanning Guides for UAE Sites | Bhadeya Technical",
     "Practical guides on GPR scanning, core cutting and utility surveys in the UAE."
   ),
 };
@@ -60,7 +60,7 @@ export default function BlogIndexPage() {
           <div>
             <p className="eyebrow eyebrow-dark">Field notes</p>
             <h1 className="display-xl mt-5 text-white">
-              Guides from the site, not the brochure.
+              GPR scanning guides from our UAE site crews.
             </h1>
             <p className="mt-5 max-w-[54ch] text-[1.0625rem] leading-relaxed text-white/75">
               What we have learned scanning concrete and ground across the UAE
@@ -79,7 +79,7 @@ export default function BlogIndexPage() {
             <div className="bg-white px-5 py-4">
               <dt className="spec-label text-slate-soft">Written by</dt>
               <dd className="mt-1.5 text-[0.9375rem] font-semibold leading-snug text-graphite">
-                Our scanning crew
+                Our GPR scanning crew
               </dd>
             </div>
           </dl>
@@ -140,7 +140,7 @@ export default function BlogIndexPage() {
         />
         <div className="relative mx-auto max-w-7xl px-6 text-center sm:px-8">
           <h2 className="display-lg text-white">
-            Need scanning on a live job?
+            Need GPR scanning on a live job?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-white/75">
             Tell us the site and what you need done. We will give you a clear

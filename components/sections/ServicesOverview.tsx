@@ -179,7 +179,7 @@ export function ServicesOverview() {
         <div className="mt-6 flex flex-col items-start gap-5 rounded-xl border border-hairline bg-mist-tint px-6 py-7 sm:flex-row sm:items-center sm:justify-between md:px-8">
           <div>
             <p className="display-sm text-graphite">
-              Need scanning and cutting together?
+              Need GPR scanning and core cutting together?
             </p>
             <p className="mt-1 text-[0.9375rem] text-slate-deep">
               We run integrated packages — one team, one visit, one report.

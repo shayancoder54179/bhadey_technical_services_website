@@ -6,30 +6,32 @@ import { Shield, CircleDot, Wrench } from "lucide-react";
 
 import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
-  title: "Diamond Core Cutting Dubai & UAE",
+  title: "Diamond Core Cutting Services UAE",
   description:
-    "Diamond core cutting in Dubai and across the UAE, 12 mm to 500 mm. Every hole is GPR scanned first, so we never cut into rebar or post-tension cables.",
+    "Diamond core cutting with GPR scanning across the UAE, 12 mm to 500 mm. Every hole is scanned for rebar and post-tension cables before we cut. Free quote.",
   keywords: [
-    "core cutting Dubai",
+    "core cutting UAE",
+    "core cutting and scanning",
     "diamond core cutting UAE",
-    "concrete core cutting Dubai",
-    "core drilling Dubai",
+    "coring and scanning UAE",
+    "concrete core cutting services",
+    "core cutting services Dubai",
     "core cutting Abu Dhabi",
     "core cutting Sharjah",
   ],
   alternates: { canonical: "https://www.bhadeya.com/services/core-cutting" },
   openGraph: {
     ...OG_DEFAULTS,
-    title: "Core Cutting Dubai & UAE | 12-500mm | Bhadeya Technical",
+    title: "Diamond Core Cutting Services UAE | 12-500mm | Bhadeya Technical",
     description:
-      "Diamond core cutting 12mm–500mm in Dubai, Abu Dhabi & UAE. GPR before every cut. Professional equipment.",
+      "Diamond core cutting 12mm–500mm across the UAE, with GPR scanning before every cut. Dubai, Abu Dhabi and Sharjah.",
     url: "https://www.bhadeya.com/services/core-cutting",
     type: "website",
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    "Core Cutting Dubai & UAE | 12-500mm | Bhadeya Technical",
-    "Diamond core cutting 12mm–500mm in Dubai, Abu Dhabi & UAE. GPR before every cut. Professional equipment."
+    "Diamond Core Cutting Services UAE | 12-500mm | Bhadeya Technical",
+    "Diamond core cutting 12mm–500mm across the UAE, with GPR scanning before every cut. Dubai, Abu Dhabi and Sharjah."
   ),
 };
 
@@ -57,9 +59,9 @@ const coreCuttingData: ServicePageData = {
     { label: "Core Cutting", href: "/services/core-cutting" },
   ],
   hero: {
-    title: "Diamond Core Cutting Services in Dubai & UAE",
+    title: "Diamond Core Cutting Services Across the UAE",
     subtitle:
-      "Precision diamond core cutting from 12mm to 500mm diameter using professional equipment. GPR scanning is included before every cut to avoid rebar and post-tension cables. Serving Dubai, Abu Dhabi, Sharjah and major projects across the UAE.",
+      "Precision diamond core cutting from 12mm to 500mm diameter using professional equipment. Core cutting and GPR scanning come from the same team on the same visit, so rebar and post-tension cables are located before any hole is cut. Serving Dubai, Abu Dhabi, Sharjah and major projects across the UAE.",
     stats: [
       { value: "12–500mm", label: "Hole diameter range" },
       { value: "Professional equipment", label: "Equipment" },
@@ -179,9 +181,9 @@ const coreCuttingData: ServicePageData = {
   },
   seoParagraphs: [
     {
-      title: "Core Cutting in Dubai",
+      title: "Core Cutting Services Across the UAE",
       content:
-        "Core cutting in Dubai is in high demand for high-rise, commercial and MEP projects. Contractors need precise holes for plumbing, electrical, HVAC and structural penetrations. Bhadeya Technical provides diamond core cutting from 12mm to 500mm using professional equipment, with GPR scanning included before every cut. We serve Dubai, Abu Dhabi and the wider UAE with a focus on safety and quality.",
+        "Core cutting is in constant demand on high-rise, commercial and MEP projects throughout the Emirates. Contractors need precise holes for plumbing, electrical, HVAC and structural penetrations, and they need them without damaging what is already inside the slab. Bhadeya Technical provides diamond core cutting from 12mm to 500mm using professional equipment, with GPR scanning included before every cut. Our team is mobile and attends site across Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Fujairah and Al Ain.",
     },
     {
       title: "Core Cutting in Abu Dhabi",
@@ -189,7 +191,7 @@ const coreCuttingData: ServicePageData = {
         "In Abu Dhabi, core cutting is required for government, oil & gas and infrastructure projects. Our core cutting services in Abu Dhabi include the full diameter range and pre-cut GPR scanning. We use professional equipment and follow strict safety procedures to protect rebar and post-tension systems. We cover Abu Dhabi city, Mussafah and surrounding areas.",
     },
     {
-      title: "Why GPR Before Every Cut Matters",
+      title: "Why Core Cutting and Scanning Belong Together",
       content:
         "Cutting or drilling without knowing where rebar and post-tension cables are can cause serious structural damage and safety risks. At Bhadeya Technical we perform GPR scanning before every core cutting job. This ensures we never hit critical reinforcement and that every hole is in a safe, approved location. It is our standard practice across all UAE projects.",
     },
@@ -207,9 +209,9 @@ const coreCuttingData: ServicePageData = {
           "We cut core holes from 12mm to 500mm in diameter using professional diamond core cutting equipment. This covers small anchors, conduits, plumbing, HVAC and large structural openings.",
       },
       {
-        question: "Do you scan before core cutting?",
+        question: "Do you do core cutting and scanning together?",
         answer:
-          "Yes. We always perform GPR scanning before any core cutting. We use the Proceq GP8000 to locate rebar, post-tension cables and utilities, and we only cut at approved positions. This is standard on every job.",
+          "Yes — they are one job, not two bookings. We always perform GPR scanning before any core cutting, using the Proceq GP8000 to locate rebar, post-tension cables and utilities, and we only cut at approved positions. The scan is included on every core cutting job.",
       },
       {
         question: "What equipment do you use for core cutting?",
@@ -223,7 +225,7 @@ const coreCuttingData: ServicePageData = {
       },
     ],
   },
-  ctaTitle: "Need Core Cutting in Dubai or UAE?",
+  ctaTitle: "Need Core Cutting Anywhere in the UAE?",
   ctaDescription:
     "Get a free quote for diamond core cutting with GPR scanning included. We respond within 1 hour during business hours.",
 };
@@ -275,10 +277,10 @@ function CoreCuttingExtras() {
               </span>
               <div>
                 <h2 id="gpr-safety-heading" className="display-lg mb-2 text-graphite">
-                  GPR Scanning Before Every Cut
+                  Core Cutting &amp; GPR Scanning in One Visit
                 </h2>
                 <p className="leading-relaxed text-slate-deep">
-                  We never cut blind. Before any core cutting we perform GPR scanning with the Proceq GP8000 to locate rebar, post-tension cables and utilities. We then mark safe positions and only cut where approved. This protects the structure, avoids costly damage and keeps your project on track. It is our standard practice on every job in Dubai and the UAE.
+                  We never cut blind. Coring and scanning are a single job here: before any core cutting we perform GPR scanning with the Proceq GP8000 to locate rebar, post-tension cables and utilities, mark safe positions, and only then cut where approved. You do not have to book a separate scanning contractor and wait for their report. This protects the structure, avoids costly damage and keeps your project on track — standard practice on every job in Dubai and the UAE.
                 </p>
               </div>
             </div>

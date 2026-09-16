@@ -6,7 +6,7 @@ import { OG_DEFAULTS, OG_IMAGES, twitterCard } from "@/lib/og-image";
 export const metadata: Metadata = {
   title: "Interlock Paving & Road Works UAE",
   description:
-    "Interlock paving and road works across Dubai, Abu Dhabi and Sharjah. Driveways, car parks and access roads laid on a properly compacted sub-base.",
+    "Interlock paving and road works across Dubai, Abu Dhabi and Sharjah. Driveways, car parks and access roads laid on a compacted sub-base, so they stay level.",
   keywords: [
     "interlock Dubai",
     "interlock tiles UAE",
@@ -43,7 +43,7 @@ const interlockPageData: ServicePageData = {
     { label: "Interlock & Road Pavement", href: "/services/interlock-road-pavement" },
   ],
   hero: {
-    title: "Interlock & Road Pavement Works in Dubai & UAE",
+    title: "Interlock Paving & Road Works in Dubai & UAE",
     subtitle:
       "Interlock tile laying, repair and re-levelling, plus road pavement and hardstanding works for driveways, parking areas, yards and internal site roads. We handle the excavation, sub-base and compaction ourselves — which is what decides whether paving stays flat or sinks within a year.",
     stats: [

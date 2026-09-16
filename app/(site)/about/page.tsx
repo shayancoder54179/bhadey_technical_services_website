@@ -16,22 +16,22 @@ const CTASection = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: { absolute: `About ${company.name} | UAE` },
+  title: "About Us: GPR Scanning Team Since 2019",
   description:
-    `${company.name} has provided GPR scanning, core cutting and excavation across the UAE since 2019. Proceq GP8000 and GS8000 operators.`,
+    "Bhadeya Technical Services has run GPR scanning and core cutting across the UAE since 2019. DED Dubai trade licence 844806, with Proceq radar owned in house.",
   alternates: { canonical: "https://www.bhadeya.com/about" },
   openGraph: {
     ...OG_DEFAULTS,
-    title: `About ${company.name} | UAE`,
+    title: `About ${company.name}: GPR Scanning Since 2019`,
     description:
-      "UAE's trusted GPR scanning and core cutting company since 2019. 7+ years across Dubai, Abu Dhabi, Sharjah & UAE.",
+      "GPR scanning and core cutting across the UAE since 2019. DED Dubai trade licence 844806, Proceq GP8000 and GS8000 radar owned in house.",
     url: "https://www.bhadeya.com/about",
     type: "website",
     images: OG_IMAGES,
   },
   twitter: twitterCard(
-    `About ${company.name} | UAE`,
-    "UAE's trusted GPR scanning and core cutting company since 2019. 7+ years across Dubai, Abu Dhabi, Sharjah & UAE."
+    `About ${company.name}: GPR Scanning Since 2019`,
+    "GPR scanning and core cutting across the UAE since 2019. DED Dubai trade licence 844806, Proceq GP8000 and GS8000 radar owned in house."
   ),
 };
 
@@ -61,11 +61,14 @@ export default function AboutPage() {
               id="about-hero-title"
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] font-semibold leading-tight text-white mb-4 tracking-tight"
             >
-              About Bhadeya Technical Services L.L.C
+              About Bhadeya Technical Services &mdash; GPR Scanning Across the
+              UAE Since 2019
             </h1>
             <p className="text-lg text-white/75">
-              Your Trusted Partner for GPR Scanning & Technical Services in UAE
-              Since 2019
+              A Dubai company licensed by the {company.license.issuerShort}{" "}
+              (trade licence {company.license.number}), running GPR concrete
+              scanning, GPR ground scanning and core cutting across{" "}
+              {company.serviceAreas.length} UAE cities.
             </p>
           </header>
         </div>
@@ -83,7 +86,7 @@ export default function AboutPage() {
                 id="our-story-heading"
                 className="display-lg mb-6 text-graphite"
               >
-                Our Story
+                Our Story: GPR Scanning in the UAE Since 2019
               </h2>
               <div className="space-y-4 text-slate-deep leading-relaxed">
                 <p>
@@ -110,6 +113,44 @@ export default function AboutPage() {
                   that standard practice across the UAE construction industry.
                 </p>
               </div>
+
+              {/* Company facts a buyer checks before appointing a subcontractor
+                  — licence, age, coverage and whether the radar is owned. */}
+              <dl className="mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-hairline bg-hairline sm:grid-cols-2">
+                <div className="bg-surface px-5 py-4">
+                  <dt className="font-mono text-xs uppercase tracking-widest text-slate-soft">
+                    Trade licence
+                  </dt>
+                  <dd className="mt-1.5 font-semibold text-graphite">
+                    {company.license.number} &middot;{" "}
+                    {company.license.issuerShort}
+                  </dd>
+                </div>
+                <div className="bg-surface px-5 py-4">
+                  <dt className="font-mono text-xs uppercase tracking-widest text-slate-soft">
+                    Operating since
+                  </dt>
+                  <dd className="mt-1.5 font-semibold text-graphite">
+                    {company.foundingYear}
+                  </dd>
+                </div>
+                <div className="bg-surface px-5 py-4">
+                  <dt className="font-mono text-xs uppercase tracking-widest text-slate-soft">
+                    Cities served
+                  </dt>
+                  <dd className="mt-1.5 font-semibold text-graphite">
+                    {company.serviceAreas.join(", ")}
+                  </dd>
+                </div>
+                <div className="bg-surface px-5 py-4">
+                  <dt className="font-mono text-xs uppercase tracking-widest text-slate-soft">
+                    Radar owned in house
+                  </dt>
+                  <dd className="mt-1.5 font-semibold text-graphite">
+                    Proceq GP8000 &amp; GS8000
+                  </dd>
+                </div>
+              </dl>
             </div>
             <div className="aspect-[4/3] border border-hairline overflow-hidden">
               <Image
@@ -136,7 +177,7 @@ export default function AboutPage() {
             id="mission-values-heading"
             className="display-lg mb-10 text-center text-graphite"
           >
-            Our Mission & Values
+            What We Stand For as a UAE GPR Contractor
           </h2>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
             <div className="rounded-xl border border-hairline bg-surface p-6 shadow-panel">
@@ -183,7 +224,7 @@ export default function AboutPage() {
             id="equipment-heading"
             className="display-lg mb-10 text-center text-graphite"
           >
-            Our Equipment
+            Our GPR Scanning and Core Cutting Equipment
           </h2>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3 max-w-6xl mx-auto">
             <div className="rounded-xl border border-hairline bg-mist p-6 shadow-panel">
@@ -247,7 +288,7 @@ export default function AboutPage() {
             id="service-areas-heading"
             className="display-lg mb-6 text-center text-graphite"
           >
-            Service Areas
+            Where We Provide GPR Scanning in the UAE
           </h2>
           <p className="text-center text-slate-deep max-w-2xl mx-auto mb-10">
             We provide GPR scanning and core cutting services across the UAE.
@@ -285,7 +326,7 @@ export default function AboutPage() {
             id="why-choose-heading"
             className="display-lg mb-4 text-center text-graphite"
           >
-            Why Clients Choose Us
+            Why Clients Choose Our GPR Scanning Team
           </h2>
           <p className="text-center text-slate-deep max-w-2xl mx-auto mb-12">
             Trusted by leading developers, contractors, and consultants across
@@ -339,7 +380,7 @@ export default function AboutPage() {
             id="how-we-work-heading"
             className="display-lg mb-4 text-graphite"
           >
-            How we work
+            How We Run a GPR Scanning Job
           </h2>
           <p className="mb-12 max-w-2xl text-slate-deep">
             Four things decide whether subsurface work is done properly. They
@@ -350,7 +391,7 @@ export default function AboutPage() {
           <div className="grid gap-10 md:grid-cols-2 md:gap-x-14">
             <div>
               <h3 className="text-lg font-semibold tracking-tight">
-                We never cut blind
+                We scan every core before it is cut
               </h3>
               <p className="mt-2 leading-relaxed text-slate-deep">
                 Every core we cut is scanned first. Not a sample of them, not
@@ -390,7 +431,7 @@ export default function AboutPage() {
 
             <div>
               <h3 className="text-lg font-semibold tracking-tight">
-                Findings you can act on
+                GPR findings you can act on
               </h3>
               <p className="mt-2 leading-relaxed text-slate-deep">
                 Results are marked directly on the surface where the crew will
@@ -404,7 +445,7 @@ export default function AboutPage() {
 
           <div className="mt-14 border-t border-hairline pt-10">
             <h3 className="text-lg font-semibold tracking-tight">
-              Where we work
+              Where we work across the UAE
             </h3>
             <p className="mt-2 max-w-3xl leading-relaxed text-slate-deep">
               We cover all six emirates, and the work looks different in each.
